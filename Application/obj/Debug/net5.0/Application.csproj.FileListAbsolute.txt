@@ -1,0 +1,15 @@
+C:\Users\rudik\source\repos\ScienceResearchPA\Application\bin\Debug\net5.0\Application.deps.json
+C:\Users\rudik\source\repos\ScienceResearchPA\Application\bin\Debug\net5.0\Application.dll
+C:\Users\rudik\source\repos\ScienceResearchPA\Application\bin\Debug\net5.0\ref\Application.dll
+C:\Users\rudik\source\repos\ScienceResearchPA\Application\bin\Debug\net5.0\Application.pdb
+C:\Users\rudik\source\repos\ScienceResearchPA\Application\bin\Debug\net5.0\Domain.dll
+C:\Users\rudik\source\repos\ScienceResearchPA\Application\bin\Debug\net5.0\Domain.pdb
+C:\Users\rudik\source\repos\ScienceResearchPA\Application\obj\Debug\net5.0\Application.csprojAssemblyReference.cache
+C:\Users\rudik\source\repos\ScienceResearchPA\Application\obj\Debug\net5.0\Application.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\rudik\source\repos\ScienceResearchPA\Application\obj\Debug\net5.0\Application.AssemblyInfoInputs.cache
+C:\Users\rudik\source\repos\ScienceResearchPA\Application\obj\Debug\net5.0\Application.AssemblyInfo.cs
+C:\Users\rudik\source\repos\ScienceResearchPA\Application\obj\Debug\net5.0\Application.csproj.CoreCompileInputs.cache
+C:\Users\rudik\source\repos\ScienceResearchPA\Application\obj\Debug\net5.0\Application.csproj.CopyComplete
+C:\Users\rudik\source\repos\ScienceResearchPA\Application\obj\Debug\net5.0\Application.dll
+C:\Users\rudik\source\repos\ScienceResearchPA\Application\obj\Debug\net5.0\ref\Application.dll
+C:\Users\rudik\source\repos\ScienceResearchPA\Application\obj\Debug\net5.0\Application.pdb
