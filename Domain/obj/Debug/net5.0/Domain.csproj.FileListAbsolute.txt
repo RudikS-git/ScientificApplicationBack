@@ -1,8 +1,6 @@
 C:\Users\rudik\source\repos\ScienceResearchPA\Domain\bin\Debug\net5.0\Domain.deps.json
 C:\Users\rudik\source\repos\ScienceResearchPA\Domain\bin\Debug\net5.0\Domain.dll
-C:\Users\rudik\source\repos\ScienceResearchPA\Domain\bin\Debug\net5.0\ref\Domain.dll
 C:\Users\rudik\source\repos\ScienceResearchPA\Domain\bin\Debug\net5.0\Domain.pdb
-C:\Users\rudik\source\repos\ScienceResearchPA\Domain\obj\Debug\net5.0\Domain.csprojAssemblyReference.cache
 C:\Users\rudik\source\repos\ScienceResearchPA\Domain\obj\Debug\net5.0\Domain.GeneratedMSBuildEditorConfig.editorconfig
 C:\Users\rudik\source\repos\ScienceResearchPA\Domain\obj\Debug\net5.0\Domain.AssemblyInfoInputs.cache
 C:\Users\rudik\source\repos\ScienceResearchPA\Domain\obj\Debug\net5.0\Domain.AssemblyInfo.cs
@@ -10,3 +8,5 @@ C:\Users\rudik\source\repos\ScienceResearchPA\Domain\obj\Debug\net5.0\Domain.csp
 C:\Users\rudik\source\repos\ScienceResearchPA\Domain\obj\Debug\net5.0\Domain.dll
 C:\Users\rudik\source\repos\ScienceResearchPA\Domain\obj\Debug\net5.0\ref\Domain.dll
 C:\Users\rudik\source\repos\ScienceResearchPA\Domain\obj\Debug\net5.0\Domain.pdb
+C:\Users\rudik\source\repos\ScienceResearchPA\Domain\obj\Debug\net5.0\Domain.csproj.AssemblyReference.cache
+C:\Users\rudik\source\repos\ScienceResearchPA\Domain\obj\Debug\net5.0\refint\Domain.dll

@@ -1,14 +1,12 @@
-﻿using MediatR;
-using Microsoft.AspNetCore.Mvc;
-using System;
+﻿using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.DependencyInjection;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
+using MediatR;
 
 namespace ScienceResearchPA.Controllers
 {
-    public class BaseApiController : Controller
+    [ApiController]
+    [Route("api/[controller]")]
+    public abstract class BaseApiController : ControllerBase
     {
         private ISender _mediator;
         protected ISender Mediator => _mediator ??= HttpContext.RequestServices.GetService<ISender>();

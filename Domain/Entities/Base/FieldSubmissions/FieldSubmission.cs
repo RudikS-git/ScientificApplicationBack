@@ -1,0 +1,15 @@
+﻿using Domain.Entities.Common;
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace Domain.Entities.Base
+{
+    public class FieldSubmission : BaseEntity
+    {
+        public int SubmissionId { get; set; }
+        public Submission Submission { get; set; }
+    }
+}

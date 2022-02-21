@@ -9,7 +9,6 @@ C:\Users\rudik\source\repos\ScienceResearchPA\ScienceResearchPA\bin\Debug\net5.0
 C:\Users\rudik\source\repos\ScienceResearchPA\ScienceResearchPA\bin\Debug\net5.0\Swashbuckle.AspNetCore.SwaggerGen.dll
 C:\Users\rudik\source\repos\ScienceResearchPA\ScienceResearchPA\bin\Debug\net5.0\Swashbuckle.AspNetCore.SwaggerUI.dll
 C:\Users\rudik\source\repos\ScienceResearchPA\ScienceResearchPA\bin\Debug\net5.0\System.Diagnostics.DiagnosticSource.dll
-C:\Users\rudik\source\repos\ScienceResearchPA\ScienceResearchPA\bin\Debug\net5.0\Application.dll
 C:\Users\rudik\source\repos\ScienceResearchPA\ScienceResearchPA\bin\Debug\net5.0\Domain.dll
 C:\Users\rudik\source\repos\ScienceResearchPA\ScienceResearchPA\obj\Debug\net5.0\ScienceResearchPA.csprojAssemblyReference.cache
 C:\Users\rudik\source\repos\ScienceResearchPA\ScienceResearchPA\obj\Debug\net5.0\ScienceResearchPA.GeneratedMSBuildEditorConfig.editorconfig
@@ -28,10 +27,8 @@ C:\Users\rudik\source\repos\ScienceResearchPA\ScienceResearchPA\bin\Debug\net5.0
 C:\Users\rudik\source\repos\ScienceResearchPA\ScienceResearchPA\bin\Debug\net5.0\ScienceResearchPA.dll
 C:\Users\rudik\source\repos\ScienceResearchPA\ScienceResearchPA\bin\Debug\net5.0\ref\ScienceResearchPA.dll
 C:\Users\rudik\source\repos\ScienceResearchPA\ScienceResearchPA\bin\Debug\net5.0\ScienceResearchPA.pdb
-C:\Users\rudik\source\repos\ScienceResearchPA\ScienceResearchPA\bin\Debug\net5.0\Application.pdb
 C:\Users\rudik\source\repos\ScienceResearchPA\ScienceResearchPA\bin\Debug\net5.0\Domain.pdb
 C:\Users\rudik\source\repos\ScienceResearchPA\ScienceResearchPA\obj\Debug\net5.0\ScienceResearchPA.csproj.CoreCompileInputs.cache
-C:\Users\rudik\source\repos\ScienceResearchPA\ScienceResearchPA\obj\Debug\net5.0\ScienceResearchPA.MvcApplicationPartsAssemblyInfo.cs
 C:\Users\rudik\source\repos\ScienceResearchPA\ScienceResearchPA\obj\Debug\net5.0\ScienceResearchPA.MvcApplicationPartsAssemblyInfo.cache
 C:\Users\rudik\source\repos\ScienceResearchPA\ScienceResearchPA\obj\Debug\net5.0\ScienceResearchPA.csproj.CopyComplete
 C:\Users\rudik\source\repos\ScienceResearchPA\ScienceResearchPA\obj\Debug\net5.0\ScienceResearchPA.dll
@@ -42,3 +39,18 @@ C:\Users\rudik\source\repos\ScienceResearchPA\ScienceResearchPA\bin\Debug\net5.0
 C:\Users\rudik\source\repos\ScienceResearchPA\ScienceResearchPA\bin\Debug\net5.0\Microsoft.EntityFrameworkCore.Design.dll
 C:\Users\rudik\source\repos\ScienceResearchPA\ScienceResearchPA\bin\Debug\net5.0\MediatR.dll
 C:\Users\rudik\source\repos\ScienceResearchPA\ScienceResearchPA\bin\Debug\net5.0\AutoMapper.dll
+C:\Users\rudik\source\repos\ScienceResearchPA\ScienceResearchPA\bin\Debug\net5.0\Newtonsoft.Json.dll
+C:\Users\rudik\source\repos\ScienceResearchPA\ScienceResearchPA\bin\Debug\net5.0\App.dll
+C:\Users\rudik\source\repos\ScienceResearchPA\ScienceResearchPA\bin\Debug\net5.0\App.pdb
+C:\Users\rudik\source\repos\ScienceResearchPA\ScienceResearchPA\obj\Debug\net5.0\ScienceResearchPA.MvcApplicationPartsAssemblyInfo.cs
+C:\Users\rudik\source\repos\ScienceResearchPA\ScienceResearchPA\bin\Debug\net5.0\MiniProfiler.AspNetCore.dll
+C:\Users\rudik\source\repos\ScienceResearchPA\ScienceResearchPA\bin\Debug\net5.0\MiniProfiler.AspNetCore.Mvc.dll
+C:\Users\rudik\source\repos\ScienceResearchPA\ScienceResearchPA\bin\Debug\net5.0\MiniProfiler.EntityFrameworkCore.dll
+C:\Users\rudik\source\repos\ScienceResearchPA\ScienceResearchPA\bin\Debug\net5.0\MiniProfiler.Shared.dll
+C:\Users\rudik\source\repos\ScienceResearchPA\ScienceResearchPA\bin\Debug\net5.0\Microsoft.Extensions.Localization.Abstractions.dll
+C:\Users\rudik\source\repos\ScienceResearchPA\ScienceResearchPA\bin\Debug\net5.0\en\App.resources.dll
+C:\Users\rudik\source\repos\ScienceResearchPA\ScienceResearchPA\bin\Debug\net5.0\ru\App.resources.dll
+C:\Users\rudik\source\repos\ScienceResearchPA\ScienceResearchPA\bin\Debug\net5.0\MediatR.Contracts.dll
+C:\Users\rudik\source\repos\ScienceResearchPA\ScienceResearchPA\bin\Debug\net5.0\MediatR.Extensions.Microsoft.DependencyInjection.dll
+C:\Users\rudik\source\repos\ScienceResearchPA\ScienceResearchPA\bin\Debug\net5.0\Microsoft.Extensions.DependencyInjection.Abstractions.dll
+C:\Users\rudik\source\repos\ScienceResearchPA\ScienceResearchPA\obj\Debug\net5.0\ScienceResearchPA.csproj.AssemblyReference.cache

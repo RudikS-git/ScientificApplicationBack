@@ -1,18 +1,27 @@
-using Application;
+using App;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpsPolicy;
+using Microsoft.AspNetCore.Localization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
+using Microsoft.Extensions.Options;
 using Microsoft.OpenApi.Models;
 using System;
 using System.Collections.Generic;
+using System.Globalization;
 using System.Linq;
 using System.Threading.Tasks;
+using MediatR;
+using System.Reflection;
+using Infrastructure.Persistence;
+using Infrastructure;
+using Microsoft.AspNetCore.Mvc.ApplicationModels;
+using Microsoft.AspNetCore.Routing;
 
 namespace ScienceResearchPA
 {
@@ -28,13 +37,29 @@ namespace ScienceResearchPA
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
-           // services.AddMediatR(typeof(Startup));
+            services.AddApplication();
+            services.AddInfrastructure(Configuration);
 
-            string connection = Configuration.GetConnectionString("DefaultConnection");
-            services.AddDbContext<ApplicationContext>(options =>
-                options.UseNpgsql(connection));
+            services.AddLocalization(options => options.ResourcesPath = "Resources");
+            services.Configure<RequestLocalizationOptions>(options =>
+            {
+                var supportedCultures = new List<CultureInfo>()
+                {
+                    new CultureInfo("en-US"),
+                    new CultureInfo("ru-RU"),
+                };
+
+                options.DefaultRequestCulture = new RequestCulture(culture: "en-US", uiCulture: "en-US");
+                options.SupportedCultures = supportedCultures;
+                options.SupportedUICultures = supportedCultures;
+            });
+
+            services.AddMiniProfiler(options => options.RouteBasePath = "/profiler").AddEntityFramework();
+
+            services.Configure<RouteOptions>(options => options.LowercaseUrls = true); // for lower case urls
 
             services.AddControllers();
+
             services.AddSwaggerGen(c =>
             {
                 c.SwaggerDoc("v1", new OpenApiInfo { Title = "ScienceResearchPA", Version = "v1" });
@@ -51,6 +76,11 @@ namespace ScienceResearchPA
                 app.UseSwaggerUI(c => c.SwaggerEndpoint("/swagger/v1/swagger.json", "ScienceResearchPA v1"));
             }
 
+            app.UseMiniProfiler();
+
+            var localizationOptions = app.ApplicationServices.GetService<IOptions<RequestLocalizationOptions>>();
+            app.UseRequestLocalization(localizationOptions.Value);
+
             app.UseHttpsRedirection();
 
             app.UseRouting();
@@ -62,5 +92,6 @@ namespace ScienceResearchPA
                 endpoints.MapControllers();
             });
         }
+
     }
 }
