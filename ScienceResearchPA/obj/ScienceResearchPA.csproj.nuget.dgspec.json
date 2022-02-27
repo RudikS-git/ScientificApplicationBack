@@ -35,9 +35,6 @@
             "projectReferences": {
               "C:\\Users\\rudik\\source\\repos\\ScienceResearchPA\\Domain\\Domain.csproj": {
                 "projectPath": "C:\\Users\\rudik\\source\\repos\\ScienceResearchPA\\Domain\\Domain.csproj"
-              },
-              "C:\\Users\\rudik\\source\\repos\\ScienceResearchPA\\Infrastructure\\Infrastructure.csproj": {
-                "projectPath": "C:\\Users\\rudik\\source\\repos\\ScienceResearchPA\\Infrastructure\\Infrastructure.csproj"
               }
             }
           }
@@ -200,6 +197,9 @@
           "net6.0": {
             "targetAlias": "net6.0",
             "projectReferences": {
+              "C:\\Users\\rudik\\source\\repos\\ScienceResearchPA\\App\\App.csproj": {
+                "projectPath": "C:\\Users\\rudik\\source\\repos\\ScienceResearchPA\\App\\App.csproj"
+              },
               "C:\\Users\\rudik\\source\\repos\\ScienceResearchPA\\Domain\\Domain.csproj": {
                 "projectPath": "C:\\Users\\rudik\\source\\repos\\ScienceResearchPA\\Domain\\Domain.csproj"
               }
@@ -228,6 +228,10 @@
               "target": "Package",
               "version": "[6.0.0, )"
             },
+            "Microsoft.IdentityModel.Tokens": {
+              "target": "Package",
+              "version": "[6.16.0, )"
+            },
             "Newtonsoft.Json": {
               "target": "Package",
               "version": "[13.0.1, )"
@@ -235,6 +239,10 @@
             "Npgsql.EntityFrameworkCore.PostgreSQL": {
               "target": "Package",
               "version": "[6.0.3, )"
+            },
+            "System.IdentityModel.Tokens.Jwt": {
+              "target": "Package",
+              "version": "[6.16.0, )"
             }
           },
           "imports": [
@@ -287,6 +295,9 @@
             "projectReferences": {
               "C:\\Users\\rudik\\source\\repos\\ScienceResearchPA\\App\\App.csproj": {
                 "projectPath": "C:\\Users\\rudik\\source\\repos\\ScienceResearchPA\\App\\App.csproj"
+              },
+              "C:\\Users\\rudik\\source\\repos\\ScienceResearchPA\\Infrastructure\\Infrastructure.csproj": {
+                "projectPath": "C:\\Users\\rudik\\source\\repos\\ScienceResearchPA\\Infrastructure\\Infrastructure.csproj"
               }
             }
           }

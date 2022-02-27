@@ -13,3 +13,7 @@ C:\Users\rudik\source\repos\ScienceResearchPA\Infrastructure\obj\Debug\net6.0\re
 C:\Users\rudik\source\repos\ScienceResearchPA\Infrastructure\bin\Debug\net6.0\Domain.dll
 C:\Users\rudik\source\repos\ScienceResearchPA\Infrastructure\bin\Debug\net6.0\Domain.pdb
 C:\Users\rudik\source\repos\ScienceResearchPA\Infrastructure\obj\Debug\net6.0\Infrastructure.csproj.CopyComplete
+C:\Users\rudik\source\repos\ScienceResearchPA\Infrastructure\bin\Debug\net6.0\App.dll
+C:\Users\rudik\source\repos\ScienceResearchPA\Infrastructure\bin\Debug\net6.0\App.pdb
+C:\Users\rudik\source\repos\ScienceResearchPA\Infrastructure\bin\Debug\net6.0\en\App.resources.dll
+C:\Users\rudik\source\repos\ScienceResearchPA\Infrastructure\bin\Debug\net6.0\ru\App.resources.dll

@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "Uq6AJlPfi+RQJT4Au7FEjB3quuwu7Aq7RZiuGVliI4mkWTvmvQz7mYRIw6ikelTWPCJNE4o2icmqoN3piM7AmA==",
+  "dgSpecHash": "LzGdoA4ZD0s1FIf53ULW2MhI2QbNfP5g+GJpVFvEy7z+uqCuhdQZUyp7AukoaOU59mqqVC046KuGVO+uOknJAw==",
   "success": true,
   "projectFilePath": "C:\\Users\\rudik\\source\\repos\\ScienceResearchPA\\App\\App.csproj",
   "expectedPackageFiles": [
@@ -15,7 +15,7 @@
     "C:\\Users\\rudik\\.nuget\\packages\\microsoft.entityframeworkcore\\6.0.2\\microsoft.entityframeworkcore.6.0.2.nupkg.sha512",
     "C:\\Users\\rudik\\.nuget\\packages\\microsoft.entityframeworkcore.abstractions\\6.0.2\\microsoft.entityframeworkcore.abstractions.6.0.2.nupkg.sha512",
     "C:\\Users\\rudik\\.nuget\\packages\\microsoft.entityframeworkcore.analyzers\\6.0.2\\microsoft.entityframeworkcore.analyzers.6.0.2.nupkg.sha512",
-    "C:\\Users\\rudik\\.nuget\\packages\\microsoft.entityframeworkcore.relational\\6.0.2\\microsoft.entityframeworkcore.relational.6.0.2.nupkg.sha512",
+    "C:\\Users\\rudik\\.nuget\\packages\\microsoft.entityframeworkcore.relational\\6.0.1\\microsoft.entityframeworkcore.relational.6.0.1.nupkg.sha512",
     "C:\\Users\\rudik\\.nuget\\packages\\microsoft.extensions.caching.abstractions\\6.0.0\\microsoft.extensions.caching.abstractions.6.0.0.nupkg.sha512",
     "C:\\Users\\rudik\\.nuget\\packages\\microsoft.extensions.caching.memory\\6.0.1\\microsoft.extensions.caching.memory.6.0.1.nupkg.sha512",
     "C:\\Users\\rudik\\.nuget\\packages\\microsoft.extensions.configuration\\6.0.0\\microsoft.extensions.configuration.6.0.0.nupkg.sha512",

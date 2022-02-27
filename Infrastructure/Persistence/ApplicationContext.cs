@@ -1,5 +1,7 @@
-﻿using Domain.Entities;
+﻿using App.Common.Interfaces;
+using Domain.Entities;
 using Domain.Entities.Base;
+using Domain.Entities.Base.FieldRestrictions;
 using Domain.Entities.Base.FieldTypes;
 using Infrastructure.Persistence.Configurations;
 using Microsoft.EntityFrameworkCore;
@@ -18,11 +20,18 @@ namespace Infrastructure.Persistence
         public DbSet<User> Users { get; set; }
 
         public DbSet<Application> Applications { get; set; }
-        public DbSet<Submission> Submissions { get; set; }
+        public DbSet<ApplicationState> ApplicationStates { get; set; }
+        public DbSet<ApplicationSubmission> Submissions { get; set; }
 
         public DbSet<FieldType> FieldTypes { get; set; }
         public DbSet<InputField> InputFields { get; set; }
         public DbSet<SelectField> SelectFields { get; set; }
+        public DbSet<FieldSet> EntityFields { get; set; }
+
+        public DbSet<InputNumberField> InputNumberRestrictions { get; set; }
+        public DbSet<InputDateField> InputDateRestrictions { get; set; }
+        public DbSet<InputTextField> InputInputTextRestrictions { get; set; }
+        public DbSet<InputNumberPhoneField> InputNumberPhoneRestrictions { get; set; }
 
         public ApplicationContext(DbContextOptions<ApplicationContext> options, IConfiguration configuration)
             : base(options)
@@ -48,6 +57,7 @@ namespace Infrastructure.Persistence
         {
             modelBuilder.ApplyConfiguration(new FieldTypeConfiguration());
             modelBuilder.ApplyConfiguration(new ApplicationStateConfiguration());
+            modelBuilder.ApplyConfiguration(new InputUnderTypeConfiguration());
             /*  Task initDBTask = Task.WhenAll(new List<Task>
               {
                   InitializeDatabase<ApplicationState>(modelBuilder, "ApplicationState.json"),

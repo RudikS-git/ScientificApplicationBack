@@ -54,3 +54,8 @@ C:\Users\rudik\source\repos\ScienceResearchPA\ScienceResearchPA\obj\Debug\net6.0
 C:\Users\rudik\source\repos\ScienceResearchPA\ScienceResearchPA\bin\Debug\net6.0\Mapster.dll
 C:\Users\rudik\source\repos\ScienceResearchPA\ScienceResearchPA\bin\Debug\net6.0\Mapster.Core.dll
 C:\Users\rudik\source\repos\ScienceResearchPA\ScienceResearchPA\bin\Debug\net6.0\Mapster.DependencyInjection.dll
+C:\Users\rudik\source\repos\ScienceResearchPA\ScienceResearchPA\bin\Debug\net6.0\Microsoft.IdentityModel.JsonWebTokens.dll
+C:\Users\rudik\source\repos\ScienceResearchPA\ScienceResearchPA\bin\Debug\net6.0\Microsoft.IdentityModel.Logging.dll
+C:\Users\rudik\source\repos\ScienceResearchPA\ScienceResearchPA\bin\Debug\net6.0\Microsoft.IdentityModel.Tokens.dll
+C:\Users\rudik\source\repos\ScienceResearchPA\ScienceResearchPA\bin\Debug\net6.0\System.IdentityModel.Tokens.Jwt.dll
+C:\Users\rudik\source\repos\ScienceResearchPA\ScienceResearchPA\obj\Debug\net6.0\ScienceResearchPA.MvcApplicationPartsAssemblyInfo.cs

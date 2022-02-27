@@ -18,7 +18,5 @@ C:\Users\rudik\source\repos\ScienceResearchPA\App\obj\Debug\net6.0\App.dll
 C:\Users\rudik\source\repos\ScienceResearchPA\App\obj\Debug\net6.0\refint\App.dll
 C:\Users\rudik\source\repos\ScienceResearchPA\App\obj\Debug\net6.0\App.pdb
 C:\Users\rudik\source\repos\ScienceResearchPA\App\obj\Debug\net6.0\ref\App.dll
-C:\Users\rudik\source\repos\ScienceResearchPA\App\bin\Debug\net6.0\Infrastructure.dll
-C:\Users\rudik\source\repos\ScienceResearchPA\App\bin\Debug\net6.0\Infrastructure.pdb
 C:\Users\rudik\source\repos\ScienceResearchPA\App\obj\Debug\net6.0\App.Common.Resources.Models.SharedResource.en.resources
 C:\Users\rudik\source\repos\ScienceResearchPA\App\obj\Debug\net6.0\App.Common.Resources.Models.SharedResource.ru.resources

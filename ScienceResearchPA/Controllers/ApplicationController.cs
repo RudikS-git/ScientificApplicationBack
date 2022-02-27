@@ -12,7 +12,7 @@ using System.Threading;
 using System.Threading.Tasks;
 using App.Applications.DTOs;
 using App.Applications.Queries;
-using App.Fields.Commands;
+using App.SelectFields.Commands;
 
 namespace ScienceResearchPA.Controllers
 {
@@ -52,6 +52,12 @@ namespace ScienceResearchPA.Controllers
         [HttpDelete("{id}")]
         public void Delete(int id)
         {
+        }
+
+        [HttpGet("states")]
+        public async Task<ActionResult> GetApplicationStates(CancellationToken cancellationToken)
+        {
+            return Ok(await Mediator.Send(new GetApplicationStatesQuery(), cancellationToken));
         }
     }
 }

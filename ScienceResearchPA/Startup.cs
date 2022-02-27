@@ -18,10 +18,9 @@ using System.Linq;
 using System.Threading.Tasks;
 using MediatR;
 using System.Reflection;
-using Infrastructure.Persistence;
-using Infrastructure;
 using Microsoft.AspNetCore.Mvc.ApplicationModels;
 using Microsoft.AspNetCore.Routing;
+using Infrastructure;
 
 namespace ScienceResearchPA
 {
@@ -56,7 +55,9 @@ namespace ScienceResearchPA
 
             services.AddMiniProfiler(options => options.RouteBasePath = "/profiler").AddEntityFramework();
 
-            services.Configure<RouteOptions>(options => options.LowercaseUrls = true); // for lower case urls
+            services.Configure<RouteOptions> (options => {
+                options.LowercaseUrls = true;
+            }); // for lower case urls
 
             services.AddControllers();
 

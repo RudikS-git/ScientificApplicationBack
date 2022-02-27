@@ -1,7 +1,6 @@
 ﻿using App.Common.Interfaces;
 using App.Common.Models;
 using Domain.Entities.Base;
-using Infrastructure.Persistence;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -43,16 +42,28 @@ namespace App.Applications.Queries
             ApplicationDetailsDto application = await _context.Applications
                 .Include(it => it.FieldGroups)
                 .ThenInclude(it => it.SelectFields)
+
                 .Include(it => it.FieldGroups)
-                .ThenInclude(it => it.InputFields)
-                
+                .ThenInclude(it => it.InputTextFields)
+
+                .Include(it => it.FieldGroups)
+                .ThenInclude(it => it.InputNumberFields)
+
+                .Include(it => it.FieldGroups)
+                .ThenInclude(it => it.InputNumberPhoneFields)
+
+                .Include(it => it.FieldGroups)
+                .ThenInclude(it => it.InputDataFields)
+
+                .Include(it => it.FieldGroups)
+                .ThenInclude(it => it.FieldSets)
+
                 .Where(it => it.Id == query.id)
                 .ProjectToType<ApplicationDetailsDto>()
-                .FirstOrDefaultAsync();
-            
-            
-            // TODO: transfer cancellationToken
+                .FirstOrDefaultAsync(cancellationToken);
 
+            
+            
             if (application == null)
             {
                 return ServiceResult.Failed<ApplicationDetailsDto>(ServiceError.NotFound);

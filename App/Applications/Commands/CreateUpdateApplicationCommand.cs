@@ -9,7 +9,6 @@ using System.Linq;
 using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
-using Infrastructure.Persistence;
 using App.Applications.DTOs;
 using MapsterMapper;
 using Mapster;

@@ -16,6 +16,7 @@ namespace Domain.Entities.Base
         public Permission Permission { get; set; } // доступ по правам
         public bool IsRemoved { get; set; }
         
-        public List<ApplicationGroup> FieldGroups { get; set; }
+        public IList<ApplicationGroup> FieldGroups { get; set; }
+        public IList<ApplicationSubmission> ApplicationSubmissions { get; set; }
     }
 }

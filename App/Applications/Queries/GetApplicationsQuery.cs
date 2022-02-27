@@ -10,9 +10,8 @@ using App.Common.Interfaces;
 using Microsoft.EntityFrameworkCore;
 using App.Common.Models;
 using App.Applications.DTOs;
-using Infrastructure.Persistence;
-using MapsterMapper;
 using Mapster;
+using MapsterMapper;
 
 namespace App.Queries
 {

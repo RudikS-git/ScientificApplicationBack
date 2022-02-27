@@ -1,5 +1,4 @@
 ﻿using Domain.Entities.Base.FieldRestrictions;
-using Domain.Entities.Common;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations.Schema;
@@ -12,7 +11,10 @@ namespace Domain.Entities.Base.FieldTypes
     [Table("SelectField")]
     public class SelectField : Field
     {
-        public List<WorkEntityField> Options { get; set;}
+        public bool IsMultiple { get; set; }
+        public bool IsAsync { get; set; }
+        public List<SelectOption> Options { get; set; }
+
         public int SelectRestrictionId { get; set; }
         public SelectRestriction SelectRestriction { get; set; }
     }
