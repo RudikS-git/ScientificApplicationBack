@@ -5,6 +5,7 @@ using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using System.Threading;
 using System.Threading.Tasks;
+using App.SelectFields.Queries;
 
 namespace ScienceResearchPA.Controllers
 {
@@ -33,7 +34,7 @@ namespace ScienceResearchPA.Controllers
         [HttpGet("options/{id}")]
         public async Task<ActionResult<ServiceResult<object>>> AsyncSelectOptions(int id, string search, CancellationToken cancellationToken)
         {
-            return Ok(await Mediator.Send(null, cancellationToken));
+            return Ok(await Mediator.Send(new GetSelectOptionsQuery(id, search), cancellationToken));
         }
     }
 }

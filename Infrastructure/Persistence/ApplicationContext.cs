@@ -28,6 +28,8 @@ namespace Infrastructure.Persistence
         public DbSet<SelectField> SelectFields { get; set; }
         public DbSet<FieldSet> EntityFields { get; set; }
 
+        public DbSet<SelectOption> SelectOptions { get; set; }
+
         public DbSet<InputNumberField> InputNumberRestrictions { get; set; }
         public DbSet<InputDateField> InputDateRestrictions { get; set; }
         public DbSet<InputTextField> InputInputTextRestrictions { get; set; }

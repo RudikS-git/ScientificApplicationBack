@@ -5,6 +5,7 @@ using App.SelectFields.DTOs;
 using Domain.Entities.Base.FieldTypes;
 using MapsterMapper;
 using Microsoft.Extensions.Localization;
+using Microsoft.Extensions.Options;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -39,7 +40,6 @@ namespace App.SelectFields.Commands
             {
                 Id = request.SelectField.Id,
                 ApplicationGroupId = request.GroupId,
-             //   FieldTypeId = request.SelectField.FieldTypeId,
                 Description = request.SelectField.Description,
                 IsRequired = request.SelectField.IsRequired,
                 Label = request.SelectField.Label,
@@ -47,14 +47,15 @@ namespace App.SelectFields.Commands
                 {
                     MaxCount = request.SelectField.SelectRestriction.MaxCount,
                     MinCount = request.SelectField.SelectRestriction.MinCount
-                }
+                },
+                Options = mapper.Map<List<SelectOption>>(request.SelectField.Options)
             };
 
-            if (selectField.Id != 0) // update
+            if (selectField.Id != 0)
             {
                 applicationContext.SelectFields.Update(selectField);
             }
-            else // create
+            else
             {
                 await applicationContext.SelectFields.AddAsync(selectField, cancellationToken);
             }
