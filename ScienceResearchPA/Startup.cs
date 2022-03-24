@@ -21,6 +21,9 @@ using System.Reflection;
 using Microsoft.AspNetCore.Mvc.ApplicationModels;
 using Microsoft.AspNetCore.Routing;
 using Infrastructure;
+using Infrastructure.Identity;
+using ScienceResearchPA.Services;
+using App.Common.Interfaces;
 
 namespace ScienceResearchPA
 {
@@ -38,6 +41,7 @@ namespace ScienceResearchPA
         {
             services.AddApplication();
             services.AddInfrastructure(Configuration);
+            services.AddIdentityInfrastructure(Configuration);
 
             services.AddLocalization(options => options.ResourcesPath = "Resources");
             services.Configure<RequestLocalizationOptions>(options =>
@@ -59,12 +63,15 @@ namespace ScienceResearchPA
                 options.LowercaseUrls = true;
             }); // for lower case urls
 
-            services.AddControllers();
+            services.AddControllers().AddNewtonsoftJson();
 
             services.AddSwaggerGen(c =>
             {
                 c.SwaggerDoc("v1", new OpenApiInfo { Title = "ScienceResearchPA", Version = "v1" });
             });
+
+            services.AddScoped<ICurrentUserService, CurrentUserService>();
+            services.AddHttpContextAccessor();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -84,8 +91,8 @@ namespace ScienceResearchPA
 
             app.UseHttpsRedirection();
 
+            app.UseAuthentication();
             app.UseRouting();
-
             app.UseAuthorization();
 
             app.UseEndpoints(endpoints =>

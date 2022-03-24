@@ -1,22 +1,26 @@
 ﻿using Domain.Entities.Base;
 using Domain.Entities.Common;
+using Domain.Entities.Complex;
 using System;
 using System.Collections.Generic;
 using System.Text;
+using Microsoft.AspNetCore.Identity;
+using System.ComponentModel.DataAnnotations;
 
 namespace Domain.Entities.Base
 {
-    public class User : BaseEntity
+    public class User : IdentityUser<int>
     {
-        public string Email { get; set; }
-        public string PasswordHash { get; set; }
+        public PersonName PersonName { get; set; }
 
-        public int ExternalId { get; set; }
-        public DateTime FirstActivity { get; set; }
-        public DateTime LastActivity { get; set; }
+        public DateOnly BirthDate { get; set; }
 
-        public List<Application> Applications { get; set; }
-        public List<ApplicationSubmission> Submissions { get; set; }
-        public List<Permission> Permissions { get; set; }
+        public IList<Application> Applications { get; set; }
+
+        public IList<ApplicationSubmission> Submissions { get; set; }
+
+        public IList<Permission> Permissions { get; set; }
+
+        public IList<RefreshToken> RefreshTokens { get; set; }
     }
 }

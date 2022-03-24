@@ -1,4 +1,5 @@
 ﻿using Domain.Entities.Base;
+using Domain.Entities.Complex;
 using Mapster;
 using System;
 using System.Collections.Generic;
@@ -14,6 +15,8 @@ namespace App.InputFields.DTOs
         public Boolean IsRequired { get; set; }
         public string Label { get; set; }
         public string Description { get; set; }
+
+        public FieldStyle Style { get; set; }
 
         public void Register(TypeAdapterConfig config)
         {

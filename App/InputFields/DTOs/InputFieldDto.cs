@@ -7,12 +7,15 @@ using System.Text;
 using System.Threading.Tasks;
 using Mapster;
 using Domain.Entities.Base.FieldTypes;
+using Domain.Entities.Base.UnderTypes;
+using Domain.Enums;
 
 namespace App.InputFields.DTOs
 {
     public class InputFieldDto : FieldDto, IRegister
     {
         public int InputFieldId { get; set; }
+        public InputUnderTypes InputUnderTypeId  { get; set; }
 
         public void Register(TypeAdapterConfig config)
         {

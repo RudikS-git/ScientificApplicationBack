@@ -1,4 +1,5 @@
 ﻿using Domain.Entities.Base;
+using Domain.Entities.Enums;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
 using System;
@@ -17,20 +18,20 @@ namespace Infrastructure.Persistence.Configurations
             {
                 new FieldType()
                 {
-                    Id = 1,
+                    Id = (int)FieldTypesEnum.Input,
                     Name="Input"
                 },
 
                 new FieldType()
                 {
-                    Id = 2,
+                    Id =  (int)FieldTypesEnum.Select,
                     Name = "Select"
                 },
 
                 new FieldType()
                 {
-                    Id = 3,
-                    Name = "Entity"
+                    Id =  (int)FieldTypesEnum.FieldType,
+                    Name = "FieldType"
                 }
             });
         }

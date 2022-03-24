@@ -3,8 +3,12 @@ using Domain.Entities;
 using Domain.Entities.Base;
 using Domain.Entities.Base.FieldRestrictions;
 using Domain.Entities.Base.FieldTypes;
+using Domain.Entities.Common;
 using Infrastructure.Persistence.Configurations;
+using Microsoft.AspNetCore.Identity;
+using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.EntityFrameworkCore.ChangeTracking;
 using Microsoft.Extensions.Configuration;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
@@ -15,15 +19,19 @@ using System.Threading.Tasks;
 
 namespace Infrastructure.Persistence
 {
-    public class ApplicationContext : DbContext, IApplicationContext
+    public class ApplicationContext : IdentityDbContext<User, Role, int>, IApplicationContext
     {
-        public DbSet<User> Users { get; set; }
+       // public DbSet<User> Users { get; set; }
+       // public DbSet<Role> Roles { get; set; }
+       //public DbSet<IdentityUserRole<int>> UserRoles { get; set; }
+        public DbSet<RefreshToken> RefreshTokens { get; set; }
 
         public DbSet<Application> Applications { get; set; }
         public DbSet<ApplicationState> ApplicationStates { get; set; }
         public DbSet<ApplicationSubmission> Submissions { get; set; }
 
         public DbSet<FieldType> FieldTypes { get; set; }
+
         public DbSet<InputField> InputFields { get; set; }
         public DbSet<SelectField> SelectFields { get; set; }
         public DbSet<FieldSet> EntityFields { get; set; }
@@ -38,8 +46,8 @@ namespace Infrastructure.Persistence
         public ApplicationContext(DbContextOptions<ApplicationContext> options, IConfiguration configuration)
             : base(options)
         {
-          //  Database.EnsureCreated();
-
+       //     Database.EnsureDeleted();
+       //     Database.EnsureCreated();
         }
 
         async private Task InitializeDatabase<T>(ModelBuilder modelBuilder, string config) where T : class
@@ -57,21 +65,44 @@ namespace Infrastructure.Persistence
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
-            modelBuilder.ApplyConfiguration(new FieldTypeConfiguration());
-            modelBuilder.ApplyConfiguration(new ApplicationStateConfiguration());
-            modelBuilder.ApplyConfiguration(new InputUnderTypeConfiguration());
+            base.OnModelCreating(modelBuilder);
+            modelBuilder.ApplyConfigurationsFromAssembly(assembly: typeof(AppContext).Assembly);
+
+            modelBuilder.HasDefaultSchema("Identity");
+            modelBuilder.Entity<Role>(entity =>
+            {
+                entity.ToTable(name: "Role");
+            });
+            modelBuilder.Entity<IdentityUserRole<int>>(entity =>
+            {
+                entity.ToTable("UserRoles");
+            });
+
+            modelBuilder.Entity<IdentityUserClaim<int>>(entity =>
+            {
+                entity.ToTable("UserClaims");
+            });
+
+            modelBuilder.Entity<IdentityUserLogin<int>>(entity =>
+            {
+                entity.ToTable("UserLogins");
+            });
+
+            modelBuilder.Entity<IdentityRoleClaim<int>>(entity =>
+            {
+                entity.ToTable("RoleClaims");
+            });
+
+            modelBuilder.Entity<IdentityUserToken<int>>(entity =>
+            {
+                entity.ToTable("UserTokens");
+            });
+
             /*  Task initDBTask = Task.WhenAll(new List<Task>
               {
                   InitializeDatabase<ApplicationState>(modelBuilder, "ApplicationState.json"),
                   InitializeDatabase<Permission>(modelBuilder, "Permissions.json")
               });*/
-
-            /* modelBuilder.Entity<ApplicationState>(entity =>
-             {
-                 entity.HasIndex(it => it.Name).IsUnique();
-                 entity.Property(it => it.Name).IsRequired().HasMaxLength(150);
-
-             });*/
 
             /*
                             entity
@@ -84,16 +115,29 @@ namespace Infrastructure.Persistence
                                 .HasCheckConstraint("CC_Phone",
                                                "\"Phone\" ~* '^[0 - 9\\.] +$)'");*/
 
-            modelBuilder.Entity<User>()
-                .HasCheckConstraint("CC_FirstActivityLastActivity",
-                                    "\"FirstActivity\" <= \"LastActivity\"");
+            /*            modelBuilder.Entity<User>()
+                            .HasCheckConstraint("CC_FirstActivityLastActivity",
+                                                "\"FirstActivity\" <= \"LastActivity\"");*/
 
-           // await initDBTask;
         }
 
-        public async Task<int> SaveChangesAsync()
+        public override async Task<int> SaveChangesAsync(CancellationToken cancellationToken = new CancellationToken())
         {
-            return await base.SaveChangesAsync();
+            foreach (EntityEntry<AuditableBaseEntity> entry in ChangeTracker.Entries<AuditableBaseEntity>())
+            {
+                switch (entry.State)
+                {
+                    case EntityState.Added:
+                        entry.Entity.Created = DateTime.UtcNow.ToUniversalTime();
+                        break;
+                    case EntityState.Modified:
+                        entry.Entity.Updated = DateTime.UtcNow.ToUniversalTime();
+                        break;
+                }
+            }
+
+
+            return await base.SaveChangesAsync(cancellationToken);
         }
     }
 }

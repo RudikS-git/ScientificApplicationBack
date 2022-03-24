@@ -17,7 +17,8 @@ namespace Infrastructure.Migrations
         {
 #pragma warning disable 612, 618
             modelBuilder
-                .HasAnnotation("ProductVersion", "6.0.2")
+                .HasDefaultSchema("Identity")
+                .HasAnnotation("ProductVersion", "6.0.3")
                 .HasAnnotation("Relational:MaxIdentifierLength", 63);
 
             NpgsqlModelBuilderExtensions.UseIdentityByDefaultColumns(modelBuilder);
@@ -63,7 +64,7 @@ namespace Infrastructure.Migrations
 
                     b.HasIndex("UserId");
 
-                    b.ToTable("Applications");
+                    b.ToTable("Applications", "Identity");
                 });
 
             modelBuilder.Entity("Domain.Entities.Base.ApplicationGroup", b =>
@@ -84,7 +85,7 @@ namespace Infrastructure.Migrations
 
                     b.HasIndex("ApplicationId");
 
-                    b.ToTable("ApplicationGroup");
+                    b.ToTable("ApplicationGroup", "Identity");
                 });
 
             modelBuilder.Entity("Domain.Entities.Base.ApplicationState", b =>
@@ -100,34 +101,7 @@ namespace Infrastructure.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("ApplicationStates");
-
-                    b.HasData(
-                        new
-                        {
-                            Id = 1,
-                            Name = "Черновик"
-                        },
-                        new
-                        {
-                            Id = 2,
-                            Name = "На проверке"
-                        },
-                        new
-                        {
-                            Id = 3,
-                            Name = "Отклонено"
-                        },
-                        new
-                        {
-                            Id = 4,
-                            Name = "Отправлено на доработку"
-                        },
-                        new
-                        {
-                            Id = 5,
-                            Name = "Согласовано"
-                        });
+                    b.ToTable("ApplicationStates", "Identity");
                 });
 
             modelBuilder.Entity("Domain.Entities.Base.ApplicationSubmission", b =>
@@ -158,7 +132,7 @@ namespace Infrastructure.Migrations
 
                     b.HasIndex("UserId");
 
-                    b.ToTable("Submissions");
+                    b.ToTable("Submissions", "Identity");
                 });
 
             modelBuilder.Entity("Domain.Entities.Base.FieldRestrictions.SelectRestriction", b =>
@@ -177,7 +151,7 @@ namespace Infrastructure.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("SelectRestriction");
+                    b.ToTable("SelectRestriction", "Identity");
                 });
 
             modelBuilder.Entity("Domain.Entities.Base.FieldSubmissions.InputSubmission", b =>
@@ -203,7 +177,7 @@ namespace Infrastructure.Migrations
 
                     b.HasIndex("SubmissionId");
 
-                    b.ToTable("InputSubmission");
+                    b.ToTable("InputSubmission", "Identity");
                 });
 
             modelBuilder.Entity("Domain.Entities.Base.FieldSubmissions.SelectSubmission", b =>
@@ -226,7 +200,7 @@ namespace Infrastructure.Migrations
 
                     b.HasIndex("SubmissionId");
 
-                    b.ToTable("SelectSubmission");
+                    b.ToTable("SelectSubmission", "Identity");
                 });
 
             modelBuilder.Entity("Domain.Entities.Base.FieldType", b =>
@@ -242,24 +216,7 @@ namespace Infrastructure.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("FieldTypes");
-
-                    b.HasData(
-                        new
-                        {
-                            Id = 1,
-                            Name = "Input"
-                        },
-                        new
-                        {
-                            Id = 2,
-                            Name = "Select"
-                        },
-                        new
-                        {
-                            Id = 3,
-                            Name = "Entity"
-                        });
+                    b.ToTable("FieldTypes", "Identity");
                 });
 
             modelBuilder.Entity("Domain.Entities.Base.FieldTypes.FieldSet", b =>
@@ -294,7 +251,7 @@ namespace Infrastructure.Migrations
 
                     b.HasIndex("SelectSubmissionId");
 
-                    b.ToTable("FieldSet");
+                    b.ToTable("FieldSet", "Identity");
                 });
 
             modelBuilder.Entity("Domain.Entities.Base.FieldTypes.InputField", b =>
@@ -322,7 +279,7 @@ namespace Infrastructure.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("InputFields");
+                    b.ToTable("InputFields", "Identity");
                 });
 
             modelBuilder.Entity("Domain.Entities.Base.FieldTypes.SelectField", b =>
@@ -368,7 +325,7 @@ namespace Infrastructure.Migrations
 
                     b.HasIndex("SelectRestrictionId");
 
-                    b.ToTable("SelectField");
+                    b.ToTable("SelectField", "Identity");
                 });
 
             modelBuilder.Entity("Domain.Entities.Base.FieldTypes.SelectOption", b =>
@@ -389,7 +346,7 @@ namespace Infrastructure.Migrations
 
                     b.HasIndex("SelectFieldId");
 
-                    b.ToTable("SelectOptions");
+                    b.ToTable("SelectOptions", "Identity");
                 });
 
             modelBuilder.Entity("Domain.Entities.Base.HistoryApplicationState", b =>
@@ -425,7 +382,7 @@ namespace Infrastructure.Migrations
 
                     b.HasIndex("NewApplicationStateId");
 
-                    b.ToTable("HistoryApplicationState");
+                    b.ToTable("HistoryApplicationState", "Identity");
                 });
 
             modelBuilder.Entity("Domain.Entities.Base.Permission", b =>
@@ -444,10 +401,10 @@ namespace Infrastructure.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("Permission");
+                    b.ToTable("Permission", "Identity");
                 });
 
-            modelBuilder.Entity("Domain.Entities.Base.UnderTypes.InputUnderType", b =>
+            modelBuilder.Entity("Domain.Entities.Base.RefreshToken", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
@@ -455,54 +412,64 @@ namespace Infrastructure.Migrations
 
                     NpgsqlPropertyBuilderExtensions.UseIdentityByDefaultColumn(b.Property<int>("Id"));
 
-                    b.Property<string>("Name")
+                    b.Property<DateTime>("Created")
+                        .HasColumnType("timestamp with time zone");
+
+                    b.Property<string>("CreatedByIp")
                         .HasColumnType("text");
+
+                    b.Property<DateTime>("Expires")
+                        .HasColumnType("timestamp with time zone");
+
+                    b.Property<string>("ReplacedByToken")
+                        .HasColumnType("text");
+
+                    b.Property<DateTime?>("Revoked")
+                        .HasColumnType("timestamp with time zone");
+
+                    b.Property<string>("RevokedByIp")
+                        .HasColumnType("text");
+
+                    b.Property<string>("Token")
+                        .HasColumnType("text");
+
+                    b.Property<int>("UserId")
+                        .HasColumnType("integer");
 
                     b.HasKey("Id");
 
-                    b.ToTable("InputUnderType");
+                    b.HasIndex("UserId");
 
-                    b.HasData(
-                        new
-                        {
-                            Id = 1,
-                            Name = "Text"
-                        },
-                        new
-                        {
-                            Id = 2,
-                            Name = "Date"
-                        },
-                        new
-                        {
-                            Id = 3,
-                            Name = "Time"
-                        },
-                        new
-                        {
-                            Id = 4,
-                            Name = "DateTime"
-                        },
-                        new
-                        {
-                            Id = 5,
-                            Name = "NumberPhone"
-                        },
-                        new
-                        {
-                            Id = 6,
-                            Name = "Email"
-                        },
-                        new
-                        {
-                            Id = 7,
-                            Name = "Number"
-                        },
-                        new
-                        {
-                            Id = 8,
-                            Name = "Float number"
-                        });
+                    b.ToTable("RefreshTokens", "Identity");
+                });
+
+            modelBuilder.Entity("Domain.Entities.Base.Role", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("integer");
+
+                    NpgsqlPropertyBuilderExtensions.UseIdentityByDefaultColumn(b.Property<int>("Id"));
+
+                    b.Property<string>("ConcurrencyStamp")
+                        .IsConcurrencyToken()
+                        .HasColumnType("text");
+
+                    b.Property<string>("Name")
+                        .HasMaxLength(256)
+                        .HasColumnType("character varying(256)");
+
+                    b.Property<string>("NormalizedName")
+                        .HasMaxLength(256)
+                        .HasColumnType("character varying(256)");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("NormalizedName")
+                        .IsUnique()
+                        .HasDatabaseName("RoleNameIndex");
+
+                    b.ToTable("Role", "Identity");
                 });
 
             modelBuilder.Entity("Domain.Entities.Base.User", b =>
@@ -513,26 +480,169 @@ namespace Infrastructure.Migrations
 
                     NpgsqlPropertyBuilderExtensions.UseIdentityByDefaultColumn(b.Property<int>("Id"));
 
-                    b.Property<string>("Email")
-                        .HasColumnType("text");
-
-                    b.Property<int>("ExternalId")
+                    b.Property<int>("AccessFailedCount")
                         .HasColumnType("integer");
 
-                    b.Property<DateTime>("FirstActivity")
+                    b.Property<DateOnly>("BirthDate")
+                        .HasColumnType("date");
+
+                    b.Property<string>("ConcurrencyStamp")
+                        .IsConcurrencyToken()
+                        .HasColumnType("text");
+
+                    b.Property<string>("Email")
+                        .HasMaxLength(256)
+                        .HasColumnType("character varying(256)");
+
+                    b.Property<bool>("EmailConfirmed")
+                        .HasColumnType("boolean");
+
+                    b.Property<bool>("LockoutEnabled")
+                        .HasColumnType("boolean");
+
+                    b.Property<DateTimeOffset?>("LockoutEnd")
                         .HasColumnType("timestamp with time zone");
 
-                    b.Property<DateTime>("LastActivity")
-                        .HasColumnType("timestamp with time zone");
+                    b.Property<string>("NormalizedEmail")
+                        .HasMaxLength(256)
+                        .HasColumnType("character varying(256)");
+
+                    b.Property<string>("NormalizedUserName")
+                        .HasMaxLength(256)
+                        .HasColumnType("character varying(256)");
 
                     b.Property<string>("PasswordHash")
                         .HasColumnType("text");
 
+                    b.Property<string>("PhoneNumber")
+                        .HasColumnType("text");
+
+                    b.Property<bool>("PhoneNumberConfirmed")
+                        .HasColumnType("boolean");
+
+                    b.Property<string>("SecurityStamp")
+                        .HasColumnType("text");
+
+                    b.Property<bool>("TwoFactorEnabled")
+                        .HasColumnType("boolean");
+
+                    b.Property<string>("UserName")
+                        .HasMaxLength(256)
+                        .HasColumnType("character varying(256)");
+
                     b.HasKey("Id");
 
-                    b.ToTable("Users");
+                    b.HasIndex("NormalizedEmail")
+                        .HasDatabaseName("EmailIndex");
 
-                    b.HasCheckConstraint("CC_FirstActivityLastActivity", "\"FirstActivity\" <= \"LastActivity\"");
+                    b.HasIndex("NormalizedUserName")
+                        .IsUnique()
+                        .HasDatabaseName("UserNameIndex");
+
+                    b.ToTable("AspNetUsers", "Identity");
+                });
+
+            modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRoleClaim<int>", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("integer");
+
+                    NpgsqlPropertyBuilderExtensions.UseIdentityByDefaultColumn(b.Property<int>("Id"));
+
+                    b.Property<string>("ClaimType")
+                        .HasColumnType("text");
+
+                    b.Property<string>("ClaimValue")
+                        .HasColumnType("text");
+
+                    b.Property<int>("RoleId")
+                        .HasColumnType("integer");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("RoleId");
+
+                    b.ToTable("RoleClaims", "Identity");
+                });
+
+            modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityUserClaim<int>", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("integer");
+
+                    NpgsqlPropertyBuilderExtensions.UseIdentityByDefaultColumn(b.Property<int>("Id"));
+
+                    b.Property<string>("ClaimType")
+                        .HasColumnType("text");
+
+                    b.Property<string>("ClaimValue")
+                        .HasColumnType("text");
+
+                    b.Property<int>("UserId")
+                        .HasColumnType("integer");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("UserId");
+
+                    b.ToTable("UserClaims", "Identity");
+                });
+
+            modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityUserLogin<int>", b =>
+                {
+                    b.Property<string>("LoginProvider")
+                        .HasColumnType("text");
+
+                    b.Property<string>("ProviderKey")
+                        .HasColumnType("text");
+
+                    b.Property<string>("ProviderDisplayName")
+                        .HasColumnType("text");
+
+                    b.Property<int>("UserId")
+                        .HasColumnType("integer");
+
+                    b.HasKey("LoginProvider", "ProviderKey");
+
+                    b.HasIndex("UserId");
+
+                    b.ToTable("UserLogins", "Identity");
+                });
+
+            modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityUserRole<int>", b =>
+                {
+                    b.Property<int>("UserId")
+                        .HasColumnType("integer");
+
+                    b.Property<int>("RoleId")
+                        .HasColumnType("integer");
+
+                    b.HasKey("UserId", "RoleId");
+
+                    b.HasIndex("RoleId");
+
+                    b.ToTable("UserRoles", "Identity");
+                });
+
+            modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityUserToken<int>", b =>
+                {
+                    b.Property<int>("UserId")
+                        .HasColumnType("integer");
+
+                    b.Property<string>("LoginProvider")
+                        .HasColumnType("text");
+
+                    b.Property<string>("Name")
+                        .HasColumnType("text");
+
+                    b.Property<string>("Value")
+                        .HasColumnType("text");
+
+                    b.HasKey("UserId", "LoginProvider", "Name");
+
+                    b.ToTable("UserTokens", "Identity");
                 });
 
             modelBuilder.Entity("PermissionUser", b =>
@@ -547,7 +657,7 @@ namespace Infrastructure.Migrations
 
                     b.HasIndex("UsersId");
 
-                    b.ToTable("PermissionUser");
+                    b.ToTable("PermissionUser", "Identity");
                 });
 
             modelBuilder.Entity("Domain.Entities.Base.FieldRestrictions.InputDateField", b =>
@@ -572,7 +682,7 @@ namespace Infrastructure.Migrations
 
                     b.HasIndex("InputFieldId");
 
-                    b.ToTable("InputDateField");
+                    b.ToTable("InputDateField", "Identity");
                 });
 
             modelBuilder.Entity("Domain.Entities.Base.FieldRestrictions.InputNumberField", b =>
@@ -597,7 +707,7 @@ namespace Infrastructure.Migrations
 
                     b.HasIndex("InputFieldId");
 
-                    b.ToTable("InputNumberField");
+                    b.ToTable("InputNumberField", "Identity");
                 });
 
             modelBuilder.Entity("Domain.Entities.Base.FieldRestrictions.InputNumberPhoneField", b =>
@@ -619,7 +729,7 @@ namespace Infrastructure.Migrations
 
                     b.HasIndex("InputFieldId");
 
-                    b.ToTable("InputNumberPhoneField");
+                    b.ToTable("InputNumberPhoneField", "Identity");
                 });
 
             modelBuilder.Entity("Domain.Entities.Base.FieldRestrictions.InputTextField", b =>
@@ -644,7 +754,7 @@ namespace Infrastructure.Migrations
 
                     b.HasIndex("InputFieldId");
 
-                    b.ToTable("InputTextField");
+                    b.ToTable("InputTextField", "Identity");
                 });
 
             modelBuilder.Entity("Domain.Entities.Base.Application", b =>
@@ -742,7 +852,46 @@ namespace Infrastructure.Migrations
                         .WithMany("Values")
                         .HasForeignKey("SelectSubmissionId");
 
+                    b.OwnsOne("Domain.Entities.Complex.FieldStyle", "Style", b1 =>
+                        {
+                            b1.Property<int>("FieldSetId")
+                                .HasColumnType("integer");
+
+                            b1.Property<int>("Order")
+                                .HasColumnType("integer");
+
+                            b1.HasKey("FieldSetId");
+
+                            b1.ToTable("FieldSet", "Identity");
+
+                            b1.WithOwner()
+                                .HasForeignKey("FieldSetId");
+                        });
+
                     b.Navigation("ApplicationGroup");
+
+                    b.Navigation("Style");
+                });
+
+            modelBuilder.Entity("Domain.Entities.Base.FieldTypes.InputField", b =>
+                {
+                    b.OwnsOne("Domain.Entities.Complex.FieldStyle", "Style", b1 =>
+                        {
+                            b1.Property<int>("InputFieldId")
+                                .HasColumnType("integer");
+
+                            b1.Property<int>("Order")
+                                .HasColumnType("integer");
+
+                            b1.HasKey("InputFieldId");
+
+                            b1.ToTable("InputFields", "Identity");
+
+                            b1.WithOwner()
+                                .HasForeignKey("InputFieldId");
+                        });
+
+                    b.Navigation("Style");
                 });
 
             modelBuilder.Entity("Domain.Entities.Base.FieldTypes.SelectField", b =>
@@ -763,9 +912,27 @@ namespace Infrastructure.Migrations
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
+                    b.OwnsOne("Domain.Entities.Complex.FieldStyle", "Style", b1 =>
+                        {
+                            b1.Property<int>("SelectFieldId")
+                                .HasColumnType("integer");
+
+                            b1.Property<int>("Order")
+                                .HasColumnType("integer");
+
+                            b1.HasKey("SelectFieldId");
+
+                            b1.ToTable("SelectField", "Identity");
+
+                            b1.WithOwner()
+                                .HasForeignKey("SelectFieldId");
+                        });
+
                     b.Navigation("ApplicationGroup");
 
                     b.Navigation("SelectRestriction");
+
+                    b.Navigation("Style");
                 });
 
             modelBuilder.Entity("Domain.Entities.Base.FieldTypes.SelectOption", b =>
@@ -798,6 +965,95 @@ namespace Infrastructure.Migrations
                     b.Navigation("LastApplicationState");
 
                     b.Navigation("NewApplicationState");
+                });
+
+            modelBuilder.Entity("Domain.Entities.Base.RefreshToken", b =>
+                {
+                    b.HasOne("Domain.Entities.Base.User", "User")
+                        .WithMany("RefreshTokens")
+                        .HasForeignKey("UserId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("User");
+                });
+
+            modelBuilder.Entity("Domain.Entities.Base.User", b =>
+                {
+                    b.OwnsOne("Domain.Entities.Complex.PersonName", "PersonName", b1 =>
+                        {
+                            b1.Property<int>("UserId")
+                                .HasColumnType("integer");
+
+                            b1.Property<string>("FirstName")
+                                .HasColumnType("text");
+
+                            b1.Property<string>("LastName")
+                                .HasColumnType("text");
+
+                            b1.Property<string>("Patronymic")
+                                .HasColumnType("text");
+
+                            b1.HasKey("UserId");
+
+                            b1.ToTable("AspNetUsers", "Identity");
+
+                            b1.WithOwner()
+                                .HasForeignKey("UserId");
+                        });
+
+                    b.Navigation("PersonName");
+                });
+
+            modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRoleClaim<int>", b =>
+                {
+                    b.HasOne("Domain.Entities.Base.Role", null)
+                        .WithMany()
+                        .HasForeignKey("RoleId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+                });
+
+            modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityUserClaim<int>", b =>
+                {
+                    b.HasOne("Domain.Entities.Base.User", null)
+                        .WithMany()
+                        .HasForeignKey("UserId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+                });
+
+            modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityUserLogin<int>", b =>
+                {
+                    b.HasOne("Domain.Entities.Base.User", null)
+                        .WithMany()
+                        .HasForeignKey("UserId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+                });
+
+            modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityUserRole<int>", b =>
+                {
+                    b.HasOne("Domain.Entities.Base.Role", null)
+                        .WithMany()
+                        .HasForeignKey("RoleId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("Domain.Entities.Base.User", null)
+                        .WithMany()
+                        .HasForeignKey("UserId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+                });
+
+            modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityUserToken<int>", b =>
+                {
+                    b.HasOne("Domain.Entities.Base.User", null)
+                        .WithMany()
+                        .HasForeignKey("UserId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
                 });
 
             modelBuilder.Entity("PermissionUser", b =>
@@ -988,6 +1244,8 @@ namespace Infrastructure.Migrations
             modelBuilder.Entity("Domain.Entities.Base.User", b =>
                 {
                     b.Navigation("Applications");
+
+                    b.Navigation("RefreshTokens");
 
                     b.Navigation("Submissions");
                 });

@@ -1,4 +1,5 @@
 ﻿using Domain.Entities.Base;
+using Domain.Enums;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
 using System;
@@ -17,34 +18,37 @@ namespace Infrastructure.Persistence.Configurations
             {
                 new ApplicationState()
                 {
-                    Id = 1,
+                    Id = (int)ApplicationStates.Draft,
                     Name="Черновик"
                 },
 
                 new ApplicationState()
                 {
-                    Id = 2,
+                    Id = (int)ApplicationStates.Checked,
                     Name = "На проверке"
                 },
 
                 new ApplicationState()
                 {
-                    Id = 3,
+                    Id = (int)ApplicationStates.Rejected,
                     Name = "Отклонено"
                 },
 
                 new ApplicationState()
                 {
-                    Id = 4,
+                    Id = (int)ApplicationStates.Modification,
                     Name = "Отправлено на доработку"
                 },
 
                  new ApplicationState()
                 {
-                    Id = 5,
+                    Id = (int)ApplicationStates.Accepted,
                     Name = "Согласовано"
                 }
             });
+
+            builder.HasIndex(it => it.Name).IsUnique();
+            builder.Property(it => it.Name).IsRequired().HasMaxLength(150);
         }
     }
 }

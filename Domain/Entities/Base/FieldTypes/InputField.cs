@@ -1,6 +1,7 @@
 ﻿using Domain.Entities.Base.FieldRestrictions;
 using Domain.Entities.Base.UnderTypes;
 using Domain.Entities.Common;
+using Domain.Enums;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations.Schema;
@@ -12,6 +13,6 @@ namespace Domain.Entities.Base.FieldTypes
 {
     public class InputField : Field
     {
-
+        public InputUnderTypes InputUnderTypeId;
     }
 }

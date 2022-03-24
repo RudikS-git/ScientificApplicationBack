@@ -1,5 +1,7 @@
 ﻿using App.Common.Interfaces;
+using Domain.Settings;
 using Infrastructure.Persistence;
+using Infrastructure.Services;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
@@ -20,6 +22,9 @@ namespace Infrastructure
                 options.UseNpgsql(connection));
 
             services.AddScoped<IApplicationContext>(provider => provider.GetService<ApplicationContext>());
+
+            services.Configure<MailSettings>(configuration.GetSection("MailSettings"));
+            services.AddTransient<IEmailService, EmailService>();
 
             return services;
         }

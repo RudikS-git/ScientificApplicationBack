@@ -11,6 +11,7 @@ using Microsoft.EntityFrameworkCore;
 using MapsterMapper;
 using Mapster;
 using App.Applications.DTOs;
+using App.InputFields.DTOs;
 
 namespace App.Applications.Queries
 {
@@ -31,15 +32,17 @@ namespace App.Applications.Queries
     public class GetApplicationByIdHandler : IRequestHandlerWrapper<GetApplicationByIdQuery, ApplicationDetailsDto>
     {
         private readonly IApplicationContext _context;
+        private readonly IMapper _mapper;
 
-        public GetApplicationByIdHandler(IApplicationContext context)
+        public GetApplicationByIdHandler(IApplicationContext context, IMapper mapper)
         {
             _context = context;
+            _mapper = mapper;
         }
 
         public async Task<ServiceResult<ApplicationDetailsDto>> Handle(GetApplicationByIdQuery query, CancellationToken cancellationToken)
         {
-            ApplicationDetailsDto application = await _context.Applications
+            var application = await _context.Applications
                 .Include(it => it.FieldGroups)
                 .ThenInclude(it => it.SelectFields)
 
@@ -59,17 +62,26 @@ namespace App.Applications.Queries
                 .ThenInclude(it => it.FieldSets)
 
                 .Where(it => it.Id == query.id)
-                .ProjectToType<ApplicationDetailsDto>()
+               /* .ProjectToType<ApplicationDetailsDto>()*/
                 .FirstOrDefaultAsync(cancellationToken);
 
-            
-            
             if (application == null)
             {
                 return ServiceResult.Failed<ApplicationDetailsDto>(ServiceError.NotFound);
             }
 
-            return ServiceResult.Success(application);
+            var appDto = _mapper.Map<ApplicationDetailsDto>(application);
+
+            appDto.ApplicationGroups.ForEach(it =>
+            {
+                it.Fields = new List<InputFieldDto>(it.InputTextFields);
+                it.Fields.AddRange(it.InputNumberFields);
+                it.Fields.AddRange(it.InputNumberPhoneFields);
+                it.Fields.AddRange(it.InputNumberPhoneFields);
+                it.Fields = it.Fields.OrderBy(it => it.Id).ToList();
+            });
+
+            return ServiceResult.Success(appDto);
         }
     }
 }

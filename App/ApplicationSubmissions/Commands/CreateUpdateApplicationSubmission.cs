@@ -8,12 +8,7 @@ using App.Common.Interfaces;
 using Domain.Entities.Base;
 using MediatR;
 using Microsoft.Extensions.Localization;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
 using System.Threading;
-using System.Threading.Tasks;
 using App.Applications.DTOs;
 using MapsterMapper;
 using Mapster;
@@ -48,19 +43,16 @@ namespace App.ApplicationSubmissions.Commands
             {
                 Id = request.Id,
                 Name = request.Name,
-                Created = DateTime.Now.ToUniversalTime(),
-                Updated = DateTime.Now.ToUniversalTime(),
                 Description = request.Description,
                 FieldGroups = mapper.Map<List<ApplicationGroup>>(request.Groups)
             };
 
-            if (application.Id != 0) // update
+            if (application.Id != 0)
             {
                 applicationContext.Applications.Update(application);
             }
-            else // create
+            else
             {
-                application.Created = DateTime.Now.ToUniversalTime();
                 await applicationContext.Applications.AddAsync(application);
             }
 

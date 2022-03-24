@@ -6,14 +6,14 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 
 namespace App.Common.Interfaces
 {
     public interface IApplicationContext
     {
-        public DbSet<User> Users { get; set; }
-
+        public DbSet<RefreshToken> RefreshTokens { get; set; }
         public DbSet<Application> Applications { get; set; }
         public DbSet<ApplicationState> ApplicationStates { get; set; }
         public DbSet<ApplicationSubmission> Submissions { get; set; }
@@ -30,7 +30,7 @@ namespace App.Common.Interfaces
         public DbSet<InputTextField> InputInputTextRestrictions { get; set; }
         public DbSet<InputNumberPhoneField> InputNumberPhoneRestrictions { get; set; }
 
-        Task<int> SaveChangesAsync();
+        Task<int> SaveChangesAsync(CancellationToken cancellationToken = new CancellationToken());
         
     }
 }

@@ -13,16 +13,19 @@ using System.Threading.Tasks;
 using App.Applications.DTOs;
 using App.Applications.Queries;
 using App.SelectFields.Commands;
+using Microsoft.AspNetCore.Authorization;
+using Domain.Entities.Enums;
 
 namespace ScienceResearchPA.Controllers
 {
+    [Authorize("Admin")]
     [Route("api/[controller]")]
     [ApiController]
     public class ApplicationController : BaseApiController
     {
         // GET: api/<InnovativeDevelopmentController>
         [HttpGet("{page}/{pageSize}")]
-        public async Task<ActionResult> Get(int page, int pageSize, [FromQuery]ApplicationQueryParamsDto filterParams, CancellationToken cancellationToken)
+        public async Task<ActionResult> Get([FromQuery] ApplicationQueryParamsDto filterParams, CancellationToken cancellationToken, int page = 1, int pageSize = 15)
         {
             return Ok(await Mediator.Send(new GetApplicationsQuery(page, pageSize, filterParams), cancellationToken));
         }

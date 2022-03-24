@@ -1,8 +1,10 @@
 ﻿using App.FieldSets.DTOs;
+using App.InputFields.DTOs;
 using App.InputFields.DTOs.InputFields;
 using App.SelectFields.DTOs;
 using Domain.Entities.Base;
 using Mapster;
+using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -16,9 +18,18 @@ namespace App.Applications.DTOs
         public int Id { get; set; }
         public string Name { get; set; }
 
+        public List<InputFieldDto> Fields { get; set; }
+
+        [JsonIgnore]
         public List<InputTextFieldDto> InputTextFields { get; set; }
+
+        [JsonIgnore]
         public List<InputDateFieldDto> InputDataFields { get; set; }
+
+        [JsonIgnore]
         public List<InputNumberFieldDto> InputNumberFields { get; set; }
+
+        [JsonIgnore]
         public List<InputNumberPhoneFieldDto> InputNumberPhoneFields { get; set; }
 
         public List<SelectFieldDto> SelectFields { get; set; }

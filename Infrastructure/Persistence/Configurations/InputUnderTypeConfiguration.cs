@@ -6,6 +6,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Domain.Enums;
 
 namespace Infrastructure.Persistence.Configurations
 {
@@ -17,51 +18,58 @@ namespace Infrastructure.Persistence.Configurations
             {
                 new InputUnderType()
                 {
-                    Id = 1,
+                    Id = (int)InputUnderTypes.Text,
                     Name="Text"
                 },
 
                 new InputUnderType()
                 {
-                    Id = 2,
+                    Id = (int)InputUnderTypes.Date,
                     Name = "Date"
                 },
 
                 new InputUnderType()
                 {
-                    Id = 3,
+                    Id = (int)InputUnderTypes.Time,
                     Name = "Time"
                 },
 
                 new InputUnderType()
                 {
-                    Id = 4,
+                    Id = (int)InputUnderTypes.DateTime,
                     Name = "DateTime"
                 },
 
                 new InputUnderType()
                 {
-                    Id = 5,
+                    Id = (int)InputUnderTypes.NumberPhone,
                     Name = "NumberPhone"
                 },
 
                 new InputUnderType()
                 {
-                    Id = 6,
+                    Id = (int)InputUnderTypes.Email,
                     Name = "Email"
                 },
 
                 new InputUnderType()
                 {
-                    Id = 7,
+                    Id = (int)InputUnderTypes.Number,
                     Name = "Number"
                 },
 
                 new InputUnderType()
                 {
-                    Id = 8,
+                    Id = (int)InputUnderTypes.FloatNumber,
                     Name = "Float number"
                 },
+
+                new InputUnderType()
+                {
+                    Id = (int)InputUnderTypes.File,
+                    Name = "File"
+                },
+
             });
         }
     }
