@@ -18,7 +18,7 @@ using Domain.Entities.Enums;
 
 namespace ScienceResearchPA.Controllers
 {
-    [Authorize("Admin")]
+    [Authorize(Roles = "Admin")]
     [Route("api/[controller]")]
     [ApiController]
     public class ApplicationController : BaseApiController
@@ -32,21 +32,21 @@ namespace ScienceResearchPA.Controllers
 
         // GET api/<InnovativeDevelopmentController>/5
         [HttpGet("{id}")]
-        public async Task<ActionResult<ServiceResult<int>>> Get([FromRoute]GetApplicationByIdQuery query, CancellationToken cancellationToken)
+        public async Task<ActionResult> Get([FromRoute]GetApplicationByIdQuery query, CancellationToken cancellationToken)
         {
            return Ok(await Mediator.Send(query, cancellationToken));
         }
 
         // POST api/<InnovativeDevelopmentController>
         [HttpPost]
-        public async Task<ActionResult<ServiceResult<int>>> Post(CreateApplicationCommand command, CancellationToken cancellationToken)
+        public async Task<ActionResult> Post(CreateApplicationCommand command, CancellationToken cancellationToken)
         {
             return Ok(await Mediator.Send(command, cancellationToken));
         }
 
         // PUT api/<InnovativeDevelopmentController>/5
         [HttpPut("{id}")]
-        public async Task<ActionResult<ServiceResult<int>>> Put(int id, [FromBody]CreateApplicationCommand command, CancellationToken cancellationToken)
+        public async Task<ActionResult> Put(int id, [FromBody]CreateApplicationCommand command, CancellationToken cancellationToken)
         {
             return Ok(await Mediator.Send(command, cancellationToken));
         }
@@ -55,6 +55,7 @@ namespace ScienceResearchPA.Controllers
         [HttpDelete("{id}")]
         public void Delete(int id)
         {
+
         }
 
         [HttpGet("states")]

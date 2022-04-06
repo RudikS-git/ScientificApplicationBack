@@ -12,6 +12,6 @@ namespace Domain.Entities.Base.FieldSubmissions
         public int SelectFieldId { get; set; }
         public SelectField SelectField { get; set; }
 
-        public List<FieldSet> Values { get; set; }
+        public List<SelectSubmissonOptions> Values { get; set; }
     }
 }

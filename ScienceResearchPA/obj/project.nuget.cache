@@ -1,11 +1,13 @@
 {
   "version": 2,
-  "dgSpecHash": "zyyD6FniZ2yISY0YG6U3SpqAEJw/fvqk5kTii8ZpKl00pa7Mhp6erJBgOygdX92i7lfpAkE/oYHYlbZXCD9chA==",
+  "dgSpecHash": "pAyAcQ4ltZyvT+jWDtORdkIwRd1YYfobY8VbepbZx8sVwaAqR5efN6Tgy9E/JnMhLjJJevg+BKxVDWyji9/VRQ==",
   "success": true,
   "projectFilePath": "C:\\Users\\rudik\\source\\repos\\ScienceResearchPA\\ScienceResearchPA\\ScienceResearchPA.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\rudik\\.nuget\\packages\\automapper\\11.0.1\\automapper.11.0.1.nupkg.sha512",
     "C:\\Users\\rudik\\.nuget\\packages\\fluentvalidation\\10.4.0\\fluentvalidation.10.4.0.nupkg.sha512",
+    "C:\\Users\\rudik\\.nuget\\packages\\fluentvalidation.aspnetcore\\10.4.0\\fluentvalidation.aspnetcore.10.4.0.nupkg.sha512",
+    "C:\\Users\\rudik\\.nuget\\packages\\fluentvalidation.dependencyinjectionextensions\\10.4.0\\fluentvalidation.dependencyinjectionextensions.10.4.0.nupkg.sha512",
     "C:\\Users\\rudik\\.nuget\\packages\\humanizer.core\\2.8.26\\humanizer.core.2.8.26.nupkg.sha512",
     "C:\\Users\\rudik\\.nuget\\packages\\identitymodel\\4.4.0\\identitymodel.4.4.0.nupkg.sha512",
     "C:\\Users\\rudik\\.nuget\\packages\\identityserver4\\4.1.2\\identityserver4.4.1.2.nupkg.sha512",

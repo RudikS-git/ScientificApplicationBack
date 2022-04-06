@@ -9,7 +9,7 @@ namespace App.Common.Interfaces
 {
     public interface ITokenService
     {
-        string CreateJwtSecurityToken(User user);
+        string CreateJwtSecurityToken(User user, IList<string> roles);
         RefreshToken CreateJwtRefreshToken(string ip);
     }
 }

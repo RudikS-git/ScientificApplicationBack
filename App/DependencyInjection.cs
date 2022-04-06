@@ -9,6 +9,8 @@ using System.Text;
 using System.Threading.Tasks;
 using MapsterMapper;
 using Mapster;
+using FluentValidation;
+using FluentValidation.AspNetCore;
 
 namespace App
 {
@@ -18,8 +20,9 @@ namespace App
         {
             services.AddSingleton(GetConfiguredMappingConfig());
             services.AddScoped<IMapper, ServiceMapper>();
+            services.AddValidatorsFromAssembly(Assembly.GetExecutingAssembly());
 
-        //    services.AddValidatorsFromAssembly(Assembly.GetExecutingAssembly());
+            //    services.AddValidatorsFromAssembly(Assembly.GetExecutingAssembly());
             services.AddMediatR(AppDomain.CurrentDomain.GetAssemblies());
           //  services.AddTransient(typeof(IPipelineBehavior<,>), typeof(AuthorizationBehaviour<,>));
           //  services.AddTransient(typeof(IPipelineBehavior<,>), typeof(PerformanceBehaviour<,>));

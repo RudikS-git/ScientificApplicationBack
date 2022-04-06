@@ -28,7 +28,7 @@ namespace Infrastructure.Persistence
 
         public DbSet<Application> Applications { get; set; }
         public DbSet<ApplicationState> ApplicationStates { get; set; }
-        public DbSet<ApplicationSubmission> Submissions { get; set; }
+        public DbSet<ApplicationSubmission> ApplicationSubmissions { get; set; }
 
         public DbSet<FieldType> FieldTypes { get; set; }
 

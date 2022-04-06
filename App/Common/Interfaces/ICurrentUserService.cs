@@ -8,7 +8,7 @@ namespace App.Common.Interfaces
 {
     public interface ICurrentUserService
     {
-        string UserId { get; set; }
+        int UserId { get; set; }
         public string IpAddress { get; set; }
     }
 }

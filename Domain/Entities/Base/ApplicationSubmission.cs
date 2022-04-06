@@ -8,13 +8,15 @@ using System.Threading.Tasks;
 
 namespace Domain.Entities.Base
 {
-    public class ApplicationSubmission : BaseEntity
+    public class ApplicationSubmission : AuditableBaseEntity
     {
         public int ApplicationId { get; set; }
         public Application Application { get; set; }
         
         public int UserId { get; set; }
         public User User { get; set; }
+
+        public string Name { get; set; }
 
         public ApplicationState ApplicationState { get; set; }
         public List<HistoryApplicationState> HistoryApplicationStates { get; set; }

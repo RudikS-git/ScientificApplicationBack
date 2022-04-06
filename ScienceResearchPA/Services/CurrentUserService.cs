@@ -6,12 +6,12 @@ namespace ScienceResearchPA.Services
 {
     public class CurrentUserService : ICurrentUserService
     {
-        public string UserId { get; set; }
+        public int UserId { get; set; }
         public string IpAddress { get; set; }
 
         public CurrentUserService(IHttpContextAccessor httpContextAccessor)
         {
-            UserId = httpContextAccessor.HttpContext?.User?.FindFirstValue(ClaimTypes.NameIdentifier);
+            UserId = GetUserId(httpContextAccessor);
             IpAddress = GenerateIPAddress(httpContextAccessor.HttpContext.Request);
         }
 
@@ -21,6 +21,12 @@ namespace ScienceResearchPA.Services
                 return httpRequest.Headers["X-Forwarded-For"];
             else
                 return httpRequest.HttpContext.Connection.RemoteIpAddress.MapToIPv4().ToString();
+        }
+
+        private int GetUserId(IHttpContextAccessor httpContextAccessor)
+        {
+            int.TryParse(httpContextAccessor.HttpContext?.User?.FindFirstValue("id"), out int userId);
+            return userId;
         }
     }
 

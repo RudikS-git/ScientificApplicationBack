@@ -48,7 +48,9 @@ namespace Infrastructure.Persistence.Configurations
             });
 
             builder.HasIndex(it => it.Name).IsUnique();
-            builder.Property(it => it.Name).IsRequired().HasMaxLength(150);
+            builder.Property(it => it.Name).IsRequired()
+                .HasMaxLength(150)
+                .HasDefaultValue(ApplicationStates.Draft);
         }
     }
 }

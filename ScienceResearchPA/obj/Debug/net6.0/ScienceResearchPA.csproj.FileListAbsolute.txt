@@ -92,3 +92,5 @@ C:\Users\rudik\source\repos\ScienceResearchPA\ScienceResearchPA\bin\Debug\net6.0
 C:\Users\rudik\source\repos\ScienceResearchPA\ScienceResearchPA\bin\Debug\net6.0\Serilog.Sinks.Console.dll
 C:\Users\rudik\source\repos\ScienceResearchPA\ScienceResearchPA\bin\Debug\net6.0\Serilog.Sinks.Debug.dll
 C:\Users\rudik\source\repos\ScienceResearchPA\ScienceResearchPA\bin\Debug\net6.0\Serilog.Sinks.File.dll
+C:\Users\rudik\source\repos\ScienceResearchPA\ScienceResearchPA\bin\Debug\net6.0\FluentValidation.AspNetCore.dll
+C:\Users\rudik\source\repos\ScienceResearchPA\ScienceResearchPA\bin\Debug\net6.0\FluentValidation.DependencyInjectionExtensions.dll

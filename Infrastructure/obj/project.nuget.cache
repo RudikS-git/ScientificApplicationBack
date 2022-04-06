@@ -1,10 +1,12 @@
 {
   "version": 2,
-  "dgSpecHash": "dv741dij1gZCfD4w7UFJX22MhJJ/5UXuWiO4Gehhcynia3UgNembUnGL29VZk50vxJ3S6vX/tSVJV1nuTUkxvA==",
+  "dgSpecHash": "nU9ysJeW39CEfDZRtc2Bq9yZCfknQTjhBAtuT5Dr+WMNY9VJ6OIMo7cL95/S1/vjKMpLc/5Pg+BUVNG9vC1RWQ==",
   "success": true,
   "projectFilePath": "C:\\Users\\rudik\\source\\repos\\ScienceResearchPA\\Infrastructure\\Infrastructure.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\rudik\\.nuget\\packages\\fluentvalidation\\10.4.0\\fluentvalidation.10.4.0.nupkg.sha512",
+    "C:\\Users\\rudik\\.nuget\\packages\\fluentvalidation.aspnetcore\\10.4.0\\fluentvalidation.aspnetcore.10.4.0.nupkg.sha512",
+    "C:\\Users\\rudik\\.nuget\\packages\\fluentvalidation.dependencyinjectionextensions\\10.4.0\\fluentvalidation.dependencyinjectionextensions.10.4.0.nupkg.sha512",
     "C:\\Users\\rudik\\.nuget\\packages\\identitymodel\\4.4.0\\identitymodel.4.4.0.nupkg.sha512",
     "C:\\Users\\rudik\\.nuget\\packages\\identityserver4\\4.1.2\\identityserver4.4.1.2.nupkg.sha512",
     "C:\\Users\\rudik\\.nuget\\packages\\identityserver4.storage\\4.1.2\\identityserver4.storage.4.1.2.nupkg.sha512",

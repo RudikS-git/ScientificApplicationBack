@@ -1,6 +1,7 @@
 ﻿using Domain.Entities.Base;
 using Domain.Entities.Base.FieldRestrictions;
 using Domain.Entities.Base.FieldTypes;
+using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
@@ -13,10 +14,11 @@ namespace App.Common.Interfaces
 {
     public interface IApplicationContext
     {
+        public DbSet<User> Users { get; set; }
         public DbSet<RefreshToken> RefreshTokens { get; set; }
         public DbSet<Application> Applications { get; set; }
         public DbSet<ApplicationState> ApplicationStates { get; set; }
-        public DbSet<ApplicationSubmission> Submissions { get; set; }
+        public DbSet<ApplicationSubmission> ApplicationSubmissions { get; set; }
 
         public DbSet<FieldType> FieldTypes { get; set; }
         public DbSet<InputField> InputFields { get; set; }

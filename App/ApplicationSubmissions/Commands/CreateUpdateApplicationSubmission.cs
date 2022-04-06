@@ -13,52 +13,61 @@ using App.Applications.DTOs;
 using MapsterMapper;
 using Mapster;
 using Microsoft.EntityFrameworkCore;
+using App.ApplicationSubmissions.DTOs;
+using Domain.Entities.Base.FieldSubmissions;
+using Domain.Enums;
 
 namespace App.ApplicationSubmissions.Commands
 {
-    public class CreateUpdateApplicationSubmissionCommand : IRequestWrapper<Application>
+    public class CreateUpdateApplicationSubmissionCommand : IRequestWrapper<ApplicationSubmissionDto>
     {
-        public int Id { get; set; }
-        public string Name { get; set; }
-        public string Description { get; set; }
-        public List<ApplicationGroupRequest> Groups { get; set; }
+        public ApplicationSubmissionDto ApplicationSubmission { get; set; }
     }
 
-    class CreateUpdateApplicationSubmissionCommandHandler : IRequestHandlerWrapper<CreateUpdateApplicationSubmissionCommand, Application>
+    class CreateUpdateApplicationSubmissionCommandHandler : IRequestHandlerWrapper<CreateUpdateApplicationSubmissionCommand, ApplicationSubmissionDto>
     {
         private readonly IApplicationContext applicationContext;
         private readonly IStringLocalizer<SharedResource> localizer;
         private readonly IMapper mapper;
+        private readonly ICurrentUserService _userService;
 
-        public CreateUpdateApplicationSubmissionCommandHandler(IApplicationContext applicationContext, IStringLocalizer<SharedResource> localizer, IMapper mapper)
+        public CreateUpdateApplicationSubmissionCommandHandler(IApplicationContext applicationContext, 
+            IStringLocalizer<SharedResource> localizer, 
+            IMapper mapper,
+            ICurrentUserService userService)
         {
             this.applicationContext = applicationContext;
             this.localizer = localizer;
             this.mapper = mapper;
+            _userService = userService;
         }
 
-        public async Task<ServiceResult<Application>> Handle(CreateUpdateApplicationSubmissionCommand request, CancellationToken cancellationToken)
+        public async Task<ServiceResult<ApplicationSubmissionDto>> Handle(CreateUpdateApplicationSubmissionCommand request, CancellationToken cancellationToken)
         {
-            var application = new Application()
-            {
-                Id = request.Id,
-                Name = request.Name,
-                Description = request.Description,
-                FieldGroups = mapper.Map<List<ApplicationGroup>>(request.Groups)
-            };
+            var applicationSubmission = mapper.Map<ApplicationSubmission>(request.ApplicationSubmission);
 
-            if (application.Id != 0)
+            applicationSubmission.SelectSubmissions = request.ApplicationSubmission.SelectSubmissions.Select(it =>
+                new SelectSubmission()
+                {
+                    SelectFieldId = it.SelectFieldId,
+                    Values = it.ValuesId.Select(value => new SelectSubmissonOptions() { SelectOptionId = value }).ToList()
+                }
+            ).ToList();
+
+            applicationSubmission.UserId = _userService.UserId;
+
+            if (applicationSubmission.Id != 0)
             {
-                applicationContext.Applications.Update(application);
+                applicationContext.ApplicationSubmissions.Update(applicationSubmission);
             }
             else
             {
-                await applicationContext.Applications.AddAsync(application);
+                await applicationContext.ApplicationSubmissions.AddAsync(applicationSubmission);
             }
 
             await applicationContext.SaveChangesAsync();
 
-            return ServiceResult.Success(application);
+            return ServiceResult.Success(mapper.Map<ApplicationSubmissionDto>(applicationSubmission));
         }
     }
 }

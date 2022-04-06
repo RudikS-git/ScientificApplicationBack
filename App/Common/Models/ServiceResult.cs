@@ -1,4 +1,5 @@
-﻿using System;
+﻿using App.ApplicationSubmissions.Queries;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -47,6 +48,11 @@ namespace App.Common.Models
         public static ServiceResult Failed(ServiceError error)
         {
             return new ServiceResult(error);
+        }
+
+        public static ServiceResult Success()
+        {
+            return new ServiceResult();
         }
 
         public static ServiceResult<T> Failed<T>(ServiceError error)

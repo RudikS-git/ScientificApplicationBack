@@ -42,7 +42,7 @@ namespace ScienceResearchPA.Filters
 
             if (!context.ModelState.IsValid)
             {
-           //     HandleInvalidModelStateException(context);
+            //    HandleInvalidModelStateException(context);
                 return;
             }
 
@@ -73,7 +73,7 @@ namespace ScienceResearchPA.Filters
             context.ExceptionHandled = true;
         }
 
-        /*private static void HandleInvalidModelStateException(ExceptionContext context)
+       /* private static void HandleInvalidModelStateException(ExceptionContext context)
         {
             var exception = new ValidateModelException(context.ModelState);
 

@@ -118,8 +118,17 @@ namespace Infrastructure.Migrations
                     b.Property<int?>("ApplicationStateId")
                         .HasColumnType("integer");
 
+                    b.Property<DateTime>("Created")
+                        .HasColumnType("timestamp with time zone");
+
                     b.Property<bool>("IsRemoved")
                         .HasColumnType("boolean");
+
+                    b.Property<string>("Name")
+                        .HasColumnType("text");
+
+                    b.Property<DateTime>("Updated")
+                        .HasColumnType("timestamp with time zone");
 
                     b.Property<int>("UserId")
                         .HasColumnType("integer");
@@ -132,7 +141,7 @@ namespace Infrastructure.Migrations
 
                     b.HasIndex("UserId");
 
-                    b.ToTable("Submissions", "Identity");
+                    b.ToTable("ApplicationSubmissions", "Identity");
                 });
 
             modelBuilder.Entity("Domain.Entities.Base.FieldRestrictions.SelectRestriction", b =>
@@ -162,10 +171,10 @@ namespace Infrastructure.Migrations
 
                     NpgsqlPropertyBuilderExtensions.UseIdentityByDefaultColumn(b.Property<int>("Id"));
 
-                    b.Property<int>("InputFieldId")
+                    b.Property<int>("ApplicationSubmissionId")
                         .HasColumnType("integer");
 
-                    b.Property<int>("SubmissionId")
+                    b.Property<int>("InputFieldId")
                         .HasColumnType("integer");
 
                     b.Property<string>("Value")
@@ -173,9 +182,9 @@ namespace Infrastructure.Migrations
 
                     b.HasKey("Id");
 
-                    b.HasIndex("InputFieldId");
+                    b.HasIndex("ApplicationSubmissionId");
 
-                    b.HasIndex("SubmissionId");
+                    b.HasIndex("InputFieldId");
 
                     b.ToTable("InputSubmission", "Identity");
                 });
@@ -188,19 +197,42 @@ namespace Infrastructure.Migrations
 
                     NpgsqlPropertyBuilderExtensions.UseIdentityByDefaultColumn(b.Property<int>("Id"));
 
-                    b.Property<int>("SelectFieldId")
+                    b.Property<int>("ApplicationSubmissionId")
                         .HasColumnType("integer");
 
-                    b.Property<int>("SubmissionId")
+                    b.Property<int>("SelectFieldId")
                         .HasColumnType("integer");
 
                     b.HasKey("Id");
 
+                    b.HasIndex("ApplicationSubmissionId");
+
                     b.HasIndex("SelectFieldId");
 
-                    b.HasIndex("SubmissionId");
-
                     b.ToTable("SelectSubmission", "Identity");
+                });
+
+            modelBuilder.Entity("Domain.Entities.Base.FieldSubmissions.SelectSubmissonOptions", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("integer");
+
+                    NpgsqlPropertyBuilderExtensions.UseIdentityByDefaultColumn(b.Property<int>("Id"));
+
+                    b.Property<int>("SelectOptionId")
+                        .HasColumnType("integer");
+
+                    b.Property<int>("SelectSubmissionId")
+                        .HasColumnType("integer");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("SelectOptionId");
+
+                    b.HasIndex("SelectSubmissionId");
+
+                    b.ToTable("SelectSubmissonOptions", "Identity");
                 });
 
             modelBuilder.Entity("Domain.Entities.Base.FieldType", b =>
@@ -239,17 +271,12 @@ namespace Infrastructure.Migrations
                     b.Property<string>("Label")
                         .HasColumnType("text");
 
-                    b.Property<int?>("SelectSubmissionId")
-                        .HasColumnType("integer");
-
                     b.Property<string>("SystemName")
                         .HasColumnType("text");
 
                     b.HasKey("Id");
 
                     b.HasIndex("ApplicationGroupId");
-
-                    b.HasIndex("SelectSubmissionId");
 
                     b.ToTable("FieldSet", "Identity");
                 });
@@ -804,40 +831,59 @@ namespace Infrastructure.Migrations
 
             modelBuilder.Entity("Domain.Entities.Base.FieldSubmissions.InputSubmission", b =>
                 {
+                    b.HasOne("Domain.Entities.Base.ApplicationSubmission", "ApplicationSubmission")
+                        .WithMany("InputSubmissions")
+                        .HasForeignKey("ApplicationSubmissionId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
                     b.HasOne("Domain.Entities.Base.FieldTypes.InputField", "InputField")
                         .WithMany()
                         .HasForeignKey("InputFieldId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
-                    b.HasOne("Domain.Entities.Base.ApplicationSubmission", "Submission")
-                        .WithMany("InputSubmissions")
-                        .HasForeignKey("SubmissionId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
+                    b.Navigation("ApplicationSubmission");
 
                     b.Navigation("InputField");
-
-                    b.Navigation("Submission");
                 });
 
             modelBuilder.Entity("Domain.Entities.Base.FieldSubmissions.SelectSubmission", b =>
                 {
+                    b.HasOne("Domain.Entities.Base.ApplicationSubmission", "ApplicationSubmission")
+                        .WithMany("SelectSubmissions")
+                        .HasForeignKey("ApplicationSubmissionId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
                     b.HasOne("Domain.Entities.Base.FieldTypes.SelectField", "SelectField")
                         .WithMany()
                         .HasForeignKey("SelectFieldId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
-                    b.HasOne("Domain.Entities.Base.ApplicationSubmission", "Submission")
-                        .WithMany("SelectSubmissions")
-                        .HasForeignKey("SubmissionId")
+                    b.Navigation("ApplicationSubmission");
+
+                    b.Navigation("SelectField");
+                });
+
+            modelBuilder.Entity("Domain.Entities.Base.FieldSubmissions.SelectSubmissonOptions", b =>
+                {
+                    b.HasOne("Domain.Entities.Base.FieldTypes.SelectOption", "SelectOption")
+                        .WithMany()
+                        .HasForeignKey("SelectOptionId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
-                    b.Navigation("SelectField");
+                    b.HasOne("Domain.Entities.Base.FieldSubmissions.SelectSubmission", "SelectSubmission")
+                        .WithMany("Values")
+                        .HasForeignKey("SelectSubmissionId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
 
-                    b.Navigation("Submission");
+                    b.Navigation("SelectOption");
+
+                    b.Navigation("SelectSubmission");
                 });
 
             modelBuilder.Entity("Domain.Entities.Base.FieldTypes.FieldSet", b =>
@@ -847,10 +893,6 @@ namespace Infrastructure.Migrations
                         .HasForeignKey("ApplicationGroupId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
-
-                    b.HasOne("Domain.Entities.Base.FieldSubmissions.SelectSubmission", null)
-                        .WithMany("Values")
-                        .HasForeignKey("SelectSubmissionId");
 
                     b.OwnsOne("Domain.Entities.Complex.FieldStyle", "Style", b1 =>
                         {

@@ -9,7 +9,7 @@ namespace Domain.Entities.Base
 {
     public class FieldSubmission : BaseEntity
     {
-        public int SubmissionId { get; set; }
-        public ApplicationSubmission Submission { get; set; }
+        public int ApplicationSubmissionId { get; set; }
+        public ApplicationSubmission ApplicationSubmission { get; set; }
     }
 }

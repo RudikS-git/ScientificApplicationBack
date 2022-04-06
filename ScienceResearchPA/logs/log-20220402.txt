@@ -1,0 +1,808 @@
+2022-04-02 00:08:10.516 +04:00 [ERR] The foreign key {'ApplicationGroupId'} on the entity type 'InputDateField' targeting 'ApplicationGroup' cannot be represented in the database. Either the properties {'ApplicationGroupId'} aren't mapped to table 'Identity.InputDateField', or the principal properties {'Id'} aren't mapped to table 'Identity.ApplicationGroup'. All foreign key properties must map to the table to which the dependent type is mapped, and all principal properties must map to a single table to which the principal type is mapped.
+2022-04-02 00:08:10.542 +04:00 [ERR] The foreign key {'ApplicationGroupId'} on the entity type 'InputNumberField' targeting 'ApplicationGroup' cannot be represented in the database. Either the properties {'ApplicationGroupId'} aren't mapped to table 'Identity.InputNumberField', or the principal properties {'Id'} aren't mapped to table 'Identity.ApplicationGroup'. All foreign key properties must map to the table to which the dependent type is mapped, and all principal properties must map to a single table to which the principal type is mapped.
+2022-04-02 00:08:10.542 +04:00 [ERR] The foreign key {'ApplicationGroupId'} on the entity type 'InputNumberPhoneField' targeting 'ApplicationGroup' cannot be represented in the database. Either the properties {'ApplicationGroupId'} aren't mapped to table 'Identity.InputNumberPhoneField', or the principal properties {'Id'} aren't mapped to table 'Identity.ApplicationGroup'. All foreign key properties must map to the table to which the dependent type is mapped, and all principal properties must map to a single table to which the principal type is mapped.
+2022-04-02 00:08:10.542 +04:00 [ERR] The foreign key {'ApplicationGroupId'} on the entity type 'InputTextField' targeting 'ApplicationGroup' cannot be represented in the database. Either the properties {'ApplicationGroupId'} aren't mapped to table 'Identity.InputTextField', or the principal properties {'Id'} aren't mapped to table 'Identity.ApplicationGroup'. All foreign key properties must map to the table to which the dependent type is mapped, and all principal properties must map to a single table to which the principal type is mapped.
+2022-04-02 00:08:10.556 +04:00 [WRN] The entity type 'PersonName' is an optional dependent using table sharing without any required non shared property that could be used to identify whether the entity exists. If all nullable properties contain a null value in database then an object instance won't be created in the query. Add a required property to create instances with null values for other properties or mark the incoming navigation as required to always create an instance.
+2022-04-02 00:08:11.606 +04:00 [WRN] Role null validation failed: DuplicateRoleName.
+2022-04-02 00:08:11.616 +04:00 [WRN] Role null validation failed: DuplicateRoleName.
+2022-04-02 00:08:11.622 +04:00 [WRN] Role null validation failed: DuplicateRoleName.
+2022-04-02 00:08:11.626 +04:00 [INF] Starting web host
+2022-04-02 00:08:11.911 +04:00 [INF] Application started. Press Ctrl+C to shut down.
+2022-04-02 00:08:11.914 +04:00 [INF] Hosting environment: Development
+2022-04-02 00:08:11.914 +04:00 [INF] Content root path: C:\Users\rudik\source\repos\ScienceResearchPA\ScienceResearchPA
+2022-04-02 00:12:51.925 +04:00 [ERR] The foreign key {'ApplicationGroupId'} on the entity type 'InputDateField' targeting 'ApplicationGroup' cannot be represented in the database. Either the properties {'ApplicationGroupId'} aren't mapped to table 'Identity.InputDateField', or the principal properties {'Id'} aren't mapped to table 'Identity.ApplicationGroup'. All foreign key properties must map to the table to which the dependent type is mapped, and all principal properties must map to a single table to which the principal type is mapped.
+2022-04-02 00:12:51.945 +04:00 [ERR] The foreign key {'ApplicationGroupId'} on the entity type 'InputNumberField' targeting 'ApplicationGroup' cannot be represented in the database. Either the properties {'ApplicationGroupId'} aren't mapped to table 'Identity.InputNumberField', or the principal properties {'Id'} aren't mapped to table 'Identity.ApplicationGroup'. All foreign key properties must map to the table to which the dependent type is mapped, and all principal properties must map to a single table to which the principal type is mapped.
+2022-04-02 00:12:51.946 +04:00 [ERR] The foreign key {'ApplicationGroupId'} on the entity type 'InputNumberPhoneField' targeting 'ApplicationGroup' cannot be represented in the database. Either the properties {'ApplicationGroupId'} aren't mapped to table 'Identity.InputNumberPhoneField', or the principal properties {'Id'} aren't mapped to table 'Identity.ApplicationGroup'. All foreign key properties must map to the table to which the dependent type is mapped, and all principal properties must map to a single table to which the principal type is mapped.
+2022-04-02 00:12:51.946 +04:00 [ERR] The foreign key {'ApplicationGroupId'} on the entity type 'InputTextField' targeting 'ApplicationGroup' cannot be represented in the database. Either the properties {'ApplicationGroupId'} aren't mapped to table 'Identity.InputTextField', or the principal properties {'Id'} aren't mapped to table 'Identity.ApplicationGroup'. All foreign key properties must map to the table to which the dependent type is mapped, and all principal properties must map to a single table to which the principal type is mapped.
+2022-04-02 00:12:51.963 +04:00 [WRN] The entity type 'PersonName' is an optional dependent using table sharing without any required non shared property that could be used to identify whether the entity exists. If all nullable properties contain a null value in database then an object instance won't be created in the query. Add a required property to create instances with null values for other properties or mark the incoming navigation as required to always create an instance.
+2022-04-02 00:12:52.665 +04:00 [WRN] Role null validation failed: DuplicateRoleName.
+2022-04-02 00:12:52.681 +04:00 [WRN] Role null validation failed: DuplicateRoleName.
+2022-04-02 00:12:52.684 +04:00 [WRN] Role null validation failed: DuplicateRoleName.
+2022-04-02 00:12:52.690 +04:00 [INF] Starting web host
+2022-04-02 00:12:52.893 +04:00 [INF] Application started. Press Ctrl+C to shut down.
+2022-04-02 00:12:52.896 +04:00 [INF] Hosting environment: Development
+2022-04-02 00:12:52.896 +04:00 [INF] Content root path: C:\Users\rudik\source\repos\ScienceResearchPA\ScienceResearchPA
+2022-04-02 00:21:03.493 +04:00 [ERR] The foreign key {'ApplicationGroupId'} on the entity type 'InputDateField' targeting 'ApplicationGroup' cannot be represented in the database. Either the properties {'ApplicationGroupId'} aren't mapped to table 'Identity.InputDateField', or the principal properties {'Id'} aren't mapped to table 'Identity.ApplicationGroup'. All foreign key properties must map to the table to which the dependent type is mapped, and all principal properties must map to a single table to which the principal type is mapped.
+2022-04-02 00:21:03.516 +04:00 [ERR] The foreign key {'ApplicationGroupId'} on the entity type 'InputNumberField' targeting 'ApplicationGroup' cannot be represented in the database. Either the properties {'ApplicationGroupId'} aren't mapped to table 'Identity.InputNumberField', or the principal properties {'Id'} aren't mapped to table 'Identity.ApplicationGroup'. All foreign key properties must map to the table to which the dependent type is mapped, and all principal properties must map to a single table to which the principal type is mapped.
+2022-04-02 00:21:03.516 +04:00 [ERR] The foreign key {'ApplicationGroupId'} on the entity type 'InputNumberPhoneField' targeting 'ApplicationGroup' cannot be represented in the database. Either the properties {'ApplicationGroupId'} aren't mapped to table 'Identity.InputNumberPhoneField', or the principal properties {'Id'} aren't mapped to table 'Identity.ApplicationGroup'. All foreign key properties must map to the table to which the dependent type is mapped, and all principal properties must map to a single table to which the principal type is mapped.
+2022-04-02 00:21:03.517 +04:00 [ERR] The foreign key {'ApplicationGroupId'} on the entity type 'InputTextField' targeting 'ApplicationGroup' cannot be represented in the database. Either the properties {'ApplicationGroupId'} aren't mapped to table 'Identity.InputTextField', or the principal properties {'Id'} aren't mapped to table 'Identity.ApplicationGroup'. All foreign key properties must map to the table to which the dependent type is mapped, and all principal properties must map to a single table to which the principal type is mapped.
+2022-04-02 00:21:03.536 +04:00 [WRN] The entity type 'PersonName' is an optional dependent using table sharing without any required non shared property that could be used to identify whether the entity exists. If all nullable properties contain a null value in database then an object instance won't be created in the query. Add a required property to create instances with null values for other properties or mark the incoming navigation as required to always create an instance.
+2022-04-02 00:21:04.393 +04:00 [WRN] Role null validation failed: DuplicateRoleName.
+2022-04-02 00:21:04.401 +04:00 [WRN] Role null validation failed: DuplicateRoleName.
+2022-04-02 00:21:04.406 +04:00 [WRN] Role null validation failed: DuplicateRoleName.
+2022-04-02 00:21:04.408 +04:00 [INF] Starting web host
+2022-04-02 00:21:04.614 +04:00 [INF] Application started. Press Ctrl+C to shut down.
+2022-04-02 00:21:04.614 +04:00 [INF] Hosting environment: Development
+2022-04-02 00:21:04.615 +04:00 [INF] Content root path: C:\Users\rudik\source\repos\ScienceResearchPA\ScienceResearchPA
+2022-04-02 00:22:51.469 +04:00 [ERR] The foreign key {'ApplicationGroupId'} on the entity type 'InputDateField' targeting 'ApplicationGroup' cannot be represented in the database. Either the properties {'ApplicationGroupId'} aren't mapped to table 'Identity.InputDateField', or the principal properties {'Id'} aren't mapped to table 'Identity.ApplicationGroup'. All foreign key properties must map to the table to which the dependent type is mapped, and all principal properties must map to a single table to which the principal type is mapped.
+2022-04-02 00:22:51.490 +04:00 [ERR] The foreign key {'ApplicationGroupId'} on the entity type 'InputNumberField' targeting 'ApplicationGroup' cannot be represented in the database. Either the properties {'ApplicationGroupId'} aren't mapped to table 'Identity.InputNumberField', or the principal properties {'Id'} aren't mapped to table 'Identity.ApplicationGroup'. All foreign key properties must map to the table to which the dependent type is mapped, and all principal properties must map to a single table to which the principal type is mapped.
+2022-04-02 00:22:51.491 +04:00 [ERR] The foreign key {'ApplicationGroupId'} on the entity type 'InputNumberPhoneField' targeting 'ApplicationGroup' cannot be represented in the database. Either the properties {'ApplicationGroupId'} aren't mapped to table 'Identity.InputNumberPhoneField', or the principal properties {'Id'} aren't mapped to table 'Identity.ApplicationGroup'. All foreign key properties must map to the table to which the dependent type is mapped, and all principal properties must map to a single table to which the principal type is mapped.
+2022-04-02 00:22:51.491 +04:00 [ERR] The foreign key {'ApplicationGroupId'} on the entity type 'InputTextField' targeting 'ApplicationGroup' cannot be represented in the database. Either the properties {'ApplicationGroupId'} aren't mapped to table 'Identity.InputTextField', or the principal properties {'Id'} aren't mapped to table 'Identity.ApplicationGroup'. All foreign key properties must map to the table to which the dependent type is mapped, and all principal properties must map to a single table to which the principal type is mapped.
+2022-04-02 00:22:51.505 +04:00 [WRN] The entity type 'PersonName' is an optional dependent using table sharing without any required non shared property that could be used to identify whether the entity exists. If all nullable properties contain a null value in database then an object instance won't be created in the query. Add a required property to create instances with null values for other properties or mark the incoming navigation as required to always create an instance.
+2022-04-02 00:22:52.348 +04:00 [WRN] Role null validation failed: DuplicateRoleName.
+2022-04-02 00:22:52.357 +04:00 [WRN] Role null validation failed: DuplicateRoleName.
+2022-04-02 00:22:52.363 +04:00 [WRN] Role null validation failed: DuplicateRoleName.
+2022-04-02 00:22:52.367 +04:00 [INF] Starting web host
+2022-04-02 00:22:52.652 +04:00 [INF] Application started. Press Ctrl+C to shut down.
+2022-04-02 00:22:52.652 +04:00 [INF] Hosting environment: Development
+2022-04-02 00:22:52.653 +04:00 [INF] Content root path: C:\Users\rudik\source\repos\ScienceResearchPA\ScienceResearchPA
+2022-04-02 00:26:46.992 +04:00 [ERR] The foreign key {'ApplicationGroupId'} on the entity type 'InputDateField' targeting 'ApplicationGroup' cannot be represented in the database. Either the properties {'ApplicationGroupId'} aren't mapped to table 'Identity.InputDateField', or the principal properties {'Id'} aren't mapped to table 'Identity.ApplicationGroup'. All foreign key properties must map to the table to which the dependent type is mapped, and all principal properties must map to a single table to which the principal type is mapped.
+2022-04-02 00:26:47.017 +04:00 [ERR] The foreign key {'ApplicationGroupId'} on the entity type 'InputNumberField' targeting 'ApplicationGroup' cannot be represented in the database. Either the properties {'ApplicationGroupId'} aren't mapped to table 'Identity.InputNumberField', or the principal properties {'Id'} aren't mapped to table 'Identity.ApplicationGroup'. All foreign key properties must map to the table to which the dependent type is mapped, and all principal properties must map to a single table to which the principal type is mapped.
+2022-04-02 00:26:47.018 +04:00 [ERR] The foreign key {'ApplicationGroupId'} on the entity type 'InputNumberPhoneField' targeting 'ApplicationGroup' cannot be represented in the database. Either the properties {'ApplicationGroupId'} aren't mapped to table 'Identity.InputNumberPhoneField', or the principal properties {'Id'} aren't mapped to table 'Identity.ApplicationGroup'. All foreign key properties must map to the table to which the dependent type is mapped, and all principal properties must map to a single table to which the principal type is mapped.
+2022-04-02 00:26:47.018 +04:00 [ERR] The foreign key {'ApplicationGroupId'} on the entity type 'InputTextField' targeting 'ApplicationGroup' cannot be represented in the database. Either the properties {'ApplicationGroupId'} aren't mapped to table 'Identity.InputTextField', or the principal properties {'Id'} aren't mapped to table 'Identity.ApplicationGroup'. All foreign key properties must map to the table to which the dependent type is mapped, and all principal properties must map to a single table to which the principal type is mapped.
+2022-04-02 00:26:47.030 +04:00 [WRN] The entity type 'PersonName' is an optional dependent using table sharing without any required non shared property that could be used to identify whether the entity exists. If all nullable properties contain a null value in database then an object instance won't be created in the query. Add a required property to create instances with null values for other properties or mark the incoming navigation as required to always create an instance.
+2022-04-02 00:26:47.718 +04:00 [WRN] Role null validation failed: DuplicateRoleName.
+2022-04-02 00:26:47.726 +04:00 [WRN] Role null validation failed: DuplicateRoleName.
+2022-04-02 00:26:47.730 +04:00 [WRN] Role null validation failed: DuplicateRoleName.
+2022-04-02 00:26:47.732 +04:00 [INF] Starting web host
+2022-04-02 00:26:47.927 +04:00 [INF] Application started. Press Ctrl+C to shut down.
+2022-04-02 00:26:47.927 +04:00 [INF] Hosting environment: Development
+2022-04-02 00:26:47.927 +04:00 [INF] Content root path: C:\Users\rudik\source\repos\ScienceResearchPA\ScienceResearchPA
+2022-04-02 00:44:03.078 +04:00 [ERR] The foreign key {'ApplicationGroupId'} on the entity type 'InputDateField' targeting 'ApplicationGroup' cannot be represented in the database. Either the properties {'ApplicationGroupId'} aren't mapped to table 'Identity.InputDateField', or the principal properties {'Id'} aren't mapped to table 'Identity.ApplicationGroup'. All foreign key properties must map to the table to which the dependent type is mapped, and all principal properties must map to a single table to which the principal type is mapped.
+2022-04-02 00:44:03.107 +04:00 [ERR] The foreign key {'ApplicationGroupId'} on the entity type 'InputNumberField' targeting 'ApplicationGroup' cannot be represented in the database. Either the properties {'ApplicationGroupId'} aren't mapped to table 'Identity.InputNumberField', or the principal properties {'Id'} aren't mapped to table 'Identity.ApplicationGroup'. All foreign key properties must map to the table to which the dependent type is mapped, and all principal properties must map to a single table to which the principal type is mapped.
+2022-04-02 00:44:03.108 +04:00 [ERR] The foreign key {'ApplicationGroupId'} on the entity type 'InputNumberPhoneField' targeting 'ApplicationGroup' cannot be represented in the database. Either the properties {'ApplicationGroupId'} aren't mapped to table 'Identity.InputNumberPhoneField', or the principal properties {'Id'} aren't mapped to table 'Identity.ApplicationGroup'. All foreign key properties must map to the table to which the dependent type is mapped, and all principal properties must map to a single table to which the principal type is mapped.
+2022-04-02 00:44:03.108 +04:00 [ERR] The foreign key {'ApplicationGroupId'} on the entity type 'InputTextField' targeting 'ApplicationGroup' cannot be represented in the database. Either the properties {'ApplicationGroupId'} aren't mapped to table 'Identity.InputTextField', or the principal properties {'Id'} aren't mapped to table 'Identity.ApplicationGroup'. All foreign key properties must map to the table to which the dependent type is mapped, and all principal properties must map to a single table to which the principal type is mapped.
+2022-04-02 00:44:03.122 +04:00 [WRN] The entity type 'PersonName' is an optional dependent using table sharing without any required non shared property that could be used to identify whether the entity exists. If all nullable properties contain a null value in database then an object instance won't be created in the query. Add a required property to create instances with null values for other properties or mark the incoming navigation as required to always create an instance.
+2022-04-02 00:44:03.371 +04:00 [ERR] The foreign key {'ApplicationGroupId'} on the entity type 'InputDateField' targeting 'ApplicationGroup' cannot be represented in the database. Either the properties {'ApplicationGroupId'} aren't mapped to table 'Identity.InputDateField', or the principal properties {'Id'} aren't mapped to table 'Identity.ApplicationGroup'. All foreign key properties must map to the table to which the dependent type is mapped, and all principal properties must map to a single table to which the principal type is mapped.
+2022-04-02 00:44:03.371 +04:00 [ERR] The foreign key {'ApplicationGroupId'} on the entity type 'InputNumberField' targeting 'ApplicationGroup' cannot be represented in the database. Either the properties {'ApplicationGroupId'} aren't mapped to table 'Identity.InputNumberField', or the principal properties {'Id'} aren't mapped to table 'Identity.ApplicationGroup'. All foreign key properties must map to the table to which the dependent type is mapped, and all principal properties must map to a single table to which the principal type is mapped.
+2022-04-02 00:44:03.371 +04:00 [ERR] The foreign key {'ApplicationGroupId'} on the entity type 'InputNumberPhoneField' targeting 'ApplicationGroup' cannot be represented in the database. Either the properties {'ApplicationGroupId'} aren't mapped to table 'Identity.InputNumberPhoneField', or the principal properties {'Id'} aren't mapped to table 'Identity.ApplicationGroup'. All foreign key properties must map to the table to which the dependent type is mapped, and all principal properties must map to a single table to which the principal type is mapped.
+2022-04-02 00:44:03.371 +04:00 [ERR] The foreign key {'ApplicationGroupId'} on the entity type 'InputTextField' targeting 'ApplicationGroup' cannot be represented in the database. Either the properties {'ApplicationGroupId'} aren't mapped to table 'Identity.InputTextField', or the principal properties {'Id'} aren't mapped to table 'Identity.ApplicationGroup'. All foreign key properties must map to the table to which the dependent type is mapped, and all principal properties must map to a single table to which the principal type is mapped.
+2022-04-02 00:44:03.374 +04:00 [WRN] The entity type 'PersonName' is an optional dependent using table sharing without any required non shared property that could be used to identify whether the entity exists. If all nullable properties contain a null value in database then an object instance won't be created in the query. Add a required property to create instances with null values for other properties or mark the incoming navigation as required to always create an instance.
+2022-04-02 00:44:15.446 +04:00 [ERR] The foreign key {'ApplicationGroupId'} on the entity type 'InputDateField' targeting 'ApplicationGroup' cannot be represented in the database. Either the properties {'ApplicationGroupId'} aren't mapped to table 'Identity.InputDateField', or the principal properties {'Id'} aren't mapped to table 'Identity.ApplicationGroup'. All foreign key properties must map to the table to which the dependent type is mapped, and all principal properties must map to a single table to which the principal type is mapped.
+2022-04-02 00:44:15.473 +04:00 [ERR] The foreign key {'ApplicationGroupId'} on the entity type 'InputNumberField' targeting 'ApplicationGroup' cannot be represented in the database. Either the properties {'ApplicationGroupId'} aren't mapped to table 'Identity.InputNumberField', or the principal properties {'Id'} aren't mapped to table 'Identity.ApplicationGroup'. All foreign key properties must map to the table to which the dependent type is mapped, and all principal properties must map to a single table to which the principal type is mapped.
+2022-04-02 00:44:15.474 +04:00 [ERR] The foreign key {'ApplicationGroupId'} on the entity type 'InputNumberPhoneField' targeting 'ApplicationGroup' cannot be represented in the database. Either the properties {'ApplicationGroupId'} aren't mapped to table 'Identity.InputNumberPhoneField', or the principal properties {'Id'} aren't mapped to table 'Identity.ApplicationGroup'. All foreign key properties must map to the table to which the dependent type is mapped, and all principal properties must map to a single table to which the principal type is mapped.
+2022-04-02 00:44:15.474 +04:00 [ERR] The foreign key {'ApplicationGroupId'} on the entity type 'InputTextField' targeting 'ApplicationGroup' cannot be represented in the database. Either the properties {'ApplicationGroupId'} aren't mapped to table 'Identity.InputTextField', or the principal properties {'Id'} aren't mapped to table 'Identity.ApplicationGroup'. All foreign key properties must map to the table to which the dependent type is mapped, and all principal properties must map to a single table to which the principal type is mapped.
+2022-04-02 00:44:15.493 +04:00 [WRN] The entity type 'PersonName' is an optional dependent using table sharing without any required non shared property that could be used to identify whether the entity exists. If all nullable properties contain a null value in database then an object instance won't be created in the query. Add a required property to create instances with null values for other properties or mark the incoming navigation as required to always create an instance.
+2022-04-02 00:44:32.897 +04:00 [ERR] The foreign key {'ApplicationGroupId'} on the entity type 'InputDateField' targeting 'ApplicationGroup' cannot be represented in the database. Either the properties {'ApplicationGroupId'} aren't mapped to table 'Identity.InputDateField', or the principal properties {'Id'} aren't mapped to table 'Identity.ApplicationGroup'. All foreign key properties must map to the table to which the dependent type is mapped, and all principal properties must map to a single table to which the principal type is mapped.
+2022-04-02 00:44:32.919 +04:00 [ERR] The foreign key {'ApplicationGroupId'} on the entity type 'InputNumberField' targeting 'ApplicationGroup' cannot be represented in the database. Either the properties {'ApplicationGroupId'} aren't mapped to table 'Identity.InputNumberField', or the principal properties {'Id'} aren't mapped to table 'Identity.ApplicationGroup'. All foreign key properties must map to the table to which the dependent type is mapped, and all principal properties must map to a single table to which the principal type is mapped.
+2022-04-02 00:44:32.920 +04:00 [ERR] The foreign key {'ApplicationGroupId'} on the entity type 'InputNumberPhoneField' targeting 'ApplicationGroup' cannot be represented in the database. Either the properties {'ApplicationGroupId'} aren't mapped to table 'Identity.InputNumberPhoneField', or the principal properties {'Id'} aren't mapped to table 'Identity.ApplicationGroup'. All foreign key properties must map to the table to which the dependent type is mapped, and all principal properties must map to a single table to which the principal type is mapped.
+2022-04-02 00:44:32.920 +04:00 [ERR] The foreign key {'ApplicationGroupId'} on the entity type 'InputTextField' targeting 'ApplicationGroup' cannot be represented in the database. Either the properties {'ApplicationGroupId'} aren't mapped to table 'Identity.InputTextField', or the principal properties {'Id'} aren't mapped to table 'Identity.ApplicationGroup'. All foreign key properties must map to the table to which the dependent type is mapped, and all principal properties must map to a single table to which the principal type is mapped.
+2022-04-02 00:44:32.936 +04:00 [WRN] The entity type 'PersonName' is an optional dependent using table sharing without any required non shared property that could be used to identify whether the entity exists. If all nullable properties contain a null value in database then an object instance won't be created in the query. Add a required property to create instances with null values for other properties or mark the incoming navigation as required to always create an instance.
+2022-04-02 00:44:33.689 +04:00 [WRN] Role null validation failed: DuplicateRoleName.
+2022-04-02 00:44:33.699 +04:00 [WRN] Role null validation failed: DuplicateRoleName.
+2022-04-02 00:44:33.701 +04:00 [WRN] Role null validation failed: DuplicateRoleName.
+2022-04-02 00:44:33.702 +04:00 [INF] Starting web host
+2022-04-02 00:44:33.900 +04:00 [INF] Application started. Press Ctrl+C to shut down.
+2022-04-02 00:44:33.902 +04:00 [INF] Hosting environment: Development
+2022-04-02 00:44:33.902 +04:00 [INF] Content root path: C:\Users\rudik\source\repos\ScienceResearchPA\ScienceResearchPA
+2022-04-02 13:14:56.815 +04:00 [ERR] The foreign key {'ApplicationGroupId'} on the entity type 'InputDateField' targeting 'ApplicationGroup' cannot be represented in the database. Either the properties {'ApplicationGroupId'} aren't mapped to table 'Identity.InputDateField', or the principal properties {'Id'} aren't mapped to table 'Identity.ApplicationGroup'. All foreign key properties must map to the table to which the dependent type is mapped, and all principal properties must map to a single table to which the principal type is mapped.
+2022-04-02 13:14:56.845 +04:00 [ERR] The foreign key {'ApplicationGroupId'} on the entity type 'InputNumberField' targeting 'ApplicationGroup' cannot be represented in the database. Either the properties {'ApplicationGroupId'} aren't mapped to table 'Identity.InputNumberField', or the principal properties {'Id'} aren't mapped to table 'Identity.ApplicationGroup'. All foreign key properties must map to the table to which the dependent type is mapped, and all principal properties must map to a single table to which the principal type is mapped.
+2022-04-02 13:14:56.845 +04:00 [ERR] The foreign key {'ApplicationGroupId'} on the entity type 'InputNumberPhoneField' targeting 'ApplicationGroup' cannot be represented in the database. Either the properties {'ApplicationGroupId'} aren't mapped to table 'Identity.InputNumberPhoneField', or the principal properties {'Id'} aren't mapped to table 'Identity.ApplicationGroup'. All foreign key properties must map to the table to which the dependent type is mapped, and all principal properties must map to a single table to which the principal type is mapped.
+2022-04-02 13:14:56.845 +04:00 [ERR] The foreign key {'ApplicationGroupId'} on the entity type 'InputTextField' targeting 'ApplicationGroup' cannot be represented in the database. Either the properties {'ApplicationGroupId'} aren't mapped to table 'Identity.InputTextField', or the principal properties {'Id'} aren't mapped to table 'Identity.ApplicationGroup'. All foreign key properties must map to the table to which the dependent type is mapped, and all principal properties must map to a single table to which the principal type is mapped.
+2022-04-02 13:14:56.856 +04:00 [WRN] The entity type 'PersonName' is an optional dependent using table sharing without any required non shared property that could be used to identify whether the entity exists. If all nullable properties contain a null value in database then an object instance won't be created in the query. Add a required property to create instances with null values for other properties or mark the incoming navigation as required to always create an instance.
+2022-04-02 13:15:04.044 +04:00 [ERR] The foreign key {'ApplicationGroupId'} on the entity type 'InputDateField' targeting 'ApplicationGroup' cannot be represented in the database. Either the properties {'ApplicationGroupId'} aren't mapped to table 'Identity.InputDateField', or the principal properties {'Id'} aren't mapped to table 'Identity.ApplicationGroup'. All foreign key properties must map to the table to which the dependent type is mapped, and all principal properties must map to a single table to which the principal type is mapped.
+2022-04-02 13:15:04.079 +04:00 [ERR] The foreign key {'ApplicationGroupId'} on the entity type 'InputNumberField' targeting 'ApplicationGroup' cannot be represented in the database. Either the properties {'ApplicationGroupId'} aren't mapped to table 'Identity.InputNumberField', or the principal properties {'Id'} aren't mapped to table 'Identity.ApplicationGroup'. All foreign key properties must map to the table to which the dependent type is mapped, and all principal properties must map to a single table to which the principal type is mapped.
+2022-04-02 13:15:04.079 +04:00 [ERR] The foreign key {'ApplicationGroupId'} on the entity type 'InputNumberPhoneField' targeting 'ApplicationGroup' cannot be represented in the database. Either the properties {'ApplicationGroupId'} aren't mapped to table 'Identity.InputNumberPhoneField', or the principal properties {'Id'} aren't mapped to table 'Identity.ApplicationGroup'. All foreign key properties must map to the table to which the dependent type is mapped, and all principal properties must map to a single table to which the principal type is mapped.
+2022-04-02 13:15:04.079 +04:00 [ERR] The foreign key {'ApplicationGroupId'} on the entity type 'InputTextField' targeting 'ApplicationGroup' cannot be represented in the database. Either the properties {'ApplicationGroupId'} aren't mapped to table 'Identity.InputTextField', or the principal properties {'Id'} aren't mapped to table 'Identity.ApplicationGroup'. All foreign key properties must map to the table to which the dependent type is mapped, and all principal properties must map to a single table to which the principal type is mapped.
+2022-04-02 13:15:04.093 +04:00 [WRN] The entity type 'PersonName' is an optional dependent using table sharing without any required non shared property that could be used to identify whether the entity exists. If all nullable properties contain a null value in database then an object instance won't be created in the query. Add a required property to create instances with null values for other properties or mark the incoming navigation as required to always create an instance.
+2022-04-02 13:15:04.310 +04:00 [ERR] The foreign key {'ApplicationGroupId'} on the entity type 'InputDateField' targeting 'ApplicationGroup' cannot be represented in the database. Either the properties {'ApplicationGroupId'} aren't mapped to table 'Identity.InputDateField', or the principal properties {'Id'} aren't mapped to table 'Identity.ApplicationGroup'. All foreign key properties must map to the table to which the dependent type is mapped, and all principal properties must map to a single table to which the principal type is mapped.
+2022-04-02 13:15:04.310 +04:00 [ERR] The foreign key {'ApplicationGroupId'} on the entity type 'InputNumberField' targeting 'ApplicationGroup' cannot be represented in the database. Either the properties {'ApplicationGroupId'} aren't mapped to table 'Identity.InputNumberField', or the principal properties {'Id'} aren't mapped to table 'Identity.ApplicationGroup'. All foreign key properties must map to the table to which the dependent type is mapped, and all principal properties must map to a single table to which the principal type is mapped.
+2022-04-02 13:15:04.311 +04:00 [ERR] The foreign key {'ApplicationGroupId'} on the entity type 'InputNumberPhoneField' targeting 'ApplicationGroup' cannot be represented in the database. Either the properties {'ApplicationGroupId'} aren't mapped to table 'Identity.InputNumberPhoneField', or the principal properties {'Id'} aren't mapped to table 'Identity.ApplicationGroup'. All foreign key properties must map to the table to which the dependent type is mapped, and all principal properties must map to a single table to which the principal type is mapped.
+2022-04-02 13:15:04.311 +04:00 [ERR] The foreign key {'ApplicationGroupId'} on the entity type 'InputTextField' targeting 'ApplicationGroup' cannot be represented in the database. Either the properties {'ApplicationGroupId'} aren't mapped to table 'Identity.InputTextField', or the principal properties {'Id'} aren't mapped to table 'Identity.ApplicationGroup'. All foreign key properties must map to the table to which the dependent type is mapped, and all principal properties must map to a single table to which the principal type is mapped.
+2022-04-02 13:15:04.313 +04:00 [WRN] The entity type 'PersonName' is an optional dependent using table sharing without any required non shared property that could be used to identify whether the entity exists. If all nullable properties contain a null value in database then an object instance won't be created in the query. Add a required property to create instances with null values for other properties or mark the incoming navigation as required to always create an instance.
+2022-04-02 17:27:12.593 +04:00 [ERR] The foreign key {'ApplicationGroupId'} on the entity type 'InputDateField' targeting 'ApplicationGroup' cannot be represented in the database. Either the properties {'ApplicationGroupId'} aren't mapped to table 'Identity.InputDateField', or the principal properties {'Id'} aren't mapped to table 'Identity.ApplicationGroup'. All foreign key properties must map to the table to which the dependent type is mapped, and all principal properties must map to a single table to which the principal type is mapped.
+2022-04-02 17:27:12.625 +04:00 [ERR] The foreign key {'ApplicationGroupId'} on the entity type 'InputNumberField' targeting 'ApplicationGroup' cannot be represented in the database. Either the properties {'ApplicationGroupId'} aren't mapped to table 'Identity.InputNumberField', or the principal properties {'Id'} aren't mapped to table 'Identity.ApplicationGroup'. All foreign key properties must map to the table to which the dependent type is mapped, and all principal properties must map to a single table to which the principal type is mapped.
+2022-04-02 17:27:12.626 +04:00 [ERR] The foreign key {'ApplicationGroupId'} on the entity type 'InputNumberPhoneField' targeting 'ApplicationGroup' cannot be represented in the database. Either the properties {'ApplicationGroupId'} aren't mapped to table 'Identity.InputNumberPhoneField', or the principal properties {'Id'} aren't mapped to table 'Identity.ApplicationGroup'. All foreign key properties must map to the table to which the dependent type is mapped, and all principal properties must map to a single table to which the principal type is mapped.
+2022-04-02 17:27:12.626 +04:00 [ERR] The foreign key {'ApplicationGroupId'} on the entity type 'InputTextField' targeting 'ApplicationGroup' cannot be represented in the database. Either the properties {'ApplicationGroupId'} aren't mapped to table 'Identity.InputTextField', or the principal properties {'Id'} aren't mapped to table 'Identity.ApplicationGroup'. All foreign key properties must map to the table to which the dependent type is mapped, and all principal properties must map to a single table to which the principal type is mapped.
+2022-04-02 17:27:12.640 +04:00 [WRN] The entity type 'PersonName' is an optional dependent using table sharing without any required non shared property that could be used to identify whether the entity exists. If all nullable properties contain a null value in database then an object instance won't be created in the query. Add a required property to create instances with null values for other properties or mark the incoming navigation as required to always create an instance.
+2022-04-02 17:27:12.852 +04:00 [ERR] The foreign key {'ApplicationGroupId'} on the entity type 'InputDateField' targeting 'ApplicationGroup' cannot be represented in the database. Either the properties {'ApplicationGroupId'} aren't mapped to table 'Identity.InputDateField', or the principal properties {'Id'} aren't mapped to table 'Identity.ApplicationGroup'. All foreign key properties must map to the table to which the dependent type is mapped, and all principal properties must map to a single table to which the principal type is mapped.
+2022-04-02 17:27:12.852 +04:00 [ERR] The foreign key {'ApplicationGroupId'} on the entity type 'InputNumberField' targeting 'ApplicationGroup' cannot be represented in the database. Either the properties {'ApplicationGroupId'} aren't mapped to table 'Identity.InputNumberField', or the principal properties {'Id'} aren't mapped to table 'Identity.ApplicationGroup'. All foreign key properties must map to the table to which the dependent type is mapped, and all principal properties must map to a single table to which the principal type is mapped.
+2022-04-02 17:27:12.852 +04:00 [ERR] The foreign key {'ApplicationGroupId'} on the entity type 'InputNumberPhoneField' targeting 'ApplicationGroup' cannot be represented in the database. Either the properties {'ApplicationGroupId'} aren't mapped to table 'Identity.InputNumberPhoneField', or the principal properties {'Id'} aren't mapped to table 'Identity.ApplicationGroup'. All foreign key properties must map to the table to which the dependent type is mapped, and all principal properties must map to a single table to which the principal type is mapped.
+2022-04-02 17:27:12.853 +04:00 [ERR] The foreign key {'ApplicationGroupId'} on the entity type 'InputTextField' targeting 'ApplicationGroup' cannot be represented in the database. Either the properties {'ApplicationGroupId'} aren't mapped to table 'Identity.InputTextField', or the principal properties {'Id'} aren't mapped to table 'Identity.ApplicationGroup'. All foreign key properties must map to the table to which the dependent type is mapped, and all principal properties must map to a single table to which the principal type is mapped.
+2022-04-02 17:27:12.856 +04:00 [WRN] The entity type 'PersonName' is an optional dependent using table sharing without any required non shared property that could be used to identify whether the entity exists. If all nullable properties contain a null value in database then an object instance won't be created in the query. Add a required property to create instances with null values for other properties or mark the incoming navigation as required to always create an instance.
+2022-04-02 17:27:24.169 +04:00 [ERR] The foreign key {'ApplicationGroupId'} on the entity type 'InputDateField' targeting 'ApplicationGroup' cannot be represented in the database. Either the properties {'ApplicationGroupId'} aren't mapped to table 'Identity.InputDateField', or the principal properties {'Id'} aren't mapped to table 'Identity.ApplicationGroup'. All foreign key properties must map to the table to which the dependent type is mapped, and all principal properties must map to a single table to which the principal type is mapped.
+2022-04-02 17:27:24.216 +04:00 [ERR] The foreign key {'ApplicationGroupId'} on the entity type 'InputNumberField' targeting 'ApplicationGroup' cannot be represented in the database. Either the properties {'ApplicationGroupId'} aren't mapped to table 'Identity.InputNumberField', or the principal properties {'Id'} aren't mapped to table 'Identity.ApplicationGroup'. All foreign key properties must map to the table to which the dependent type is mapped, and all principal properties must map to a single table to which the principal type is mapped.
+2022-04-02 17:27:24.217 +04:00 [ERR] The foreign key {'ApplicationGroupId'} on the entity type 'InputNumberPhoneField' targeting 'ApplicationGroup' cannot be represented in the database. Either the properties {'ApplicationGroupId'} aren't mapped to table 'Identity.InputNumberPhoneField', or the principal properties {'Id'} aren't mapped to table 'Identity.ApplicationGroup'. All foreign key properties must map to the table to which the dependent type is mapped, and all principal properties must map to a single table to which the principal type is mapped.
+2022-04-02 17:27:24.217 +04:00 [ERR] The foreign key {'ApplicationGroupId'} on the entity type 'InputTextField' targeting 'ApplicationGroup' cannot be represented in the database. Either the properties {'ApplicationGroupId'} aren't mapped to table 'Identity.InputTextField', or the principal properties {'Id'} aren't mapped to table 'Identity.ApplicationGroup'. All foreign key properties must map to the table to which the dependent type is mapped, and all principal properties must map to a single table to which the principal type is mapped.
+2022-04-02 17:27:24.230 +04:00 [WRN] The entity type 'PersonName' is an optional dependent using table sharing without any required non shared property that could be used to identify whether the entity exists. If all nullable properties contain a null value in database then an object instance won't be created in the query. Add a required property to create instances with null values for other properties or mark the incoming navigation as required to always create an instance.
+2022-04-02 17:43:59.455 +04:00 [ERR] The foreign key {'ApplicationGroupId'} on the entity type 'InputDateField' targeting 'ApplicationGroup' cannot be represented in the database. Either the properties {'ApplicationGroupId'} aren't mapped to table 'Identity.InputDateField', or the principal properties {'Id'} aren't mapped to table 'Identity.ApplicationGroup'. All foreign key properties must map to the table to which the dependent type is mapped, and all principal properties must map to a single table to which the principal type is mapped.
+2022-04-02 17:43:59.478 +04:00 [ERR] The foreign key {'ApplicationGroupId'} on the entity type 'InputNumberField' targeting 'ApplicationGroup' cannot be represented in the database. Either the properties {'ApplicationGroupId'} aren't mapped to table 'Identity.InputNumberField', or the principal properties {'Id'} aren't mapped to table 'Identity.ApplicationGroup'. All foreign key properties must map to the table to which the dependent type is mapped, and all principal properties must map to a single table to which the principal type is mapped.
+2022-04-02 17:43:59.478 +04:00 [ERR] The foreign key {'ApplicationGroupId'} on the entity type 'InputNumberPhoneField' targeting 'ApplicationGroup' cannot be represented in the database. Either the properties {'ApplicationGroupId'} aren't mapped to table 'Identity.InputNumberPhoneField', or the principal properties {'Id'} aren't mapped to table 'Identity.ApplicationGroup'. All foreign key properties must map to the table to which the dependent type is mapped, and all principal properties must map to a single table to which the principal type is mapped.
+2022-04-02 17:43:59.479 +04:00 [ERR] The foreign key {'ApplicationGroupId'} on the entity type 'InputTextField' targeting 'ApplicationGroup' cannot be represented in the database. Either the properties {'ApplicationGroupId'} aren't mapped to table 'Identity.InputTextField', or the principal properties {'Id'} aren't mapped to table 'Identity.ApplicationGroup'. All foreign key properties must map to the table to which the dependent type is mapped, and all principal properties must map to a single table to which the principal type is mapped.
+2022-04-02 17:43:59.492 +04:00 [WRN] The entity type 'PersonName' is an optional dependent using table sharing without any required non shared property that could be used to identify whether the entity exists. If all nullable properties contain a null value in database then an object instance won't be created in the query. Add a required property to create instances with null values for other properties or mark the incoming navigation as required to always create an instance.
+2022-04-02 17:44:00.384 +04:00 [WRN] Role null validation failed: DuplicateRoleName.
+2022-04-02 17:44:00.395 +04:00 [WRN] Role null validation failed: DuplicateRoleName.
+2022-04-02 17:44:00.400 +04:00 [WRN] Role null validation failed: DuplicateRoleName.
+2022-04-02 17:44:00.404 +04:00 [INF] Starting web host
+2022-04-02 17:44:01.006 +04:00 [INF] Application started. Press Ctrl+C to shut down.
+2022-04-02 17:44:01.006 +04:00 [INF] Hosting environment: Development
+2022-04-02 17:44:01.006 +04:00 [INF] Content root path: C:\Users\rudik\source\repos\ScienceResearchPA\ScienceResearchPA
+2022-04-02 17:45:09.639 +04:00 [ERR] Failed executing DbCommand (46ms) [Parameters=[@p0='?' (DbType = Int32), @p1='?' (DbType = Int32), @p2='?' (DbType = Boolean), @p3='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+INSERT INTO "Identity"."ApplicationSubmissions" ("ApplicationId", "ApplicationStateId", "IsRemoved", "UserId")
+VALUES (@p0, @p1, @p2, @p3)
+RETURNING "Id";
+2022-04-02 17:45:09.778 +04:00 [ERR] An exception occurred in the database while saving changes for context type 'Infrastructure.Persistence.ApplicationContext'.
+Microsoft.EntityFrameworkCore.DbUpdateException: An error occurred while saving the entity changes. See the inner exception for details.
+ ---> Npgsql.PostgresException (0x80004005): 23503: insert or update on table "ApplicationSubmissions" violates foreign key constraint "FK_ApplicationSubmissions_Applications_ApplicationId"
+
+DETAIL: Detail redacted as it may contain sensitive data. Specify 'Include Error Detail' in the connection string to include this information.
+   at Npgsql.Internal.NpgsqlConnector.<ReadMessage>g__ReadMessageLong|211_0(NpgsqlConnector connector, Boolean async, DataRowLoadingMode dataRowLoadingMode, Boolean readingNotifications, Boolean isReadingPrependedMessage)
+   at Npgsql.NpgsqlDataReader.NextResult(Boolean async, Boolean isConsuming, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlCommand.ExecuteReader(CommandBehavior behavior, Boolean async, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlCommand.ExecuteReader(CommandBehavior behavior, Boolean async, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlCommand.ExecuteDbDataReaderAsync(CommandBehavior behavior, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+  Exception data:
+    Severity: ERROR
+    SqlState: 23503
+    MessageText: insert or update on table "ApplicationSubmissions" violates foreign key constraint "FK_ApplicationSubmissions_Applications_ApplicationId"
+    Detail: Detail redacted as it may contain sensitive data. Specify 'Include Error Detail' in the connection string to include this information.
+    SchemaName: Identity
+    TableName: ApplicationSubmissions
+    ConstraintName: FK_ApplicationSubmissions_Applications_ApplicationId
+    File: d:\pginstaller_13.auto\postgres.windows-x64\src\backend\utils\adt\ri_triggers.c
+    Line: 2476
+    Routine: ri_ReportViolation
+   --- End of inner exception stack trace ---
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(IList`1 entriesToSave, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(StateManager stateManager, Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at Npgsql.EntityFrameworkCore.PostgreSQL.Storage.Internal.NpgsqlExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+Microsoft.EntityFrameworkCore.DbUpdateException: An error occurred while saving the entity changes. See the inner exception for details.
+ ---> Npgsql.PostgresException (0x80004005): 23503: insert or update on table "ApplicationSubmissions" violates foreign key constraint "FK_ApplicationSubmissions_Applications_ApplicationId"
+
+DETAIL: Detail redacted as it may contain sensitive data. Specify 'Include Error Detail' in the connection string to include this information.
+   at Npgsql.Internal.NpgsqlConnector.<ReadMessage>g__ReadMessageLong|211_0(NpgsqlConnector connector, Boolean async, DataRowLoadingMode dataRowLoadingMode, Boolean readingNotifications, Boolean isReadingPrependedMessage)
+   at Npgsql.NpgsqlDataReader.NextResult(Boolean async, Boolean isConsuming, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlCommand.ExecuteReader(CommandBehavior behavior, Boolean async, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlCommand.ExecuteReader(CommandBehavior behavior, Boolean async, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlCommand.ExecuteDbDataReaderAsync(CommandBehavior behavior, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+  Exception data:
+    Severity: ERROR
+    SqlState: 23503
+    MessageText: insert or update on table "ApplicationSubmissions" violates foreign key constraint "FK_ApplicationSubmissions_Applications_ApplicationId"
+    Detail: Detail redacted as it may contain sensitive data. Specify 'Include Error Detail' in the connection string to include this information.
+    SchemaName: Identity
+    TableName: ApplicationSubmissions
+    ConstraintName: FK_ApplicationSubmissions_Applications_ApplicationId
+    File: d:\pginstaller_13.auto\postgres.windows-x64\src\backend\utils\adt\ri_triggers.c
+    Line: 2476
+    Routine: ri_ReportViolation
+   --- End of inner exception stack trace ---
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(IList`1 entriesToSave, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(StateManager stateManager, Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at Npgsql.EntityFrameworkCore.PostgreSQL.Storage.Internal.NpgsqlExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+2022-04-02 17:45:10.018 +04:00 [ERR] An unhandled exception has occurred while executing the request.
+Microsoft.EntityFrameworkCore.DbUpdateException: An error occurred while saving the entity changes. See the inner exception for details.
+ ---> Npgsql.PostgresException (0x80004005): 23503: insert or update on table "ApplicationSubmissions" violates foreign key constraint "FK_ApplicationSubmissions_Applications_ApplicationId"
+
+DETAIL: Detail redacted as it may contain sensitive data. Specify 'Include Error Detail' in the connection string to include this information.
+   at Npgsql.Internal.NpgsqlConnector.<ReadMessage>g__ReadMessageLong|211_0(NpgsqlConnector connector, Boolean async, DataRowLoadingMode dataRowLoadingMode, Boolean readingNotifications, Boolean isReadingPrependedMessage)
+   at Npgsql.NpgsqlDataReader.NextResult(Boolean async, Boolean isConsuming, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlCommand.ExecuteReader(CommandBehavior behavior, Boolean async, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlCommand.ExecuteReader(CommandBehavior behavior, Boolean async, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlCommand.ExecuteDbDataReaderAsync(CommandBehavior behavior, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+  Exception data:
+    Severity: ERROR
+    SqlState: 23503
+    MessageText: insert or update on table "ApplicationSubmissions" violates foreign key constraint "FK_ApplicationSubmissions_Applications_ApplicationId"
+    Detail: Detail redacted as it may contain sensitive data. Specify 'Include Error Detail' in the connection string to include this information.
+    SchemaName: Identity
+    TableName: ApplicationSubmissions
+    ConstraintName: FK_ApplicationSubmissions_Applications_ApplicationId
+    File: d:\pginstaller_13.auto\postgres.windows-x64\src\backend\utils\adt\ri_triggers.c
+    Line: 2476
+    Routine: ri_ReportViolation
+   --- End of inner exception stack trace ---
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(IList`1 entriesToSave, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(StateManager stateManager, Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at Npgsql.EntityFrameworkCore.PostgreSQL.Storage.Internal.NpgsqlExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at Infrastructure.Persistence.ApplicationContext.SaveChangesAsync(CancellationToken cancellationToken) in C:\Users\rudik\source\repos\ScienceResearchPA\Infrastructure\Persistence\ApplicationContext.cs:line 140
+   at App.ApplicationSubmissions.Commands.CreateUpdateApplicationSubmissionCommandHandler.Handle(CreateUpdateApplicationSubmissionCommand request, CancellationToken cancellationToken) in C:\Users\rudik\source\repos\ScienceResearchPA\App\ApplicationSubmissions\Commands\CreateUpdateApplicationSubmission.cs:line 51
+   at App.Common.Behaviours.ValidationBehavior`2.Handle(TRequest request, CancellationToken cancellationToken, RequestHandlerDelegate`1 next) in C:\Users\rudik\source\repos\ScienceResearchPA\App\Common\Behaviours\ValidationBehavior.cs:line 34
+   at MediatR.Pipeline.RequestExceptionProcessorBehavior`2.Handle(TRequest request, CancellationToken cancellationToken, RequestHandlerDelegate`1 next)
+   at MediatR.Pipeline.RequestExceptionProcessorBehavior`2.Handle(TRequest request, CancellationToken cancellationToken, RequestHandlerDelegate`1 next)
+   at MediatR.Pipeline.RequestExceptionActionProcessorBehavior`2.Handle(TRequest request, CancellationToken cancellationToken, RequestHandlerDelegate`1 next)
+   at MediatR.Pipeline.RequestExceptionActionProcessorBehavior`2.Handle(TRequest request, CancellationToken cancellationToken, RequestHandlerDelegate`1 next)
+   at MediatR.Pipeline.RequestPostProcessorBehavior`2.Handle(TRequest request, CancellationToken cancellationToken, RequestHandlerDelegate`1 next)
+   at MediatR.Pipeline.RequestPreProcessorBehavior`2.Handle(TRequest request, CancellationToken cancellationToken, RequestHandlerDelegate`1 next)
+   at ScienceResearchPA.Controllers.ApplicationSubmission.Post(CreateUpdateApplicationSubmissionCommand command, CancellationToken cancellationToken) in C:\Users\rudik\source\repos\ScienceResearchPA\ScienceResearchPA\Controllers\ApplicationSubmission.cs:line 33
+   at lambda_method61(Closure , Object )
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.AwaitableObjectResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Logged|12_1(ControllerActionInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Localization.RequestLocalizationMiddleware.Invoke(HttpContext context)
+   at StackExchange.Profiling.MiniProfilerMiddleware.Invoke(HttpContext context) in C:\projects\dotnet\src\MiniProfiler.AspNetCore\MiniProfilerMiddleware.cs:line 103
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+2022-04-02 23:51:09.186 +04:00 [ERR] The foreign key {'ApplicationGroupId'} on the entity type 'InputDateField' targeting 'ApplicationGroup' cannot be represented in the database. Either the properties {'ApplicationGroupId'} aren't mapped to table 'Identity.InputDateField', or the principal properties {'Id'} aren't mapped to table 'Identity.ApplicationGroup'. All foreign key properties must map to the table to which the dependent type is mapped, and all principal properties must map to a single table to which the principal type is mapped.
+2022-04-02 23:51:09.211 +04:00 [ERR] The foreign key {'ApplicationGroupId'} on the entity type 'InputNumberField' targeting 'ApplicationGroup' cannot be represented in the database. Either the properties {'ApplicationGroupId'} aren't mapped to table 'Identity.InputNumberField', or the principal properties {'Id'} aren't mapped to table 'Identity.ApplicationGroup'. All foreign key properties must map to the table to which the dependent type is mapped, and all principal properties must map to a single table to which the principal type is mapped.
+2022-04-02 23:51:09.211 +04:00 [ERR] The foreign key {'ApplicationGroupId'} on the entity type 'InputNumberPhoneField' targeting 'ApplicationGroup' cannot be represented in the database. Either the properties {'ApplicationGroupId'} aren't mapped to table 'Identity.InputNumberPhoneField', or the principal properties {'Id'} aren't mapped to table 'Identity.ApplicationGroup'. All foreign key properties must map to the table to which the dependent type is mapped, and all principal properties must map to a single table to which the principal type is mapped.
+2022-04-02 23:51:09.212 +04:00 [ERR] The foreign key {'ApplicationGroupId'} on the entity type 'InputTextField' targeting 'ApplicationGroup' cannot be represented in the database. Either the properties {'ApplicationGroupId'} aren't mapped to table 'Identity.InputTextField', or the principal properties {'Id'} aren't mapped to table 'Identity.ApplicationGroup'. All foreign key properties must map to the table to which the dependent type is mapped, and all principal properties must map to a single table to which the principal type is mapped.
+2022-04-02 23:51:09.226 +04:00 [WRN] The entity type 'PersonName' is an optional dependent using table sharing without any required non shared property that could be used to identify whether the entity exists. If all nullable properties contain a null value in database then an object instance won't be created in the query. Add a required property to create instances with null values for other properties or mark the incoming navigation as required to always create an instance.
+2022-04-02 23:51:10.082 +04:00 [WRN] Role null validation failed: DuplicateRoleName.
+2022-04-02 23:51:10.091 +04:00 [WRN] Role null validation failed: DuplicateRoleName.
+2022-04-02 23:51:10.092 +04:00 [WRN] Role null validation failed: DuplicateRoleName.
+2022-04-02 23:51:10.095 +04:00 [INF] Starting web host
+2022-04-02 23:51:10.626 +04:00 [INF] Application started. Press Ctrl+C to shut down.
+2022-04-02 23:51:10.627 +04:00 [INF] Hosting environment: Development
+2022-04-02 23:51:10.627 +04:00 [INF] Content root path: C:\Users\rudik\source\repos\ScienceResearchPA\ScienceResearchPA
+2022-04-02 23:55:29.802 +04:00 [ERR] The foreign key {'ApplicationGroupId'} on the entity type 'InputDateField' targeting 'ApplicationGroup' cannot be represented in the database. Either the properties {'ApplicationGroupId'} aren't mapped to table 'Identity.InputDateField', or the principal properties {'Id'} aren't mapped to table 'Identity.ApplicationGroup'. All foreign key properties must map to the table to which the dependent type is mapped, and all principal properties must map to a single table to which the principal type is mapped.
+2022-04-02 23:55:29.838 +04:00 [ERR] The foreign key {'ApplicationGroupId'} on the entity type 'InputNumberField' targeting 'ApplicationGroup' cannot be represented in the database. Either the properties {'ApplicationGroupId'} aren't mapped to table 'Identity.InputNumberField', or the principal properties {'Id'} aren't mapped to table 'Identity.ApplicationGroup'. All foreign key properties must map to the table to which the dependent type is mapped, and all principal properties must map to a single table to which the principal type is mapped.
+2022-04-02 23:55:29.842 +04:00 [ERR] The foreign key {'ApplicationGroupId'} on the entity type 'InputNumberPhoneField' targeting 'ApplicationGroup' cannot be represented in the database. Either the properties {'ApplicationGroupId'} aren't mapped to table 'Identity.InputNumberPhoneField', or the principal properties {'Id'} aren't mapped to table 'Identity.ApplicationGroup'. All foreign key properties must map to the table to which the dependent type is mapped, and all principal properties must map to a single table to which the principal type is mapped.
+2022-04-02 23:55:29.843 +04:00 [ERR] The foreign key {'ApplicationGroupId'} on the entity type 'InputTextField' targeting 'ApplicationGroup' cannot be represented in the database. Either the properties {'ApplicationGroupId'} aren't mapped to table 'Identity.InputTextField', or the principal properties {'Id'} aren't mapped to table 'Identity.ApplicationGroup'. All foreign key properties must map to the table to which the dependent type is mapped, and all principal properties must map to a single table to which the principal type is mapped.
+2022-04-02 23:55:29.869 +04:00 [WRN] The entity type 'PersonName' is an optional dependent using table sharing without any required non shared property that could be used to identify whether the entity exists. If all nullable properties contain a null value in database then an object instance won't be created in the query. Add a required property to create instances with null values for other properties or mark the incoming navigation as required to always create an instance.
+2022-04-02 23:55:30.796 +04:00 [WRN] Role null validation failed: DuplicateRoleName.
+2022-04-02 23:55:30.804 +04:00 [WRN] Role null validation failed: DuplicateRoleName.
+2022-04-02 23:55:30.809 +04:00 [WRN] Role null validation failed: DuplicateRoleName.
+2022-04-02 23:55:30.813 +04:00 [INF] Starting web host
+2022-04-02 23:55:31.048 +04:00 [INF] Application started. Press Ctrl+C to shut down.
+2022-04-02 23:55:31.048 +04:00 [INF] Hosting environment: Development
+2022-04-02 23:55:31.048 +04:00 [INF] Content root path: C:\Users\rudik\source\repos\ScienceResearchPA\ScienceResearchPA
+2022-04-02 23:57:00.132 +04:00 [ERR] Failed executing DbCommand (41ms) [Parameters=[@p0='?' (DbType = Int32), @p1='?' (DbType = Int32), @p2='?' (DbType = Boolean), @p3='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+INSERT INTO "Identity"."ApplicationSubmissions" ("ApplicationId", "ApplicationStateId", "IsRemoved", "UserId")
+VALUES (@p0, @p1, @p2, @p3)
+RETURNING "Id";
+2022-04-02 23:57:00.348 +04:00 [ERR] An exception occurred in the database while saving changes for context type 'Infrastructure.Persistence.ApplicationContext'.
+Microsoft.EntityFrameworkCore.DbUpdateException: An error occurred while saving the entity changes. See the inner exception for details.
+ ---> Npgsql.PostgresException (0x80004005): 23503: insert or update on table "ApplicationSubmissions" violates foreign key constraint "FK_ApplicationSubmissions_Applications_ApplicationId"
+
+DETAIL: Detail redacted as it may contain sensitive data. Specify 'Include Error Detail' in the connection string to include this information.
+   at Npgsql.Internal.NpgsqlConnector.<ReadMessage>g__ReadMessageLong|211_0(NpgsqlConnector connector, Boolean async, DataRowLoadingMode dataRowLoadingMode, Boolean readingNotifications, Boolean isReadingPrependedMessage)
+   at Npgsql.NpgsqlDataReader.NextResult(Boolean async, Boolean isConsuming, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlCommand.ExecuteReader(CommandBehavior behavior, Boolean async, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlCommand.ExecuteReader(CommandBehavior behavior, Boolean async, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlCommand.ExecuteDbDataReaderAsync(CommandBehavior behavior, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+  Exception data:
+    Severity: ERROR
+    SqlState: 23503
+    MessageText: insert or update on table "ApplicationSubmissions" violates foreign key constraint "FK_ApplicationSubmissions_Applications_ApplicationId"
+    Detail: Detail redacted as it may contain sensitive data. Specify 'Include Error Detail' in the connection string to include this information.
+    SchemaName: Identity
+    TableName: ApplicationSubmissions
+    ConstraintName: FK_ApplicationSubmissions_Applications_ApplicationId
+    File: d:\pginstaller_13.auto\postgres.windows-x64\src\backend\utils\adt\ri_triggers.c
+    Line: 2476
+    Routine: ri_ReportViolation
+   --- End of inner exception stack trace ---
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(IList`1 entriesToSave, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(StateManager stateManager, Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at Npgsql.EntityFrameworkCore.PostgreSQL.Storage.Internal.NpgsqlExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+Microsoft.EntityFrameworkCore.DbUpdateException: An error occurred while saving the entity changes. See the inner exception for details.
+ ---> Npgsql.PostgresException (0x80004005): 23503: insert or update on table "ApplicationSubmissions" violates foreign key constraint "FK_ApplicationSubmissions_Applications_ApplicationId"
+
+DETAIL: Detail redacted as it may contain sensitive data. Specify 'Include Error Detail' in the connection string to include this information.
+   at Npgsql.Internal.NpgsqlConnector.<ReadMessage>g__ReadMessageLong|211_0(NpgsqlConnector connector, Boolean async, DataRowLoadingMode dataRowLoadingMode, Boolean readingNotifications, Boolean isReadingPrependedMessage)
+   at Npgsql.NpgsqlDataReader.NextResult(Boolean async, Boolean isConsuming, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlCommand.ExecuteReader(CommandBehavior behavior, Boolean async, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlCommand.ExecuteReader(CommandBehavior behavior, Boolean async, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlCommand.ExecuteDbDataReaderAsync(CommandBehavior behavior, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+  Exception data:
+    Severity: ERROR
+    SqlState: 23503
+    MessageText: insert or update on table "ApplicationSubmissions" violates foreign key constraint "FK_ApplicationSubmissions_Applications_ApplicationId"
+    Detail: Detail redacted as it may contain sensitive data. Specify 'Include Error Detail' in the connection string to include this information.
+    SchemaName: Identity
+    TableName: ApplicationSubmissions
+    ConstraintName: FK_ApplicationSubmissions_Applications_ApplicationId
+    File: d:\pginstaller_13.auto\postgres.windows-x64\src\backend\utils\adt\ri_triggers.c
+    Line: 2476
+    Routine: ri_ReportViolation
+   --- End of inner exception stack trace ---
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(IList`1 entriesToSave, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(StateManager stateManager, Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at Npgsql.EntityFrameworkCore.PostgreSQL.Storage.Internal.NpgsqlExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+2022-04-02 23:57:00.583 +04:00 [ERR] An unhandled exception has occurred while executing the request.
+Microsoft.EntityFrameworkCore.DbUpdateException: An error occurred while saving the entity changes. See the inner exception for details.
+ ---> Npgsql.PostgresException (0x80004005): 23503: insert or update on table "ApplicationSubmissions" violates foreign key constraint "FK_ApplicationSubmissions_Applications_ApplicationId"
+
+DETAIL: Detail redacted as it may contain sensitive data. Specify 'Include Error Detail' in the connection string to include this information.
+   at Npgsql.Internal.NpgsqlConnector.<ReadMessage>g__ReadMessageLong|211_0(NpgsqlConnector connector, Boolean async, DataRowLoadingMode dataRowLoadingMode, Boolean readingNotifications, Boolean isReadingPrependedMessage)
+   at Npgsql.NpgsqlDataReader.NextResult(Boolean async, Boolean isConsuming, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlCommand.ExecuteReader(CommandBehavior behavior, Boolean async, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlCommand.ExecuteReader(CommandBehavior behavior, Boolean async, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlCommand.ExecuteDbDataReaderAsync(CommandBehavior behavior, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+  Exception data:
+    Severity: ERROR
+    SqlState: 23503
+    MessageText: insert or update on table "ApplicationSubmissions" violates foreign key constraint "FK_ApplicationSubmissions_Applications_ApplicationId"
+    Detail: Detail redacted as it may contain sensitive data. Specify 'Include Error Detail' in the connection string to include this information.
+    SchemaName: Identity
+    TableName: ApplicationSubmissions
+    ConstraintName: FK_ApplicationSubmissions_Applications_ApplicationId
+    File: d:\pginstaller_13.auto\postgres.windows-x64\src\backend\utils\adt\ri_triggers.c
+    Line: 2476
+    Routine: ri_ReportViolation
+   --- End of inner exception stack trace ---
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(IList`1 entriesToSave, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(StateManager stateManager, Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at Npgsql.EntityFrameworkCore.PostgreSQL.Storage.Internal.NpgsqlExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at Infrastructure.Persistence.ApplicationContext.SaveChangesAsync(CancellationToken cancellationToken) in C:\Users\rudik\source\repos\ScienceResearchPA\Infrastructure\Persistence\ApplicationContext.cs:line 140
+   at App.ApplicationSubmissions.Commands.CreateUpdateApplicationSubmissionCommandHandler.Handle(CreateUpdateApplicationSubmissionCommand request, CancellationToken cancellationToken) in C:\Users\rudik\source\repos\ScienceResearchPA\App\ApplicationSubmissions\Commands\CreateUpdateApplicationSubmission.cs:line 51
+   at App.Common.Behaviours.ValidationBehavior`2.Handle(TRequest request, CancellationToken cancellationToken, RequestHandlerDelegate`1 next) in C:\Users\rudik\source\repos\ScienceResearchPA\App\Common\Behaviours\ValidationBehavior.cs:line 34
+   at MediatR.Pipeline.RequestExceptionProcessorBehavior`2.Handle(TRequest request, CancellationToken cancellationToken, RequestHandlerDelegate`1 next)
+   at MediatR.Pipeline.RequestExceptionProcessorBehavior`2.Handle(TRequest request, CancellationToken cancellationToken, RequestHandlerDelegate`1 next)
+   at MediatR.Pipeline.RequestExceptionActionProcessorBehavior`2.Handle(TRequest request, CancellationToken cancellationToken, RequestHandlerDelegate`1 next)
+   at MediatR.Pipeline.RequestExceptionActionProcessorBehavior`2.Handle(TRequest request, CancellationToken cancellationToken, RequestHandlerDelegate`1 next)
+   at MediatR.Pipeline.RequestPostProcessorBehavior`2.Handle(TRequest request, CancellationToken cancellationToken, RequestHandlerDelegate`1 next)
+   at MediatR.Pipeline.RequestPreProcessorBehavior`2.Handle(TRequest request, CancellationToken cancellationToken, RequestHandlerDelegate`1 next)
+   at ScienceResearchPA.Controllers.ApplicationSubmission.Post(CreateUpdateApplicationSubmissionCommand command, CancellationToken cancellationToken) in C:\Users\rudik\source\repos\ScienceResearchPA\ScienceResearchPA\Controllers\ApplicationSubmission.cs:line 33
+   at lambda_method61(Closure , Object )
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.AwaitableObjectResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Logged|12_1(ControllerActionInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Localization.RequestLocalizationMiddleware.Invoke(HttpContext context)
+   at StackExchange.Profiling.MiniProfilerMiddleware.Invoke(HttpContext context) in C:\projects\dotnet\src\MiniProfiler.AspNetCore\MiniProfilerMiddleware.cs:line 103
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+2022-04-02 23:57:40.759 +04:00 [ERR] Failed executing DbCommand (10ms) [Parameters=[@p0='?' (DbType = Int32), @p1='?' (DbType = Int32), @p2='?' (DbType = Boolean), @p3='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+INSERT INTO "Identity"."ApplicationSubmissions" ("ApplicationId", "ApplicationStateId", "IsRemoved", "UserId")
+VALUES (@p0, @p1, @p2, @p3)
+RETURNING "Id";
+2022-04-02 23:57:40.763 +04:00 [ERR] An exception occurred in the database while saving changes for context type 'Infrastructure.Persistence.ApplicationContext'.
+Microsoft.EntityFrameworkCore.DbUpdateException: An error occurred while saving the entity changes. See the inner exception for details.
+ ---> Npgsql.PostgresException (0x80004005): 23503: insert or update on table "ApplicationSubmissions" violates foreign key constraint "FK_ApplicationSubmissions_Applications_ApplicationId"
+
+DETAIL: Detail redacted as it may contain sensitive data. Specify 'Include Error Detail' in the connection string to include this information.
+   at Npgsql.Internal.NpgsqlConnector.<ReadMessage>g__ReadMessageLong|211_0(NpgsqlConnector connector, Boolean async, DataRowLoadingMode dataRowLoadingMode, Boolean readingNotifications, Boolean isReadingPrependedMessage)
+   at Npgsql.NpgsqlDataReader.NextResult(Boolean async, Boolean isConsuming, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlCommand.ExecuteReader(CommandBehavior behavior, Boolean async, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlCommand.ExecuteReader(CommandBehavior behavior, Boolean async, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlCommand.ExecuteDbDataReaderAsync(CommandBehavior behavior, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+  Exception data:
+    Severity: ERROR
+    SqlState: 23503
+    MessageText: insert or update on table "ApplicationSubmissions" violates foreign key constraint "FK_ApplicationSubmissions_Applications_ApplicationId"
+    Detail: Detail redacted as it may contain sensitive data. Specify 'Include Error Detail' in the connection string to include this information.
+    SchemaName: Identity
+    TableName: ApplicationSubmissions
+    ConstraintName: FK_ApplicationSubmissions_Applications_ApplicationId
+    File: d:\pginstaller_13.auto\postgres.windows-x64\src\backend\utils\adt\ri_triggers.c
+    Line: 2476
+    Routine: ri_ReportViolation
+   --- End of inner exception stack trace ---
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(IList`1 entriesToSave, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(StateManager stateManager, Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at Npgsql.EntityFrameworkCore.PostgreSQL.Storage.Internal.NpgsqlExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+Microsoft.EntityFrameworkCore.DbUpdateException: An error occurred while saving the entity changes. See the inner exception for details.
+ ---> Npgsql.PostgresException (0x80004005): 23503: insert or update on table "ApplicationSubmissions" violates foreign key constraint "FK_ApplicationSubmissions_Applications_ApplicationId"
+
+DETAIL: Detail redacted as it may contain sensitive data. Specify 'Include Error Detail' in the connection string to include this information.
+   at Npgsql.Internal.NpgsqlConnector.<ReadMessage>g__ReadMessageLong|211_0(NpgsqlConnector connector, Boolean async, DataRowLoadingMode dataRowLoadingMode, Boolean readingNotifications, Boolean isReadingPrependedMessage)
+   at Npgsql.NpgsqlDataReader.NextResult(Boolean async, Boolean isConsuming, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlCommand.ExecuteReader(CommandBehavior behavior, Boolean async, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlCommand.ExecuteReader(CommandBehavior behavior, Boolean async, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlCommand.ExecuteDbDataReaderAsync(CommandBehavior behavior, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+  Exception data:
+    Severity: ERROR
+    SqlState: 23503
+    MessageText: insert or update on table "ApplicationSubmissions" violates foreign key constraint "FK_ApplicationSubmissions_Applications_ApplicationId"
+    Detail: Detail redacted as it may contain sensitive data. Specify 'Include Error Detail' in the connection string to include this information.
+    SchemaName: Identity
+    TableName: ApplicationSubmissions
+    ConstraintName: FK_ApplicationSubmissions_Applications_ApplicationId
+    File: d:\pginstaller_13.auto\postgres.windows-x64\src\backend\utils\adt\ri_triggers.c
+    Line: 2476
+    Routine: ri_ReportViolation
+   --- End of inner exception stack trace ---
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(IList`1 entriesToSave, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(StateManager stateManager, Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at Npgsql.EntityFrameworkCore.PostgreSQL.Storage.Internal.NpgsqlExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+2022-04-02 23:57:40.924 +04:00 [ERR] An unhandled exception has occurred while executing the request.
+Microsoft.EntityFrameworkCore.DbUpdateException: An error occurred while saving the entity changes. See the inner exception for details.
+ ---> Npgsql.PostgresException (0x80004005): 23503: insert or update on table "ApplicationSubmissions" violates foreign key constraint "FK_ApplicationSubmissions_Applications_ApplicationId"
+
+DETAIL: Detail redacted as it may contain sensitive data. Specify 'Include Error Detail' in the connection string to include this information.
+   at Npgsql.Internal.NpgsqlConnector.<ReadMessage>g__ReadMessageLong|211_0(NpgsqlConnector connector, Boolean async, DataRowLoadingMode dataRowLoadingMode, Boolean readingNotifications, Boolean isReadingPrependedMessage)
+   at Npgsql.NpgsqlDataReader.NextResult(Boolean async, Boolean isConsuming, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlCommand.ExecuteReader(CommandBehavior behavior, Boolean async, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlCommand.ExecuteReader(CommandBehavior behavior, Boolean async, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlCommand.ExecuteDbDataReaderAsync(CommandBehavior behavior, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+  Exception data:
+    Severity: ERROR
+    SqlState: 23503
+    MessageText: insert or update on table "ApplicationSubmissions" violates foreign key constraint "FK_ApplicationSubmissions_Applications_ApplicationId"
+    Detail: Detail redacted as it may contain sensitive data. Specify 'Include Error Detail' in the connection string to include this information.
+    SchemaName: Identity
+    TableName: ApplicationSubmissions
+    ConstraintName: FK_ApplicationSubmissions_Applications_ApplicationId
+    File: d:\pginstaller_13.auto\postgres.windows-x64\src\backend\utils\adt\ri_triggers.c
+    Line: 2476
+    Routine: ri_ReportViolation
+   --- End of inner exception stack trace ---
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(IList`1 entriesToSave, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(StateManager stateManager, Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at Npgsql.EntityFrameworkCore.PostgreSQL.Storage.Internal.NpgsqlExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at Infrastructure.Persistence.ApplicationContext.SaveChangesAsync(CancellationToken cancellationToken) in C:\Users\rudik\source\repos\ScienceResearchPA\Infrastructure\Persistence\ApplicationContext.cs:line 140
+   at App.ApplicationSubmissions.Commands.CreateUpdateApplicationSubmissionCommandHandler.Handle(CreateUpdateApplicationSubmissionCommand request, CancellationToken cancellationToken) in C:\Users\rudik\source\repos\ScienceResearchPA\App\ApplicationSubmissions\Commands\CreateUpdateApplicationSubmission.cs:line 51
+   at App.Common.Behaviours.ValidationBehavior`2.Handle(TRequest request, CancellationToken cancellationToken, RequestHandlerDelegate`1 next) in C:\Users\rudik\source\repos\ScienceResearchPA\App\Common\Behaviours\ValidationBehavior.cs:line 34
+   at MediatR.Pipeline.RequestExceptionProcessorBehavior`2.Handle(TRequest request, CancellationToken cancellationToken, RequestHandlerDelegate`1 next)
+   at MediatR.Pipeline.RequestExceptionProcessorBehavior`2.Handle(TRequest request, CancellationToken cancellationToken, RequestHandlerDelegate`1 next)
+   at MediatR.Pipeline.RequestExceptionActionProcessorBehavior`2.Handle(TRequest request, CancellationToken cancellationToken, RequestHandlerDelegate`1 next)
+   at MediatR.Pipeline.RequestExceptionActionProcessorBehavior`2.Handle(TRequest request, CancellationToken cancellationToken, RequestHandlerDelegate`1 next)
+   at MediatR.Pipeline.RequestPostProcessorBehavior`2.Handle(TRequest request, CancellationToken cancellationToken, RequestHandlerDelegate`1 next)
+   at MediatR.Pipeline.RequestPreProcessorBehavior`2.Handle(TRequest request, CancellationToken cancellationToken, RequestHandlerDelegate`1 next)
+   at ScienceResearchPA.Controllers.ApplicationSubmission.Post(CreateUpdateApplicationSubmissionCommand command, CancellationToken cancellationToken) in C:\Users\rudik\source\repos\ScienceResearchPA\ScienceResearchPA\Controllers\ApplicationSubmission.cs:line 33
+   at lambda_method61(Closure , Object )
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.AwaitableObjectResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Logged|12_1(ControllerActionInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Localization.RequestLocalizationMiddleware.Invoke(HttpContext context)
+   at StackExchange.Profiling.MiniProfilerMiddleware.Invoke(HttpContext context) in C:\projects\dotnet\src\MiniProfiler.AspNetCore\MiniProfilerMiddleware.cs:line 103
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+2022-04-02 23:57:42.425 +04:00 [ERR] Failed executing DbCommand (10ms) [Parameters=[@p0='?' (DbType = Int32), @p1='?' (DbType = Int32), @p2='?' (DbType = Boolean), @p3='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+INSERT INTO "Identity"."ApplicationSubmissions" ("ApplicationId", "ApplicationStateId", "IsRemoved", "UserId")
+VALUES (@p0, @p1, @p2, @p3)
+RETURNING "Id";
+2022-04-02 23:57:42.430 +04:00 [ERR] An exception occurred in the database while saving changes for context type 'Infrastructure.Persistence.ApplicationContext'.
+Microsoft.EntityFrameworkCore.DbUpdateException: An error occurred while saving the entity changes. See the inner exception for details.
+ ---> Npgsql.PostgresException (0x80004005): 23503: insert or update on table "ApplicationSubmissions" violates foreign key constraint "FK_ApplicationSubmissions_Applications_ApplicationId"
+
+DETAIL: Detail redacted as it may contain sensitive data. Specify 'Include Error Detail' in the connection string to include this information.
+   at Npgsql.Internal.NpgsqlConnector.<ReadMessage>g__ReadMessageLong|211_0(NpgsqlConnector connector, Boolean async, DataRowLoadingMode dataRowLoadingMode, Boolean readingNotifications, Boolean isReadingPrependedMessage)
+   at Npgsql.NpgsqlDataReader.NextResult(Boolean async, Boolean isConsuming, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlCommand.ExecuteReader(CommandBehavior behavior, Boolean async, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlCommand.ExecuteReader(CommandBehavior behavior, Boolean async, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlCommand.ExecuteDbDataReaderAsync(CommandBehavior behavior, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+  Exception data:
+    Severity: ERROR
+    SqlState: 23503
+    MessageText: insert or update on table "ApplicationSubmissions" violates foreign key constraint "FK_ApplicationSubmissions_Applications_ApplicationId"
+    Detail: Detail redacted as it may contain sensitive data. Specify 'Include Error Detail' in the connection string to include this information.
+    SchemaName: Identity
+    TableName: ApplicationSubmissions
+    ConstraintName: FK_ApplicationSubmissions_Applications_ApplicationId
+    File: d:\pginstaller_13.auto\postgres.windows-x64\src\backend\utils\adt\ri_triggers.c
+    Line: 2476
+    Routine: ri_ReportViolation
+   --- End of inner exception stack trace ---
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(IList`1 entriesToSave, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(StateManager stateManager, Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at Npgsql.EntityFrameworkCore.PostgreSQL.Storage.Internal.NpgsqlExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+Microsoft.EntityFrameworkCore.DbUpdateException: An error occurred while saving the entity changes. See the inner exception for details.
+ ---> Npgsql.PostgresException (0x80004005): 23503: insert or update on table "ApplicationSubmissions" violates foreign key constraint "FK_ApplicationSubmissions_Applications_ApplicationId"
+
+DETAIL: Detail redacted as it may contain sensitive data. Specify 'Include Error Detail' in the connection string to include this information.
+   at Npgsql.Internal.NpgsqlConnector.<ReadMessage>g__ReadMessageLong|211_0(NpgsqlConnector connector, Boolean async, DataRowLoadingMode dataRowLoadingMode, Boolean readingNotifications, Boolean isReadingPrependedMessage)
+   at Npgsql.NpgsqlDataReader.NextResult(Boolean async, Boolean isConsuming, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlCommand.ExecuteReader(CommandBehavior behavior, Boolean async, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlCommand.ExecuteReader(CommandBehavior behavior, Boolean async, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlCommand.ExecuteDbDataReaderAsync(CommandBehavior behavior, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+  Exception data:
+    Severity: ERROR
+    SqlState: 23503
+    MessageText: insert or update on table "ApplicationSubmissions" violates foreign key constraint "FK_ApplicationSubmissions_Applications_ApplicationId"
+    Detail: Detail redacted as it may contain sensitive data. Specify 'Include Error Detail' in the connection string to include this information.
+    SchemaName: Identity
+    TableName: ApplicationSubmissions
+    ConstraintName: FK_ApplicationSubmissions_Applications_ApplicationId
+    File: d:\pginstaller_13.auto\postgres.windows-x64\src\backend\utils\adt\ri_triggers.c
+    Line: 2476
+    Routine: ri_ReportViolation
+   --- End of inner exception stack trace ---
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(IList`1 entriesToSave, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(StateManager stateManager, Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at Npgsql.EntityFrameworkCore.PostgreSQL.Storage.Internal.NpgsqlExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+2022-04-02 23:57:42.673 +04:00 [ERR] An unhandled exception has occurred while executing the request.
+Microsoft.EntityFrameworkCore.DbUpdateException: An error occurred while saving the entity changes. See the inner exception for details.
+ ---> Npgsql.PostgresException (0x80004005): 23503: insert or update on table "ApplicationSubmissions" violates foreign key constraint "FK_ApplicationSubmissions_Applications_ApplicationId"
+
+DETAIL: Detail redacted as it may contain sensitive data. Specify 'Include Error Detail' in the connection string to include this information.
+   at Npgsql.Internal.NpgsqlConnector.<ReadMessage>g__ReadMessageLong|211_0(NpgsqlConnector connector, Boolean async, DataRowLoadingMode dataRowLoadingMode, Boolean readingNotifications, Boolean isReadingPrependedMessage)
+   at Npgsql.NpgsqlDataReader.NextResult(Boolean async, Boolean isConsuming, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlCommand.ExecuteReader(CommandBehavior behavior, Boolean async, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlCommand.ExecuteReader(CommandBehavior behavior, Boolean async, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlCommand.ExecuteDbDataReaderAsync(CommandBehavior behavior, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+  Exception data:
+    Severity: ERROR
+    SqlState: 23503
+    MessageText: insert or update on table "ApplicationSubmissions" violates foreign key constraint "FK_ApplicationSubmissions_Applications_ApplicationId"
+    Detail: Detail redacted as it may contain sensitive data. Specify 'Include Error Detail' in the connection string to include this information.
+    SchemaName: Identity
+    TableName: ApplicationSubmissions
+    ConstraintName: FK_ApplicationSubmissions_Applications_ApplicationId
+    File: d:\pginstaller_13.auto\postgres.windows-x64\src\backend\utils\adt\ri_triggers.c
+    Line: 2476
+    Routine: ri_ReportViolation
+   --- End of inner exception stack trace ---
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(IList`1 entriesToSave, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(StateManager stateManager, Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at Npgsql.EntityFrameworkCore.PostgreSQL.Storage.Internal.NpgsqlExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at Infrastructure.Persistence.ApplicationContext.SaveChangesAsync(CancellationToken cancellationToken) in C:\Users\rudik\source\repos\ScienceResearchPA\Infrastructure\Persistence\ApplicationContext.cs:line 140
+   at App.ApplicationSubmissions.Commands.CreateUpdateApplicationSubmissionCommandHandler.Handle(CreateUpdateApplicationSubmissionCommand request, CancellationToken cancellationToken) in C:\Users\rudik\source\repos\ScienceResearchPA\App\ApplicationSubmissions\Commands\CreateUpdateApplicationSubmission.cs:line 51
+   at App.Common.Behaviours.ValidationBehavior`2.Handle(TRequest request, CancellationToken cancellationToken, RequestHandlerDelegate`1 next) in C:\Users\rudik\source\repos\ScienceResearchPA\App\Common\Behaviours\ValidationBehavior.cs:line 34
+   at MediatR.Pipeline.RequestExceptionProcessorBehavior`2.Handle(TRequest request, CancellationToken cancellationToken, RequestHandlerDelegate`1 next)
+   at MediatR.Pipeline.RequestExceptionProcessorBehavior`2.Handle(TRequest request, CancellationToken cancellationToken, RequestHandlerDelegate`1 next)
+   at MediatR.Pipeline.RequestExceptionActionProcessorBehavior`2.Handle(TRequest request, CancellationToken cancellationToken, RequestHandlerDelegate`1 next)
+   at MediatR.Pipeline.RequestExceptionActionProcessorBehavior`2.Handle(TRequest request, CancellationToken cancellationToken, RequestHandlerDelegate`1 next)
+   at MediatR.Pipeline.RequestPostProcessorBehavior`2.Handle(TRequest request, CancellationToken cancellationToken, RequestHandlerDelegate`1 next)
+   at MediatR.Pipeline.RequestPreProcessorBehavior`2.Handle(TRequest request, CancellationToken cancellationToken, RequestHandlerDelegate`1 next)
+   at ScienceResearchPA.Controllers.ApplicationSubmission.Post(CreateUpdateApplicationSubmissionCommand command, CancellationToken cancellationToken) in C:\Users\rudik\source\repos\ScienceResearchPA\ScienceResearchPA\Controllers\ApplicationSubmission.cs:line 33
+   at lambda_method61(Closure , Object )
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.AwaitableObjectResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Logged|12_1(ControllerActionInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Localization.RequestLocalizationMiddleware.Invoke(HttpContext context)
+   at StackExchange.Profiling.MiniProfilerMiddleware.Invoke(HttpContext context) in C:\projects\dotnet\src\MiniProfiler.AspNetCore\MiniProfilerMiddleware.cs:line 103
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+2022-04-02 23:57:57.348 +04:00 [ERR] Failed executing DbCommand (8ms) [Parameters=[@p0='?' (DbType = Int32), @p1='?' (DbType = Int32), @p2='?' (DbType = Boolean), @p3='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+INSERT INTO "Identity"."ApplicationSubmissions" ("ApplicationId", "ApplicationStateId", "IsRemoved", "UserId")
+VALUES (@p0, @p1, @p2, @p3)
+RETURNING "Id";
+2022-04-02 23:57:57.353 +04:00 [ERR] An exception occurred in the database while saving changes for context type 'Infrastructure.Persistence.ApplicationContext'.
+Microsoft.EntityFrameworkCore.DbUpdateException: An error occurred while saving the entity changes. See the inner exception for details.
+ ---> Npgsql.PostgresException (0x80004005): 23503: insert or update on table "ApplicationSubmissions" violates foreign key constraint "FK_ApplicationSubmissions_Applications_ApplicationId"
+
+DETAIL: Detail redacted as it may contain sensitive data. Specify 'Include Error Detail' in the connection string to include this information.
+   at Npgsql.Internal.NpgsqlConnector.<ReadMessage>g__ReadMessageLong|211_0(NpgsqlConnector connector, Boolean async, DataRowLoadingMode dataRowLoadingMode, Boolean readingNotifications, Boolean isReadingPrependedMessage)
+   at Npgsql.NpgsqlDataReader.NextResult(Boolean async, Boolean isConsuming, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlCommand.ExecuteReader(CommandBehavior behavior, Boolean async, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlCommand.ExecuteReader(CommandBehavior behavior, Boolean async, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlCommand.ExecuteDbDataReaderAsync(CommandBehavior behavior, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+  Exception data:
+    Severity: ERROR
+    SqlState: 23503
+    MessageText: insert or update on table "ApplicationSubmissions" violates foreign key constraint "FK_ApplicationSubmissions_Applications_ApplicationId"
+    Detail: Detail redacted as it may contain sensitive data. Specify 'Include Error Detail' in the connection string to include this information.
+    SchemaName: Identity
+    TableName: ApplicationSubmissions
+    ConstraintName: FK_ApplicationSubmissions_Applications_ApplicationId
+    File: d:\pginstaller_13.auto\postgres.windows-x64\src\backend\utils\adt\ri_triggers.c
+    Line: 2476
+    Routine: ri_ReportViolation
+   --- End of inner exception stack trace ---
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(IList`1 entriesToSave, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(StateManager stateManager, Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at Npgsql.EntityFrameworkCore.PostgreSQL.Storage.Internal.NpgsqlExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+Microsoft.EntityFrameworkCore.DbUpdateException: An error occurred while saving the entity changes. See the inner exception for details.
+ ---> Npgsql.PostgresException (0x80004005): 23503: insert or update on table "ApplicationSubmissions" violates foreign key constraint "FK_ApplicationSubmissions_Applications_ApplicationId"
+
+DETAIL: Detail redacted as it may contain sensitive data. Specify 'Include Error Detail' in the connection string to include this information.
+   at Npgsql.Internal.NpgsqlConnector.<ReadMessage>g__ReadMessageLong|211_0(NpgsqlConnector connector, Boolean async, DataRowLoadingMode dataRowLoadingMode, Boolean readingNotifications, Boolean isReadingPrependedMessage)
+   at Npgsql.NpgsqlDataReader.NextResult(Boolean async, Boolean isConsuming, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlCommand.ExecuteReader(CommandBehavior behavior, Boolean async, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlCommand.ExecuteReader(CommandBehavior behavior, Boolean async, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlCommand.ExecuteDbDataReaderAsync(CommandBehavior behavior, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+  Exception data:
+    Severity: ERROR
+    SqlState: 23503
+    MessageText: insert or update on table "ApplicationSubmissions" violates foreign key constraint "FK_ApplicationSubmissions_Applications_ApplicationId"
+    Detail: Detail redacted as it may contain sensitive data. Specify 'Include Error Detail' in the connection string to include this information.
+    SchemaName: Identity
+    TableName: ApplicationSubmissions
+    ConstraintName: FK_ApplicationSubmissions_Applications_ApplicationId
+    File: d:\pginstaller_13.auto\postgres.windows-x64\src\backend\utils\adt\ri_triggers.c
+    Line: 2476
+    Routine: ri_ReportViolation
+   --- End of inner exception stack trace ---
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(IList`1 entriesToSave, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(StateManager stateManager, Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at Npgsql.EntityFrameworkCore.PostgreSQL.Storage.Internal.NpgsqlExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+2022-04-02 23:57:57.547 +04:00 [ERR] An unhandled exception has occurred while executing the request.
+Microsoft.EntityFrameworkCore.DbUpdateException: An error occurred while saving the entity changes. See the inner exception for details.
+ ---> Npgsql.PostgresException (0x80004005): 23503: insert or update on table "ApplicationSubmissions" violates foreign key constraint "FK_ApplicationSubmissions_Applications_ApplicationId"
+
+DETAIL: Detail redacted as it may contain sensitive data. Specify 'Include Error Detail' in the connection string to include this information.
+   at Npgsql.Internal.NpgsqlConnector.<ReadMessage>g__ReadMessageLong|211_0(NpgsqlConnector connector, Boolean async, DataRowLoadingMode dataRowLoadingMode, Boolean readingNotifications, Boolean isReadingPrependedMessage)
+   at Npgsql.NpgsqlDataReader.NextResult(Boolean async, Boolean isConsuming, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlCommand.ExecuteReader(CommandBehavior behavior, Boolean async, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlCommand.ExecuteReader(CommandBehavior behavior, Boolean async, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlCommand.ExecuteDbDataReaderAsync(CommandBehavior behavior, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+  Exception data:
+    Severity: ERROR
+    SqlState: 23503
+    MessageText: insert or update on table "ApplicationSubmissions" violates foreign key constraint "FK_ApplicationSubmissions_Applications_ApplicationId"
+    Detail: Detail redacted as it may contain sensitive data. Specify 'Include Error Detail' in the connection string to include this information.
+    SchemaName: Identity
+    TableName: ApplicationSubmissions
+    ConstraintName: FK_ApplicationSubmissions_Applications_ApplicationId
+    File: d:\pginstaller_13.auto\postgres.windows-x64\src\backend\utils\adt\ri_triggers.c
+    Line: 2476
+    Routine: ri_ReportViolation
+   --- End of inner exception stack trace ---
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(IList`1 entriesToSave, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(StateManager stateManager, Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at Npgsql.EntityFrameworkCore.PostgreSQL.Storage.Internal.NpgsqlExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at Infrastructure.Persistence.ApplicationContext.SaveChangesAsync(CancellationToken cancellationToken) in C:\Users\rudik\source\repos\ScienceResearchPA\Infrastructure\Persistence\ApplicationContext.cs:line 140
+   at App.ApplicationSubmissions.Commands.CreateUpdateApplicationSubmissionCommandHandler.Handle(CreateUpdateApplicationSubmissionCommand request, CancellationToken cancellationToken) in C:\Users\rudik\source\repos\ScienceResearchPA\App\ApplicationSubmissions\Commands\CreateUpdateApplicationSubmission.cs:line 51
+   at App.Common.Behaviours.ValidationBehavior`2.Handle(TRequest request, CancellationToken cancellationToken, RequestHandlerDelegate`1 next) in C:\Users\rudik\source\repos\ScienceResearchPA\App\Common\Behaviours\ValidationBehavior.cs:line 34
+   at MediatR.Pipeline.RequestExceptionProcessorBehavior`2.Handle(TRequest request, CancellationToken cancellationToken, RequestHandlerDelegate`1 next)
+   at MediatR.Pipeline.RequestExceptionProcessorBehavior`2.Handle(TRequest request, CancellationToken cancellationToken, RequestHandlerDelegate`1 next)
+   at MediatR.Pipeline.RequestExceptionActionProcessorBehavior`2.Handle(TRequest request, CancellationToken cancellationToken, RequestHandlerDelegate`1 next)
+   at MediatR.Pipeline.RequestExceptionActionProcessorBehavior`2.Handle(TRequest request, CancellationToken cancellationToken, RequestHandlerDelegate`1 next)
+   at MediatR.Pipeline.RequestPostProcessorBehavior`2.Handle(TRequest request, CancellationToken cancellationToken, RequestHandlerDelegate`1 next)
+   at MediatR.Pipeline.RequestPreProcessorBehavior`2.Handle(TRequest request, CancellationToken cancellationToken, RequestHandlerDelegate`1 next)
+   at ScienceResearchPA.Controllers.ApplicationSubmission.Post(CreateUpdateApplicationSubmissionCommand command, CancellationToken cancellationToken) in C:\Users\rudik\source\repos\ScienceResearchPA\ScienceResearchPA\Controllers\ApplicationSubmission.cs:line 33
+   at lambda_method61(Closure , Object )
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.AwaitableObjectResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Logged|12_1(ControllerActionInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Localization.RequestLocalizationMiddleware.Invoke(HttpContext context)
+   at StackExchange.Profiling.MiniProfilerMiddleware.Invoke(HttpContext context) in C:\projects\dotnet\src\MiniProfiler.AspNetCore\MiniProfilerMiddleware.cs:line 103
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)

@@ -1,10 +1,12 @@
 {
   "version": 2,
-  "dgSpecHash": "L90zZsYTikpychmAPP9kLPDBcrKhAUHTgie24JzocsHxxPUDY714/KwBdhrObrJkZR3P6T/UEUU7sX9cMH0dCA==",
+  "dgSpecHash": "fZQphFuTAX0h5g0bANHcTFwk/yiEwRahjykIuqjoJufbosWm6Asc+D/UHpXFQS4S5hjAVeytsyj96Ud8KlfTlQ==",
   "success": true,
   "projectFilePath": "C:\\Users\\rudik\\source\\repos\\ScienceResearchPA\\App\\App.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\rudik\\.nuget\\packages\\fluentvalidation\\10.4.0\\fluentvalidation.10.4.0.nupkg.sha512",
+    "C:\\Users\\rudik\\.nuget\\packages\\fluentvalidation.aspnetcore\\10.4.0\\fluentvalidation.aspnetcore.10.4.0.nupkg.sha512",
+    "C:\\Users\\rudik\\.nuget\\packages\\fluentvalidation.dependencyinjectionextensions\\10.4.0\\fluentvalidation.dependencyinjectionextensions.10.4.0.nupkg.sha512",
     "C:\\Users\\rudik\\.nuget\\packages\\mapster\\7.3.0\\mapster.7.3.0.nupkg.sha512",
     "C:\\Users\\rudik\\.nuget\\packages\\mapster.core\\1.2.0\\mapster.core.1.2.0.nupkg.sha512",
     "C:\\Users\\rudik\\.nuget\\packages\\mapster.dependencyinjection\\1.0.0\\mapster.dependencyinjection.1.0.0.nupkg.sha512",
