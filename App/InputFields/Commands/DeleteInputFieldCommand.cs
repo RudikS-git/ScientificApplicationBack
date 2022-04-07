@@ -1,5 +1,7 @@
 ﻿using App.Common.Interfaces;
 using App.Common.Models;
+using MapsterMapper;
+using Microsoft.Extensions.Localization;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -14,26 +16,26 @@ namespace App.InputFields.Commands
         public int Id { get; set; }
     }
 
-    class DeleteInputFieldCommanddHandler : IRequestHandlerWrapper<DeleteInputFieldCommand, int>
+    class DeleteInputFieldCommanddHandler : Handler, IRequestHandlerWrapper<DeleteInputFieldCommand, int>
     {
-        private readonly IApplicationContext applicationContext;
-
-        public DeleteInputFieldCommanddHandler(IApplicationContext applicationContext)
+        public DeleteInputFieldCommanddHandler(IApplicationContext applicationContext, IStringLocalizer<SharedResource> localizer, IMapper mapper)
+            : base(applicationContext, localizer, mapper)
         {
-            this.applicationContext = applicationContext;
         }
 
         public async Task<ServiceResult<int>> Handle(DeleteInputFieldCommand command, CancellationToken cancellationToken)
         {
-            var application = applicationContext.Applications.Where(it => it.Id == command.Id).FirstOrDefault();
+            throw new NotImplementedException();
+
+            var application = _context.Applications.Where(it => it.Id == command.Id).FirstOrDefault();
 
             if (application == null)
             {
                 return ServiceResult.Failed<int>(new ServiceError());
             }
 
-            applicationContext.Applications.Remove(application);
-            await applicationContext.SaveChangesAsync();
+            _context.Applications.Remove(application);
+            await _context.SaveChangesAsync();
 
             return ServiceResult.Success(0);
         }

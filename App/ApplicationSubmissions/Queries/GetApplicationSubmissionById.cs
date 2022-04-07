@@ -14,33 +14,31 @@ using Mapster;
 using MapsterMapper;
 
 using ResponseQuery = App.ApplicationSubmissions.Queries.ApplicationSubmissionQueryDto;
+using Microsoft.Extensions.Localization;
 
 namespace App.ApplicationSubmissions.Queries
 {
-    public class GetApplicationSubmissionByIdQuery : IRequestWrapper<ResponseQuery>
+    public class GetApplicationSubmissionById : IRequestWrapper<ResponseQuery>
     {
         public int Id { get; set; }
 
-        public GetApplicationSubmissionByIdQuery(int id)
+        public GetApplicationSubmissionById(int id)
         {
             this.Id = id;
         }
     }
 
-    public class GetApplicationSubmissionByIdQueryHandler : IRequestHandlerWrapper<GetApplicationSubmissionByIdQuery, ResponseQuery>
+    public class GetApplicationSubmissionByIdQueryHandler : Handler<ApplicationSubmission, ApplicationSubmissionQueryDto>, IRequestHandlerWrapper<GetApplicationSubmissionById, ResponseQuery>
     {
-        private readonly IApplicationContext _context;
-        private readonly IMapper _mapper;
         private readonly ICurrentUserService _userService;
 
-        public GetApplicationSubmissionByIdQueryHandler(IApplicationContext context, IMapper mapper, ICurrentUserService userService)
+        public GetApplicationSubmissionByIdQueryHandler(IApplicationContext context, IStringLocalizer<SharedResource> localizer, IMapper mapper, ICurrentUserService userService)
+            : base(context, localizer, mapper)
         {
-            _context = context;
-            _mapper = mapper;
             _userService = userService;
         }
 
-        public async Task<ServiceResult<ResponseQuery>> Handle(GetApplicationSubmissionByIdQuery query, CancellationToken cancellationToken)
+        public async Task<ServiceResult<ResponseQuery>> Handle(GetApplicationSubmissionById query, CancellationToken cancellationToken)
         {
             var applicationSubmission = await _context.ApplicationSubmissions.Where(it => it.UserId == _userService.UserId && query.Id == it.Id)
                 .OrderByDescending(it => it.Id)
@@ -49,9 +47,9 @@ namespace App.ApplicationSubmissions.Queries
             if(applicationSubmission == null)
             {
                 return ServiceResult.Failed<ResponseQuery>(ServiceError.NotFound);
-            }    
+            }
 
-            return ServiceResult.Success<ResponseQuery>(_mapper.Map<ApplicationSubmissionQueryDto>(applicationSubmission));
+            return GetSuccessResult(applicationSubmission);
         }
     }
 }

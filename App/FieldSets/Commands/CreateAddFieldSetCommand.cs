@@ -14,7 +14,6 @@ using System.Linq;
 using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
-using System.Linq;
 
 namespace App.FieldSets.Commands
 {
@@ -24,22 +23,17 @@ namespace App.FieldSets.Commands
         public FieldSetDto EntityFieldDto { get; set; }
     }
 
-    class CreateAddEntityFieldCommandCommandCommandHandler : IRequestHandlerWrapper<CreateAddEntityFieldCommandCommand, FieldSetDto>
+    class CreateAddEntityFieldCommandCommandCommandHandler : Handler<FieldSet, FieldSetDto>, IRequestHandlerWrapper<CreateAddEntityFieldCommandCommand, FieldSetDto>
     {
-        private readonly IApplicationContext applicationContext;
-        private readonly IStringLocalizer<SharedResource> localizer;
-        private readonly IMapper mapper;
 
         public CreateAddEntityFieldCommandCommandCommandHandler(IApplicationContext applicationContext, IStringLocalizer<SharedResource> localizer, IMapper mapper)
+            : base (applicationContext, localizer, mapper)
         {
-            this.applicationContext = applicationContext;
-            this.localizer = localizer;
-            this.mapper = mapper;
         }
 
         public async Task<ServiceResult<FieldSetDto>> Handle(CreateAddEntityFieldCommandCommand request, CancellationToken cancellationToken)
         {
-            var entityField = mapper.Map<FieldSet>(request.EntityFieldDto);
+            var entityField = _mapper.Map<FieldSet>(request.EntityFieldDto);
             entityField.ApplicationGroupId = request.GroupId;
             entityField.InputNumberPhoneFields.ForEach(field => field.InputField.ApplicationGroupId = request.GroupId);
             entityField.InputTextFields.ForEach(field => field.InputField.ApplicationGroupId = request.GroupId);
@@ -48,16 +42,16 @@ namespace App.FieldSets.Commands
 
             if (entityField.Id != 0)
             {
-                applicationContext.EntityFields.Update(entityField);
+                _context.EntityFields.Update(entityField);
             }
             else
             {
-                await applicationContext.EntityFields.AddAsync(entityField, cancellationToken);
+                await _context.EntityFields.AddAsync(entityField, cancellationToken);
             }
 
-            await applicationContext.SaveChangesAsync();
+            await _context.SaveChangesAsync();
 
-            return ServiceResult.Success(mapper.Map<FieldSetDto>(entityField));
+            return GetSuccessResult(entityField);
         }
     }
 }

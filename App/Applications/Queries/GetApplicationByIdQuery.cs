@@ -12,6 +12,7 @@ using MapsterMapper;
 using Mapster;
 using App.Applications.DTOs;
 using App.InputFields.DTOs;
+using Microsoft.Extensions.Localization;
 
 namespace App.Applications.Queries
 {
@@ -29,15 +30,11 @@ namespace App.Applications.Queries
         }
     }
 
-    public class GetApplicationByIdHandler : IRequestHandlerWrapper<GetApplicationByIdQuery, ApplicationDetailsDto>
+    public class GetApplicationByIdHandler : Handler<Application, ApplicationDetailsDto>, IRequestHandlerWrapper<GetApplicationByIdQuery, ApplicationDetailsDto>
     {
-        private readonly IApplicationContext _context;
-        private readonly IMapper _mapper;
-
-        public GetApplicationByIdHandler(IApplicationContext context, IMapper mapper)
+        public GetApplicationByIdHandler(IApplicationContext context, IStringLocalizer<SharedResource> localizer, IMapper mapper) 
+            : base(context, localizer, mapper)
         {
-            _context = context;
-            _mapper = mapper;
         }
 
         public async Task<ServiceResult<ApplicationDetailsDto>> Handle(GetApplicationByIdQuery query, CancellationToken cancellationToken)
@@ -70,7 +67,7 @@ namespace App.Applications.Queries
                 return ServiceResult.Failed<ApplicationDetailsDto>(ServiceError.NotFound);
             }
 
-            var appDto = _mapper.Map<ApplicationDetailsDto>(application);
+            var appDto = MapToDTO(application);
 
             appDto.ApplicationGroups.ForEach(it =>
             {

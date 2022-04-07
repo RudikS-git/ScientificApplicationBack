@@ -33,17 +33,11 @@ namespace App.InputFields.Commands
         public InputNumberPhoneFieldDto NumberPhoneField { get; set; }
     }
 
-    class CreateUpdateInputFieldCommandHandler : IRequestHandlerWrapper<CreateUpdateInputFieldCommand, InputTextFieldDto>
+    class CreateUpdateInputFieldCommandHandler : Handler<InputField, InputTextFieldDto>, IRequestHandlerWrapper<CreateUpdateInputFieldCommand, InputTextFieldDto>
     {
-        private readonly IApplicationContext applicationContext;
-        private readonly IStringLocalizer<SharedResource> localizer;
-        private readonly IMapper mapper;
-
         public CreateUpdateInputFieldCommandHandler(IApplicationContext applicationContext, IStringLocalizer<SharedResource> localizer, IMapper mapper)
+            : base(applicationContext, localizer, mapper)
         {
-            this.applicationContext = applicationContext;
-            this.localizer = localizer;
-            this.mapper = mapper;
         }
 
         public async Task<ServiceResult<InputTextFieldDto>> Handle(CreateUpdateInputFieldCommand request, CancellationToken cancellationToken)
@@ -62,25 +56,25 @@ namespace App.InputFields.Commands
             switch (request.InputUnderTypeId)
             {
                 case InputUnderTypes.Date:
-                    var inputDateField = mapper.Map<InputDateField>(request.DateField);
+                    var inputDateField = _mapper.Map<InputDateField>(request.DateField);
                     inputDateField.InputField = inputField;
                     savedInputField = inputDateField;
                     break;
 
                 case InputUnderTypes.Text:
-                    var textField = mapper.Map<InputTextField>(request.TextField);
+                    var textField = _mapper.Map<InputTextField>(request.TextField);
                     textField.InputField = inputField;
                     savedInputField = textField;
                     break;
 
                 case InputUnderTypes.Number:
-                    var numberField = mapper.Map<InputNumberField>(request.DateField);
+                    var numberField = _mapper.Map<InputNumberField>(request.DateField);
                     numberField.InputField = inputField;
                     savedInputField = numberField;
                     break;
 
                 case InputUnderTypes.NumberPhone:
-                    var numberPhoneField = mapper.Map<InputNumberPhoneField>(request.DateField);
+                    var numberPhoneField = _mapper.Map<InputNumberPhoneField>(request.DateField);
                     numberPhoneField.InputField = inputField;
                     savedInputField = numberPhoneField;
                     break;
@@ -88,16 +82,16 @@ namespace App.InputFields.Commands
 
             if (savedInputField.Id != 0)
             {
-                applicationContext.InputFields.Update(savedInputField);
+                _context.InputFields.Update(savedInputField);
             }
             else
             {
-                await applicationContext.InputFields.AddAsync(savedInputField, cancellationToken);
+                await _context.InputFields.AddAsync(savedInputField, cancellationToken);
             }
 
-            await applicationContext.SaveChangesAsync();
+            await _context.SaveChangesAsync();
 
-            return ServiceResult.Success(mapper.Map<InputTextFieldDto>(inputField));
+            return GetSuccessResult(inputField);
         }
     }
 }

@@ -24,27 +24,19 @@ namespace App.ApplicationSubmissions.Commands
         public ApplicationSubmissionDto ApplicationSubmission { get; set; }
     }
 
-    class CreateUpdateApplicationSubmissionCommandHandler : IRequestHandlerWrapper<CreateUpdateApplicationSubmissionCommand, ApplicationSubmissionDto>
+    class CreateUpdateApplicationSubmissionCommandHandler : Handler<ApplicationSubmission, ApplicationSubmissionDto>, IRequestHandlerWrapper<CreateUpdateApplicationSubmissionCommand, ApplicationSubmissionDto>
     {
-        private readonly IApplicationContext applicationContext;
-        private readonly IStringLocalizer<SharedResource> localizer;
-        private readonly IMapper mapper;
         private readonly ICurrentUserService _userService;
 
-        public CreateUpdateApplicationSubmissionCommandHandler(IApplicationContext applicationContext, 
-            IStringLocalizer<SharedResource> localizer, 
-            IMapper mapper,
-            ICurrentUserService userService)
+        public CreateUpdateApplicationSubmissionCommandHandler(IApplicationContext context, IStringLocalizer<SharedResource> localizer, IMapper mapper, ICurrentUserService userService)
+            : base(context, localizer, mapper)
         {
-            this.applicationContext = applicationContext;
-            this.localizer = localizer;
-            this.mapper = mapper;
             _userService = userService;
         }
 
         public async Task<ServiceResult<ApplicationSubmissionDto>> Handle(CreateUpdateApplicationSubmissionCommand request, CancellationToken cancellationToken)
         {
-            var applicationSubmission = mapper.Map<ApplicationSubmission>(request.ApplicationSubmission);
+            var applicationSubmission = _mapper.Map<ApplicationSubmission>(request.ApplicationSubmission);
 
             applicationSubmission.SelectSubmissions = request.ApplicationSubmission.SelectSubmissions.Select(it =>
                 new SelectSubmission()
@@ -58,16 +50,16 @@ namespace App.ApplicationSubmissions.Commands
 
             if (applicationSubmission.Id != 0)
             {
-                applicationContext.ApplicationSubmissions.Update(applicationSubmission);
+                _context.ApplicationSubmissions.Update(applicationSubmission);
             }
             else
             {
-                await applicationContext.ApplicationSubmissions.AddAsync(applicationSubmission);
+                await _context.ApplicationSubmissions.AddAsync(applicationSubmission);
             }
 
-            await applicationContext.SaveChangesAsync();
+            await _context.SaveChangesAsync();
 
-            return ServiceResult.Success(mapper.Map<ApplicationSubmissionDto>(applicationSubmission));
+            return GetSuccessResult(applicationSubmission);
         }
     }
 }

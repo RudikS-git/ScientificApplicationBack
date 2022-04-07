@@ -28,22 +28,16 @@ namespace App.SelectFields.Queries
         }
     }
 
-    class GetSelectOptionsQueryHandler : IRequestHandlerWrapper<GetSelectOptionsQuery, IEnumerable<SelectOptionDto>>
+    class GetSelectOptionsQueryHandler : Handler<IEnumerable<SelectOption>, IEnumerable<SelectOptionDto>>, IRequestHandlerWrapper<GetSelectOptionsQuery, IEnumerable<SelectOptionDto>>
     {
-        private readonly IApplicationContext applicationContext;
-        private readonly IStringLocalizer<SharedResource> localizer;
-        private readonly IMapper mapper;
-
         public GetSelectOptionsQueryHandler(IApplicationContext applicationContext, IStringLocalizer<SharedResource> localizer, IMapper mapper)
+            : base(applicationContext, localizer, mapper)
         {
-            this.applicationContext = applicationContext;
-            this.localizer = localizer;
-            this.mapper = mapper;
         }
 
         public async Task<ServiceResult<IEnumerable<SelectOptionDto>>> Handle(GetSelectOptionsQuery query, CancellationToken cancellationToken)
         {
-            IQueryable<SelectOption> queryable = applicationContext.SelectOptions;
+            IQueryable<SelectOption> queryable = _context.SelectOptions;
 
             if(!string.IsNullOrEmpty(query.Search))
             {
@@ -57,7 +51,7 @@ namespace App.SelectFields.Queries
                 return ServiceResult.Failed<IEnumerable<SelectOptionDto>>(ServiceError.NotFound);
             }
 
-            return ServiceResult.Success(mapper.Map<IEnumerable<SelectOptionDto>>(selectOptions));
+            return GetSuccessResult(selectOptions);
         }
     }
 }

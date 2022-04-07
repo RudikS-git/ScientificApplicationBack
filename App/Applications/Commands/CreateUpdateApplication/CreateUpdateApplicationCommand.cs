@@ -1,0 +1,61 @@
+﻿using App.Common.Models;
+using App.Common.Interfaces;
+using Domain.Entities.Base;
+using MediatR;
+using Microsoft.Extensions.Localization;
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading;
+using System.Threading.Tasks;
+using App.Applications.DTOs;
+using MapsterMapper;
+using Mapster;
+using Microsoft.EntityFrameworkCore;
+
+using Response = App.Applications.DTOs.ApplicationDto;
+
+namespace App.Applications.Commands
+{
+    public class CreateApplicationCommand : IRequestWrapper<Response>
+    {
+        public int Id { get; set; }
+        public string Name { get; set; }
+        public string Description { get; set; }
+        public List<ApplicationGroupRequest> Groups { get; set; }
+    }
+
+    class CreateApplicationCommandHandler : Handler<Application, Response>, 
+                                            IRequestHandlerWrapper<CreateApplicationCommand, Response>
+    {
+        public CreateApplicationCommandHandler(IApplicationContext context, IStringLocalizer<SharedResource> localizer, IMapper mapper)
+            : base(context, localizer, mapper)
+        {
+        }
+
+        public async Task<ServiceResult<Response>> Handle(CreateApplicationCommand request, CancellationToken cancellationToken)
+        {
+            var application = new Application()
+            {
+                Id = request.Id,
+                Name = request.Name,
+                Description = request.Description,
+                FieldGroups = _mapper.Map<List<ApplicationGroup>>(request.Groups)
+            };
+
+            if (application.Id != 0)
+            {
+                _context.Applications.Update(application);
+            }
+            else
+            {
+                await _context.Applications.AddAsync(application);
+            }
+
+            await _context.SaveChangesAsync();
+
+            return GetSuccessResult(application);
+        }
+    }
+}

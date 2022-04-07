@@ -23,37 +23,29 @@ namespace App.ApplicationSubmissions.Commands
         public int Id { get; set; }
     }
 
-    class DeleteApplicationSubmissionCommandHandler : IRequestHandlerWrapper<DeleteApplicationSubmissionCommand, ApplicationSubmissionDto>
+    class DeleteApplicationSubmissionCommandHandler : Handler<ApplicationSubmission, ApplicationSubmissionDto>, IRequestHandlerWrapper<DeleteApplicationSubmissionCommand, ApplicationSubmissionDto>
     {
-        private readonly IApplicationContext applicationContext;
-        private readonly IStringLocalizer<SharedResource> localizer;
-        private readonly IMapper mapper;
         private readonly ICurrentUserService _userService;
 
-        public DeleteApplicationSubmissionCommandHandler(IApplicationContext applicationContext,
-            IStringLocalizer<SharedResource> localizer,
-            IMapper mapper,
-            ICurrentUserService userService)
+        public DeleteApplicationSubmissionCommandHandler(IApplicationContext context, IStringLocalizer<SharedResource> localizer, IMapper mapper, ICurrentUserService userService)
+            : base(context, localizer, mapper)
         {
-            this.applicationContext = applicationContext;
-            this.localizer = localizer;
-            this.mapper = mapper;
             _userService = userService;
         }
 
         public async Task<ServiceResult<ApplicationSubmissionDto>> Handle(DeleteApplicationSubmissionCommand request, CancellationToken cancellationToken)
         {
-            var applicationSubmission = await applicationContext.ApplicationSubmissions.Where(it => it.Id == request.Id).FirstOrDefaultAsync();
+            var applicationSubmission = await _context.ApplicationSubmissions.Where(it => it.Id == request.Id).FirstOrDefaultAsync();
 
             if (applicationSubmission == null)
             {
                 return ServiceResult.Failed<ApplicationSubmissionDto>(ServiceError.NotFound);
             }
-            
-            applicationContext.ApplicationSubmissions.Remove(applicationSubmission);
-            await applicationContext.SaveChangesAsync();
 
-            return ServiceResult.Success(mapper.Map<ApplicationSubmissionDto>(applicationSubmission));
+            _context.ApplicationSubmissions.Remove(applicationSubmission);
+            await _context.SaveChangesAsync();
+
+            return GetSuccessResult(applicationSubmission);
         }
     }
 }

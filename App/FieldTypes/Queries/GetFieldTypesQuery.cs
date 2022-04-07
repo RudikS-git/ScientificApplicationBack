@@ -8,6 +8,8 @@ using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.Localization;
+using MapsterMapper;
 
 namespace App.FieldTypes.Queries
 {
@@ -16,13 +18,11 @@ namespace App.FieldTypes.Queries
     
     }
 
-    public class GetFieldTypesQueryHandler : IRequestHandlerWrapper<GetFieldTypesQuery, IEnumerable<FieldType>>
+    public class GetFieldTypesQueryHandler : Handler, IRequestHandlerWrapper<GetFieldTypesQuery, IEnumerable<FieldType>>
     {
-        private readonly IApplicationContext _context;
-
-        public GetFieldTypesQueryHandler(IApplicationContext context)
+        public GetFieldTypesQueryHandler(IApplicationContext applicationContext, IStringLocalizer<SharedResource> localizer, IMapper mapper)
+            : base(applicationContext, localizer, mapper)
         {
-            _context = context;
         }
 
         public async Task<ServiceResult<IEnumerable<FieldType>>> Handle(GetFieldTypesQuery query, CancellationToken cancellationToken)

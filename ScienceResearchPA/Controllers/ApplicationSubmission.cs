@@ -27,13 +27,13 @@ namespace ScienceResearchPA.Controllers
         [HttpGet("{page}/{pageSize}")]
         public async Task<ActionResult> Get(int page, int pageSize, [FromQuery] ApplicationQueryParamsDto filterParams, CancellationToken cancellationToken)
         {
-            return Ok(await Mediator.Send(new GetApplicationSubmissionsQuery(page, pageSize, filterParams), cancellationToken));
+            return Ok(await Mediator.Send(new GetApplicationSubmissions(page, pageSize, filterParams), cancellationToken));
         }
 
         [HttpGet("{id}")]
         public async Task<ActionResult> GetById(int id, CancellationToken cancellationToken)
         {
-            return Ok(await Mediator.Send(new GetApplicationSubmissionByIdQuery(id), cancellationToken));
+            return Ok(await Mediator.Send(new GetApplicationSubmissionById(id), cancellationToken));
         }
 
         [HttpPost]

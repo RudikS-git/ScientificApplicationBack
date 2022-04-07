@@ -14,16 +14,17 @@ using Mapster;
 using MapsterMapper;
 
 using ResponseQuery = App.Common.Models.PaginatedList<App.ApplicationSubmissions.Queries.ApplicationSubmissionQueryDto>;
+using Microsoft.Extensions.Localization;
 
 namespace App.ApplicationSubmissions.Queries
 {
-    public class GetApplicationSubmissionsQuery : IRequestWrapper<ResponseQuery>
+    public class GetApplicationSubmissions : IRequestWrapper<ResponseQuery>
     {
         public int page;
         public int pageSize;
         public ApplicationQueryParamsDto filterParams;
 
-        public GetApplicationSubmissionsQuery(int page, int pageSize, ApplicationQueryParamsDto filterParams)
+        public GetApplicationSubmissions(int page, int pageSize, ApplicationQueryParamsDto filterParams)
         {
             this.page = page;
             this.pageSize = pageSize;
@@ -31,20 +32,17 @@ namespace App.ApplicationSubmissions.Queries
         }
     }
 
-    public class GetApplicationSubmissionsQueryHandler : IRequestHandlerWrapper<GetApplicationSubmissionsQuery, ResponseQuery>
+    public class GetApplicationSubmissionsQueryHandler : Handler, IRequestHandlerWrapper<GetApplicationSubmissions, ResponseQuery>
     {
-        private readonly IApplicationContext _context;
-        private readonly IMapper _mapper;
         private readonly ICurrentUserService _userService;
 
-        public GetApplicationSubmissionsQueryHandler(IApplicationContext context, IMapper mapper, ICurrentUserService userService)
+        public GetApplicationSubmissionsQueryHandler(IApplicationContext context, IStringLocalizer<SharedResource> localizer, IMapper mapper, ICurrentUserService userService)
+            : base(context, localizer, mapper)
         {
-            _context = context;
-            _mapper = mapper;
             _userService = userService;
         }
 
-        public async Task<ServiceResult<ResponseQuery>> Handle(GetApplicationSubmissionsQuery query, CancellationToken cancellationToken)
+        public async Task<ServiceResult<ResponseQuery>> Handle(GetApplicationSubmissions query, CancellationToken cancellationToken)
         {
             var queryable = _context.Applications.Join(
                 _context.ApplicationSubmissions.Where(it => it.UserId == _userService.UserId),

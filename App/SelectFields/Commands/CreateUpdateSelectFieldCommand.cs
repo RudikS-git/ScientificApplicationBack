@@ -21,13 +21,14 @@ namespace App.SelectFields.Commands
         public SelectFieldDto SelectField { get; set; }
     }
 
-    class CreateUpdateSelectFieldCommandHandler : IRequestHandlerWrapper<CreateUpdateSelectFieldCommand, SelectFieldDto>
+    class CreateUpdateSelectFieldCommandHandler : Handler<SelectField, SelectFieldDto>, IRequestHandlerWrapper<CreateUpdateSelectFieldCommand, SelectFieldDto>
     {
         private readonly IApplicationContext applicationContext;
         private readonly IStringLocalizer<SharedResource> localizer;
         private readonly IMapper mapper;
 
         public CreateUpdateSelectFieldCommandHandler(IApplicationContext applicationContext, IStringLocalizer<SharedResource> localizer, IMapper mapper)
+            : base(applicationContext, localizer, mapper)
         {
             this.applicationContext = applicationContext;
             this.localizer = localizer;
@@ -62,7 +63,7 @@ namespace App.SelectFields.Commands
 
             await applicationContext.SaveChangesAsync();
 
-            return ServiceResult.Success(mapper.Map<SelectFieldDto>(selectField));
+            return GetSuccessResult(selectField);
         }
     }
 }

@@ -12,6 +12,7 @@ using App.Common.Models;
 using App.Applications.DTOs;
 using Mapster;
 using MapsterMapper;
+using Microsoft.Extensions.Localization;
 
 namespace App.Queries
 {
@@ -29,15 +30,11 @@ namespace App.Queries
         }
     }
 
-    public class GetApplicationsQueryHandler : IRequestHandlerWrapper<GetApplicationsQuery, PaginatedList<ApplicationDto>>
+    public class GetApplicationsQueryHandler : Handler, IRequestHandlerWrapper<GetApplicationsQuery, PaginatedList<ApplicationDto>>
     {
-        private readonly IApplicationContext _context;
-        private readonly IMapper _mapper;
-
-        public GetApplicationsQueryHandler(IApplicationContext context, IMapper mapper)
+        public GetApplicationsQueryHandler(IApplicationContext context, IStringLocalizer<SharedResource> localizer, IMapper mapper) 
+            : base(context, localizer, mapper)
         {
-            _context = context;
-            _mapper = mapper;
         }
 
         public async Task<ServiceResult<PaginatedList<ApplicationDto>>> Handle(GetApplicationsQuery query, CancellationToken cancellationToken)

@@ -18,10 +18,7 @@ namespace App.Applications.DTOs
 
         public void Register(TypeAdapterConfig config)
         {
-            /*config.NewConfig<Application, ApplicationDto>()
-                .Map(dest => dest.Name, src => "Sig. " + src.Name, srcCond => srcCond.Name == "Karacabey")
-                .Map(dest => dest.Name, src => "Sr. " + src.Name, srcCond => srcCond.Name == "Osmangazi")
-                .Map(dest => dest.Name, src => src.Name);*/
+
         }
     }
 }

@@ -14,6 +14,7 @@ using Mapster;
 using MapsterMapper;
 
 using ResponseQuery = App.Users.Queries.UserInfoResponse;
+using Microsoft.Extensions.Localization;
 
 namespace App.Users.Queries
 {
@@ -27,16 +28,14 @@ namespace App.Users.Queries
         }
     }
 
-    public class GetUserInfoQueryHandler : IRequestHandlerWrapper<GetUserInfoQuery, ResponseQuery>
+    public class GetUserInfoQueryHandler : Handler, IRequestHandlerWrapper<GetUserInfoQuery, ResponseQuery>
     {
-        private readonly IApplicationContext _context;
-        private readonly IMapper _mapper;
         private readonly ICurrentUserService _userService;
 
-        public GetUserInfoQueryHandler(IApplicationContext context, IMapper mapper, ICurrentUserService userService)
+        public GetUserInfoQueryHandler(IApplicationContext applicationContext, IStringLocalizer<SharedResource> localizer, IMapper mapper, ICurrentUserService userService)
+            : base(applicationContext, localizer, mapper)
+
         {
-            _context = context;
-            _mapper = mapper;
             _userService = userService;
         }
 
