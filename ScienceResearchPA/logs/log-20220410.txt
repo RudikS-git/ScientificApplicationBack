@@ -1,0 +1,24 @@
+2022-04-10 19:01:15.975 +04:00 [ERR] The foreign key {'ApplicationGroupId'} on the entity type 'InputDateField' targeting 'ApplicationGroup' cannot be represented in the database. Either the properties {'ApplicationGroupId'} aren't mapped to table 'Identity.InputDateField', or the principal properties {'Id'} aren't mapped to table 'Identity.ApplicationGroup'. All foreign key properties must map to the table to which the dependent type is mapped, and all principal properties must map to a single table to which the principal type is mapped.
+2022-04-10 19:01:16.018 +04:00 [ERR] The foreign key {'ApplicationGroupId'} on the entity type 'InputNumberField' targeting 'ApplicationGroup' cannot be represented in the database. Either the properties {'ApplicationGroupId'} aren't mapped to table 'Identity.InputNumberField', or the principal properties {'Id'} aren't mapped to table 'Identity.ApplicationGroup'. All foreign key properties must map to the table to which the dependent type is mapped, and all principal properties must map to a single table to which the principal type is mapped.
+2022-04-10 19:01:16.019 +04:00 [ERR] The foreign key {'ApplicationGroupId'} on the entity type 'InputNumberPhoneField' targeting 'ApplicationGroup' cannot be represented in the database. Either the properties {'ApplicationGroupId'} aren't mapped to table 'Identity.InputNumberPhoneField', or the principal properties {'Id'} aren't mapped to table 'Identity.ApplicationGroup'. All foreign key properties must map to the table to which the dependent type is mapped, and all principal properties must map to a single table to which the principal type is mapped.
+2022-04-10 19:01:16.019 +04:00 [ERR] The foreign key {'ApplicationGroupId'} on the entity type 'InputTextField' targeting 'ApplicationGroup' cannot be represented in the database. Either the properties {'ApplicationGroupId'} aren't mapped to table 'Identity.InputTextField', or the principal properties {'Id'} aren't mapped to table 'Identity.ApplicationGroup'. All foreign key properties must map to the table to which the dependent type is mapped, and all principal properties must map to a single table to which the principal type is mapped.
+2022-04-10 19:01:16.045 +04:00 [WRN] The entity type 'PersonName' is an optional dependent using table sharing without any required non shared property that could be used to identify whether the entity exists. If all nullable properties contain a null value in database then an object instance won't be created in the query. Add a required property to create instances with null values for other properties or mark the incoming navigation as required to always create an instance.
+2022-04-10 19:01:17.486 +04:00 [WRN] Role null validation failed: DuplicateRoleName.
+2022-04-10 19:01:17.501 +04:00 [WRN] Role null validation failed: DuplicateRoleName.
+2022-04-10 19:01:17.503 +04:00 [WRN] Role null validation failed: DuplicateRoleName.
+2022-04-10 19:01:17.506 +04:00 [INF] Starting web host
+2022-04-10 19:01:18.417 +04:00 [INF] Application started. Press Ctrl+C to shut down.
+2022-04-10 19:01:18.421 +04:00 [INF] Hosting environment: Development
+2022-04-10 19:01:18.425 +04:00 [INF] Content root path: C:\Users\rudik\source\repos\ScienceResearchPA\ScienceResearchPA
+2022-04-10 19:02:34.145 +04:00 [WRN] Invalid password for user.
+2022-04-10 19:02:34.147 +04:00 [WRN] User failed to provide the correct password.
+2022-04-10 19:12:22.858 +04:00 [WRN] Invalid password for user.
+2022-04-10 19:12:22.858 +04:00 [WRN] User failed to provide the correct password.
+2022-04-10 19:12:23.263 +04:00 [WRN] Invalid password for user.
+2022-04-10 19:12:23.263 +04:00 [WRN] User failed to provide the correct password.
+2022-04-10 19:12:23.263 +04:00 [WRN] User is locked out.
+2022-04-10 19:12:23.332 +04:00 [WRN] User is currently locked out.
+2022-04-10 20:16:25.389 +04:00 [WRN] Invalid password for user.
+2022-04-10 20:16:25.389 +04:00 [WRN] User failed to provide the correct password.
+2022-04-10 20:16:28.674 +04:00 [WRN] Invalid password for user.
+2022-04-10 20:16:28.674 +04:00 [WRN] User failed to provide the correct password.

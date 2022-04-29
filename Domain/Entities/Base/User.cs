@@ -13,7 +13,7 @@ namespace Domain.Entities.Base
     {
         public PersonName PersonName { get; set; }
 
-        public DateOnly BirthDate { get; set; }
+        public DateTime BirthDate { get; set; }
 
         public IList<Application> Applications { get; set; }
 

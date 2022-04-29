@@ -72,6 +72,7 @@ namespace ScienceResearchPA
             services.AddSwaggerGen(c =>
             {
                 c.SwaggerDoc("v1", new OpenApiInfo { Title = "ScienceResearchPA", Version = "v1" });
+                c.CustomSchemaIds(type => type.ToString());
 
                 c.AddSecurityDefinition("Bearer", new OpenApiSecurityScheme
                 {

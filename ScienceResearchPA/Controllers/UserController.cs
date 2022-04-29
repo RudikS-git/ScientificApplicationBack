@@ -109,7 +109,13 @@ namespace ScienceResearchPA.Controllers
 
         private void deleteRefreshTokenInCookie()
         {
-            Response.Cookies.Delete(_configuration["JWTSettings:RefreshToken:CookieName"]);
+            Response.Cookies.Delete(_configuration["JWTSettings:RefreshToken:CookieName"], new CookieOptions
+            {
+                HttpOnly = true,
+                Expires = DateTime.UtcNow.AddMinutes(int.Parse(_configuration["JWTSettings:RefreshToken:LifeTime"])),
+                Path = "api/user",
+                SameSite = SameSiteMode.Strict
+            });
         }
 
     }

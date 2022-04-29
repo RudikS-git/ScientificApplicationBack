@@ -11,7 +11,6 @@ using Microsoft.EntityFrameworkCore;
 using MapsterMapper;
 using Mapster;
 using App.Applications.DTOs;
-using App.InputFields.DTOs;
 using Microsoft.Extensions.Localization;
 
 namespace App.Applications.Queries
@@ -74,8 +73,8 @@ namespace App.Applications.Queries
                 it.Fields = new List<InputFieldDto>(it.InputTextFields);
                 it.Fields.AddRange(it.InputNumberFields);
                 it.Fields.AddRange(it.InputNumberPhoneFields);
-                it.Fields.AddRange(it.InputNumberPhoneFields);
-                it.Fields = it.Fields.OrderBy(it => it.Id).ToList();
+                it.Fields.AddRange(it.InputDataFields);
+                it.Fields = it.Fields.OrderBy(it => it.Style).ToList();
             });
 
             return ServiceResult.Success(appDto);

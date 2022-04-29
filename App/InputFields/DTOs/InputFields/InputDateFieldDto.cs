@@ -16,13 +16,13 @@ namespace App.InputFields.DTOs.InputFields
 
         public void Register(TypeAdapterConfig config)
         {
-            config.NewConfig<InputDateFieldDto, InputDateField>()
+           /* config.NewConfig<InputDateFieldDto, InputDateField>()
                 .Map(dest => dest.InputField, src => new InputField()
                 {
                     Description = src.Description,
                     Label = src.Label,
                     IsRequired = src.IsRequired,
-                });
+                });*/
         }
     }
 }

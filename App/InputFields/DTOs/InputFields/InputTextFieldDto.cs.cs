@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 using Mapster;
 using Domain.Entities.Base.FieldRestrictions;
 using Domain.Entities.Base.FieldTypes;
+using System.ComponentModel;
 
 namespace App.InputFields.DTOs.InputFields
 {
@@ -16,13 +17,13 @@ namespace App.InputFields.DTOs.InputFields
 
         public void Register(TypeAdapterConfig config)
         {
-            config.NewConfig<InputTextFieldDto, InputTextField>()
+           /* config.NewConfig<InputTextFieldDto, InputTextField>()
                 .Map(dest => dest.InputField, src => new InputField()
                 {
                     Description = src.Description,
                     Label = src.Label,
                     IsRequired = src.IsRequired,
-                });
+                });*/
         }
     }
 }

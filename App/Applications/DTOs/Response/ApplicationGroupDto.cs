@@ -1,6 +1,5 @@
-﻿using App.FieldSets.DTOs;
-using App.InputFields.DTOs;
-using App.InputFields.DTOs.InputFields;
+﻿using App.Applications.DTOs.Inputs;
+using App.FieldSets.DTOs;
 using App.SelectFields.DTOs;
 using Domain.Entities.Base;
 using Mapster;

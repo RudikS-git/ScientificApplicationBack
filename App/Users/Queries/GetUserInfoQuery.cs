@@ -61,7 +61,7 @@ namespace App.Users.Queries
                 .OrderByDescending(it => it.id).AsQueryable();*/
 
 
-            return ServiceResult.Success<ResponseQuery>(_mapper.Map<UserInfoResponse>(user));
+            return ServiceResult.Success(_mapper.Map<ResponseQuery>(user));
         }
     }
 }

@@ -12,20 +12,16 @@ using Domain.Enums;
 
 namespace App.InputFields.DTOs
 {
-    public class InputFieldDto : FieldDto, IRegister
+    public class InputFieldDto : IRegister
     {
-        public int InputFieldId { get; set; }
-        public InputUnderTypes InputUnderTypeId  { get; set; }
-
         public void Register(TypeAdapterConfig config)
         {
             config.NewConfig<InputFieldDto, InputField>()
-               .Map(dest => dest, src => new InputField()
-               {
-                   Description = src.Description,
-                   Label = src.Label,
-                   IsRequired = src.IsRequired,
-               });
+                .TwoWays()
+                .Include<InputTextFieldDto, InputTextField>()
+                .Include<InputDateFieldDto, InputDateField>()
+                .Include<InputNumberFieldDto, InputNumberField>()
+                .Include<InputNumberPhoneFieldDto, InputNumberPhoneField>();
         }
     }
 }

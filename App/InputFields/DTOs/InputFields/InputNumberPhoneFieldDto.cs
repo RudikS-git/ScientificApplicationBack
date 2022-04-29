@@ -15,13 +15,13 @@ namespace App.InputFields.DTOs.InputFields
 
         public void Register(TypeAdapterConfig config)
         {
-            config.NewConfig<InputNumberPhoneFieldDto, InputNumberPhoneField>()
+       /*     config.NewConfig<InputNumberPhoneFieldDto, InputNumberPhoneField>()
                 .Map(dest => dest.InputField, src => new InputField()
                 {
                     Description = src.Description,
                     Label = src.Label,
                     IsRequired = src.IsRequired,
-                });
+                });*/
         }
     }
 }

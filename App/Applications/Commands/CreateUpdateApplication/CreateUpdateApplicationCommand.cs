@@ -23,7 +23,7 @@ namespace App.Applications.Commands
         public int Id { get; set; }
         public string Name { get; set; }
         public string Description { get; set; }
-        public List<ApplicationGroupRequest> Groups { get; set; }
+        public List<ApplicationGroupRequest> ApplicationGroups { get; set; }
     }
 
     class CreateApplicationCommandHandler : Handler<Application, Response>, 
@@ -41,7 +41,7 @@ namespace App.Applications.Commands
                 Id = request.Id,
                 Name = request.Name,
                 Description = request.Description,
-                FieldGroups = _mapper.Map<List<ApplicationGroup>>(request.Groups)
+                FieldGroups = _mapper.Map<List<ApplicationGroup>>(request.ApplicationGroups)
             };
 
             if (application.Id != 0)

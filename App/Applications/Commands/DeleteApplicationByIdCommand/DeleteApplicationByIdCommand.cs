@@ -19,6 +19,11 @@ namespace App.Applications.Commands
     public class DeleteApplicationByIdCommand : IRequestWrapper<Response>
     {
        public int Id { get; set; }
+
+        public DeleteApplicationByIdCommand(int id)
+        {
+            Id = id;
+        }
     }
 
     class DeleteApplicationByIdCommandHandler : Handler<Application, Response>, IRequestHandlerWrapper<DeleteApplicationByIdCommand, Response>

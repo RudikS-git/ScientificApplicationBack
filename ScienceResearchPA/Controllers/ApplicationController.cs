@@ -53,9 +53,9 @@ namespace ScienceResearchPA.Controllers
 
         // DELETE api/<InnovativeDevelopmentController>/5
         [HttpDelete("{id}")]
-        public void Delete(int id)
+        public async Task<ActionResult> Delete(int id, CancellationToken cancellationToken)
         {
-
+            return Ok(await Mediator.Send(new DeleteApplicationByIdCommand(id), cancellationToken));
         }
 
         [HttpGet("states")]

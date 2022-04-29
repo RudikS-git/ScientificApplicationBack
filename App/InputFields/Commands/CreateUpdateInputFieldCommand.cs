@@ -17,7 +17,7 @@ using System.Threading.Tasks;
 
 namespace App.InputFields.Commands
 {
-    public class CreateUpdateInputFieldCommand : IRequestWrapper<InputTextFieldDto>
+    public class CreateUpdateInputFieldCommand : IRequestWrapper<InputFieldDto>
     {
         public int GroupId { get; set; }
 
@@ -33,16 +33,15 @@ namespace App.InputFields.Commands
         public InputNumberPhoneFieldDto NumberPhoneField { get; set; }
     }
 
-    class CreateUpdateInputFieldCommandHandler : Handler<InputField, InputTextFieldDto>, IRequestHandlerWrapper<CreateUpdateInputFieldCommand, InputTextFieldDto>
+    class CreateUpdateInputFieldCommandHandler : Handler<InputField, InputFieldDto>, IRequestHandlerWrapper<CreateUpdateInputFieldCommand, InputFieldDto>
     {
         public CreateUpdateInputFieldCommandHandler(IApplicationContext applicationContext, IStringLocalizer<SharedResource> localizer, IMapper mapper)
             : base(applicationContext, localizer, mapper)
         {
         }
 
-        public async Task<ServiceResult<InputTextFieldDto>> Handle(CreateUpdateInputFieldCommand request, CancellationToken cancellationToken)
+        public async Task<ServiceResult<InputFieldDto>> Handle(CreateUpdateInputFieldCommand request, CancellationToken cancellationToken)
         {
-            InputField savedInputField = null;
             InputField inputField = new InputField()
             {
                 Id = request.Id,
@@ -50,7 +49,7 @@ namespace App.InputFields.Commands
                 Description = request.Description,
                 IsRequired = request.IsRequired,
                 Label = request.Label,
-                InputUnderTypeId = request.InputUnderTypeId
+                InputUnderTypeId = request.InputUnderTypeId,
             };
 
             switch (request.InputUnderTypeId)
@@ -58,28 +57,46 @@ namespace App.InputFields.Commands
                 case InputUnderTypes.Date:
                     var inputDateField = _mapper.Map<InputDateField>(request.DateField);
                     inputDateField.InputField = inputField;
-                    savedInputField = inputDateField;
-                    break;
+                    await Save(inputDateField, cancellationToken);
+
+                    return ServiceResult.Success<InputFieldDto>(
+                        _mapper.Map<InputDateFieldDto>(inputDateField)
+                    );
 
                 case InputUnderTypes.Text:
                     var textField = _mapper.Map<InputTextField>(request.TextField);
                     textField.InputField = inputField;
-                    savedInputField = textField;
-                    break;
+                    await Save(textField, cancellationToken);
+
+                    return ServiceResult.Success<InputFieldDto>(
+                        _mapper.Map<InputTextFieldDto>(textField)
+                    );
 
                 case InputUnderTypes.Number:
                     var numberField = _mapper.Map<InputNumberField>(request.DateField);
                     numberField.InputField = inputField;
-                    savedInputField = numberField;
-                    break;
+                    await Save(numberField, cancellationToken);
+
+                    return ServiceResult.Success<InputFieldDto>(
+                        _mapper.Map<InputNumberFieldDto>(numberField)
+                    );
 
                 case InputUnderTypes.NumberPhone:
                     var numberPhoneField = _mapper.Map<InputNumberPhoneField>(request.DateField);
                     numberPhoneField.InputField = inputField;
-                    savedInputField = numberPhoneField;
-                    break;
-            }
+                    await Save(numberPhoneField, cancellationToken);
 
+                    return ServiceResult.Success<InputFieldDto>(
+                        _mapper.Map<InputNumberPhoneFieldDto>(numberPhoneField)
+                    );
+
+                default: 
+                    return ServiceResult.Failed<InputFieldDto>(ServiceError.NotFound);
+            }
+        }
+
+        public async Task Save(InputField savedInputField, CancellationToken cancellationToken)
+        {
             if (savedInputField.Id != 0)
             {
                 _context.InputFields.Update(savedInputField);
@@ -90,8 +107,6 @@ namespace App.InputFields.Commands
             }
 
             await _context.SaveChangesAsync();
-
-            return GetSuccessResult(inputField);
         }
     }
 }

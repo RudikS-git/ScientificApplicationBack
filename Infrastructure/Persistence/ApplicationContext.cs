@@ -123,14 +123,18 @@ namespace Infrastructure.Persistence
 
         public override async Task<int> SaveChangesAsync(CancellationToken cancellationToken = new CancellationToken())
         {
+            var entities = ChangeTracker.Entries<AuditableBaseEntity>();
+
             foreach (EntityEntry<AuditableBaseEntity> entry in ChangeTracker.Entries<AuditableBaseEntity>())
             {
                 switch (entry.State)
                 {
                     case EntityState.Added:
+                        entry.Property(it => it.Updated).IsModified = false;
                         entry.Entity.Created = DateTime.UtcNow.ToUniversalTime();
                         break;
                     case EntityState.Modified:
+                        entry.Property(it => it.Created).IsModified = false;
                         entry.Entity.Updated = DateTime.UtcNow.ToUniversalTime();
                         break;
                 }
