@@ -15,6 +15,7 @@ using App.Applications.Queries;
 using App.SelectFields.Commands;
 using Microsoft.AspNetCore.Authorization;
 using Domain.Entities.Enums;
+using App.Applications.Commands.SetManageApplicationStates;
 
 namespace ScienceResearchPA.Controllers
 {
@@ -62,6 +63,12 @@ namespace ScienceResearchPA.Controllers
         public async Task<ActionResult> GetApplicationStates(CancellationToken cancellationToken)
         {
             return Ok(await Mediator.Send(new GetApplicationStatesQuery(), cancellationToken));
+        }
+
+        [HttpPatch("application-state/{id}")]
+        public async Task<ActionResult> SetApplicationState(int id, [FromBody] ManageApplicationStates state, CancellationToken cancellationToken)
+        {
+            return Ok(await Mediator.Send(new SetApplicationStatesCommand(id, state), cancellationToken));
         }
     }
 }

@@ -1,4 +1,5 @@
 ﻿using Domain.Entities.Common;
+using Domain.Entities.Enums;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -16,7 +17,9 @@ namespace Domain.Entities.Base
         public Permission Permission { get; set; } // доступ по правам
         public bool IsRemoved { get; set; }
         
-        public IList<ApplicationGroup> FieldGroups { get; set; }
+        public IList<ApplicationGroup> ApplicationGroups { get; set; }
         public IList<ApplicationSubmission> ApplicationSubmissions { get; set; }
+
+        public ManageApplicationStates ManageApplicationState { get; set; }
     }
 }

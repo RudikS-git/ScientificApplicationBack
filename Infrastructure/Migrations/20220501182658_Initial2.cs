@@ -4,19 +4,19 @@
 
 namespace Infrastructure.Migrations
 {
-    public partial class EditAuthEntities6 : Migration
+    public partial class Initial2 : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
             migrationBuilder.DropForeignKey(
-                name: "FK_RefreshTokens_AspNetUsers_UserId",
+                name: "FK_ApplicationGroup_Applications_ApplicationId",
                 schema: "Identity",
-                table: "RefreshTokens");
+                table: "ApplicationGroup");
 
             migrationBuilder.AlterColumn<int>(
-                name: "UserId",
+                name: "ApplicationId",
                 schema: "Identity",
-                table: "RefreshTokens",
+                table: "ApplicationGroup",
                 type: "integer",
                 nullable: false,
                 defaultValue: 0,
@@ -25,12 +25,12 @@ namespace Infrastructure.Migrations
                 oldNullable: true);
 
             migrationBuilder.AddForeignKey(
-                name: "FK_RefreshTokens_AspNetUsers_UserId",
+                name: "FK_ApplicationGroup_Applications_ApplicationId",
                 schema: "Identity",
-                table: "RefreshTokens",
-                column: "UserId",
+                table: "ApplicationGroup",
+                column: "ApplicationId",
                 principalSchema: "Identity",
-                principalTable: "AspNetUsers",
+                principalTable: "Applications",
                 principalColumn: "Id",
                 onDelete: ReferentialAction.Cascade);
         }
@@ -38,26 +38,26 @@ namespace Infrastructure.Migrations
         protected override void Down(MigrationBuilder migrationBuilder)
         {
             migrationBuilder.DropForeignKey(
-                name: "FK_RefreshTokens_AspNetUsers_UserId",
+                name: "FK_ApplicationGroup_Applications_ApplicationId",
                 schema: "Identity",
-                table: "RefreshTokens");
+                table: "ApplicationGroup");
 
             migrationBuilder.AlterColumn<int>(
-                name: "UserId",
+                name: "ApplicationId",
                 schema: "Identity",
-                table: "RefreshTokens",
+                table: "ApplicationGroup",
                 type: "integer",
                 nullable: true,
                 oldClrType: typeof(int),
                 oldType: "integer");
 
             migrationBuilder.AddForeignKey(
-                name: "FK_RefreshTokens_AspNetUsers_UserId",
+                name: "FK_ApplicationGroup_Applications_ApplicationId",
                 schema: "Identity",
-                table: "RefreshTokens",
-                column: "UserId",
+                table: "ApplicationGroup",
+                column: "ApplicationId",
                 principalSchema: "Identity",
-                principalTable: "AspNetUsers",
+                principalTable: "Applications",
                 principalColumn: "Id");
         }
     }

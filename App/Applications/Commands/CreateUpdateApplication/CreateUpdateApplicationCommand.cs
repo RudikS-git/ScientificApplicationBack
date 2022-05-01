@@ -36,12 +36,23 @@ namespace App.Applications.Commands
 
         public async Task<ServiceResult<Response>> Handle(CreateApplicationCommand request, CancellationToken cancellationToken)
         {
+            if(request.ApplicationGroups != null) // удаляем группы, которые не пришли, но есть в БД
+            {
+                var applicationGroups = 
+                    await _context.ApplicationGroup
+                        .Where(it => it.ApplicationId == request.Id && 
+                                    !request.ApplicationGroups.Select(ag => ag.Id).ToArray().Contains(it.Id))
+                        .ToListAsync();
+
+                _context.ApplicationGroup.RemoveRange(applicationGroups);
+            }
+
             var application = new Application()
             {
                 Id = request.Id,
                 Name = request.Name,
                 Description = request.Description,
-                FieldGroups = _mapper.Map<List<ApplicationGroup>>(request.ApplicationGroups)
+                ApplicationGroups = _mapper.Map<List<ApplicationGroup>>(request.ApplicationGroups)
             };
 
             if (application.Id != 0)

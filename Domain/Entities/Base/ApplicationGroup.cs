@@ -16,7 +16,11 @@ namespace Domain.Entities.Base
         public List<InputDateField> InputDataFields { get; set; }
         public List<InputNumberField> InputNumberFields { get; set; }
         public List<InputNumberPhoneField> InputNumberPhoneFields { get; set; }
+
         public List<FieldSet> FieldSets { get; set; }
         public List<SelectField> SelectFields { get; set; }
+
+        public int ApplicationId { get; set; }
+        public Application Application { get; set; }
     }
 }

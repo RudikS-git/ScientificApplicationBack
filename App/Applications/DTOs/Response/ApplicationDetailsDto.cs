@@ -20,7 +20,7 @@ namespace App.Applications.DTOs
         public void Register(TypeAdapterConfig config)
         {
             config.NewConfig<Application, ApplicationDetailsDto>()
-               .Map(dest => dest.ApplicationGroups, src => src.FieldGroups);
+               .Map(dest => dest.ApplicationGroups, src => src.ApplicationGroups);
         }
     }
 }

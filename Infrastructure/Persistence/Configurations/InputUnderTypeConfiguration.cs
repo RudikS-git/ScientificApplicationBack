@@ -28,7 +28,7 @@ namespace Infrastructure.Persistence.Configurations
                     Name = "Date"
                 },
 
-                new InputUnderType()
+             /*   new InputUnderType()
                 {
                     Id = (int)InputUnderTypes.Time,
                     Name = "Time"
@@ -38,7 +38,7 @@ namespace Infrastructure.Persistence.Configurations
                 {
                     Id = (int)InputUnderTypes.DateTime,
                     Name = "DateTime"
-                },
+                },*/
 
                 new InputUnderType()
                 {
@@ -46,11 +46,11 @@ namespace Infrastructure.Persistence.Configurations
                     Name = "NumberPhone"
                 },
 
-                new InputUnderType()
+               /* new InputUnderType()
                 {
                     Id = (int)InputUnderTypes.Email,
                     Name = "Email"
-                },
+                },*/
 
                 new InputUnderType()
                 {
@@ -58,7 +58,7 @@ namespace Infrastructure.Persistence.Configurations
                     Name = "Number"
                 },
 
-                new InputUnderType()
+               /* new InputUnderType()
                 {
                     Id = (int)InputUnderTypes.FloatNumber,
                     Name = "Float number"
@@ -68,7 +68,7 @@ namespace Infrastructure.Persistence.Configurations
                 {
                     Id = (int)InputUnderTypes.File,
                     Name = "File"
-                },
+                },*/
 
             });
         }

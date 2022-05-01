@@ -15,9 +15,10 @@ namespace App.Applications.DTOs
     public class ApplicationGroupDto : IRegister
     {
         public int Id { get; set; }
+
         public string Name { get; set; }
 
-        public List<InputFieldDto> Fields { get; set; }
+        public List<InputFieldDto> InputFields { get; set; }
 
         [JsonIgnore]
         public List<InputTextFieldDto> InputTextFields { get; set; }
@@ -32,6 +33,7 @@ namespace App.Applications.DTOs
         public List<InputNumberPhoneFieldDto> InputNumberPhoneFields { get; set; }
 
         public List<SelectFieldDto> SelectFields { get; set; }
+
         public List<FieldSetDto> FieldSets { get; set; }
 
         public void Register(TypeAdapterConfig config)

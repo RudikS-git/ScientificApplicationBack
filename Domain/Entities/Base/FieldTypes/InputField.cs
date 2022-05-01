@@ -13,6 +13,14 @@ namespace Domain.Entities.Base.FieldTypes
 {
     public class InputField : Field
     {
-        public InputUnderTypes InputUnderTypeId;
+        public InputUnderTypes InputUnderTypeId { get; set; }
+
+        public List<InputDateField> InputDateField { get; set; }
+
+        public List<InputTextField> InputTextField { get; set; }
+
+        public List<InputNumberPhoneField> InputNumberPhoneField { get; set; }
+
+        public List<InputNumberField> InputNumberField { get; set; }
     }
 }

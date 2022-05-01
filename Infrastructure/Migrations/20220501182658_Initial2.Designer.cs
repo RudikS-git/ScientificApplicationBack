@@ -12,13 +12,14 @@ using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
 namespace Infrastructure.Migrations
 {
     [DbContext(typeof(ApplicationContext))]
-    [Migration("20220319172001_Init")]
-    partial class Init
+    [Migration("20220501182658_Initial2")]
+    partial class Initial2
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
+                .HasDefaultSchema("Identity")
                 .HasAnnotation("ProductVersion", "6.0.3")
                 .HasAnnotation("Relational:MaxIdentifierLength", 63);
 
@@ -65,7 +66,7 @@ namespace Infrastructure.Migrations
 
                     b.HasIndex("UserId");
 
-                    b.ToTable("Applications");
+                    b.ToTable("Applications", "Identity");
                 });
 
             modelBuilder.Entity("Domain.Entities.Base.ApplicationGroup", b =>
@@ -76,7 +77,7 @@ namespace Infrastructure.Migrations
 
                     NpgsqlPropertyBuilderExtensions.UseIdentityByDefaultColumn(b.Property<int>("Id"));
 
-                    b.Property<int?>("ApplicationId")
+                    b.Property<int>("ApplicationId")
                         .HasColumnType("integer");
 
                     b.Property<string>("Name")
@@ -86,7 +87,7 @@ namespace Infrastructure.Migrations
 
                     b.HasIndex("ApplicationId");
 
-                    b.ToTable("ApplicationGroup");
+                    b.ToTable("ApplicationGroup", "Identity");
                 });
 
             modelBuilder.Entity("Domain.Entities.Base.ApplicationState", b =>
@@ -102,7 +103,7 @@ namespace Infrastructure.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("ApplicationStates");
+                    b.ToTable("ApplicationStates", "Identity");
                 });
 
             modelBuilder.Entity("Domain.Entities.Base.ApplicationSubmission", b =>
@@ -119,8 +120,17 @@ namespace Infrastructure.Migrations
                     b.Property<int?>("ApplicationStateId")
                         .HasColumnType("integer");
 
+                    b.Property<DateTime>("Created")
+                        .HasColumnType("timestamp with time zone");
+
                     b.Property<bool>("IsRemoved")
                         .HasColumnType("boolean");
+
+                    b.Property<string>("Name")
+                        .HasColumnType("text");
+
+                    b.Property<DateTime>("Updated")
+                        .HasColumnType("timestamp with time zone");
 
                     b.Property<int>("UserId")
                         .HasColumnType("integer");
@@ -133,7 +143,140 @@ namespace Infrastructure.Migrations
 
                     b.HasIndex("UserId");
 
-                    b.ToTable("Submissions");
+                    b.ToTable("ApplicationSubmissions", "Identity");
+                });
+
+            modelBuilder.Entity("Domain.Entities.Base.FieldRestrictions.InputDateField", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("integer");
+
+                    NpgsqlPropertyBuilderExtensions.UseIdentityByDefaultColumn(b.Property<int>("Id"));
+
+                    b.Property<int>("ApplicationGroupId")
+                        .HasColumnType("integer");
+
+                    b.Property<int?>("FieldSetId")
+                        .HasColumnType("integer");
+
+                    b.Property<int>("InputFieldId")
+                        .HasColumnType("integer");
+
+                    b.Property<DateTime>("MaxDateTime")
+                        .HasColumnType("timestamp with time zone");
+
+                    b.Property<DateTime>("MinDateTime")
+                        .HasColumnType("timestamp with time zone");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("ApplicationGroupId");
+
+                    b.HasIndex("FieldSetId");
+
+                    b.HasIndex("InputFieldId");
+
+                    b.ToTable("InputDateField", "Identity");
+                });
+
+            modelBuilder.Entity("Domain.Entities.Base.FieldRestrictions.InputNumberField", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("integer");
+
+                    NpgsqlPropertyBuilderExtensions.UseIdentityByDefaultColumn(b.Property<int>("Id"));
+
+                    b.Property<int>("ApplicationGroupId")
+                        .HasColumnType("integer");
+
+                    b.Property<int?>("FieldSetId")
+                        .HasColumnType("integer");
+
+                    b.Property<int>("InputFieldId")
+                        .HasColumnType("integer");
+
+                    b.Property<int>("Max")
+                        .HasColumnType("integer");
+
+                    b.Property<int>("Min")
+                        .HasColumnType("integer");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("ApplicationGroupId");
+
+                    b.HasIndex("FieldSetId");
+
+                    b.HasIndex("InputFieldId");
+
+                    b.ToTable("InputNumberField", "Identity");
+                });
+
+            modelBuilder.Entity("Domain.Entities.Base.FieldRestrictions.InputNumberPhoneField", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("integer");
+
+                    NpgsqlPropertyBuilderExtensions.UseIdentityByDefaultColumn(b.Property<int>("Id"));
+
+                    b.Property<int>("ApplicationGroupId")
+                        .HasColumnType("integer");
+
+                    b.Property<int?>("FieldSetId")
+                        .HasColumnType("integer");
+
+                    b.Property<int>("InputFieldId")
+                        .HasColumnType("integer");
+
+                    b.Property<string>("Type")
+                        .HasColumnType("text");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("ApplicationGroupId");
+
+                    b.HasIndex("FieldSetId");
+
+                    b.HasIndex("InputFieldId");
+
+                    b.ToTable("InputNumberPhoneField", "Identity");
+                });
+
+            modelBuilder.Entity("Domain.Entities.Base.FieldRestrictions.InputTextField", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("integer");
+
+                    NpgsqlPropertyBuilderExtensions.UseIdentityByDefaultColumn(b.Property<int>("Id"));
+
+                    b.Property<int>("ApplicationGroupId")
+                        .HasColumnType("integer");
+
+                    b.Property<int?>("FieldSetId")
+                        .HasColumnType("integer");
+
+                    b.Property<int>("InputFieldId")
+                        .HasColumnType("integer");
+
+                    b.Property<int>("MaxLength")
+                        .HasColumnType("integer");
+
+                    b.Property<int>("MinLength")
+                        .HasColumnType("integer");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("ApplicationGroupId");
+
+                    b.HasIndex("FieldSetId");
+
+                    b.HasIndex("InputFieldId");
+
+                    b.ToTable("InputTextField", "Identity");
                 });
 
             modelBuilder.Entity("Domain.Entities.Base.FieldRestrictions.SelectRestriction", b =>
@@ -152,7 +295,7 @@ namespace Infrastructure.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("SelectRestriction");
+                    b.ToTable("SelectRestriction", "Identity");
                 });
 
             modelBuilder.Entity("Domain.Entities.Base.FieldSubmissions.InputSubmission", b =>
@@ -163,10 +306,10 @@ namespace Infrastructure.Migrations
 
                     NpgsqlPropertyBuilderExtensions.UseIdentityByDefaultColumn(b.Property<int>("Id"));
 
-                    b.Property<int>("InputFieldId")
+                    b.Property<int>("ApplicationSubmissionId")
                         .HasColumnType("integer");
 
-                    b.Property<int>("SubmissionId")
+                    b.Property<int>("InputFieldId")
                         .HasColumnType("integer");
 
                     b.Property<string>("Value")
@@ -174,11 +317,11 @@ namespace Infrastructure.Migrations
 
                     b.HasKey("Id");
 
+                    b.HasIndex("ApplicationSubmissionId");
+
                     b.HasIndex("InputFieldId");
 
-                    b.HasIndex("SubmissionId");
-
-                    b.ToTable("InputSubmission");
+                    b.ToTable("InputSubmission", "Identity");
                 });
 
             modelBuilder.Entity("Domain.Entities.Base.FieldSubmissions.SelectSubmission", b =>
@@ -189,19 +332,42 @@ namespace Infrastructure.Migrations
 
                     NpgsqlPropertyBuilderExtensions.UseIdentityByDefaultColumn(b.Property<int>("Id"));
 
-                    b.Property<int>("SelectFieldId")
+                    b.Property<int>("ApplicationSubmissionId")
                         .HasColumnType("integer");
 
-                    b.Property<int>("SubmissionId")
+                    b.Property<int>("SelectFieldId")
                         .HasColumnType("integer");
 
                     b.HasKey("Id");
 
+                    b.HasIndex("ApplicationSubmissionId");
+
                     b.HasIndex("SelectFieldId");
 
-                    b.HasIndex("SubmissionId");
+                    b.ToTable("SelectSubmission", "Identity");
+                });
 
-                    b.ToTable("SelectSubmission");
+            modelBuilder.Entity("Domain.Entities.Base.FieldSubmissions.SelectSubmissonOptions", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("integer");
+
+                    NpgsqlPropertyBuilderExtensions.UseIdentityByDefaultColumn(b.Property<int>("Id"));
+
+                    b.Property<int>("SelectOptionId")
+                        .HasColumnType("integer");
+
+                    b.Property<int>("SelectSubmissionId")
+                        .HasColumnType("integer");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("SelectOptionId");
+
+                    b.HasIndex("SelectSubmissionId");
+
+                    b.ToTable("SelectSubmissonOptions", "Identity");
                 });
 
             modelBuilder.Entity("Domain.Entities.Base.FieldType", b =>
@@ -217,7 +383,7 @@ namespace Infrastructure.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("FieldTypes");
+                    b.ToTable("FieldTypes", "Identity");
                 });
 
             modelBuilder.Entity("Domain.Entities.Base.FieldTypes.FieldSet", b =>
@@ -240,9 +406,6 @@ namespace Infrastructure.Migrations
                     b.Property<string>("Label")
                         .HasColumnType("text");
 
-                    b.Property<int?>("SelectSubmissionId")
-                        .HasColumnType("integer");
-
                     b.Property<string>("SystemName")
                         .HasColumnType("text");
 
@@ -250,9 +413,7 @@ namespace Infrastructure.Migrations
 
                     b.HasIndex("ApplicationGroupId");
 
-                    b.HasIndex("SelectSubmissionId");
-
-                    b.ToTable("FieldSet");
+                    b.ToTable("FieldSet", "Identity");
                 });
 
             modelBuilder.Entity("Domain.Entities.Base.FieldTypes.InputField", b =>
@@ -269,6 +430,9 @@ namespace Infrastructure.Migrations
                     b.Property<string>("Description")
                         .HasColumnType("text");
 
+                    b.Property<int>("InputUnderTypeId")
+                        .HasColumnType("integer");
+
                     b.Property<bool>("IsRequired")
                         .HasColumnType("boolean");
 
@@ -280,7 +444,9 @@ namespace Infrastructure.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("InputFields");
+                    b.HasIndex("ApplicationGroupId");
+
+                    b.ToTable("InputFields", "Identity");
                 });
 
             modelBuilder.Entity("Domain.Entities.Base.FieldTypes.SelectField", b =>
@@ -326,7 +492,7 @@ namespace Infrastructure.Migrations
 
                     b.HasIndex("SelectRestrictionId");
 
-                    b.ToTable("SelectField");
+                    b.ToTable("SelectField", "Identity");
                 });
 
             modelBuilder.Entity("Domain.Entities.Base.FieldTypes.SelectOption", b =>
@@ -347,7 +513,7 @@ namespace Infrastructure.Migrations
 
                     b.HasIndex("SelectFieldId");
 
-                    b.ToTable("SelectOptions");
+                    b.ToTable("SelectOptions", "Identity");
                 });
 
             modelBuilder.Entity("Domain.Entities.Base.HistoryApplicationState", b =>
@@ -383,7 +549,7 @@ namespace Infrastructure.Migrations
 
                     b.HasIndex("NewApplicationStateId");
 
-                    b.ToTable("HistoryApplicationState");
+                    b.ToTable("HistoryApplicationState", "Identity");
                 });
 
             modelBuilder.Entity("Domain.Entities.Base.Permission", b =>
@@ -402,7 +568,7 @@ namespace Infrastructure.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("Permission");
+                    b.ToTable("Permission", "Identity");
                 });
 
             modelBuilder.Entity("Domain.Entities.Base.RefreshToken", b =>
@@ -413,14 +579,35 @@ namespace Infrastructure.Migrations
 
                     NpgsqlPropertyBuilderExtensions.UseIdentityByDefaultColumn(b.Property<int>("Id"));
 
-                    b.Property<int?>("UserId")
+                    b.Property<DateTime>("Created")
+                        .HasColumnType("timestamp with time zone");
+
+                    b.Property<string>("CreatedByIp")
+                        .HasColumnType("text");
+
+                    b.Property<DateTime>("Expires")
+                        .HasColumnType("timestamp with time zone");
+
+                    b.Property<string>("ReplacedByToken")
+                        .HasColumnType("text");
+
+                    b.Property<DateTime?>("Revoked")
+                        .HasColumnType("timestamp with time zone");
+
+                    b.Property<string>("RevokedByIp")
+                        .HasColumnType("text");
+
+                    b.Property<string>("Token")
+                        .HasColumnType("text");
+
+                    b.Property<int>("UserId")
                         .HasColumnType("integer");
 
                     b.HasKey("Id");
 
                     b.HasIndex("UserId");
 
-                    b.ToTable("RefreshToken");
+                    b.ToTable("RefreshTokens", "Identity");
                 });
 
             modelBuilder.Entity("Domain.Entities.Base.Role", b =>
@@ -432,47 +619,24 @@ namespace Infrastructure.Migrations
                     NpgsqlPropertyBuilderExtensions.UseIdentityByDefaultColumn(b.Property<int>("Id"));
 
                     b.Property<string>("ConcurrencyStamp")
+                        .IsConcurrencyToken()
                         .HasColumnType("text");
 
                     b.Property<string>("Name")
-                        .HasColumnType("text");
+                        .HasMaxLength(256)
+                        .HasColumnType("character varying(256)");
 
                     b.Property<string>("NormalizedName")
-                        .HasColumnType("text");
+                        .HasMaxLength(256)
+                        .HasColumnType("character varying(256)");
 
                     b.HasKey("Id");
 
-                    b.ToTable("Roles");
-                });
+                    b.HasIndex("NormalizedName")
+                        .IsUnique()
+                        .HasDatabaseName("RoleNameIndex");
 
-            modelBuilder.Entity("Domain.Entities.Base.RoleClaim", b =>
-                {
-                    b.Property<int>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("integer");
-
-                    NpgsqlPropertyBuilderExtensions.UseIdentityByDefaultColumn(b.Property<int>("Id"));
-
-                    b.Property<string>("ClaimType")
-                        .HasColumnType("text");
-
-                    b.Property<string>("ClaimValue")
-                        .HasColumnType("text");
-
-                    b.Property<int>("RoleId")
-                        .HasColumnType("integer");
-
-                    b.Property<string>("Type")
-                        .HasColumnType("text");
-
-                    b.Property<string>("Value")
-                        .HasColumnType("text");
-
-                    b.HasKey("Id");
-
-                    b.HasIndex("RoleId");
-
-                    b.ToTable("RoleClaim");
+                    b.ToTable("Role", "Identity");
                 });
 
             modelBuilder.Entity("Domain.Entities.Base.User", b =>
@@ -486,14 +650,16 @@ namespace Infrastructure.Migrations
                     b.Property<int>("AccessFailedCount")
                         .HasColumnType("integer");
 
-                    b.Property<DateOnly>("BirthDate")
-                        .HasColumnType("date");
+                    b.Property<DateTime>("BirthDate")
+                        .HasColumnType("timestamp with time zone");
 
                     b.Property<string>("ConcurrencyStamp")
+                        .IsConcurrencyToken()
                         .HasColumnType("text");
 
                     b.Property<string>("Email")
-                        .HasColumnType("text");
+                        .HasMaxLength(256)
+                        .HasColumnType("character varying(256)");
 
                     b.Property<bool>("EmailConfirmed")
                         .HasColumnType("boolean");
@@ -505,10 +671,12 @@ namespace Infrastructure.Migrations
                         .HasColumnType("timestamp with time zone");
 
                     b.Property<string>("NormalizedEmail")
-                        .HasColumnType("text");
+                        .HasMaxLength(256)
+                        .HasColumnType("character varying(256)");
 
                     b.Property<string>("NormalizedUserName")
-                        .HasColumnType("text");
+                        .HasMaxLength(256)
+                        .HasColumnType("character varying(256)");
 
                     b.Property<string>("PasswordHash")
                         .HasColumnType("text");
@@ -526,14 +694,22 @@ namespace Infrastructure.Migrations
                         .HasColumnType("boolean");
 
                     b.Property<string>("UserName")
-                        .HasColumnType("text");
+                        .HasMaxLength(256)
+                        .HasColumnType("character varying(256)");
 
                     b.HasKey("Id");
 
-                    b.ToTable("User");
+                    b.HasIndex("NormalizedEmail")
+                        .HasDatabaseName("EmailIndex");
+
+                    b.HasIndex("NormalizedUserName")
+                        .IsUnique()
+                        .HasDatabaseName("UserNameIndex");
+
+                    b.ToTable("AspNetUsers", "Identity");
                 });
 
-            modelBuilder.Entity("Domain.Entities.UserRole", b =>
+            modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRoleClaim<int>", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
@@ -541,22 +717,99 @@ namespace Infrastructure.Migrations
 
                     NpgsqlPropertyBuilderExtensions.UseIdentityByDefaultColumn(b.Property<int>("Id"));
 
-                    b.Property<string>("Name")
+                    b.Property<string>("ClaimType")
+                        .HasColumnType("text");
+
+                    b.Property<string>("ClaimValue")
                         .HasColumnType("text");
 
                     b.Property<int>("RoleId")
-                        .HasColumnType("integer");
-
-                    b.Property<int>("UserId")
                         .HasColumnType("integer");
 
                     b.HasKey("Id");
 
                     b.HasIndex("RoleId");
 
+                    b.ToTable("RoleClaims", "Identity");
+                });
+
+            modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityUserClaim<int>", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("integer");
+
+                    NpgsqlPropertyBuilderExtensions.UseIdentityByDefaultColumn(b.Property<int>("Id"));
+
+                    b.Property<string>("ClaimType")
+                        .HasColumnType("text");
+
+                    b.Property<string>("ClaimValue")
+                        .HasColumnType("text");
+
+                    b.Property<int>("UserId")
+                        .HasColumnType("integer");
+
+                    b.HasKey("Id");
+
                     b.HasIndex("UserId");
 
-                    b.ToTable("UserRole");
+                    b.ToTable("UserClaims", "Identity");
+                });
+
+            modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityUserLogin<int>", b =>
+                {
+                    b.Property<string>("LoginProvider")
+                        .HasColumnType("text");
+
+                    b.Property<string>("ProviderKey")
+                        .HasColumnType("text");
+
+                    b.Property<string>("ProviderDisplayName")
+                        .HasColumnType("text");
+
+                    b.Property<int>("UserId")
+                        .HasColumnType("integer");
+
+                    b.HasKey("LoginProvider", "ProviderKey");
+
+                    b.HasIndex("UserId");
+
+                    b.ToTable("UserLogins", "Identity");
+                });
+
+            modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityUserRole<int>", b =>
+                {
+                    b.Property<int>("UserId")
+                        .HasColumnType("integer");
+
+                    b.Property<int>("RoleId")
+                        .HasColumnType("integer");
+
+                    b.HasKey("UserId", "RoleId");
+
+                    b.HasIndex("RoleId");
+
+                    b.ToTable("UserRoles", "Identity");
+                });
+
+            modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityUserToken<int>", b =>
+                {
+                    b.Property<int>("UserId")
+                        .HasColumnType("integer");
+
+                    b.Property<string>("LoginProvider")
+                        .HasColumnType("text");
+
+                    b.Property<string>("Name")
+                        .HasColumnType("text");
+
+                    b.Property<string>("Value")
+                        .HasColumnType("text");
+
+                    b.HasKey("UserId", "LoginProvider", "Name");
+
+                    b.ToTable("UserTokens", "Identity");
                 });
 
             modelBuilder.Entity("PermissionUser", b =>
@@ -571,104 +824,7 @@ namespace Infrastructure.Migrations
 
                     b.HasIndex("UsersId");
 
-                    b.ToTable("PermissionUser");
-                });
-
-            modelBuilder.Entity("Domain.Entities.Base.FieldRestrictions.InputDateField", b =>
-                {
-                    b.HasBaseType("Domain.Entities.Base.FieldTypes.InputField");
-
-                    b.Property<int?>("FieldSetId")
-                        .HasColumnType("integer");
-
-                    b.Property<int>("InputFieldId")
-                        .HasColumnType("integer");
-
-                    b.Property<DateTime>("MaxDateTime")
-                        .HasColumnType("timestamp with time zone");
-
-                    b.Property<DateTime>("MinDateTime")
-                        .HasColumnType("timestamp with time zone");
-
-                    b.HasIndex("ApplicationGroupId");
-
-                    b.HasIndex("FieldSetId");
-
-                    b.HasIndex("InputFieldId");
-
-                    b.ToTable("InputDateField");
-                });
-
-            modelBuilder.Entity("Domain.Entities.Base.FieldRestrictions.InputNumberField", b =>
-                {
-                    b.HasBaseType("Domain.Entities.Base.FieldTypes.InputField");
-
-                    b.Property<int?>("FieldSetId")
-                        .HasColumnType("integer");
-
-                    b.Property<int>("InputFieldId")
-                        .HasColumnType("integer");
-
-                    b.Property<int>("Max")
-                        .HasColumnType("integer");
-
-                    b.Property<int>("Min")
-                        .HasColumnType("integer");
-
-                    b.HasIndex("ApplicationGroupId");
-
-                    b.HasIndex("FieldSetId");
-
-                    b.HasIndex("InputFieldId");
-
-                    b.ToTable("InputNumberField");
-                });
-
-            modelBuilder.Entity("Domain.Entities.Base.FieldRestrictions.InputNumberPhoneField", b =>
-                {
-                    b.HasBaseType("Domain.Entities.Base.FieldTypes.InputField");
-
-                    b.Property<int?>("FieldSetId")
-                        .HasColumnType("integer");
-
-                    b.Property<int>("InputFieldId")
-                        .HasColumnType("integer");
-
-                    b.Property<string>("Type")
-                        .HasColumnType("text");
-
-                    b.HasIndex("ApplicationGroupId");
-
-                    b.HasIndex("FieldSetId");
-
-                    b.HasIndex("InputFieldId");
-
-                    b.ToTable("InputNumberPhoneField");
-                });
-
-            modelBuilder.Entity("Domain.Entities.Base.FieldRestrictions.InputTextField", b =>
-                {
-                    b.HasBaseType("Domain.Entities.Base.FieldTypes.InputField");
-
-                    b.Property<int?>("FieldSetId")
-                        .HasColumnType("integer");
-
-                    b.Property<int>("InputFieldId")
-                        .HasColumnType("integer");
-
-                    b.Property<int>("MaxLength")
-                        .HasColumnType("integer");
-
-                    b.Property<int>("MinLength")
-                        .HasColumnType("integer");
-
-                    b.HasIndex("ApplicationGroupId");
-
-                    b.HasIndex("FieldSetId");
-
-                    b.HasIndex("InputFieldId");
-
-                    b.ToTable("InputTextField");
+                    b.ToTable("PermissionUser", "Identity");
                 });
 
             modelBuilder.Entity("Domain.Entities.Base.Application", b =>
@@ -686,9 +842,13 @@ namespace Infrastructure.Migrations
 
             modelBuilder.Entity("Domain.Entities.Base.ApplicationGroup", b =>
                 {
-                    b.HasOne("Domain.Entities.Base.Application", null)
-                        .WithMany("FieldGroups")
-                        .HasForeignKey("ApplicationId");
+                    b.HasOne("Domain.Entities.Base.Application", "Application")
+                        .WithMany("ApplicationGroups")
+                        .HasForeignKey("ApplicationId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Application");
                 });
 
             modelBuilder.Entity("Domain.Entities.Base.ApplicationSubmission", b =>
@@ -716,42 +876,153 @@ namespace Infrastructure.Migrations
                     b.Navigation("User");
                 });
 
+            modelBuilder.Entity("Domain.Entities.Base.FieldRestrictions.InputDateField", b =>
+                {
+                    b.HasOne("Domain.Entities.Base.ApplicationGroup", "ApplicationGroup")
+                        .WithMany("InputDataFields")
+                        .HasForeignKey("ApplicationGroupId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("Domain.Entities.Base.FieldTypes.FieldSet", null)
+                        .WithMany("InputDateFields")
+                        .HasForeignKey("FieldSetId");
+
+                    b.HasOne("Domain.Entities.Base.FieldTypes.InputField", "InputField")
+                        .WithMany("InputDateField")
+                        .HasForeignKey("InputFieldId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("ApplicationGroup");
+
+                    b.Navigation("InputField");
+                });
+
+            modelBuilder.Entity("Domain.Entities.Base.FieldRestrictions.InputNumberField", b =>
+                {
+                    b.HasOne("Domain.Entities.Base.ApplicationGroup", "ApplicationGroup")
+                        .WithMany("InputNumberFields")
+                        .HasForeignKey("ApplicationGroupId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("Domain.Entities.Base.FieldTypes.FieldSet", null)
+                        .WithMany("InputNumberFields")
+                        .HasForeignKey("FieldSetId");
+
+                    b.HasOne("Domain.Entities.Base.FieldTypes.InputField", "InputField")
+                        .WithMany("InputNumberField")
+                        .HasForeignKey("InputFieldId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("ApplicationGroup");
+
+                    b.Navigation("InputField");
+                });
+
+            modelBuilder.Entity("Domain.Entities.Base.FieldRestrictions.InputNumberPhoneField", b =>
+                {
+                    b.HasOne("Domain.Entities.Base.ApplicationGroup", "ApplicationGroup")
+                        .WithMany("InputNumberPhoneFields")
+                        .HasForeignKey("ApplicationGroupId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("Domain.Entities.Base.FieldTypes.FieldSet", null)
+                        .WithMany("InputNumberPhoneFields")
+                        .HasForeignKey("FieldSetId");
+
+                    b.HasOne("Domain.Entities.Base.FieldTypes.InputField", "InputField")
+                        .WithMany("InputNumberPhoneField")
+                        .HasForeignKey("InputFieldId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("ApplicationGroup");
+
+                    b.Navigation("InputField");
+                });
+
+            modelBuilder.Entity("Domain.Entities.Base.FieldRestrictions.InputTextField", b =>
+                {
+                    b.HasOne("Domain.Entities.Base.ApplicationGroup", "ApplicationGroup")
+                        .WithMany("InputTextFields")
+                        .HasForeignKey("ApplicationGroupId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("Domain.Entities.Base.FieldTypes.FieldSet", null)
+                        .WithMany("InputTextFields")
+                        .HasForeignKey("FieldSetId");
+
+                    b.HasOne("Domain.Entities.Base.FieldTypes.InputField", "InputField")
+                        .WithMany("InputTextField")
+                        .HasForeignKey("InputFieldId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("ApplicationGroup");
+
+                    b.Navigation("InputField");
+                });
+
             modelBuilder.Entity("Domain.Entities.Base.FieldSubmissions.InputSubmission", b =>
                 {
+                    b.HasOne("Domain.Entities.Base.ApplicationSubmission", "ApplicationSubmission")
+                        .WithMany("InputSubmissions")
+                        .HasForeignKey("ApplicationSubmissionId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
                     b.HasOne("Domain.Entities.Base.FieldTypes.InputField", "InputField")
                         .WithMany()
                         .HasForeignKey("InputFieldId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
-                    b.HasOne("Domain.Entities.Base.ApplicationSubmission", "Submission")
-                        .WithMany("InputSubmissions")
-                        .HasForeignKey("SubmissionId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
+                    b.Navigation("ApplicationSubmission");
 
                     b.Navigation("InputField");
-
-                    b.Navigation("Submission");
                 });
 
             modelBuilder.Entity("Domain.Entities.Base.FieldSubmissions.SelectSubmission", b =>
                 {
+                    b.HasOne("Domain.Entities.Base.ApplicationSubmission", "ApplicationSubmission")
+                        .WithMany("SelectSubmissions")
+                        .HasForeignKey("ApplicationSubmissionId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
                     b.HasOne("Domain.Entities.Base.FieldTypes.SelectField", "SelectField")
                         .WithMany()
                         .HasForeignKey("SelectFieldId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
-                    b.HasOne("Domain.Entities.Base.ApplicationSubmission", "Submission")
-                        .WithMany("SelectSubmissions")
-                        .HasForeignKey("SubmissionId")
+                    b.Navigation("ApplicationSubmission");
+
+                    b.Navigation("SelectField");
+                });
+
+            modelBuilder.Entity("Domain.Entities.Base.FieldSubmissions.SelectSubmissonOptions", b =>
+                {
+                    b.HasOne("Domain.Entities.Base.FieldTypes.SelectOption", "SelectOption")
+                        .WithMany()
+                        .HasForeignKey("SelectOptionId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
-                    b.Navigation("SelectField");
+                    b.HasOne("Domain.Entities.Base.FieldSubmissions.SelectSubmission", "SelectSubmission")
+                        .WithMany("Values")
+                        .HasForeignKey("SelectSubmissionId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
 
-                    b.Navigation("Submission");
+                    b.Navigation("SelectOption");
+
+                    b.Navigation("SelectSubmission");
                 });
 
             modelBuilder.Entity("Domain.Entities.Base.FieldTypes.FieldSet", b =>
@@ -761,10 +1032,6 @@ namespace Infrastructure.Migrations
                         .HasForeignKey("ApplicationGroupId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
-
-                    b.HasOne("Domain.Entities.Base.FieldSubmissions.SelectSubmission", null)
-                        .WithMany("Values")
-                        .HasForeignKey("SelectSubmissionId");
 
                     b.OwnsOne("Domain.Entities.Complex.FieldStyle", "Style", b1 =>
                         {
@@ -776,7 +1043,7 @@ namespace Infrastructure.Migrations
 
                             b1.HasKey("FieldSetId");
 
-                            b1.ToTable("FieldSet");
+                            b1.ToTable("FieldSet", "Identity");
 
                             b1.WithOwner()
                                 .HasForeignKey("FieldSetId");
@@ -789,6 +1056,12 @@ namespace Infrastructure.Migrations
 
             modelBuilder.Entity("Domain.Entities.Base.FieldTypes.InputField", b =>
                 {
+                    b.HasOne("Domain.Entities.Base.ApplicationGroup", "ApplicationGroup")
+                        .WithMany()
+                        .HasForeignKey("ApplicationGroupId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
                     b.OwnsOne("Domain.Entities.Complex.FieldStyle", "Style", b1 =>
                         {
                             b1.Property<int>("InputFieldId")
@@ -799,11 +1072,13 @@ namespace Infrastructure.Migrations
 
                             b1.HasKey("InputFieldId");
 
-                            b1.ToTable("InputFields");
+                            b1.ToTable("InputFields", "Identity");
 
                             b1.WithOwner()
                                 .HasForeignKey("InputFieldId");
                         });
+
+                    b.Navigation("ApplicationGroup");
 
                     b.Navigation("Style");
                 });
@@ -836,7 +1111,7 @@ namespace Infrastructure.Migrations
 
                             b1.HasKey("SelectFieldId");
 
-                            b1.ToTable("SelectField");
+                            b1.ToTable("SelectField", "Identity");
 
                             b1.WithOwner()
                                 .HasForeignKey("SelectFieldId");
@@ -883,20 +1158,13 @@ namespace Infrastructure.Migrations
 
             modelBuilder.Entity("Domain.Entities.Base.RefreshToken", b =>
                 {
-                    b.HasOne("Domain.Entities.Base.User", null)
+                    b.HasOne("Domain.Entities.Base.User", "User")
                         .WithMany("RefreshTokens")
-                        .HasForeignKey("UserId");
-                });
-
-            modelBuilder.Entity("Domain.Entities.Base.RoleClaim", b =>
-                {
-                    b.HasOne("Domain.Entities.Base.Role", "Role")
-                        .WithMany("Claims")
-                        .HasForeignKey("RoleId")
+                        .HasForeignKey("UserId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
-                    b.Navigation("Role");
+                    b.Navigation("User");
                 });
 
             modelBuilder.Entity("Domain.Entities.Base.User", b =>
@@ -917,7 +1185,7 @@ namespace Infrastructure.Migrations
 
                             b1.HasKey("UserId");
 
-                            b1.ToTable("User");
+                            b1.ToTable("AspNetUsers", "Identity");
 
                             b1.WithOwner()
                                 .HasForeignKey("UserId");
@@ -926,23 +1194,55 @@ namespace Infrastructure.Migrations
                     b.Navigation("PersonName");
                 });
 
-            modelBuilder.Entity("Domain.Entities.UserRole", b =>
+            modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRoleClaim<int>", b =>
                 {
-                    b.HasOne("Domain.Entities.Base.Role", "Role")
-                        .WithMany("UserRoles")
+                    b.HasOne("Domain.Entities.Base.Role", null)
+                        .WithMany()
                         .HasForeignKey("RoleId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
+                });
 
-                    b.HasOne("Domain.Entities.Base.User", "User")
+            modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityUserClaim<int>", b =>
+                {
+                    b.HasOne("Domain.Entities.Base.User", null)
                         .WithMany()
                         .HasForeignKey("UserId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
+                });
 
-                    b.Navigation("Role");
+            modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityUserLogin<int>", b =>
+                {
+                    b.HasOne("Domain.Entities.Base.User", null)
+                        .WithMany()
+                        .HasForeignKey("UserId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+                });
 
-                    b.Navigation("User");
+            modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityUserRole<int>", b =>
+                {
+                    b.HasOne("Domain.Entities.Base.Role", null)
+                        .WithMany()
+                        .HasForeignKey("RoleId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("Domain.Entities.Base.User", null)
+                        .WithMany()
+                        .HasForeignKey("UserId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+                });
+
+            modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityUserToken<int>", b =>
+                {
+                    b.HasOne("Domain.Entities.Base.User", null)
+                        .WithMany()
+                        .HasForeignKey("UserId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
                 });
 
             modelBuilder.Entity("PermissionUser", b =>
@@ -960,127 +1260,11 @@ namespace Infrastructure.Migrations
                         .IsRequired();
                 });
 
-            modelBuilder.Entity("Domain.Entities.Base.FieldRestrictions.InputDateField", b =>
-                {
-                    b.HasOne("Domain.Entities.Base.ApplicationGroup", "ApplicationGroup")
-                        .WithMany("InputDataFields")
-                        .HasForeignKey("ApplicationGroupId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.HasOne("Domain.Entities.Base.FieldTypes.FieldSet", null)
-                        .WithMany("InputDateFields")
-                        .HasForeignKey("FieldSetId");
-
-                    b.HasOne("Domain.Entities.Base.FieldTypes.InputField", null)
-                        .WithOne()
-                        .HasForeignKey("Domain.Entities.Base.FieldRestrictions.InputDateField", "Id")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.HasOne("Domain.Entities.Base.FieldTypes.InputField", "InputField")
-                        .WithMany()
-                        .HasForeignKey("InputFieldId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.Navigation("ApplicationGroup");
-
-                    b.Navigation("InputField");
-                });
-
-            modelBuilder.Entity("Domain.Entities.Base.FieldRestrictions.InputNumberField", b =>
-                {
-                    b.HasOne("Domain.Entities.Base.ApplicationGroup", "ApplicationGroup")
-                        .WithMany("InputNumberFields")
-                        .HasForeignKey("ApplicationGroupId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.HasOne("Domain.Entities.Base.FieldTypes.FieldSet", null)
-                        .WithMany("InputNumberFields")
-                        .HasForeignKey("FieldSetId");
-
-                    b.HasOne("Domain.Entities.Base.FieldTypes.InputField", null)
-                        .WithOne()
-                        .HasForeignKey("Domain.Entities.Base.FieldRestrictions.InputNumberField", "Id")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.HasOne("Domain.Entities.Base.FieldTypes.InputField", "InputField")
-                        .WithMany()
-                        .HasForeignKey("InputFieldId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.Navigation("ApplicationGroup");
-
-                    b.Navigation("InputField");
-                });
-
-            modelBuilder.Entity("Domain.Entities.Base.FieldRestrictions.InputNumberPhoneField", b =>
-                {
-                    b.HasOne("Domain.Entities.Base.ApplicationGroup", "ApplicationGroup")
-                        .WithMany("InputNumberPhoneFields")
-                        .HasForeignKey("ApplicationGroupId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.HasOne("Domain.Entities.Base.FieldTypes.FieldSet", null)
-                        .WithMany("InputNumberPhoneFields")
-                        .HasForeignKey("FieldSetId");
-
-                    b.HasOne("Domain.Entities.Base.FieldTypes.InputField", null)
-                        .WithOne()
-                        .HasForeignKey("Domain.Entities.Base.FieldRestrictions.InputNumberPhoneField", "Id")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.HasOne("Domain.Entities.Base.FieldTypes.InputField", "InputField")
-                        .WithMany()
-                        .HasForeignKey("InputFieldId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.Navigation("ApplicationGroup");
-
-                    b.Navigation("InputField");
-                });
-
-            modelBuilder.Entity("Domain.Entities.Base.FieldRestrictions.InputTextField", b =>
-                {
-                    b.HasOne("Domain.Entities.Base.ApplicationGroup", "ApplicationGroup")
-                        .WithMany("InputTextFields")
-                        .HasForeignKey("ApplicationGroupId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.HasOne("Domain.Entities.Base.FieldTypes.FieldSet", null)
-                        .WithMany("InputTextFields")
-                        .HasForeignKey("FieldSetId");
-
-                    b.HasOne("Domain.Entities.Base.FieldTypes.InputField", null)
-                        .WithOne()
-                        .HasForeignKey("Domain.Entities.Base.FieldRestrictions.InputTextField", "Id")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.HasOne("Domain.Entities.Base.FieldTypes.InputField", "InputField")
-                        .WithMany()
-                        .HasForeignKey("InputFieldId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.Navigation("ApplicationGroup");
-
-                    b.Navigation("InputField");
-                });
-
             modelBuilder.Entity("Domain.Entities.Base.Application", b =>
                 {
-                    b.Navigation("ApplicationSubmissions");
+                    b.Navigation("ApplicationGroups");
 
-                    b.Navigation("FieldGroups");
+                    b.Navigation("ApplicationSubmissions");
                 });
 
             modelBuilder.Entity("Domain.Entities.Base.ApplicationGroup", b =>
@@ -1125,16 +1309,20 @@ namespace Infrastructure.Migrations
                     b.Navigation("SelectFields");
                 });
 
+            modelBuilder.Entity("Domain.Entities.Base.FieldTypes.InputField", b =>
+                {
+                    b.Navigation("InputDateField");
+
+                    b.Navigation("InputNumberField");
+
+                    b.Navigation("InputNumberPhoneField");
+
+                    b.Navigation("InputTextField");
+                });
+
             modelBuilder.Entity("Domain.Entities.Base.FieldTypes.SelectField", b =>
                 {
                     b.Navigation("Options");
-                });
-
-            modelBuilder.Entity("Domain.Entities.Base.Role", b =>
-                {
-                    b.Navigation("Claims");
-
-                    b.Navigation("UserRoles");
                 });
 
             modelBuilder.Entity("Domain.Entities.Base.User", b =>

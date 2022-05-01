@@ -29,7 +29,7 @@ namespace ScienceResearchPA.Controllers
         [HttpDelete("{id}")]
         public async Task<ActionResult> DeleteTextInput(int id, CancellationToken cancellationToken, bool isCompleteRemoval = true)
         {
-            return Ok(await Mediator.Send(null, cancellationToken));
+            return Ok(await Mediator.Send(new DeleteInputFieldCommand(id), cancellationToken));
         }
     }
 }

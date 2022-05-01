@@ -10,11 +10,15 @@ using System.ComponentModel.DataAnnotations.Schema;
 namespace Domain.Entities.Base.FieldRestrictions
 {
     [Table("InputTextField")]
-    public class InputTextField : InputField
+    public class InputTextField : BaseEntity
     {
+        public int ApplicationGroupId { get; set; }
+        public ApplicationGroup ApplicationGroup { get; set; }
+
         public int MaxLength { get; set; }
         public int MinLength { get; set; }
 
+        [ForeignKey("InputFieldId")]
         public int InputFieldId { get; set; }
         public InputField InputField { get; set; }
     }

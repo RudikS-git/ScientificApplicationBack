@@ -11,6 +11,8 @@ namespace App.Applications.DTOs
     [DisplayName("Applications_InputFieldDto")]
     public class InputFieldDto : FieldDto
     {
+        public int InputFieldId { get; set; }
+        public int GroupId { get; set; }
         public InputUnderTypes InputUnderTypeId { get; set; }
     }
 }

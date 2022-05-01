@@ -17,6 +17,7 @@ namespace App.Common.Interfaces
         public DbSet<User> Users { get; set; }
         public DbSet<RefreshToken> RefreshTokens { get; set; }
         public DbSet<Application> Applications { get; set; }
+        public DbSet<ApplicationGroup> ApplicationGroup { get; set; }
         public DbSet<ApplicationState> ApplicationStates { get; set; }
         public DbSet<ApplicationSubmission> ApplicationSubmissions { get; set; }
 
@@ -27,10 +28,10 @@ namespace App.Common.Interfaces
 
         public DbSet<SelectOption> SelectOptions { get; set; }
 
-        public DbSet<InputNumberField> InputNumberRestrictions { get; set; }
-        public DbSet<InputDateField> InputDateRestrictions { get; set; }
-        public DbSet<InputTextField> InputInputTextRestrictions { get; set; }
-        public DbSet<InputNumberPhoneField> InputNumberPhoneRestrictions { get; set; }
+        public DbSet<InputNumberField> InputNumberFields { get; set; }
+        public DbSet<InputDateField> InputDateFields { get; set; }
+        public DbSet<InputTextField> InputTextFields { get; set; }
+        public DbSet<InputNumberPhoneField> InputNumberPhoneFields { get; set; }
 
         Task<int> SaveChangesAsync(CancellationToken cancellationToken = new CancellationToken());
         

@@ -17,11 +17,11 @@ namespace App.InputFields.DTOs
         public void Register(TypeAdapterConfig config)
         {
             config.NewConfig<InputFieldDto, InputField>()
-                .TwoWays()
-                .Include<InputTextFieldDto, InputTextField>()
+                .TwoWays();
+             /*   .Include<InputTextFieldDto, InputTextField>()
                 .Include<InputDateFieldDto, InputDateField>()
                 .Include<InputNumberFieldDto, InputNumberField>()
-                .Include<InputNumberPhoneFieldDto, InputNumberPhoneField>();
+                .Include<InputNumberPhoneFieldDto, InputNumberPhoneField>();*/
         }
     }
 }

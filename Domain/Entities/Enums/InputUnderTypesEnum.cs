@@ -9,13 +9,14 @@ namespace Domain.Enums
     public enum InputUnderTypes
     {
         Text = 1,
-        Date = 2,
-        Time = 3,
-        DateTime = 4,
-        NumberPhone = 5,
-        Email = 6,
-        Number = 7,
-        FloatNumber = 8,
-        File = 9
+        Date,
+        Number,
+        NumberPhone,
+
+        /*Email */
+        /* Time = 3,
+        DateTime = 4,*/
+        /*FloatNumber = 8,
+        File = 9*/
     }
 }

@@ -35,10 +35,10 @@ namespace App.FieldSets.Commands
         {
             var entityField = _mapper.Map<FieldSet>(request.EntityFieldDto);
             entityField.ApplicationGroupId = request.GroupId;
-            entityField.InputNumberPhoneFields.ForEach(field => field.InputField.ApplicationGroupId = request.GroupId);
+            /*entityField.InputNumberPhoneFields.ForEach(field => field.InputField.ApplicationGroupId = request.GroupId);
             entityField.InputTextFields.ForEach(field => field.InputField.ApplicationGroupId = request.GroupId);
             entityField.InputDateFields.ForEach(field => field.InputField.ApplicationGroupId = request.GroupId);
-            entityField.InputNumberFields.ForEach(field => field.InputField.ApplicationGroupId = request.GroupId);
+            entityField.InputNumberFields.ForEach(field => field.InputField.ApplicationGroupId = request.GroupId);*/
 
             if (entityField.Id != 0)
             {

@@ -1,5 +1,7 @@
-﻿using App.Common.Interfaces;
+﻿using App.Applications.DTOs;
+using App.Common.Interfaces;
 using App.Common.Models;
+using Domain.Entities.Base.FieldTypes;
 using MapsterMapper;
 using Microsoft.Extensions.Localization;
 using System;
@@ -11,33 +13,36 @@ using System.Threading.Tasks;
 
 namespace App.InputFields.Commands
 {
-    public class DeleteInputFieldCommand : IRequestWrapper<int>
+    public class DeleteInputFieldCommand : IRequestWrapper<InputFieldDto>
     {
         public int Id { get; set; }
+
+        public DeleteInputFieldCommand(int id)
+        {
+            Id = id;
+        }
     }
 
-    class DeleteInputFieldCommanddHandler : Handler, IRequestHandlerWrapper<DeleteInputFieldCommand, int>
+    class DeleteInputFieldCommanddHandler : Handler<InputField, InputFieldDto>, IRequestHandlerWrapper<DeleteInputFieldCommand, InputFieldDto>
     {
         public DeleteInputFieldCommanddHandler(IApplicationContext applicationContext, IStringLocalizer<SharedResource> localizer, IMapper mapper)
             : base(applicationContext, localizer, mapper)
         {
         }
 
-        public async Task<ServiceResult<int>> Handle(DeleteInputFieldCommand command, CancellationToken cancellationToken)
+        public async Task<ServiceResult<InputFieldDto>> Handle(DeleteInputFieldCommand command, CancellationToken cancellationToken)
         {
-            throw new NotImplementedException();
+            var inputField = _context.InputFields.FirstOrDefault(it => it.Id == command.Id);
 
-            var application = _context.Applications.Where(it => it.Id == command.Id).FirstOrDefault();
-
-            if (application == null)
+            if (inputField == null)
             {
-                return ServiceResult.Failed<int>(new ServiceError());
+                return ServiceResult.Failed<InputFieldDto>(ServiceError.NotFound);
             }
 
-            _context.Applications.Remove(application);
+            _context.InputFields.Remove(inputField);
             await _context.SaveChangesAsync();
 
-            return ServiceResult.Success(0);
+            return GetSuccessResult(inputField);
         }
     }
 }

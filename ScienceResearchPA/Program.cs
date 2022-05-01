@@ -41,6 +41,7 @@ namespace ScienceResearchPA
                     var roleManager = services.GetRequiredService<RoleManager<Role>>();
 
                     await DefaultRoles.SeedAsync(userManager, roleManager);
+                    await DefaultRootUsersSeed.SeedAsync(userManager);
                 }
                 catch (Exception ex)
                 {

@@ -39,29 +39,53 @@ namespace App.Applications.Queries
         public async Task<ServiceResult<ApplicationDetailsDto>> Handle(GetApplicationByIdQuery query, CancellationToken cancellationToken)
         {
             var application = await _context.Applications
-                .Include(it => it.FieldGroups)
-                .ThenInclude(it => it.SelectFields)
 
-                .Include(it => it.FieldGroups)
-                .ThenInclude(it => it.InputTextFields)
-
-                .Include(it => it.FieldGroups)
-                .ThenInclude(it => it.InputNumberFields)
-
-                .Include(it => it.FieldGroups)
-                .ThenInclude(it => it.InputNumberPhoneFields)
-
-                .Include(it => it.FieldGroups)
+                .Include(it => it.ApplicationGroups)
                 .ThenInclude(it => it.InputDataFields)
+                .ThenInclude(it => it.InputField)
 
-                .Include(it => it.FieldGroups)
-                .ThenInclude(it => it.FieldSets)
+                .Include(it => it.ApplicationGroups)
+                .ThenInclude(it => it.InputTextFields)
+                .ThenInclude(it => it.InputField)
+
+                .Include(it => it.ApplicationGroups)
+                .ThenInclude(it => it.InputNumberFields)
+                .ThenInclude(it => it.InputField)
+
+                .Include(it => it.ApplicationGroups)
+                .ThenInclude(it => it.InputNumberPhoneFields)
+                .ThenInclude(it => it.InputField)
 
                 .Where(it => it.Id == query.id)
-               /* .ProjectToType<ApplicationDetailsDto>()*/
                 .FirstOrDefaultAsync(cancellationToken);
 
-            if (application == null)
+            if(application?.ApplicationGroups != null)
+            {
+                /*application?.ApplicationGroups.ToList().ForEach(group =>
+                {
+                    group.InputFields.ForEach(field =>
+                    {
+                        switch(field.InputUnderTypeId)
+                        {
+                            case Domain.Enums.InputUnderTypes.Text:
+
+                                break;
+                            case Domain.Enums.InputUnderTypes.Date:
+
+                                break;
+
+                            case Domain.Enums.InputUnderTypes.Number:
+
+                                break;
+
+                            case Domain.Enums.InputUnderTypes.NumberPhone:
+
+                                break;
+                        }
+                    });
+                });*/
+            }
+            else
             {
                 return ServiceResult.Failed<ApplicationDetailsDto>(ServiceError.NotFound);
             }
@@ -70,11 +94,11 @@ namespace App.Applications.Queries
 
             appDto.ApplicationGroups.ForEach(it =>
             {
-                it.Fields = new List<InputFieldDto>(it.InputTextFields);
-                it.Fields.AddRange(it.InputNumberFields);
-                it.Fields.AddRange(it.InputNumberPhoneFields);
-                it.Fields.AddRange(it.InputDataFields);
-                it.Fields = it.Fields.OrderBy(it => it.Style).ToList();
+                it.InputFields = new List<InputFieldDto>(it.InputTextFields);
+                it.InputFields.AddRange(it.InputNumberFields);
+                it.InputFields.AddRange(it.InputNumberPhoneFields);
+                it.InputFields.AddRange(it.InputDataFields);
+                it.InputFields = it.InputFields.OrderBy(it => it.Style).ToList();
             });
 
             return ServiceResult.Success(appDto);

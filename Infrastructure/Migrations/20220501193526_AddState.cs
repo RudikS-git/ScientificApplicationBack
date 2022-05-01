@@ -4,24 +4,25 @@
 
 namespace Infrastructure.Migrations
 {
-    public partial class Edit_ApplicationSubmission_Add_Name : Migration
+    public partial class AddState : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
-            migrationBuilder.AddColumn<string>(
-                name: "Name",
+            migrationBuilder.AddColumn<int>(
+                name: "ManageApplicationState",
                 schema: "Identity",
-                table: "ApplicationSubmissions",
-                type: "text",
-                nullable: true);
+                table: "Applications",
+                type: "integer",
+                nullable: false,
+                defaultValue: 0);
         }
 
         protected override void Down(MigrationBuilder migrationBuilder)
         {
             migrationBuilder.DropColumn(
-                name: "Name",
+                name: "ManageApplicationState",
                 schema: "Identity",
-                table: "ApplicationSubmissions");
+                table: "Applications");
         }
     }
 }
