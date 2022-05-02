@@ -1,8 +1,4 @@
 ﻿using App.Applications.DTOs.Inputs;
-using App.FieldSets.DTOs;
-using App.SelectFields.DTOs;
-using Domain.Entities.Base;
-using Mapster;
 using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
@@ -12,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace App.Applications.DTOs
 {
-    public class ApplicationGroupDto : IRegister
+    public class ApplicationGroupDto
     {
         public int Id { get; set; }
 
@@ -31,16 +27,5 @@ namespace App.Applications.DTOs
 
         [JsonIgnore]
         public List<InputNumberPhoneFieldDto> InputNumberPhoneFields { get; set; }
-
-        public List<SelectFieldDto> SelectFields { get; set; }
-
-        public List<FieldSetDto> FieldSets { get; set; }
-
-        public void Register(TypeAdapterConfig config)
-        {
-            config.NewConfig<ApplicationGroup, ApplicationGroupDto>()
-                .Map(dest => dest.Id, src => src.Id)
-                .Map(dest => dest.Name, src => src.Name);
-        }
     }
 }

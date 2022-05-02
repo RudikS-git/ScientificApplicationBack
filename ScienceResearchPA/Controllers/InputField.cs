@@ -10,7 +10,7 @@ using Microsoft.AspNetCore.Authorization;
 namespace ScienceResearchPA.Controllers
 {
     [Authorize(Roles = "Admin")]
-    [Route("api/input-field")]
+    [Route("api/admin/input-field")]
     [ApiController]
     public class InputFieldController : BaseApiController
     {

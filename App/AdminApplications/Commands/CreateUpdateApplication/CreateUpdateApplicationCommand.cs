@@ -9,14 +9,15 @@ using System.Linq;
 using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
-using App.Applications.DTOs;
+using App.AdminApplications.DTOs;
 using MapsterMapper;
 using Mapster;
 using Microsoft.EntityFrameworkCore;
 
-using Response = App.Applications.DTOs.ApplicationDto;
+using Response = App.AdminApplications.DTOs.ApplicationDto;
+using Microsoft.EntityFrameworkCore.ChangeTracking;
 
-namespace App.Applications.Commands
+namespace App.AdminApplications.Commands
 {
     public class CreateApplicationCommand : IRequestWrapper<Response>
     {
@@ -52,12 +53,14 @@ namespace App.Applications.Commands
                 Id = request.Id,
                 Name = request.Name,
                 Description = request.Description,
-                ApplicationGroups = _mapper.Map<List<ApplicationGroup>>(request.ApplicationGroups)
+                ApplicationGroups = _mapper.Map<List<ApplicationGroup>>(request.ApplicationGroups),
             };
 
             if (application.Id != 0)
             {
-                _context.Applications.Update(application);
+                var appEntity = _context.Entry(application);
+                appEntity.State = EntityState.Modified;
+                appEntity.Property(x => x.ManageApplicationState).IsModified = false;
             }
             else
             {

@@ -48,7 +48,7 @@ namespace Infrastructure.Persistence
             : base(options)
         {
         //    Database.EnsureDeleted();
-       //     Database.EnsureCreated();
+        //     Database.EnsureCreated();
         }
 
         async private Task InitializeDatabase<T>(ModelBuilder modelBuilder, string config) where T : class
@@ -141,8 +141,17 @@ namespace Infrastructure.Persistence
                 }
             }
 
-
             return await base.SaveChangesAsync(cancellationToken);
+        }
+
+        public override EntityEntry Entry(object entity)
+        {
+            return base.Entry(entity);
+        }
+
+        public override EntityEntry<T> Entry<T>(T entity) where T: class
+        {
+            return base.Entry(entity);
         }
     }
 }

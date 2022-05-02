@@ -1,4 +1,4 @@
-﻿using App.Applications.DTOs;
+﻿using App.AdminApplications.DTOs;
 using App.Common.Interfaces;
 using App.Common.Models;
 using App.SelectFields.DTOs;

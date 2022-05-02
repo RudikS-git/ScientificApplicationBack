@@ -6,9 +6,11 @@ using System.Threading.Tasks;
 
 namespace App.Applications.DTOs
 {
-    public class ApplicationStatesDto
+    public class ApplicationDetailsDto
     {
         public int Id { get; set; }
         public string Name { get; set; }
+        public string Description { get; set; }
+        public List<ApplicationGroupDto> ApplicationGroups { get; set; }
     }
 }

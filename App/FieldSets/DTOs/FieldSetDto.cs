@@ -1,5 +1,5 @@
-﻿using App.Applications.DTOs;
-using App.Applications.DTOs.Inputs;
+﻿using App.AdminApplications.DTOs;
+using App.AdminApplications.DTOs.Inputs;
 using App.SelectFields.DTOs;
 using Domain.Entities.Base.FieldRestrictions;
 using Domain.Entities.Base.FieldTypes;

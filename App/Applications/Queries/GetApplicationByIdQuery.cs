@@ -1,17 +1,17 @@
-﻿using App.Common.Interfaces;
+﻿using App.Applications.DTOs;
+using App.Common.Interfaces;
 using App.Common.Models;
 using Domain.Entities.Base;
+using Domain.Entities.Enums;
+using MapsterMapper;
+using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.Localization;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
-using Microsoft.EntityFrameworkCore;
-using MapsterMapper;
-using Mapster;
-using App.Applications.DTOs;
-using Microsoft.Extensions.Localization;
 
 namespace App.Applications.Queries
 {
@@ -31,7 +31,7 @@ namespace App.Applications.Queries
 
     public class GetApplicationByIdHandler : Handler<Application, ApplicationDetailsDto>, IRequestHandlerWrapper<GetApplicationByIdQuery, ApplicationDetailsDto>
     {
-        public GetApplicationByIdHandler(IApplicationContext context, IStringLocalizer<SharedResource> localizer, IMapper mapper) 
+        public GetApplicationByIdHandler(IApplicationContext context, IStringLocalizer<SharedResource> localizer, IMapper mapper)
             : base(context, localizer, mapper)
         {
         }
@@ -40,6 +40,7 @@ namespace App.Applications.Queries
         {
             var application = await _context.Applications
 
+                .Where(it => it.ManageApplicationState != ManageApplicationStates.Draft)
                 .Include(it => it.ApplicationGroups)
                 .ThenInclude(it => it.InputDataFields)
                 .ThenInclude(it => it.InputField)
@@ -59,33 +60,7 @@ namespace App.Applications.Queries
                 .Where(it => it.Id == query.id)
                 .FirstOrDefaultAsync(cancellationToken);
 
-            if(application?.ApplicationGroups != null)
-            {
-                /*application?.ApplicationGroups.ToList().ForEach(group =>
-                {
-                    group.InputFields.ForEach(field =>
-                    {
-                        switch(field.InputUnderTypeId)
-                        {
-                            case Domain.Enums.InputUnderTypes.Text:
-
-                                break;
-                            case Domain.Enums.InputUnderTypes.Date:
-
-                                break;
-
-                            case Domain.Enums.InputUnderTypes.Number:
-
-                                break;
-
-                            case Domain.Enums.InputUnderTypes.NumberPhone:
-
-                                break;
-                        }
-                    });
-                });*/
-            }
-            else
+            if (application?.ApplicationGroups == null)
             {
                 return ServiceResult.Failed<ApplicationDetailsDto>(ServiceError.NotFound);
             }

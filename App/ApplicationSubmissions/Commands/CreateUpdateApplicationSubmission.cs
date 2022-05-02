@@ -9,7 +9,7 @@ using Domain.Entities.Base;
 using MediatR;
 using Microsoft.Extensions.Localization;
 using System.Threading;
-using App.Applications.DTOs;
+using App.AdminApplications.DTOs;
 using MapsterMapper;
 using Mapster;
 using Microsoft.EntityFrameworkCore;

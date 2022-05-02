@@ -11,9 +11,9 @@ using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
 
-using Response = App.Applications.DTOs.ApplicationDto;
+using Response = App.AdminApplications.DTOs.ApplicationDto;
 
-namespace App.Applications.Commands.SetManageApplicationStates
+namespace App.AdminApplications.Commands.SetManageApplicationStates
 {
     public class SetApplicationStatesCommand : IRequestWrapper<Response>
     {

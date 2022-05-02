@@ -9,7 +9,7 @@ using System.Threading;
 using App.Common.Interfaces;
 using Microsoft.EntityFrameworkCore;
 using App.Common.Models;
-using App.Applications.DTOs;
+using App.AdminApplications.DTOs;
 using Mapster;
 using MapsterMapper;
 

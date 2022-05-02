@@ -8,7 +8,7 @@ using System.Threading;
 using System.Threading.Tasks;
 using Microsoft.EntityFrameworkCore;
 
-namespace App.Applications.Commands
+namespace App.AdminApplications.Commands
 {
     public class CreateUpdateApplicationValidator : AbstractValidator<CreateApplicationCommand>
     {

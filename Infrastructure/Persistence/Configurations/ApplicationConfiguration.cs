@@ -1,4 +1,5 @@
 ﻿using Domain.Entities.Base;
+using Domain.Entities.Enums;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
 using System;
@@ -16,6 +17,7 @@ namespace Infrastructure.Persistence.Configurations
             builder.HasIndex(it => it.Name).IsUnique();
             builder.Property(it => it.Name).IsRequired()
                 .HasMaxLength(150);
+            builder.Property(it => it.ManageApplicationState).HasDefaultValue(ManageApplicationStates.Draft);
         }
     }
 }

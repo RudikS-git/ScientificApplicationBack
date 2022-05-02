@@ -10,11 +10,11 @@ using System.Threading;
 using System.Threading.Tasks;
 using Microsoft.Extensions.Localization;
 using MapsterMapper;
-using App.Applications.DTOs;
+using App.AdminApplications.DTOs;
 
-using Response = App.Applications.DTOs.ApplicationDto;
+using Response = App.AdminApplications.DTOs.ApplicationDto;
 
-namespace App.Applications.Commands
+namespace App.AdminApplications.Commands
 {
     public class DeleteApplicationByIdCommand : IRequestWrapper<Response>
     {

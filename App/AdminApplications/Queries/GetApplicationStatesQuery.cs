@@ -9,12 +9,12 @@ using System.Threading;
 using App.Common.Interfaces;
 using Microsoft.EntityFrameworkCore;
 using App.Common.Models;
-using App.Applications.DTOs;
 using MapsterMapper;
 using Mapster;
 using Microsoft.Extensions.Localization;
+using App.AdminApplications.DTOs;
 
-namespace App.Queries
+namespace App.AdminApplications.Queries
 {
     public class GetApplicationStatesQuery : IRequestWrapper<IList<ApplicationStatesDto>>
     {

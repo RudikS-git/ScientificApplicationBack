@@ -9,12 +9,13 @@ using System.Threading;
 using App.Common.Interfaces;
 using Microsoft.EntityFrameworkCore;
 using App.Common.Models;
-using App.Applications.DTOs;
 using Mapster;
 using MapsterMapper;
 using Microsoft.Extensions.Localization;
+using App.Applications.DTOs;
+using Domain.Entities.Enums;
 
-namespace App.Queries
+namespace App.Applications.Queries
 {
     public class GetApplicationsQuery : IRequestWrapper<PaginatedList<ApplicationDto>>
     {
@@ -32,16 +33,19 @@ namespace App.Queries
 
     public class GetApplicationsQueryHandler : Handler, IRequestHandlerWrapper<GetApplicationsQuery, PaginatedList<ApplicationDto>>
     {
-        public GetApplicationsQueryHandler(IApplicationContext context, IStringLocalizer<SharedResource> localizer, IMapper mapper) 
+        public GetApplicationsQueryHandler(IApplicationContext context, IStringLocalizer<SharedResource> localizer, IMapper mapper)
             : base(context, localizer, mapper)
         {
         }
 
         public async Task<ServiceResult<PaginatedList<ApplicationDto>>> Handle(GetApplicationsQuery query, CancellationToken cancellationToken)
         {
-            IQueryable<Application> queryable = _context.Applications.OrderByDescending(it => it.Id).AsQueryable();
+            IQueryable<Application> queryable = _context.Applications
+                .Where(it => it.ManageApplicationState != ManageApplicationStates.Draft)
+                .OrderByDescending(it => it.Id)
+                .AsQueryable();
 
-            if(query.filterParams != null)
+            if (query.filterParams != null)
             {
                 SetFilterQueryable(queryable, query.filterParams);
             }

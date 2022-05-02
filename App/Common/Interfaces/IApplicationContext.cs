@@ -3,6 +3,7 @@ using Domain.Entities.Base.FieldRestrictions;
 using Domain.Entities.Base.FieldTypes;
 using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.EntityFrameworkCore.ChangeTracking;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -33,7 +34,8 @@ namespace App.Common.Interfaces
         public DbSet<InputTextField> InputTextFields { get; set; }
         public DbSet<InputNumberPhoneField> InputNumberPhoneFields { get; set; }
 
-        Task<int> SaveChangesAsync(CancellationToken cancellationToken = new CancellationToken());
-        
+        public Task<int> SaveChangesAsync(CancellationToken cancellationToken = new CancellationToken());
+        public EntityEntry Entry(object entity);
+        public EntityEntry<T> Entry<T>(T entity) where T: class;
     }
 }
