@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Domain.Enums
 {
-    public enum ApplicationStates
+    public enum ApplicationStatesEnum
     {
         Draft = 1,
         Checked = 2,

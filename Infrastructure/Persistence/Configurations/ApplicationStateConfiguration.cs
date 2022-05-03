@@ -18,39 +18,40 @@ namespace Infrastructure.Persistence.Configurations
             {
                 new ApplicationState()
                 {
-                    Id = (int)ApplicationStates.Draft,
+                    Id = (int)ApplicationStatesEnum.Draft,
                     Name="Черновик"
                 },
 
                 new ApplicationState()
                 {
-                    Id = (int)ApplicationStates.Checked,
+                    Id = (int)ApplicationStatesEnum.Checked,
                     Name = "На проверке"
                 },
 
                 new ApplicationState()
                 {
-                    Id = (int)ApplicationStates.Rejected,
+                    Id = (int)ApplicationStatesEnum.Rejected,
                     Name = "Отклонено"
                 },
 
                 new ApplicationState()
                 {
-                    Id = (int)ApplicationStates.Modification,
+                    Id = (int)ApplicationStatesEnum.Modification,
                     Name = "Отправлено на доработку"
                 },
 
                  new ApplicationState()
                 {
-                    Id = (int)ApplicationStates.Accepted,
+                    Id = (int)ApplicationStatesEnum.Accepted,
                     Name = "Согласовано"
                 }
             });
 
             builder.HasIndex(it => it.Name).IsUnique();
             builder.Property(it => it.Name).IsRequired()
-                .HasMaxLength(150)
-                .HasDefaultValue(ApplicationStates.Draft);
+                .HasMaxLength(150);
+
+            builder.Property(it => it.Id).HasDefaultValue(ApplicationStatesEnum.Draft);
         }
     }
 }

@@ -8,6 +8,7 @@ namespace App.ApplicationSubmissions.DTOs
 {
     public class InputSubmisionDto
     {
+        public int Id { get; set; }
         public int InputFieldId { get; set; }
         public string Value { get; set; }
     }

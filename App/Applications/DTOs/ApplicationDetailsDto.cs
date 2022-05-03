@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Mapster;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -12,5 +13,6 @@ namespace App.Applications.DTOs
         public string Name { get; set; }
         public string Description { get; set; }
         public List<ApplicationGroupDto> ApplicationGroups { get; set; }
+
     }
 }

@@ -20,12 +20,14 @@ namespace App.ApplicationSubmissions.Queries
 {
     public class GetApplicationSubmissions : IRequestWrapper<ResponseQuery>
     {
+        public int applicationId;
         public int page;
         public int pageSize;
         public ApplicationQueryParamsDto filterParams;
 
-        public GetApplicationSubmissions(int page, int pageSize, ApplicationQueryParamsDto filterParams)
+        public GetApplicationSubmissions(int applicationId, int page, int pageSize, ApplicationQueryParamsDto filterParams)
         {
+            this.applicationId = applicationId;
             this.page = page;
             this.pageSize = pageSize;
             this.filterParams = filterParams;
@@ -45,13 +47,13 @@ namespace App.ApplicationSubmissions.Queries
         public async Task<ServiceResult<ResponseQuery>> Handle(GetApplicationSubmissions query, CancellationToken cancellationToken)
         {
             var queryable = _context.Applications.Join(
-                _context.ApplicationSubmissions.Where(it => it.UserId == _userService.UserId),
+                _context.ApplicationSubmissions.Where(it => it.UserId == _userService.UserId && it.ApplicationId == query.applicationId),
                 u => u.Id,
                 c => c.ApplicationId,
                 (u, c) => new
                 {
-                    id = c.Id,
-                    ApplicationSubmissionName = c.Name,
+                    Id = c.Id,
+                    Name = c.Name,
                     ApplicationId = u.Id,
                     Created = c.Created,
                     ApplicationState = c.ApplicationState,
@@ -60,27 +62,16 @@ namespace App.ApplicationSubmissions.Queries
                     SelectSubmissions = c.SelectSubmissions
 
                 })
-                .OrderByDescending(it => it.id).AsQueryable();
+                .OrderByDescending(it => it.Id).AsQueryable();
 
 
             if (query.filterParams != null)
             {
                 if (!string.IsNullOrEmpty(query.filterParams.Name))
                 {
-                    queryable = queryable.Where(it => it.ApplicationSubmissionName.Contains(query.filterParams.Name));
+                    queryable = queryable.Where(it => it.Name.Contains(query.filterParams.Name));
                 }
             }
-
-            // .Where(it => it.Id ==)
-
-            /*       IQueryable<ApplicationSubmission> queryable = _context.ApplicationSubmissions
-                       .Where(it => it.UserId == _userService.UserId)
-                       .OrderByDescending(it => it.Id).AsQueryable();*/
-
-          /*  if (query.filterParams != null)
-            {
-                SetFilterQueryable(queryable, query.filterParams);
-            }*/
 
             var paginatedList = await ResponseQuery.CreateAsync(queryable.ProjectToType<ApplicationSubmissionQueryDto>(_mapper.Config), query.page, query.pageSize, cancellationToken);
 

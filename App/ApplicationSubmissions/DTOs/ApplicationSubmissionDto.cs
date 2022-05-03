@@ -12,9 +12,9 @@ namespace App.ApplicationSubmissions.DTOs
 {
     public class ApplicationSubmissionDto : IRegister
     {
+        public int Id { get; set; }
         public string Name { get; set; }
         public int ApplicationId { get; set; }
-        public int ApplicationGroupId { get; set; }
 
         public List<InputSubmisionDto> InputSubmissions { get; set; }
         public List<SelectSubmissionDto> SelectSubmissions { get; set; }

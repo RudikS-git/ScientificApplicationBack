@@ -13,7 +13,7 @@ using App.AdminApplications.DTOs;
 using Mapster;
 using MapsterMapper;
 
-using ResponseQuery = App.ApplicationSubmissions.Queries.ApplicationSubmissionQueryDto;
+using ResponseQuery = App.ApplicationSubmissions.Queries.ApplicationSubmissionQueryDetailsDto;
 using Microsoft.Extensions.Localization;
 
 namespace App.ApplicationSubmissions.Queries
@@ -28,7 +28,7 @@ namespace App.ApplicationSubmissions.Queries
         }
     }
 
-    public class GetApplicationSubmissionByIdQueryHandler : Handler<ApplicationSubmission, ApplicationSubmissionQueryDto>, IRequestHandlerWrapper<GetApplicationSubmissionById, ResponseQuery>
+    public class GetApplicationSubmissionByIdQueryHandler : Handler<ApplicationSubmission, ApplicationSubmissionQueryDetailsDto>, IRequestHandlerWrapper<GetApplicationSubmissionById, ResponseQuery>
     {
         private readonly ICurrentUserService _userService;
 
@@ -40,8 +40,13 @@ namespace App.ApplicationSubmissions.Queries
 
         public async Task<ServiceResult<ResponseQuery>> Handle(GetApplicationSubmissionById query, CancellationToken cancellationToken)
         {
-            var applicationSubmission = await _context.ApplicationSubmissions.Where(it => it.UserId == _userService.UserId && query.Id == it.Id)
+            var applicationSubmission = await _context.ApplicationSubmissions
+                .Where(it => it.UserId == _userService.UserId && query.Id == it.Id)
+                .Include(it => it.ApplicationState)
+                .Include(it => it.InputSubmissions)
+                .Include(it => it.SelectSubmissions)
                 .OrderByDescending(it => it.Id)
+                .AsSplitQuery()
                 .FirstOrDefaultAsync();
 
             if(applicationSubmission == null)

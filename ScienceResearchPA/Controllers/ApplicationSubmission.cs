@@ -24,10 +24,10 @@ namespace ScienceResearchPA.Controllers
     [ApiController]
     public class ApplicationSubmission : BaseApiController
     {
-        [HttpGet("{page}/{pageSize}")]
-        public async Task<ActionResult> Get(int page, int pageSize, [FromQuery] ApplicationQueryParamsDto filterParams, CancellationToken cancellationToken)
+        [HttpGet("{applicationId}/{page}/{pageSize}")]
+        public async Task<ActionResult> Get(int applicationId, int page, int pageSize, [FromQuery] ApplicationQueryParamsDto filterParams, CancellationToken cancellationToken)
         {
-            return Ok(await Mediator.Send(new GetApplicationSubmissions(page, pageSize, filterParams), cancellationToken));
+            return Ok(await Mediator.Send(new GetApplicationSubmissions(applicationId, page, pageSize, filterParams), cancellationToken));
         }
 
         [HttpGet("{id}")]

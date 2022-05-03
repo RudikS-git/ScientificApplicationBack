@@ -11,6 +11,7 @@ namespace App.ApplicationSubmissions.DTOs
 {
     public class SelectSubmissionDto : IRegister
     {
+        public int Id { get; set; }
         public int SelectFieldId { get; set; }
         public int[] ValuesId { get; set; }
 
@@ -21,12 +22,6 @@ namespace App.ApplicationSubmissions.DTOs
 
             config.NewConfig<SelectSubmissonOptions, int>()
                  .MapWith(poco => poco.SelectOptionId);
-
-            /*.AfterMapping((poco, dto) =>
-            {
-                poco.Values = dto.ValuesId.Select(valueDto => new SelectSubmissonOptions() { SelectOptionId = valueDto }).ToList();
-            });*/
-
         }
     }
 }

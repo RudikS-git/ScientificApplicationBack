@@ -58,13 +58,13 @@ namespace App.AdminApplications.Commands
 
             if (application.Id != 0)
             {
-                var appEntity = _context.Entry(application);
+                var appEntity = _context.Applications.Update(application);
                 appEntity.State = EntityState.Modified;
                 appEntity.Property(x => x.ManageApplicationState).IsModified = false;
             }
             else
             {
-                await _context.Applications.AddAsync(application);
+                _context.Applications.Add(application);
             }
 
             await _context.SaveChangesAsync();

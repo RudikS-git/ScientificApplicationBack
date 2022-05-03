@@ -1,0 +1,678 @@
+2022-05-04 00:40:33.325 +04:00 [WRN] Compiling a query which loads related collections for more than one collection navigation, either via 'Include' or through projection, but no 'QuerySplittingBehavior' has been configured. By default, Entity Framework will use 'QuerySplittingBehavior.SingleQuery', which can potentially result in slow query performance. See https://go.microsoft.com/fwlink/?linkid=2134277 for more information. To identify the query that's triggering this warning call 'ConfigureWarnings(w => w.Throw(RelationalEventId.MultipleCollectionIncludeWarning))'.
+2022-05-04 00:58:58.579 +04:00 [WRN] The entity type 'PersonName' is an optional dependent using table sharing without any required non shared property that could be used to identify whether the entity exists. If all nullable properties contain a null value in database then an object instance won't be created in the query. Add a required property to create instances with null values for other properties or mark the incoming navigation as required to always create an instance.
+2022-05-04 00:58:59.280 +04:00 [WRN] Role null validation failed: DuplicateRoleName.
+2022-05-04 00:58:59.291 +04:00 [WRN] Role null validation failed: DuplicateRoleName.
+2022-05-04 00:58:59.293 +04:00 [WRN] Role null validation failed: DuplicateRoleName.
+2022-05-04 00:58:59.380 +04:00 [INF] Starting web host
+2022-05-04 00:58:59.575 +04:00 [INF] Application started. Press Ctrl+C to shut down.
+2022-05-04 00:58:59.575 +04:00 [INF] Hosting environment: Development
+2022-05-04 00:58:59.577 +04:00 [INF] Content root path: C:\Users\rudik\source\repos\ScienceResearchPA\ScienceResearchPA
+2022-05-04 00:59:00.783 +04:00 [WRN] Compiling a query which loads related collections for more than one collection navigation, either via 'Include' or through projection, but no 'QuerySplittingBehavior' has been configured. By default, Entity Framework will use 'QuerySplittingBehavior.SingleQuery', which can potentially result in slow query performance. See https://go.microsoft.com/fwlink/?linkid=2134277 for more information. To identify the query that's triggering this warning call 'ConfigureWarnings(w => w.Throw(RelationalEventId.MultipleCollectionIncludeWarning))'.
+2022-05-04 00:59:00.852 +04:00 [WRN] Compiling a query which loads related collections for more than one collection navigation, either via 'Include' or through projection, but no 'QuerySplittingBehavior' has been configured. By default, Entity Framework will use 'QuerySplittingBehavior.SingleQuery', which can potentially result in slow query performance. See https://go.microsoft.com/fwlink/?linkid=2134277 for more information. To identify the query that's triggering this warning call 'ConfigureWarnings(w => w.Throw(RelationalEventId.MultipleCollectionIncludeWarning))'.
+2022-05-04 01:00:47.387 +04:00 [WRN] The entity type 'PersonName' is an optional dependent using table sharing without any required non shared property that could be used to identify whether the entity exists. If all nullable properties contain a null value in database then an object instance won't be created in the query. Add a required property to create instances with null values for other properties or mark the incoming navigation as required to always create an instance.
+2022-05-04 01:00:48.349 +04:00 [WRN] Role null validation failed: DuplicateRoleName.
+2022-05-04 01:00:48.357 +04:00 [WRN] Role null validation failed: DuplicateRoleName.
+2022-05-04 01:00:48.360 +04:00 [WRN] Role null validation failed: DuplicateRoleName.
+2022-05-04 01:00:48.451 +04:00 [INF] Starting web host
+2022-05-04 01:00:48.649 +04:00 [INF] Application started. Press Ctrl+C to shut down.
+2022-05-04 01:00:48.651 +04:00 [INF] Hosting environment: Development
+2022-05-04 01:00:48.651 +04:00 [INF] Content root path: C:\Users\rudik\source\repos\ScienceResearchPA\ScienceResearchPA
+2022-05-04 01:00:50.062 +04:00 [WRN] Compiling a query which loads related collections for more than one collection navigation, either via 'Include' or through projection, but no 'QuerySplittingBehavior' has been configured. By default, Entity Framework will use 'QuerySplittingBehavior.SingleQuery', which can potentially result in slow query performance. See https://go.microsoft.com/fwlink/?linkid=2134277 for more information. To identify the query that's triggering this warning call 'ConfigureWarnings(w => w.Throw(RelationalEventId.MultipleCollectionIncludeWarning))'.
+2022-05-04 01:00:50.107 +04:00 [WRN] Compiling a query which loads related collections for more than one collection navigation, either via 'Include' or through projection, but no 'QuerySplittingBehavior' has been configured. By default, Entity Framework will use 'QuerySplittingBehavior.SingleQuery', which can potentially result in slow query performance. See https://go.microsoft.com/fwlink/?linkid=2134277 for more information. To identify the query that's triggering this warning call 'ConfigureWarnings(w => w.Throw(RelationalEventId.MultipleCollectionIncludeWarning))'.
+2022-05-04 01:01:22.436 +04:00 [WRN] The entity type 'PersonName' is an optional dependent using table sharing without any required non shared property that could be used to identify whether the entity exists. If all nullable properties contain a null value in database then an object instance won't be created in the query. Add a required property to create instances with null values for other properties or mark the incoming navigation as required to always create an instance.
+2022-05-04 01:01:23.146 +04:00 [WRN] Role null validation failed: DuplicateRoleName.
+2022-05-04 01:01:23.154 +04:00 [WRN] Role null validation failed: DuplicateRoleName.
+2022-05-04 01:01:23.157 +04:00 [WRN] Role null validation failed: DuplicateRoleName.
+2022-05-04 01:01:23.251 +04:00 [INF] Starting web host
+2022-05-04 01:01:23.440 +04:00 [INF] Application started. Press Ctrl+C to shut down.
+2022-05-04 01:01:23.442 +04:00 [INF] Hosting environment: Development
+2022-05-04 01:01:23.442 +04:00 [INF] Content root path: C:\Users\rudik\source\repos\ScienceResearchPA\ScienceResearchPA
+2022-05-04 01:01:24.632 +04:00 [WRN] Compiling a query which loads related collections for more than one collection navigation, either via 'Include' or through projection, but no 'QuerySplittingBehavior' has been configured. By default, Entity Framework will use 'QuerySplittingBehavior.SingleQuery', which can potentially result in slow query performance. See https://go.microsoft.com/fwlink/?linkid=2134277 for more information. To identify the query that's triggering this warning call 'ConfigureWarnings(w => w.Throw(RelationalEventId.MultipleCollectionIncludeWarning))'.
+2022-05-04 01:01:24.666 +04:00 [WRN] Compiling a query which loads related collections for more than one collection navigation, either via 'Include' or through projection, but no 'QuerySplittingBehavior' has been configured. By default, Entity Framework will use 'QuerySplittingBehavior.SingleQuery', which can potentially result in slow query performance. See https://go.microsoft.com/fwlink/?linkid=2134277 for more information. To identify the query that's triggering this warning call 'ConfigureWarnings(w => w.Throw(RelationalEventId.MultipleCollectionIncludeWarning))'.
+2022-05-04 01:02:12.600 +04:00 [WRN] The entity type 'PersonName' is an optional dependent using table sharing without any required non shared property that could be used to identify whether the entity exists. If all nullable properties contain a null value in database then an object instance won't be created in the query. Add a required property to create instances with null values for other properties or mark the incoming navigation as required to always create an instance.
+2022-05-04 01:02:13.402 +04:00 [WRN] Role null validation failed: DuplicateRoleName.
+2022-05-04 01:02:13.413 +04:00 [WRN] Role null validation failed: DuplicateRoleName.
+2022-05-04 01:02:13.417 +04:00 [WRN] Role null validation failed: DuplicateRoleName.
+2022-05-04 01:02:13.509 +04:00 [INF] Starting web host
+2022-05-04 01:02:13.792 +04:00 [INF] Application started. Press Ctrl+C to shut down.
+2022-05-04 01:02:13.792 +04:00 [INF] Hosting environment: Development
+2022-05-04 01:02:13.792 +04:00 [INF] Content root path: C:\Users\rudik\source\repos\ScienceResearchPA\ScienceResearchPA
+2022-05-04 01:02:23.224 +04:00 [ERR] Failed executing DbCommand (46ms) [Parameters=[@p6='?' (DbType = Int32), @p0='?' (DbType = Int32), @p1='?' (DbType = Int32), @p2='?' (DbType = Boolean), @p3='?', @p4='?' (DbType = DateTime), @p5='?' (DbType = Int32), @p7='?' (DbType = Int32), @p8='?' (DbType = Int32), @p9='?', @p10='?' (DbType = Int32), @p11='?' (DbType = Int32), @p12='?', @p13='?' (DbType = Int32), @p14='?' (DbType = Int32), @p15='?', @p16='?' (DbType = Int32), @p17='?' (DbType = Int32), @p18='?', @p19='?' (DbType = Int32), @p20='?' (DbType = Int32), @p21='?', @p22='?' (DbType = Int32), @p23='?' (DbType = Int32), @p24='?', @p25='?' (DbType = Int32), @p26='?' (DbType = Int32), @p27='?', @p28='?' (DbType = Int32), @p29='?' (DbType = Int32), @p30='?', @p31='?' (DbType = Int32), @p32='?' (DbType = Int32), @p33='?', @p34='?' (DbType = Int32), @p35='?' (DbType = Int32), @p36='?', @p37='?' (DbType = Int32), @p38='?' (DbType = Int32), @p39='?', @p40='?' (DbType = Int32), @p41='?' (DbType = Int32), @p42='?', @p43='?' (DbType = Int32), @p44='?' (DbType = Int32), @p45='?', @p46='?' (DbType = Int32), @p47='?' (DbType = Int32), @p48='?', @p49='?' (DbType = Int32), @p50='?' (DbType = Int32), @p51='?', @p52='?' (DbType = Int32), @p53='?' (DbType = Int32), @p54='?', @p55='?' (DbType = Int32), @p56='?' (DbType = Int32), @p57='?', @p58='?' (DbType = Int32), @p59='?' (DbType = Int32), @p60='?', @p61='?' (DbType = Int32), @p62='?' (DbType = Int32), @p63='?', @p64='?' (DbType = Int32), @p65='?' (DbType = Int32), @p66='?', @p67='?' (DbType = Int32), @p68='?' (DbType = Int32), @p69='?', @p70='?' (DbType = Int32), @p71='?' (DbType = Int32), @p72='?', @p73='?' (DbType = Int32), @p74='?' (DbType = Int32), @p75='?'], CommandType='"Text"', CommandTimeout='30']
+UPDATE "Identity"."ApplicationSubmissions" SET "ApplicationId" = @p0, "ApplicationStateId" = @p1, "IsRemoved" = @p2, "Name" = @p3, "Updated" = @p4, "UserId" = @p5
+WHERE "Id" = @p6;
+INSERT INTO "Identity"."InputSubmission" ("ApplicationSubmissionId", "InputFieldId", "Value")
+VALUES (@p7, @p8, @p9)
+RETURNING "Id";
+INSERT INTO "Identity"."InputSubmission" ("ApplicationSubmissionId", "InputFieldId", "Value")
+VALUES (@p10, @p11, @p12)
+RETURNING "Id";
+INSERT INTO "Identity"."InputSubmission" ("ApplicationSubmissionId", "InputFieldId", "Value")
+VALUES (@p13, @p14, @p15)
+RETURNING "Id";
+INSERT INTO "Identity"."InputSubmission" ("ApplicationSubmissionId", "InputFieldId", "Value")
+VALUES (@p16, @p17, @p18)
+RETURNING "Id";
+INSERT INTO "Identity"."InputSubmission" ("ApplicationSubmissionId", "InputFieldId", "Value")
+VALUES (@p19, @p20, @p21)
+RETURNING "Id";
+INSERT INTO "Identity"."InputSubmission" ("ApplicationSubmissionId", "InputFieldId", "Value")
+VALUES (@p22, @p23, @p24)
+RETURNING "Id";
+INSERT INTO "Identity"."InputSubmission" ("ApplicationSubmissionId", "InputFieldId", "Value")
+VALUES (@p25, @p26, @p27)
+RETURNING "Id";
+INSERT INTO "Identity"."InputSubmission" ("ApplicationSubmissionId", "InputFieldId", "Value")
+VALUES (@p28, @p29, @p30)
+RETURNING "Id";
+INSERT INTO "Identity"."InputSubmission" ("ApplicationSubmissionId", "InputFieldId", "Value")
+VALUES (@p31, @p32, @p33)
+RETURNING "Id";
+INSERT INTO "Identity"."InputSubmission" ("ApplicationSubmissionId", "InputFieldId", "Value")
+VALUES (@p34, @p35, @p36)
+RETURNING "Id";
+INSERT INTO "Identity"."InputSubmission" ("ApplicationSubmissionId", "InputFieldId", "Value")
+VALUES (@p37, @p38, @p39)
+RETURNING "Id";
+INSERT INTO "Identity"."InputSubmission" ("ApplicationSubmissionId", "InputFieldId", "Value")
+VALUES (@p40, @p41, @p42)
+RETURNING "Id";
+INSERT INTO "Identity"."InputSubmission" ("ApplicationSubmissionId", "InputFieldId", "Value")
+VALUES (@p43, @p44, @p45)
+RETURNING "Id";
+INSERT INTO "Identity"."InputSubmission" ("ApplicationSubmissionId", "InputFieldId", "Value")
+VALUES (@p46, @p47, @p48)
+RETURNING "Id";
+INSERT INTO "Identity"."InputSubmission" ("ApplicationSubmissionId", "InputFieldId", "Value")
+VALUES (@p49, @p50, @p51)
+RETURNING "Id";
+INSERT INTO "Identity"."InputSubmission" ("ApplicationSubmissionId", "InputFieldId", "Value")
+VALUES (@p52, @p53, @p54)
+RETURNING "Id";
+INSERT INTO "Identity"."InputSubmission" ("ApplicationSubmissionId", "InputFieldId", "Value")
+VALUES (@p55, @p56, @p57)
+RETURNING "Id";
+INSERT INTO "Identity"."InputSubmission" ("ApplicationSubmissionId", "InputFieldId", "Value")
+VALUES (@p58, @p59, @p60)
+RETURNING "Id";
+INSERT INTO "Identity"."InputSubmission" ("ApplicationSubmissionId", "InputFieldId", "Value")
+VALUES (@p61, @p62, @p63)
+RETURNING "Id";
+INSERT INTO "Identity"."InputSubmission" ("ApplicationSubmissionId", "InputFieldId", "Value")
+VALUES (@p64, @p65, @p66)
+RETURNING "Id";
+INSERT INTO "Identity"."InputSubmission" ("ApplicationSubmissionId", "InputFieldId", "Value")
+VALUES (@p67, @p68, @p69)
+RETURNING "Id";
+INSERT INTO "Identity"."InputSubmission" ("ApplicationSubmissionId", "InputFieldId", "Value")
+VALUES (@p70, @p71, @p72)
+RETURNING "Id";
+INSERT INTO "Identity"."InputSubmission" ("ApplicationSubmissionId", "InputFieldId", "Value")
+VALUES (@p73, @p74, @p75)
+RETURNING "Id";
+2022-05-04 01:02:23.388 +04:00 [ERR] An exception occurred in the database while saving changes for context type 'Infrastructure.Persistence.ApplicationContext'.
+Microsoft.EntityFrameworkCore.DbUpdateException: An error occurred while saving the entity changes. See the inner exception for details.
+ ---> Npgsql.PostgresException (0x80004005): 23503: insert or update on table "ApplicationSubmissions" violates foreign key constraint "FK_ApplicationSubmissions_ApplicationStates_ApplicationStateId"
+
+DETAIL: Detail redacted as it may contain sensitive data. Specify 'Include Error Detail' in the connection string to include this information.
+   at Npgsql.Internal.NpgsqlConnector.<ReadMessage>g__ReadMessageLong|211_0(NpgsqlConnector connector, Boolean async, DataRowLoadingMode dataRowLoadingMode, Boolean readingNotifications, Boolean isReadingPrependedMessage)
+   at Npgsql.NpgsqlDataReader.NextResult(Boolean async, Boolean isConsuming, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlCommand.ExecuteReader(CommandBehavior behavior, Boolean async, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlCommand.ExecuteReader(CommandBehavior behavior, Boolean async, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlCommand.ExecuteDbDataReaderAsync(CommandBehavior behavior, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+  Exception data:
+    Severity: ERROR
+    SqlState: 23503
+    MessageText: insert or update on table "ApplicationSubmissions" violates foreign key constraint "FK_ApplicationSubmissions_ApplicationStates_ApplicationStateId"
+    Detail: Detail redacted as it may contain sensitive data. Specify 'Include Error Detail' in the connection string to include this information.
+    SchemaName: Identity
+    TableName: ApplicationSubmissions
+    ConstraintName: FK_ApplicationSubmissions_ApplicationStates_ApplicationStateId
+    File: d:\pginstaller_13.auto\postgres.windows-x64\src\backend\utils\adt\ri_triggers.c
+    Line: 2476
+    Routine: ri_ReportViolation
+   --- End of inner exception stack trace ---
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(IList`1 entriesToSave, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(StateManager stateManager, Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at Npgsql.EntityFrameworkCore.PostgreSQL.Storage.Internal.NpgsqlExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+Microsoft.EntityFrameworkCore.DbUpdateException: An error occurred while saving the entity changes. See the inner exception for details.
+ ---> Npgsql.PostgresException (0x80004005): 23503: insert or update on table "ApplicationSubmissions" violates foreign key constraint "FK_ApplicationSubmissions_ApplicationStates_ApplicationStateId"
+
+DETAIL: Detail redacted as it may contain sensitive data. Specify 'Include Error Detail' in the connection string to include this information.
+   at Npgsql.Internal.NpgsqlConnector.<ReadMessage>g__ReadMessageLong|211_0(NpgsqlConnector connector, Boolean async, DataRowLoadingMode dataRowLoadingMode, Boolean readingNotifications, Boolean isReadingPrependedMessage)
+   at Npgsql.NpgsqlDataReader.NextResult(Boolean async, Boolean isConsuming, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlCommand.ExecuteReader(CommandBehavior behavior, Boolean async, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlCommand.ExecuteReader(CommandBehavior behavior, Boolean async, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlCommand.ExecuteDbDataReaderAsync(CommandBehavior behavior, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+  Exception data:
+    Severity: ERROR
+    SqlState: 23503
+    MessageText: insert or update on table "ApplicationSubmissions" violates foreign key constraint "FK_ApplicationSubmissions_ApplicationStates_ApplicationStateId"
+    Detail: Detail redacted as it may contain sensitive data. Specify 'Include Error Detail' in the connection string to include this information.
+    SchemaName: Identity
+    TableName: ApplicationSubmissions
+    ConstraintName: FK_ApplicationSubmissions_ApplicationStates_ApplicationStateId
+    File: d:\pginstaller_13.auto\postgres.windows-x64\src\backend\utils\adt\ri_triggers.c
+    Line: 2476
+    Routine: ri_ReportViolation
+   --- End of inner exception stack trace ---
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(IList`1 entriesToSave, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(StateManager stateManager, Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at Npgsql.EntityFrameworkCore.PostgreSQL.Storage.Internal.NpgsqlExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+2022-05-04 01:02:57.986 +04:00 [ERR] Failed executing DbCommand (62ms) [Parameters=[@p6='?' (DbType = Int32), @p0='?' (DbType = Int32), @p1='?' (DbType = Int32), @p2='?' (DbType = Boolean), @p3='?', @p4='?' (DbType = DateTime), @p5='?' (DbType = Int32), @p7='?' (DbType = Int32), @p8='?' (DbType = Int32), @p9='?', @p10='?' (DbType = Int32), @p11='?' (DbType = Int32), @p12='?', @p13='?' (DbType = Int32), @p14='?' (DbType = Int32), @p15='?', @p16='?' (DbType = Int32), @p17='?' (DbType = Int32), @p18='?', @p19='?' (DbType = Int32), @p20='?' (DbType = Int32), @p21='?', @p22='?' (DbType = Int32), @p23='?' (DbType = Int32), @p24='?', @p25='?' (DbType = Int32), @p26='?' (DbType = Int32), @p27='?', @p28='?' (DbType = Int32), @p29='?' (DbType = Int32), @p30='?', @p31='?' (DbType = Int32), @p32='?' (DbType = Int32), @p33='?', @p34='?' (DbType = Int32), @p35='?' (DbType = Int32), @p36='?', @p37='?' (DbType = Int32), @p38='?' (DbType = Int32), @p39='?', @p40='?' (DbType = Int32), @p41='?' (DbType = Int32), @p42='?', @p43='?' (DbType = Int32), @p44='?' (DbType = Int32), @p45='?', @p46='?' (DbType = Int32), @p47='?' (DbType = Int32), @p48='?', @p49='?' (DbType = Int32), @p50='?' (DbType = Int32), @p51='?', @p52='?' (DbType = Int32), @p53='?' (DbType = Int32), @p54='?', @p55='?' (DbType = Int32), @p56='?' (DbType = Int32), @p57='?', @p58='?' (DbType = Int32), @p59='?' (DbType = Int32), @p60='?', @p61='?' (DbType = Int32), @p62='?' (DbType = Int32), @p63='?', @p64='?' (DbType = Int32), @p65='?' (DbType = Int32), @p66='?', @p67='?' (DbType = Int32), @p68='?' (DbType = Int32), @p69='?', @p70='?' (DbType = Int32), @p71='?' (DbType = Int32), @p72='?', @p73='?' (DbType = Int32), @p74='?' (DbType = Int32), @p75='?'], CommandType='"Text"', CommandTimeout='30']
+UPDATE "Identity"."ApplicationSubmissions" SET "ApplicationId" = @p0, "ApplicationStateId" = @p1, "IsRemoved" = @p2, "Name" = @p3, "Updated" = @p4, "UserId" = @p5
+WHERE "Id" = @p6;
+INSERT INTO "Identity"."InputSubmission" ("ApplicationSubmissionId", "InputFieldId", "Value")
+VALUES (@p7, @p8, @p9)
+RETURNING "Id";
+INSERT INTO "Identity"."InputSubmission" ("ApplicationSubmissionId", "InputFieldId", "Value")
+VALUES (@p10, @p11, @p12)
+RETURNING "Id";
+INSERT INTO "Identity"."InputSubmission" ("ApplicationSubmissionId", "InputFieldId", "Value")
+VALUES (@p13, @p14, @p15)
+RETURNING "Id";
+INSERT INTO "Identity"."InputSubmission" ("ApplicationSubmissionId", "InputFieldId", "Value")
+VALUES (@p16, @p17, @p18)
+RETURNING "Id";
+INSERT INTO "Identity"."InputSubmission" ("ApplicationSubmissionId", "InputFieldId", "Value")
+VALUES (@p19, @p20, @p21)
+RETURNING "Id";
+INSERT INTO "Identity"."InputSubmission" ("ApplicationSubmissionId", "InputFieldId", "Value")
+VALUES (@p22, @p23, @p24)
+RETURNING "Id";
+INSERT INTO "Identity"."InputSubmission" ("ApplicationSubmissionId", "InputFieldId", "Value")
+VALUES (@p25, @p26, @p27)
+RETURNING "Id";
+INSERT INTO "Identity"."InputSubmission" ("ApplicationSubmissionId", "InputFieldId", "Value")
+VALUES (@p28, @p29, @p30)
+RETURNING "Id";
+INSERT INTO "Identity"."InputSubmission" ("ApplicationSubmissionId", "InputFieldId", "Value")
+VALUES (@p31, @p32, @p33)
+RETURNING "Id";
+INSERT INTO "Identity"."InputSubmission" ("ApplicationSubmissionId", "InputFieldId", "Value")
+VALUES (@p34, @p35, @p36)
+RETURNING "Id";
+INSERT INTO "Identity"."InputSubmission" ("ApplicationSubmissionId", "InputFieldId", "Value")
+VALUES (@p37, @p38, @p39)
+RETURNING "Id";
+INSERT INTO "Identity"."InputSubmission" ("ApplicationSubmissionId", "InputFieldId", "Value")
+VALUES (@p40, @p41, @p42)
+RETURNING "Id";
+INSERT INTO "Identity"."InputSubmission" ("ApplicationSubmissionId", "InputFieldId", "Value")
+VALUES (@p43, @p44, @p45)
+RETURNING "Id";
+INSERT INTO "Identity"."InputSubmission" ("ApplicationSubmissionId", "InputFieldId", "Value")
+VALUES (@p46, @p47, @p48)
+RETURNING "Id";
+INSERT INTO "Identity"."InputSubmission" ("ApplicationSubmissionId", "InputFieldId", "Value")
+VALUES (@p49, @p50, @p51)
+RETURNING "Id";
+INSERT INTO "Identity"."InputSubmission" ("ApplicationSubmissionId", "InputFieldId", "Value")
+VALUES (@p52, @p53, @p54)
+RETURNING "Id";
+INSERT INTO "Identity"."InputSubmission" ("ApplicationSubmissionId", "InputFieldId", "Value")
+VALUES (@p55, @p56, @p57)
+RETURNING "Id";
+INSERT INTO "Identity"."InputSubmission" ("ApplicationSubmissionId", "InputFieldId", "Value")
+VALUES (@p58, @p59, @p60)
+RETURNING "Id";
+INSERT INTO "Identity"."InputSubmission" ("ApplicationSubmissionId", "InputFieldId", "Value")
+VALUES (@p61, @p62, @p63)
+RETURNING "Id";
+INSERT INTO "Identity"."InputSubmission" ("ApplicationSubmissionId", "InputFieldId", "Value")
+VALUES (@p64, @p65, @p66)
+RETURNING "Id";
+INSERT INTO "Identity"."InputSubmission" ("ApplicationSubmissionId", "InputFieldId", "Value")
+VALUES (@p67, @p68, @p69)
+RETURNING "Id";
+INSERT INTO "Identity"."InputSubmission" ("ApplicationSubmissionId", "InputFieldId", "Value")
+VALUES (@p70, @p71, @p72)
+RETURNING "Id";
+INSERT INTO "Identity"."InputSubmission" ("ApplicationSubmissionId", "InputFieldId", "Value")
+VALUES (@p73, @p74, @p75)
+RETURNING "Id";
+2022-05-04 01:02:57.991 +04:00 [ERR] An exception occurred in the database while saving changes for context type 'Infrastructure.Persistence.ApplicationContext'.
+Microsoft.EntityFrameworkCore.DbUpdateException: An error occurred while saving the entity changes. See the inner exception for details.
+ ---> Npgsql.PostgresException (0x80004005): 23503: insert or update on table "ApplicationSubmissions" violates foreign key constraint "FK_ApplicationSubmissions_ApplicationStates_ApplicationStateId"
+
+DETAIL: Detail redacted as it may contain sensitive data. Specify 'Include Error Detail' in the connection string to include this information.
+   at Npgsql.Internal.NpgsqlConnector.<ReadMessage>g__ReadMessageLong|211_0(NpgsqlConnector connector, Boolean async, DataRowLoadingMode dataRowLoadingMode, Boolean readingNotifications, Boolean isReadingPrependedMessage)
+   at Npgsql.NpgsqlDataReader.NextResult(Boolean async, Boolean isConsuming, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlCommand.ExecuteReader(CommandBehavior behavior, Boolean async, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlCommand.ExecuteReader(CommandBehavior behavior, Boolean async, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlCommand.ExecuteDbDataReaderAsync(CommandBehavior behavior, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+  Exception data:
+    Severity: ERROR
+    SqlState: 23503
+    MessageText: insert or update on table "ApplicationSubmissions" violates foreign key constraint "FK_ApplicationSubmissions_ApplicationStates_ApplicationStateId"
+    Detail: Detail redacted as it may contain sensitive data. Specify 'Include Error Detail' in the connection string to include this information.
+    SchemaName: Identity
+    TableName: ApplicationSubmissions
+    ConstraintName: FK_ApplicationSubmissions_ApplicationStates_ApplicationStateId
+    File: d:\pginstaller_13.auto\postgres.windows-x64\src\backend\utils\adt\ri_triggers.c
+    Line: 2476
+    Routine: ri_ReportViolation
+   --- End of inner exception stack trace ---
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(IList`1 entriesToSave, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(StateManager stateManager, Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at Npgsql.EntityFrameworkCore.PostgreSQL.Storage.Internal.NpgsqlExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+Microsoft.EntityFrameworkCore.DbUpdateException: An error occurred while saving the entity changes. See the inner exception for details.
+ ---> Npgsql.PostgresException (0x80004005): 23503: insert or update on table "ApplicationSubmissions" violates foreign key constraint "FK_ApplicationSubmissions_ApplicationStates_ApplicationStateId"
+
+DETAIL: Detail redacted as it may contain sensitive data. Specify 'Include Error Detail' in the connection string to include this information.
+   at Npgsql.Internal.NpgsqlConnector.<ReadMessage>g__ReadMessageLong|211_0(NpgsqlConnector connector, Boolean async, DataRowLoadingMode dataRowLoadingMode, Boolean readingNotifications, Boolean isReadingPrependedMessage)
+   at Npgsql.NpgsqlDataReader.NextResult(Boolean async, Boolean isConsuming, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlCommand.ExecuteReader(CommandBehavior behavior, Boolean async, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlCommand.ExecuteReader(CommandBehavior behavior, Boolean async, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlCommand.ExecuteDbDataReaderAsync(CommandBehavior behavior, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+  Exception data:
+    Severity: ERROR
+    SqlState: 23503
+    MessageText: insert or update on table "ApplicationSubmissions" violates foreign key constraint "FK_ApplicationSubmissions_ApplicationStates_ApplicationStateId"
+    Detail: Detail redacted as it may contain sensitive data. Specify 'Include Error Detail' in the connection string to include this information.
+    SchemaName: Identity
+    TableName: ApplicationSubmissions
+    ConstraintName: FK_ApplicationSubmissions_ApplicationStates_ApplicationStateId
+    File: d:\pginstaller_13.auto\postgres.windows-x64\src\backend\utils\adt\ri_triggers.c
+    Line: 2476
+    Routine: ri_ReportViolation
+   --- End of inner exception stack trace ---
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(IList`1 entriesToSave, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(StateManager stateManager, Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at Npgsql.EntityFrameworkCore.PostgreSQL.Storage.Internal.NpgsqlExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+2022-05-04 01:05:03.977 +04:00 [WRN] The entity type 'PersonName' is an optional dependent using table sharing without any required non shared property that could be used to identify whether the entity exists. If all nullable properties contain a null value in database then an object instance won't be created in the query. Add a required property to create instances with null values for other properties or mark the incoming navigation as required to always create an instance.
+2022-05-04 01:05:04.808 +04:00 [WRN] Role null validation failed: DuplicateRoleName.
+2022-05-04 01:05:04.819 +04:00 [WRN] Role null validation failed: DuplicateRoleName.
+2022-05-04 01:05:04.824 +04:00 [WRN] Role null validation failed: DuplicateRoleName.
+2022-05-04 01:05:04.931 +04:00 [INF] Starting web host
+2022-05-04 01:05:05.183 +04:00 [INF] Application started. Press Ctrl+C to shut down.
+2022-05-04 01:05:05.183 +04:00 [INF] Hosting environment: Development
+2022-05-04 01:05:05.183 +04:00 [INF] Content root path: C:\Users\rudik\source\repos\ScienceResearchPA\ScienceResearchPA
+2022-05-04 01:06:08.849 +04:00 [WRN] The entity type 'PersonName' is an optional dependent using table sharing without any required non shared property that could be used to identify whether the entity exists. If all nullable properties contain a null value in database then an object instance won't be created in the query. Add a required property to create instances with null values for other properties or mark the incoming navigation as required to always create an instance.
+2022-05-04 01:06:09.699 +04:00 [WRN] Role null validation failed: DuplicateRoleName.
+2022-05-04 01:06:09.707 +04:00 [WRN] Role null validation failed: DuplicateRoleName.
+2022-05-04 01:06:09.713 +04:00 [WRN] Role null validation failed: DuplicateRoleName.
+2022-05-04 01:06:09.835 +04:00 [INF] Starting web host
+2022-05-04 01:06:10.034 +04:00 [INF] Application started. Press Ctrl+C to shut down.
+2022-05-04 01:06:10.035 +04:00 [INF] Hosting environment: Development
+2022-05-04 01:06:10.037 +04:00 [INF] Content root path: C:\Users\rudik\source\repos\ScienceResearchPA\ScienceResearchPA
+2022-05-04 01:06:12.991 +04:00 [ERR] Failed executing DbCommand (49ms) [Parameters=[@p5='?' (DbType = Int32), @p0='?' (DbType = Int32), @p1='?' (DbType = Boolean), @p2='?', @p3='?' (DbType = DateTime), @p4='?' (DbType = Int32), @p6='?' (DbType = Int32), @p7='?' (DbType = Int32), @p8='?', @p9='?' (DbType = Int32), @p10='?' (DbType = Int32), @p11='?', @p12='?' (DbType = Int32), @p13='?' (DbType = Int32), @p14='?', @p15='?' (DbType = Int32), @p16='?' (DbType = Int32), @p17='?', @p18='?' (DbType = Int32), @p19='?' (DbType = Int32), @p20='?', @p21='?' (DbType = Int32), @p22='?' (DbType = Int32), @p23='?', @p24='?' (DbType = Int32), @p25='?' (DbType = Int32), @p26='?', @p27='?' (DbType = Int32), @p28='?' (DbType = Int32), @p29='?', @p30='?' (DbType = Int32), @p31='?' (DbType = Int32), @p32='?', @p33='?' (DbType = Int32), @p34='?' (DbType = Int32), @p35='?', @p36='?' (DbType = Int32), @p37='?' (DbType = Int32), @p38='?', @p39='?' (DbType = Int32), @p40='?' (DbType = Int32), @p41='?', @p42='?' (DbType = Int32), @p43='?' (DbType = Int32), @p44='?', @p45='?' (DbType = Int32), @p46='?' (DbType = Int32), @p47='?', @p48='?' (DbType = Int32), @p49='?' (DbType = Int32), @p50='?', @p51='?' (DbType = Int32), @p52='?' (DbType = Int32), @p53='?', @p54='?' (DbType = Int32), @p55='?' (DbType = Int32), @p56='?', @p57='?' (DbType = Int32), @p58='?' (DbType = Int32), @p59='?', @p60='?' (DbType = Int32), @p61='?' (DbType = Int32), @p62='?', @p63='?' (DbType = Int32), @p64='?' (DbType = Int32), @p65='?', @p66='?' (DbType = Int32), @p67='?' (DbType = Int32), @p68='?', @p69='?' (DbType = Int32), @p70='?' (DbType = Int32), @p71='?', @p72='?' (DbType = Int32), @p73='?' (DbType = Int32), @p74='?'], CommandType='"Text"', CommandTimeout='30']
+UPDATE "Identity"."ApplicationSubmissions" SET "ApplicationStateId" = @p0, "IsRemoved" = @p1, "Name" = @p2, "Updated" = @p3, "UserId" = @p4
+WHERE "Id" = @p5;
+INSERT INTO "Identity"."InputSubmission" ("ApplicationSubmissionId", "InputFieldId", "Value")
+VALUES (@p6, @p7, @p8)
+RETURNING "Id";
+INSERT INTO "Identity"."InputSubmission" ("ApplicationSubmissionId", "InputFieldId", "Value")
+VALUES (@p9, @p10, @p11)
+RETURNING "Id";
+INSERT INTO "Identity"."InputSubmission" ("ApplicationSubmissionId", "InputFieldId", "Value")
+VALUES (@p12, @p13, @p14)
+RETURNING "Id";
+INSERT INTO "Identity"."InputSubmission" ("ApplicationSubmissionId", "InputFieldId", "Value")
+VALUES (@p15, @p16, @p17)
+RETURNING "Id";
+INSERT INTO "Identity"."InputSubmission" ("ApplicationSubmissionId", "InputFieldId", "Value")
+VALUES (@p18, @p19, @p20)
+RETURNING "Id";
+INSERT INTO "Identity"."InputSubmission" ("ApplicationSubmissionId", "InputFieldId", "Value")
+VALUES (@p21, @p22, @p23)
+RETURNING "Id";
+INSERT INTO "Identity"."InputSubmission" ("ApplicationSubmissionId", "InputFieldId", "Value")
+VALUES (@p24, @p25, @p26)
+RETURNING "Id";
+INSERT INTO "Identity"."InputSubmission" ("ApplicationSubmissionId", "InputFieldId", "Value")
+VALUES (@p27, @p28, @p29)
+RETURNING "Id";
+INSERT INTO "Identity"."InputSubmission" ("ApplicationSubmissionId", "InputFieldId", "Value")
+VALUES (@p30, @p31, @p32)
+RETURNING "Id";
+INSERT INTO "Identity"."InputSubmission" ("ApplicationSubmissionId", "InputFieldId", "Value")
+VALUES (@p33, @p34, @p35)
+RETURNING "Id";
+INSERT INTO "Identity"."InputSubmission" ("ApplicationSubmissionId", "InputFieldId", "Value")
+VALUES (@p36, @p37, @p38)
+RETURNING "Id";
+INSERT INTO "Identity"."InputSubmission" ("ApplicationSubmissionId", "InputFieldId", "Value")
+VALUES (@p39, @p40, @p41)
+RETURNING "Id";
+INSERT INTO "Identity"."InputSubmission" ("ApplicationSubmissionId", "InputFieldId", "Value")
+VALUES (@p42, @p43, @p44)
+RETURNING "Id";
+INSERT INTO "Identity"."InputSubmission" ("ApplicationSubmissionId", "InputFieldId", "Value")
+VALUES (@p45, @p46, @p47)
+RETURNING "Id";
+INSERT INTO "Identity"."InputSubmission" ("ApplicationSubmissionId", "InputFieldId", "Value")
+VALUES (@p48, @p49, @p50)
+RETURNING "Id";
+INSERT INTO "Identity"."InputSubmission" ("ApplicationSubmissionId", "InputFieldId", "Value")
+VALUES (@p51, @p52, @p53)
+RETURNING "Id";
+INSERT INTO "Identity"."InputSubmission" ("ApplicationSubmissionId", "InputFieldId", "Value")
+VALUES (@p54, @p55, @p56)
+RETURNING "Id";
+INSERT INTO "Identity"."InputSubmission" ("ApplicationSubmissionId", "InputFieldId", "Value")
+VALUES (@p57, @p58, @p59)
+RETURNING "Id";
+INSERT INTO "Identity"."InputSubmission" ("ApplicationSubmissionId", "InputFieldId", "Value")
+VALUES (@p60, @p61, @p62)
+RETURNING "Id";
+INSERT INTO "Identity"."InputSubmission" ("ApplicationSubmissionId", "InputFieldId", "Value")
+VALUES (@p63, @p64, @p65)
+RETURNING "Id";
+INSERT INTO "Identity"."InputSubmission" ("ApplicationSubmissionId", "InputFieldId", "Value")
+VALUES (@p66, @p67, @p68)
+RETURNING "Id";
+INSERT INTO "Identity"."InputSubmission" ("ApplicationSubmissionId", "InputFieldId", "Value")
+VALUES (@p69, @p70, @p71)
+RETURNING "Id";
+INSERT INTO "Identity"."InputSubmission" ("ApplicationSubmissionId", "InputFieldId", "Value")
+VALUES (@p72, @p73, @p74)
+RETURNING "Id";
+2022-05-04 01:06:13.045 +04:00 [ERR] An exception occurred in the database while saving changes for context type 'Infrastructure.Persistence.ApplicationContext'.
+Microsoft.EntityFrameworkCore.DbUpdateException: An error occurred while saving the entity changes. See the inner exception for details.
+ ---> Npgsql.PostgresException (0x80004005): 23503: insert or update on table "ApplicationSubmissions" violates foreign key constraint "FK_ApplicationSubmissions_ApplicationStates_ApplicationStateId"
+
+DETAIL: Detail redacted as it may contain sensitive data. Specify 'Include Error Detail' in the connection string to include this information.
+   at Npgsql.Internal.NpgsqlConnector.<ReadMessage>g__ReadMessageLong|211_0(NpgsqlConnector connector, Boolean async, DataRowLoadingMode dataRowLoadingMode, Boolean readingNotifications, Boolean isReadingPrependedMessage)
+   at Npgsql.NpgsqlDataReader.NextResult(Boolean async, Boolean isConsuming, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlCommand.ExecuteReader(CommandBehavior behavior, Boolean async, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlCommand.ExecuteReader(CommandBehavior behavior, Boolean async, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlCommand.ExecuteDbDataReaderAsync(CommandBehavior behavior, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+  Exception data:
+    Severity: ERROR
+    SqlState: 23503
+    MessageText: insert or update on table "ApplicationSubmissions" violates foreign key constraint "FK_ApplicationSubmissions_ApplicationStates_ApplicationStateId"
+    Detail: Detail redacted as it may contain sensitive data. Specify 'Include Error Detail' in the connection string to include this information.
+    SchemaName: Identity
+    TableName: ApplicationSubmissions
+    ConstraintName: FK_ApplicationSubmissions_ApplicationStates_ApplicationStateId
+    File: d:\pginstaller_13.auto\postgres.windows-x64\src\backend\utils\adt\ri_triggers.c
+    Line: 2476
+    Routine: ri_ReportViolation
+   --- End of inner exception stack trace ---
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(IList`1 entriesToSave, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(StateManager stateManager, Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at Npgsql.EntityFrameworkCore.PostgreSQL.Storage.Internal.NpgsqlExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+Microsoft.EntityFrameworkCore.DbUpdateException: An error occurred while saving the entity changes. See the inner exception for details.
+ ---> Npgsql.PostgresException (0x80004005): 23503: insert or update on table "ApplicationSubmissions" violates foreign key constraint "FK_ApplicationSubmissions_ApplicationStates_ApplicationStateId"
+
+DETAIL: Detail redacted as it may contain sensitive data. Specify 'Include Error Detail' in the connection string to include this information.
+   at Npgsql.Internal.NpgsqlConnector.<ReadMessage>g__ReadMessageLong|211_0(NpgsqlConnector connector, Boolean async, DataRowLoadingMode dataRowLoadingMode, Boolean readingNotifications, Boolean isReadingPrependedMessage)
+   at Npgsql.NpgsqlDataReader.NextResult(Boolean async, Boolean isConsuming, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlCommand.ExecuteReader(CommandBehavior behavior, Boolean async, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlCommand.ExecuteReader(CommandBehavior behavior, Boolean async, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlCommand.ExecuteDbDataReaderAsync(CommandBehavior behavior, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+  Exception data:
+    Severity: ERROR
+    SqlState: 23503
+    MessageText: insert or update on table "ApplicationSubmissions" violates foreign key constraint "FK_ApplicationSubmissions_ApplicationStates_ApplicationStateId"
+    Detail: Detail redacted as it may contain sensitive data. Specify 'Include Error Detail' in the connection string to include this information.
+    SchemaName: Identity
+    TableName: ApplicationSubmissions
+    ConstraintName: FK_ApplicationSubmissions_ApplicationStates_ApplicationStateId
+    File: d:\pginstaller_13.auto\postgres.windows-x64\src\backend\utils\adt\ri_triggers.c
+    Line: 2476
+    Routine: ri_ReportViolation
+   --- End of inner exception stack trace ---
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(IList`1 entriesToSave, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(StateManager stateManager, Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at Npgsql.EntityFrameworkCore.PostgreSQL.Storage.Internal.NpgsqlExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+2022-05-04 01:06:33.247 +04:00 [ERR] Failed executing DbCommand (60ms) [Parameters=[@p5='?' (DbType = Int32), @p0='?' (DbType = Int32), @p1='?' (DbType = Boolean), @p2='?', @p3='?' (DbType = DateTime), @p4='?' (DbType = Int32), @p6='?' (DbType = Int32), @p7='?' (DbType = Int32), @p8='?', @p9='?' (DbType = Int32), @p10='?' (DbType = Int32), @p11='?', @p12='?' (DbType = Int32), @p13='?' (DbType = Int32), @p14='?', @p15='?' (DbType = Int32), @p16='?' (DbType = Int32), @p17='?', @p18='?' (DbType = Int32), @p19='?' (DbType = Int32), @p20='?', @p21='?' (DbType = Int32), @p22='?' (DbType = Int32), @p23='?', @p24='?' (DbType = Int32), @p25='?' (DbType = Int32), @p26='?', @p27='?' (DbType = Int32), @p28='?' (DbType = Int32), @p29='?', @p30='?' (DbType = Int32), @p31='?' (DbType = Int32), @p32='?', @p33='?' (DbType = Int32), @p34='?' (DbType = Int32), @p35='?', @p36='?' (DbType = Int32), @p37='?' (DbType = Int32), @p38='?', @p39='?' (DbType = Int32), @p40='?' (DbType = Int32), @p41='?', @p42='?' (DbType = Int32), @p43='?' (DbType = Int32), @p44='?', @p45='?' (DbType = Int32), @p46='?' (DbType = Int32), @p47='?', @p48='?' (DbType = Int32), @p49='?' (DbType = Int32), @p50='?', @p51='?' (DbType = Int32), @p52='?' (DbType = Int32), @p53='?', @p54='?' (DbType = Int32), @p55='?' (DbType = Int32), @p56='?', @p57='?' (DbType = Int32), @p58='?' (DbType = Int32), @p59='?', @p60='?' (DbType = Int32), @p61='?' (DbType = Int32), @p62='?', @p63='?' (DbType = Int32), @p64='?' (DbType = Int32), @p65='?', @p66='?' (DbType = Int32), @p67='?' (DbType = Int32), @p68='?', @p69='?' (DbType = Int32), @p70='?' (DbType = Int32), @p71='?', @p72='?' (DbType = Int32), @p73='?' (DbType = Int32), @p74='?'], CommandType='"Text"', CommandTimeout='30']
+UPDATE "Identity"."ApplicationSubmissions" SET "ApplicationStateId" = @p0, "IsRemoved" = @p1, "Name" = @p2, "Updated" = @p3, "UserId" = @p4
+WHERE "Id" = @p5;
+INSERT INTO "Identity"."InputSubmission" ("ApplicationSubmissionId", "InputFieldId", "Value")
+VALUES (@p6, @p7, @p8)
+RETURNING "Id";
+INSERT INTO "Identity"."InputSubmission" ("ApplicationSubmissionId", "InputFieldId", "Value")
+VALUES (@p9, @p10, @p11)
+RETURNING "Id";
+INSERT INTO "Identity"."InputSubmission" ("ApplicationSubmissionId", "InputFieldId", "Value")
+VALUES (@p12, @p13, @p14)
+RETURNING "Id";
+INSERT INTO "Identity"."InputSubmission" ("ApplicationSubmissionId", "InputFieldId", "Value")
+VALUES (@p15, @p16, @p17)
+RETURNING "Id";
+INSERT INTO "Identity"."InputSubmission" ("ApplicationSubmissionId", "InputFieldId", "Value")
+VALUES (@p18, @p19, @p20)
+RETURNING "Id";
+INSERT INTO "Identity"."InputSubmission" ("ApplicationSubmissionId", "InputFieldId", "Value")
+VALUES (@p21, @p22, @p23)
+RETURNING "Id";
+INSERT INTO "Identity"."InputSubmission" ("ApplicationSubmissionId", "InputFieldId", "Value")
+VALUES (@p24, @p25, @p26)
+RETURNING "Id";
+INSERT INTO "Identity"."InputSubmission" ("ApplicationSubmissionId", "InputFieldId", "Value")
+VALUES (@p27, @p28, @p29)
+RETURNING "Id";
+INSERT INTO "Identity"."InputSubmission" ("ApplicationSubmissionId", "InputFieldId", "Value")
+VALUES (@p30, @p31, @p32)
+RETURNING "Id";
+INSERT INTO "Identity"."InputSubmission" ("ApplicationSubmissionId", "InputFieldId", "Value")
+VALUES (@p33, @p34, @p35)
+RETURNING "Id";
+INSERT INTO "Identity"."InputSubmission" ("ApplicationSubmissionId", "InputFieldId", "Value")
+VALUES (@p36, @p37, @p38)
+RETURNING "Id";
+INSERT INTO "Identity"."InputSubmission" ("ApplicationSubmissionId", "InputFieldId", "Value")
+VALUES (@p39, @p40, @p41)
+RETURNING "Id";
+INSERT INTO "Identity"."InputSubmission" ("ApplicationSubmissionId", "InputFieldId", "Value")
+VALUES (@p42, @p43, @p44)
+RETURNING "Id";
+INSERT INTO "Identity"."InputSubmission" ("ApplicationSubmissionId", "InputFieldId", "Value")
+VALUES (@p45, @p46, @p47)
+RETURNING "Id";
+INSERT INTO "Identity"."InputSubmission" ("ApplicationSubmissionId", "InputFieldId", "Value")
+VALUES (@p48, @p49, @p50)
+RETURNING "Id";
+INSERT INTO "Identity"."InputSubmission" ("ApplicationSubmissionId", "InputFieldId", "Value")
+VALUES (@p51, @p52, @p53)
+RETURNING "Id";
+INSERT INTO "Identity"."InputSubmission" ("ApplicationSubmissionId", "InputFieldId", "Value")
+VALUES (@p54, @p55, @p56)
+RETURNING "Id";
+INSERT INTO "Identity"."InputSubmission" ("ApplicationSubmissionId", "InputFieldId", "Value")
+VALUES (@p57, @p58, @p59)
+RETURNING "Id";
+INSERT INTO "Identity"."InputSubmission" ("ApplicationSubmissionId", "InputFieldId", "Value")
+VALUES (@p60, @p61, @p62)
+RETURNING "Id";
+INSERT INTO "Identity"."InputSubmission" ("ApplicationSubmissionId", "InputFieldId", "Value")
+VALUES (@p63, @p64, @p65)
+RETURNING "Id";
+INSERT INTO "Identity"."InputSubmission" ("ApplicationSubmissionId", "InputFieldId", "Value")
+VALUES (@p66, @p67, @p68)
+RETURNING "Id";
+INSERT INTO "Identity"."InputSubmission" ("ApplicationSubmissionId", "InputFieldId", "Value")
+VALUES (@p69, @p70, @p71)
+RETURNING "Id";
+INSERT INTO "Identity"."InputSubmission" ("ApplicationSubmissionId", "InputFieldId", "Value")
+VALUES (@p72, @p73, @p74)
+RETURNING "Id";
+2022-05-04 01:06:33.251 +04:00 [ERR] An exception occurred in the database while saving changes for context type 'Infrastructure.Persistence.ApplicationContext'.
+Microsoft.EntityFrameworkCore.DbUpdateException: An error occurred while saving the entity changes. See the inner exception for details.
+ ---> Npgsql.PostgresException (0x80004005): 23503: insert or update on table "ApplicationSubmissions" violates foreign key constraint "FK_ApplicationSubmissions_ApplicationStates_ApplicationStateId"
+
+DETAIL: Detail redacted as it may contain sensitive data. Specify 'Include Error Detail' in the connection string to include this information.
+   at Npgsql.Internal.NpgsqlConnector.<ReadMessage>g__ReadMessageLong|211_0(NpgsqlConnector connector, Boolean async, DataRowLoadingMode dataRowLoadingMode, Boolean readingNotifications, Boolean isReadingPrependedMessage)
+   at Npgsql.NpgsqlDataReader.NextResult(Boolean async, Boolean isConsuming, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlCommand.ExecuteReader(CommandBehavior behavior, Boolean async, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlCommand.ExecuteReader(CommandBehavior behavior, Boolean async, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlCommand.ExecuteDbDataReaderAsync(CommandBehavior behavior, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+  Exception data:
+    Severity: ERROR
+    SqlState: 23503
+    MessageText: insert or update on table "ApplicationSubmissions" violates foreign key constraint "FK_ApplicationSubmissions_ApplicationStates_ApplicationStateId"
+    Detail: Detail redacted as it may contain sensitive data. Specify 'Include Error Detail' in the connection string to include this information.
+    SchemaName: Identity
+    TableName: ApplicationSubmissions
+    ConstraintName: FK_ApplicationSubmissions_ApplicationStates_ApplicationStateId
+    File: d:\pginstaller_13.auto\postgres.windows-x64\src\backend\utils\adt\ri_triggers.c
+    Line: 2476
+    Routine: ri_ReportViolation
+   --- End of inner exception stack trace ---
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(IList`1 entriesToSave, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(StateManager stateManager, Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at Npgsql.EntityFrameworkCore.PostgreSQL.Storage.Internal.NpgsqlExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+Microsoft.EntityFrameworkCore.DbUpdateException: An error occurred while saving the entity changes. See the inner exception for details.
+ ---> Npgsql.PostgresException (0x80004005): 23503: insert or update on table "ApplicationSubmissions" violates foreign key constraint "FK_ApplicationSubmissions_ApplicationStates_ApplicationStateId"
+
+DETAIL: Detail redacted as it may contain sensitive data. Specify 'Include Error Detail' in the connection string to include this information.
+   at Npgsql.Internal.NpgsqlConnector.<ReadMessage>g__ReadMessageLong|211_0(NpgsqlConnector connector, Boolean async, DataRowLoadingMode dataRowLoadingMode, Boolean readingNotifications, Boolean isReadingPrependedMessage)
+   at Npgsql.NpgsqlDataReader.NextResult(Boolean async, Boolean isConsuming, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlCommand.ExecuteReader(CommandBehavior behavior, Boolean async, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlCommand.ExecuteReader(CommandBehavior behavior, Boolean async, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlCommand.ExecuteDbDataReaderAsync(CommandBehavior behavior, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+  Exception data:
+    Severity: ERROR
+    SqlState: 23503
+    MessageText: insert or update on table "ApplicationSubmissions" violates foreign key constraint "FK_ApplicationSubmissions_ApplicationStates_ApplicationStateId"
+    Detail: Detail redacted as it may contain sensitive data. Specify 'Include Error Detail' in the connection string to include this information.
+    SchemaName: Identity
+    TableName: ApplicationSubmissions
+    ConstraintName: FK_ApplicationSubmissions_ApplicationStates_ApplicationStateId
+    File: d:\pginstaller_13.auto\postgres.windows-x64\src\backend\utils\adt\ri_triggers.c
+    Line: 2476
+    Routine: ri_ReportViolation
+   --- End of inner exception stack trace ---
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(IList`1 entriesToSave, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(StateManager stateManager, Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at Npgsql.EntityFrameworkCore.PostgreSQL.Storage.Internal.NpgsqlExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+2022-05-04 01:07:46.120 +04:00 [WRN] The entity type 'PersonName' is an optional dependent using table sharing without any required non shared property that could be used to identify whether the entity exists. If all nullable properties contain a null value in database then an object instance won't be created in the query. Add a required property to create instances with null values for other properties or mark the incoming navigation as required to always create an instance.
+2022-05-04 01:07:47.125 +04:00 [WRN] Role null validation failed: DuplicateRoleName.
+2022-05-04 01:07:47.134 +04:00 [WRN] Role null validation failed: DuplicateRoleName.
+2022-05-04 01:07:47.135 +04:00 [WRN] Role null validation failed: DuplicateRoleName.
+2022-05-04 01:07:47.239 +04:00 [INF] Starting web host
+2022-05-04 01:07:47.476 +04:00 [INF] Application started. Press Ctrl+C to shut down.
+2022-05-04 01:07:47.476 +04:00 [INF] Hosting environment: Development
+2022-05-04 01:07:47.476 +04:00 [INF] Content root path: C:\Users\rudik\source\repos\ScienceResearchPA\ScienceResearchPA
+2022-05-04 01:08:08.593 +04:00 [WRN] Compiling a query which loads related collections for more than one collection navigation, either via 'Include' or through projection, but no 'QuerySplittingBehavior' has been configured. By default, Entity Framework will use 'QuerySplittingBehavior.SingleQuery', which can potentially result in slow query performance. See https://go.microsoft.com/fwlink/?linkid=2134277 for more information. To identify the query that's triggering this warning call 'ConfigureWarnings(w => w.Throw(RelationalEventId.MultipleCollectionIncludeWarning))'.
+2022-05-04 01:08:08.629 +04:00 [WRN] Compiling a query which loads related collections for more than one collection navigation, either via 'Include' or through projection, but no 'QuerySplittingBehavior' has been configured. By default, Entity Framework will use 'QuerySplittingBehavior.SingleQuery', which can potentially result in slow query performance. See https://go.microsoft.com/fwlink/?linkid=2134277 for more information. To identify the query that's triggering this warning call 'ConfigureWarnings(w => w.Throw(RelationalEventId.MultipleCollectionIncludeWarning))'.
+2022-05-04 01:08:35.039 +04:00 [WRN] The entity type 'PersonName' is an optional dependent using table sharing without any required non shared property that could be used to identify whether the entity exists. If all nullable properties contain a null value in database then an object instance won't be created in the query. Add a required property to create instances with null values for other properties or mark the incoming navigation as required to always create an instance.
+2022-05-04 01:08:35.938 +04:00 [WRN] Role null validation failed: DuplicateRoleName.
+2022-05-04 01:08:35.950 +04:00 [WRN] Role null validation failed: DuplicateRoleName.
+2022-05-04 01:08:35.953 +04:00 [WRN] Role null validation failed: DuplicateRoleName.
+2022-05-04 01:08:36.054 +04:00 [INF] Starting web host
+2022-05-04 01:08:36.265 +04:00 [INF] Application started. Press Ctrl+C to shut down.
+2022-05-04 01:08:36.265 +04:00 [INF] Hosting environment: Development
+2022-05-04 01:08:36.265 +04:00 [INF] Content root path: C:\Users\rudik\source\repos\ScienceResearchPA\ScienceResearchPA
+2022-05-04 01:08:37.545 +04:00 [WRN] Compiling a query which loads related collections for more than one collection navigation, either via 'Include' or through projection, but no 'QuerySplittingBehavior' has been configured. By default, Entity Framework will use 'QuerySplittingBehavior.SingleQuery', which can potentially result in slow query performance. See https://go.microsoft.com/fwlink/?linkid=2134277 for more information. To identify the query that's triggering this warning call 'ConfigureWarnings(w => w.Throw(RelationalEventId.MultipleCollectionIncludeWarning))'.
+2022-05-04 01:08:37.586 +04:00 [WRN] Compiling a query which loads related collections for more than one collection navigation, either via 'Include' or through projection, but no 'QuerySplittingBehavior' has been configured. By default, Entity Framework will use 'QuerySplittingBehavior.SingleQuery', which can potentially result in slow query performance. See https://go.microsoft.com/fwlink/?linkid=2134277 for more information. To identify the query that's triggering this warning call 'ConfigureWarnings(w => w.Throw(RelationalEventId.MultipleCollectionIncludeWarning))'.
+2022-05-04 01:10:38.115 +04:00 [WRN] The entity type 'PersonName' is an optional dependent using table sharing without any required non shared property that could be used to identify whether the entity exists. If all nullable properties contain a null value in database then an object instance won't be created in the query. Add a required property to create instances with null values for other properties or mark the incoming navigation as required to always create an instance.
+2022-05-04 01:10:39.076 +04:00 [WRN] Role null validation failed: DuplicateRoleName.
+2022-05-04 01:10:39.095 +04:00 [WRN] Role null validation failed: DuplicateRoleName.
+2022-05-04 01:10:39.098 +04:00 [WRN] Role null validation failed: DuplicateRoleName.
+2022-05-04 01:10:39.204 +04:00 [INF] Starting web host
+2022-05-04 01:10:39.439 +04:00 [INF] Application started. Press Ctrl+C to shut down.
+2022-05-04 01:10:39.441 +04:00 [INF] Hosting environment: Development
+2022-05-04 01:10:39.441 +04:00 [INF] Content root path: C:\Users\rudik\source\repos\ScienceResearchPA\ScienceResearchPA
+2022-05-04 01:10:41.186 +04:00 [WRN] Compiling a query which loads related collections for more than one collection navigation, either via 'Include' or through projection, but no 'QuerySplittingBehavior' has been configured. By default, Entity Framework will use 'QuerySplittingBehavior.SingleQuery', which can potentially result in slow query performance. See https://go.microsoft.com/fwlink/?linkid=2134277 for more information. To identify the query that's triggering this warning call 'ConfigureWarnings(w => w.Throw(RelationalEventId.MultipleCollectionIncludeWarning))'.
+2022-05-04 01:11:11.763 +04:00 [WRN] The entity type 'PersonName' is an optional dependent using table sharing without any required non shared property that could be used to identify whether the entity exists. If all nullable properties contain a null value in database then an object instance won't be created in the query. Add a required property to create instances with null values for other properties or mark the incoming navigation as required to always create an instance.
+2022-05-04 01:11:12.558 +04:00 [WRN] Role null validation failed: DuplicateRoleName.
+2022-05-04 01:11:12.566 +04:00 [WRN] Role null validation failed: DuplicateRoleName.
+2022-05-04 01:11:12.571 +04:00 [WRN] Role null validation failed: DuplicateRoleName.
+2022-05-04 01:11:12.684 +04:00 [INF] Starting web host
+2022-05-04 01:11:12.892 +04:00 [INF] Application started. Press Ctrl+C to shut down.
+2022-05-04 01:11:12.894 +04:00 [INF] Hosting environment: Development
+2022-05-04 01:11:12.894 +04:00 [INF] Content root path: C:\Users\rudik\source\repos\ScienceResearchPA\ScienceResearchPA
+2022-05-04 01:11:18.048 +04:00 [WRN] Compiling a query which loads related collections for more than one collection navigation, either via 'Include' or through projection, but no 'QuerySplittingBehavior' has been configured. By default, Entity Framework will use 'QuerySplittingBehavior.SingleQuery', which can potentially result in slow query performance. See https://go.microsoft.com/fwlink/?linkid=2134277 for more information. To identify the query that's triggering this warning call 'ConfigureWarnings(w => w.Throw(RelationalEventId.MultipleCollectionIncludeWarning))'.
+2022-05-04 01:13:07.788 +04:00 [WRN] The entity type 'PersonName' is an optional dependent using table sharing without any required non shared property that could be used to identify whether the entity exists. If all nullable properties contain a null value in database then an object instance won't be created in the query. Add a required property to create instances with null values for other properties or mark the incoming navigation as required to always create an instance.
+2022-05-04 01:13:08.529 +04:00 [WRN] Role null validation failed: DuplicateRoleName.
+2022-05-04 01:13:08.540 +04:00 [WRN] Role null validation failed: DuplicateRoleName.
+2022-05-04 01:13:08.542 +04:00 [WRN] Role null validation failed: DuplicateRoleName.
+2022-05-04 01:13:08.626 +04:00 [INF] Starting web host
+2022-05-04 01:13:08.820 +04:00 [INF] Application started. Press Ctrl+C to shut down.
+2022-05-04 01:13:08.822 +04:00 [INF] Hosting environment: Development
+2022-05-04 01:13:08.822 +04:00 [INF] Content root path: C:\Users\rudik\source\repos\ScienceResearchPA\ScienceResearchPA
+2022-05-04 01:13:10.057 +04:00 [WRN] Compiling a query which loads related collections for more than one collection navigation, either via 'Include' or through projection, but no 'QuerySplittingBehavior' has been configured. By default, Entity Framework will use 'QuerySplittingBehavior.SingleQuery', which can potentially result in slow query performance. See https://go.microsoft.com/fwlink/?linkid=2134277 for more information. To identify the query that's triggering this warning call 'ConfigureWarnings(w => w.Throw(RelationalEventId.MultipleCollectionIncludeWarning))'.
+2022-05-04 01:14:27.529 +04:00 [WRN] The entity type 'PersonName' is an optional dependent using table sharing without any required non shared property that could be used to identify whether the entity exists. If all nullable properties contain a null value in database then an object instance won't be created in the query. Add a required property to create instances with null values for other properties or mark the incoming navigation as required to always create an instance.
+2022-05-04 01:14:28.691 +04:00 [WRN] Role null validation failed: DuplicateRoleName.
+2022-05-04 01:14:28.771 +04:00 [WRN] Role null validation failed: DuplicateRoleName.
+2022-05-04 01:14:28.775 +04:00 [WRN] Role null validation failed: DuplicateRoleName.
+2022-05-04 01:14:28.901 +04:00 [INF] Starting web host
+2022-05-04 01:14:29.184 +04:00 [INF] Application started. Press Ctrl+C to shut down.
+2022-05-04 01:14:29.186 +04:00 [INF] Hosting environment: Development
+2022-05-04 01:14:29.186 +04:00 [INF] Content root path: C:\Users\rudik\source\repos\ScienceResearchPA\ScienceResearchPA
+2022-05-04 01:14:30.623 +04:00 [WRN] Compiling a query which loads related collections for more than one collection navigation, either via 'Include' or through projection, but no 'QuerySplittingBehavior' has been configured. By default, Entity Framework will use 'QuerySplittingBehavior.SingleQuery', which can potentially result in slow query performance. See https://go.microsoft.com/fwlink/?linkid=2134277 for more information. To identify the query that's triggering this warning call 'ConfigureWarnings(w => w.Throw(RelationalEventId.MultipleCollectionIncludeWarning))'.
+2022-05-04 01:15:44.571 +04:00 [WRN] The entity type 'PersonName' is an optional dependent using table sharing without any required non shared property that could be used to identify whether the entity exists. If all nullable properties contain a null value in database then an object instance won't be created in the query. Add a required property to create instances with null values for other properties or mark the incoming navigation as required to always create an instance.
+2022-05-04 01:15:45.605 +04:00 [WRN] Role null validation failed: DuplicateRoleName.
+2022-05-04 01:15:45.614 +04:00 [WRN] Role null validation failed: DuplicateRoleName.
+2022-05-04 01:15:45.621 +04:00 [WRN] Role null validation failed: DuplicateRoleName.
+2022-05-04 01:15:45.738 +04:00 [INF] Starting web host
+2022-05-04 01:15:46.017 +04:00 [INF] Application started. Press Ctrl+C to shut down.
+2022-05-04 01:15:46.019 +04:00 [INF] Hosting environment: Development
+2022-05-04 01:15:46.019 +04:00 [INF] Content root path: C:\Users\rudik\source\repos\ScienceResearchPA\ScienceResearchPA
+2022-05-04 01:15:47.340 +04:00 [WRN] Compiling a query which loads related collections for more than one collection navigation, either via 'Include' or through projection, but no 'QuerySplittingBehavior' has been configured. By default, Entity Framework will use 'QuerySplittingBehavior.SingleQuery', which can potentially result in slow query performance. See https://go.microsoft.com/fwlink/?linkid=2134277 for more information. To identify the query that's triggering this warning call 'ConfigureWarnings(w => w.Throw(RelationalEventId.MultipleCollectionIncludeWarning))'.
+2022-05-04 01:22:16.763 +04:00 [WRN] The entity type 'PersonName' is an optional dependent using table sharing without any required non shared property that could be used to identify whether the entity exists. If all nullable properties contain a null value in database then an object instance won't be created in the query. Add a required property to create instances with null values for other properties or mark the incoming navigation as required to always create an instance.
+2022-05-04 01:22:17.544 +04:00 [WRN] Role null validation failed: DuplicateRoleName.
+2022-05-04 01:22:17.551 +04:00 [WRN] Role null validation failed: DuplicateRoleName.
+2022-05-04 01:22:17.554 +04:00 [WRN] Role null validation failed: DuplicateRoleName.
+2022-05-04 01:22:17.645 +04:00 [INF] Starting web host
+2022-05-04 01:22:17.842 +04:00 [INF] Application started. Press Ctrl+C to shut down.
+2022-05-04 01:22:17.843 +04:00 [INF] Hosting environment: Development
+2022-05-04 01:22:17.844 +04:00 [INF] Content root path: C:\Users\rudik\source\repos\ScienceResearchPA\ScienceResearchPA
+2022-05-04 01:22:19.138 +04:00 [WRN] Compiling a query which loads related collections for more than one collection navigation, either via 'Include' or through projection, but no 'QuerySplittingBehavior' has been configured. By default, Entity Framework will use 'QuerySplittingBehavior.SingleQuery', which can potentially result in slow query performance. See https://go.microsoft.com/fwlink/?linkid=2134277 for more information. To identify the query that's triggering this warning call 'ConfigureWarnings(w => w.Throw(RelationalEventId.MultipleCollectionIncludeWarning))'.
+2022-05-04 01:22:57.367 +04:00 [WRN] Compiling a query which loads related collections for more than one collection navigation, either via 'Include' or through projection, but no 'QuerySplittingBehavior' has been configured. By default, Entity Framework will use 'QuerySplittingBehavior.SingleQuery', which can potentially result in slow query performance. See https://go.microsoft.com/fwlink/?linkid=2134277 for more information. To identify the query that's triggering this warning call 'ConfigureWarnings(w => w.Throw(RelationalEventId.MultipleCollectionIncludeWarning))'.

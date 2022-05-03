@@ -37,24 +37,33 @@ namespace App.ApplicationSubmissions.Commands
         public async Task<ServiceResult<ApplicationSubmissionDto>> Handle(CreateUpdateApplicationSubmissionCommand request, CancellationToken cancellationToken)
         {
             var applicationSubmission = _mapper.Map<ApplicationSubmission>(request.ApplicationSubmission);
-
-            applicationSubmission.SelectSubmissions = request.ApplicationSubmission.SelectSubmissions.Select(it =>
-                new SelectSubmission()
-                {
-                    SelectFieldId = it.SelectFieldId,
-                    Values = it.ValuesId.Select(value => new SelectSubmissonOptions() { SelectOptionId = value }).ToList()
-                }
-            ).ToList();
-
             applicationSubmission.UserId = _userService.UserId;
 
             if (applicationSubmission.Id != 0)
             {
-                _context.ApplicationSubmissions.Update(applicationSubmission);
+                if(request.ApplicationSubmission?.SelectSubmissions?.Count != 0)
+                {
+                    applicationSubmission.SelectSubmissions = request.ApplicationSubmission?.SelectSubmissions?.Select(it =>
+                         new SelectSubmission()
+                         {
+                             SelectFieldId = it.SelectFieldId,
+                             Values = it.ValuesId.Select(value => new SelectSubmissonOptions() { SelectOptionId = value }).ToList()
+                         }
+                     ).ToList();
+                }
+                else
+                {
+                    applicationSubmission.SelectSubmissions = null;
+                }
+
+                var entityAppSub = _context.ApplicationSubmissions.Update(applicationSubmission);
+                entityAppSub.Property(it => it.ApplicationStateId).IsModified = false;
+                entityAppSub.Property(it => it.ApplicationId).IsModified = false;
             }
             else
             {
-                await _context.ApplicationSubmissions.AddAsync(applicationSubmission);
+                applicationSubmission.ApplicationStateId = (int)ApplicationStatesEnum.Draft;
+                _context.ApplicationSubmissions.Add(applicationSubmission);
             }
 
             await _context.SaveChangesAsync();

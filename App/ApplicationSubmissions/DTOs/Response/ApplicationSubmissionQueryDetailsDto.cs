@@ -11,14 +11,11 @@ namespace App.ApplicationSubmissions.Queries
 {
     public class ApplicationSubmissionQueryDetailsDto
     {
+        public int Id { get; set; }
+        public int ApplicationId { get; set; }
         public string Name { get; set; }
-
         public ApplicationState ApplicationState { get; set; }
-        public List<HistoryApplicationState> HistoryApplicationStates { get; set; }
-
-        public bool IsRemoved { get; set; }
-
-        public List<InputSubmission> InputSubmissions { get; set; }
-        public List<SelectSubmission> SelectSubmissions { get; set; }
+        public List<InputSubmisionDto> InputSubmissions { get; set; }
+        public List<SelectSubmissionDto> SelectSubmissions { get; set; }
     }
 }

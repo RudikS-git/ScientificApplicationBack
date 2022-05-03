@@ -13,11 +13,8 @@ namespace App.ApplicationSubmissions.Queries
         public int Id { get; set; }
         public int ApplicationId { get; set; }
 
-        public string ApplicationSubmissionName { get; set; }
+        public string Name { get; set; }
         public ApplicationState ApplicationState { get; set; }
         public DateTime Created { get; set; }
-
-        public List<InputSubmisionDto> InputSubmissions { get; set; }
-        public List<SelectSubmissionDto> SelectSubmissions { get; set; }
     }
 }

@@ -9,6 +9,7 @@ namespace App.ApplicationSubmissions.DTOs
 {
     public class FieldSubmissionDto
     {
+        public int Id { get; set; }
         public int SubmissionId { get; set; }
         public ApplicationSubmission Submission { get; set; }
     }
