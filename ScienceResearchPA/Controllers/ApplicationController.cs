@@ -1,5 +1,6 @@
 ﻿using App.Applications.DTOs;
 using App.Applications.Queries;
+using Domain.Enums;
 using MediatR;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;

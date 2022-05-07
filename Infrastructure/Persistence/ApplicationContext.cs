@@ -44,6 +44,8 @@ namespace Infrastructure.Persistence
         public DbSet<InputTextField> InputTextFields { get; set; }
         public DbSet<InputNumberPhoneField> InputNumberPhoneFields { get; set; }
 
+        public DbSet<HistoryApplicationState> HistoryApplicationStates { get; set; }
+
         public ApplicationContext(DbContextOptions<ApplicationContext> options, IConfiguration configuration)
             : base(options)
         {

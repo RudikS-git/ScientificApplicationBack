@@ -11,7 +11,6 @@ using System.Linq;
 using System.Threading;
 using System.Threading.Tasks;
 using App.AdminApplications.DTOs;
-using App.AdminApplications.Queries;
 using App.SelectFields.Commands;
 using Microsoft.AspNetCore.Authorization;
 using Domain.Entities.Enums;

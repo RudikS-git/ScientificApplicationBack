@@ -18,31 +18,31 @@ namespace Infrastructure.Persistence.Configurations
             {
                 new ApplicationState()
                 {
-                    Id = (int)ApplicationStatesEnum.Draft,
+                    Id = ApplicationStatesEnum.Draft,
                     Name="Черновик"
                 },
 
                 new ApplicationState()
                 {
-                    Id = (int)ApplicationStatesEnum.Checked,
+                    Id = ApplicationStatesEnum.Checked,
                     Name = "На проверке"
                 },
 
                 new ApplicationState()
                 {
-                    Id = (int)ApplicationStatesEnum.Rejected,
+                    Id = ApplicationStatesEnum.Rejected,
                     Name = "Отклонено"
                 },
 
                 new ApplicationState()
                 {
-                    Id = (int)ApplicationStatesEnum.Modification,
+                    Id = ApplicationStatesEnum.Modification,
                     Name = "Отправлено на доработку"
                 },
 
                  new ApplicationState()
                 {
-                    Id = (int)ApplicationStatesEnum.Accepted,
+                    Id = ApplicationStatesEnum.Accepted,
                     Name = "Согласовано"
                 }
             });

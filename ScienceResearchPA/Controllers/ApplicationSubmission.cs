@@ -11,11 +11,11 @@ using System.Linq;
 using System.Threading;
 using System.Threading.Tasks;
 using App.AdminApplications.DTOs;
-using App.AdminApplications.Queries;
 using App.SelectFields.Commands;
 using App.ApplicationSubmissions.Commands;
 using Microsoft.AspNetCore.Authorization;
 using App.ApplicationSubmissions.Queries;
+using Domain.Enums;
 
 namespace ScienceResearchPA.Controllers
 {
@@ -52,6 +52,12 @@ namespace ScienceResearchPA.Controllers
         public async Task<ActionResult> Delete(int id, CancellationToken cancellationToken)
         {
             return Ok(await Mediator.Send(new DeleteApplicationSubmissionCommand() { Id = id }, cancellationToken));
+        }
+
+        [HttpPatch("send/{id}")]
+        public async Task<ActionResult> SendApplicationForVerification(int id, CancellationToken cancellationToken)
+        {
+            return Ok(await Mediator.Send(new SendApplicationForVerification(id), cancellationToken));
         }
     }
 }

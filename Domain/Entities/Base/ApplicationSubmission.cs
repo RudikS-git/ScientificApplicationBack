@@ -1,5 +1,6 @@
 ﻿using Domain.Entities.Base.FieldSubmissions;
 using Domain.Entities.Common;
+using Domain.Enums;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -18,7 +19,7 @@ namespace Domain.Entities.Base
 
         public string Name { get; set; }
 
-        public int ApplicationStateId { get; set; }
+        public ApplicationStatesEnum ApplicationStateId { get; set; }
         public ApplicationState ApplicationState { get; set; }
         public List<HistoryApplicationState> HistoryApplicationStates { get; set; }
 

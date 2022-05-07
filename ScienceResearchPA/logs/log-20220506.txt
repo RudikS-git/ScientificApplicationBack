@@ -1,0 +1,55 @@
+2022-05-06 00:01:35.944 +04:00 [WRN] The entity type 'PersonName' is an optional dependent using table sharing without any required non shared property that could be used to identify whether the entity exists. If all nullable properties contain a null value in database then an object instance won't be created in the query. Add a required property to create instances with null values for other properties or mark the incoming navigation as required to always create an instance.
+2022-05-06 00:01:36.908 +04:00 [WRN] Role null validation failed: DuplicateRoleName.
+2022-05-06 00:01:36.920 +04:00 [WRN] Role null validation failed: DuplicateRoleName.
+2022-05-06 00:01:36.924 +04:00 [WRN] Role null validation failed: DuplicateRoleName.
+2022-05-06 00:01:37.029 +04:00 [INF] Starting web host
+2022-05-06 00:01:37.233 +04:00 [INF] Application started. Press Ctrl+C to shut down.
+2022-05-06 00:01:37.233 +04:00 [INF] Hosting environment: Development
+2022-05-06 00:01:37.233 +04:00 [INF] Content root path: C:\Users\rudik\source\repos\ScienceResearchPA\ScienceResearchPA
+2022-05-06 00:01:38.492 +04:00 [WRN] Compiling a query which loads related collections for more than one collection navigation, either via 'Include' or through projection, but no 'QuerySplittingBehavior' has been configured. By default, Entity Framework will use 'QuerySplittingBehavior.SingleQuery', which can potentially result in slow query performance. See https://go.microsoft.com/fwlink/?linkid=2134277 for more information. To identify the query that's triggering this warning call 'ConfigureWarnings(w => w.Throw(RelationalEventId.MultipleCollectionIncludeWarning))'.
+2022-05-06 00:03:58.850 +04:00 [WRN] The entity type 'PersonName' is an optional dependent using table sharing without any required non shared property that could be used to identify whether the entity exists. If all nullable properties contain a null value in database then an object instance won't be created in the query. Add a required property to create instances with null values for other properties or mark the incoming navigation as required to always create an instance.
+2022-05-06 00:03:59.585 +04:00 [WRN] Role null validation failed: DuplicateRoleName.
+2022-05-06 00:03:59.593 +04:00 [WRN] Role null validation failed: DuplicateRoleName.
+2022-05-06 00:03:59.597 +04:00 [WRN] Role null validation failed: DuplicateRoleName.
+2022-05-06 00:03:59.680 +04:00 [INF] Starting web host
+2022-05-06 00:03:59.875 +04:00 [INF] Application started. Press Ctrl+C to shut down.
+2022-05-06 00:03:59.875 +04:00 [INF] Hosting environment: Development
+2022-05-06 00:03:59.877 +04:00 [INF] Content root path: C:\Users\rudik\source\repos\ScienceResearchPA\ScienceResearchPA
+2022-05-06 00:04:01.157 +04:00 [WRN] Compiling a query which loads related collections for more than one collection navigation, either via 'Include' or through projection, but no 'QuerySplittingBehavior' has been configured. By default, Entity Framework will use 'QuerySplittingBehavior.SingleQuery', which can potentially result in slow query performance. See https://go.microsoft.com/fwlink/?linkid=2134277 for more information. To identify the query that's triggering this warning call 'ConfigureWarnings(w => w.Throw(RelationalEventId.MultipleCollectionIncludeWarning))'.
+2022-05-06 00:10:58.642 +04:00 [WRN] The entity type 'PersonName' is an optional dependent using table sharing without any required non shared property that could be used to identify whether the entity exists. If all nullable properties contain a null value in database then an object instance won't be created in the query. Add a required property to create instances with null values for other properties or mark the incoming navigation as required to always create an instance.
+2022-05-06 00:10:59.737 +04:00 [WRN] Role null validation failed: DuplicateRoleName.
+2022-05-06 00:10:59.750 +04:00 [WRN] Role null validation failed: DuplicateRoleName.
+2022-05-06 00:10:59.752 +04:00 [WRN] Role null validation failed: DuplicateRoleName.
+2022-05-06 00:10:59.855 +04:00 [INF] Starting web host
+2022-05-06 00:11:00.068 +04:00 [INF] Application started. Press Ctrl+C to shut down.
+2022-05-06 00:11:00.071 +04:00 [INF] Hosting environment: Development
+2022-05-06 00:11:00.071 +04:00 [INF] Content root path: C:\Users\rudik\source\repos\ScienceResearchPA\ScienceResearchPA
+2022-05-06 00:11:01.436 +04:00 [WRN] Compiling a query which loads related collections for more than one collection navigation, either via 'Include' or through projection, but no 'QuerySplittingBehavior' has been configured. By default, Entity Framework will use 'QuerySplittingBehavior.SingleQuery', which can potentially result in slow query performance. See https://go.microsoft.com/fwlink/?linkid=2134277 for more information. To identify the query that's triggering this warning call 'ConfigureWarnings(w => w.Throw(RelationalEventId.MultipleCollectionIncludeWarning))'.
+2022-05-06 00:13:02.590 +04:00 [WRN] The entity type 'PersonName' is an optional dependent using table sharing without any required non shared property that could be used to identify whether the entity exists. If all nullable properties contain a null value in database then an object instance won't be created in the query. Add a required property to create instances with null values for other properties or mark the incoming navigation as required to always create an instance.
+2022-05-06 00:13:03.287 +04:00 [WRN] Role null validation failed: DuplicateRoleName.
+2022-05-06 00:13:03.295 +04:00 [WRN] Role null validation failed: DuplicateRoleName.
+2022-05-06 00:13:03.299 +04:00 [WRN] Role null validation failed: DuplicateRoleName.
+2022-05-06 00:13:03.384 +04:00 [INF] Starting web host
+2022-05-06 00:13:03.576 +04:00 [INF] Application started. Press Ctrl+C to shut down.
+2022-05-06 00:13:03.578 +04:00 [INF] Hosting environment: Development
+2022-05-06 00:13:03.578 +04:00 [INF] Content root path: C:\Users\rudik\source\repos\ScienceResearchPA\ScienceResearchPA
+2022-05-06 00:13:04.780 +04:00 [WRN] Compiling a query which loads related collections for more than one collection navigation, either via 'Include' or through projection, but no 'QuerySplittingBehavior' has been configured. By default, Entity Framework will use 'QuerySplittingBehavior.SingleQuery', which can potentially result in slow query performance. See https://go.microsoft.com/fwlink/?linkid=2134277 for more information. To identify the query that's triggering this warning call 'ConfigureWarnings(w => w.Throw(RelationalEventId.MultipleCollectionIncludeWarning))'.
+2022-05-06 00:36:54.964 +04:00 [WRN] The entity type 'PersonName' is an optional dependent using table sharing without any required non shared property that could be used to identify whether the entity exists. If all nullable properties contain a null value in database then an object instance won't be created in the query. Add a required property to create instances with null values for other properties or mark the incoming navigation as required to always create an instance.
+2022-05-06 00:36:55.669 +04:00 [WRN] Role null validation failed: DuplicateRoleName.
+2022-05-06 00:36:55.676 +04:00 [WRN] Role null validation failed: DuplicateRoleName.
+2022-05-06 00:36:55.679 +04:00 [WRN] Role null validation failed: DuplicateRoleName.
+2022-05-06 00:36:55.774 +04:00 [INF] Starting web host
+2022-05-06 00:36:55.993 +04:00 [INF] Application started. Press Ctrl+C to shut down.
+2022-05-06 00:36:55.993 +04:00 [INF] Hosting environment: Development
+2022-05-06 00:36:55.995 +04:00 [INF] Content root path: C:\Users\rudik\source\repos\ScienceResearchPA\ScienceResearchPA
+2022-05-06 00:36:57.249 +04:00 [WRN] Compiling a query which loads related collections for more than one collection navigation, either via 'Include' or through projection, but no 'QuerySplittingBehavior' has been configured. By default, Entity Framework will use 'QuerySplittingBehavior.SingleQuery', which can potentially result in slow query performance. See https://go.microsoft.com/fwlink/?linkid=2134277 for more information. To identify the query that's triggering this warning call 'ConfigureWarnings(w => w.Throw(RelationalEventId.MultipleCollectionIncludeWarning))'.
+2022-05-06 01:00:46.708 +04:00 [WRN] Compiling a query which loads related collections for more than one collection navigation, either via 'Include' or through projection, but no 'QuerySplittingBehavior' has been configured. By default, Entity Framework will use 'QuerySplittingBehavior.SingleQuery', which can potentially result in slow query performance. See https://go.microsoft.com/fwlink/?linkid=2134277 for more information. To identify the query that's triggering this warning call 'ConfigureWarnings(w => w.Throw(RelationalEventId.MultipleCollectionIncludeWarning))'.
+2022-05-06 21:42:52.781 +04:00 [WRN] The entity type 'PersonName' is an optional dependent using table sharing without any required non shared property that could be used to identify whether the entity exists. If all nullable properties contain a null value in database then an object instance won't be created in the query. Add a required property to create instances with null values for other properties or mark the incoming navigation as required to always create an instance.
+2022-05-06 21:42:53.677 +04:00 [WRN] Role null validation failed: DuplicateRoleName.
+2022-05-06 21:42:53.685 +04:00 [WRN] Role null validation failed: DuplicateRoleName.
+2022-05-06 21:42:53.688 +04:00 [WRN] Role null validation failed: DuplicateRoleName.
+2022-05-06 21:42:53.776 +04:00 [INF] Starting web host
+2022-05-06 21:42:54.330 +04:00 [INF] Application started. Press Ctrl+C to shut down.
+2022-05-06 21:42:54.330 +04:00 [INF] Hosting environment: Development
+2022-05-06 21:42:54.331 +04:00 [INF] Content root path: C:\Users\rudik\source\repos\ScienceResearchPA\ScienceResearchPA
+2022-05-06 21:47:56.867 +04:00 [WRN] Compiling a query which loads related collections for more than one collection navigation, either via 'Include' or through projection, but no 'QuerySplittingBehavior' has been configured. By default, Entity Framework will use 'QuerySplittingBehavior.SingleQuery', which can potentially result in slow query performance. See https://go.microsoft.com/fwlink/?linkid=2134277 for more information. To identify the query that's triggering this warning call 'ConfigureWarnings(w => w.Throw(RelationalEventId.MultipleCollectionIncludeWarning))'.

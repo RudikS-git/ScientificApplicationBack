@@ -41,7 +41,18 @@ namespace App.ApplicationSubmissions.Commands
 
             if (applicationSubmission.Id != 0)
             {
-                if(request.ApplicationSubmission?.SelectSubmissions?.Count != 0)
+                var existingAppSubmission = await _context.ApplicationSubmissions.Where(it => it.Id == applicationSubmission.Id)
+                    .Include(it => it.ApplicationState)
+                    .FirstOrDefaultAsync();
+
+                if(existingAppSubmission.ApplicationState.Id == ApplicationStatesEnum.Rejected ||
+                    existingAppSubmission.ApplicationState.Id == ApplicationStatesEnum.Checked ||
+                    existingAppSubmission.ApplicationState.Id == ApplicationStatesEnum.Accepted)
+                {
+                    return ServiceResult.Failed<ApplicationSubmissionDto>(new ServiceError("Невозможно изменить заявку, так как она уже находится на проверке, отклонена или согласована", 400));
+                }
+
+                if (request.ApplicationSubmission?.SelectSubmissions?.Count != 0)
                 {
                     applicationSubmission.SelectSubmissions = request.ApplicationSubmission?.SelectSubmissions?.Select(it =>
                          new SelectSubmission()
@@ -62,7 +73,7 @@ namespace App.ApplicationSubmissions.Commands
             }
             else
             {
-                applicationSubmission.ApplicationStateId = (int)ApplicationStatesEnum.Draft;
+                applicationSubmission.ApplicationStateId = ApplicationStatesEnum.Draft;
                 _context.ApplicationSubmissions.Add(applicationSubmission);
             }
 

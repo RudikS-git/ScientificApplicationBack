@@ -34,6 +34,8 @@ namespace App.Common.Interfaces
         public DbSet<InputTextField> InputTextFields { get; set; }
         public DbSet<InputNumberPhoneField> InputNumberPhoneFields { get; set; }
 
+        public DbSet<HistoryApplicationState> HistoryApplicationStates { get; set; }
+
         public Task<int> SaveChangesAsync(CancellationToken cancellationToken = new CancellationToken());
         public EntityEntry Entry(object entity);
         public EntityEntry<T> Entry<T>(T entity) where T: class;

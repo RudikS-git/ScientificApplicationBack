@@ -94,10 +94,7 @@ namespace Infrastructure.Migrations
             modelBuilder.Entity("Domain.Entities.Base.ApplicationState", b =>
                 {
                     b.Property<int>("Id")
-                        .ValueGeneratedOnAdd()
                         .HasColumnType("integer");
-
-                    NpgsqlPropertyBuilderExtensions.UseIdentityByDefaultColumn(b.Property<int>("Id"));
 
                     b.Property<string>("Name")
                         .HasColumnType("text");
@@ -525,20 +522,26 @@ namespace Infrastructure.Migrations
 
                     NpgsqlPropertyBuilderExtensions.UseIdentityByDefaultColumn(b.Property<int>("Id"));
 
-                    b.Property<int?>("ApplicationSubmissionId")
+                    b.Property<int>("ApplicationSubmissionId")
                         .HasColumnType("integer");
 
-                    b.Property<int?>("ChangedUserId")
+                    b.Property<int>("ChangedUserId")
                         .HasColumnType("integer");
 
-                    b.Property<DateTime>("Creation")
+                    b.Property<string>("Comment")
+                        .HasColumnType("text");
+
+                    b.Property<DateTime>("Created")
                         .HasColumnType("timestamp with time zone");
 
-                    b.Property<int?>("LastApplicationStateId")
+                    b.Property<int>("LastApplicationStateId")
                         .HasColumnType("integer");
 
-                    b.Property<int?>("NewApplicationStateId")
+                    b.Property<int>("NewApplicationStateId")
                         .HasColumnType("integer");
+
+                    b.Property<DateTime>("Updated")
+                        .HasColumnType("timestamp with time zone");
 
                     b.HasKey("Id");
 
@@ -550,7 +553,7 @@ namespace Infrastructure.Migrations
 
                     b.HasIndex("NewApplicationStateId");
 
-                    b.ToTable("HistoryApplicationState", "Identity");
+                    b.ToTable("HistoryApplicationStates", "Identity");
                 });
 
             modelBuilder.Entity("Domain.Entities.Base.Permission", b =>
@@ -1136,21 +1139,31 @@ namespace Infrastructure.Migrations
 
             modelBuilder.Entity("Domain.Entities.Base.HistoryApplicationState", b =>
                 {
-                    b.HasOne("Domain.Entities.Base.ApplicationSubmission", null)
+                    b.HasOne("Domain.Entities.Base.ApplicationSubmission", "ApplicationSubmission")
                         .WithMany("HistoryApplicationStates")
-                        .HasForeignKey("ApplicationSubmissionId");
+                        .HasForeignKey("ApplicationSubmissionId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
 
                     b.HasOne("Domain.Entities.Base.User", "ChangedUser")
                         .WithMany()
-                        .HasForeignKey("ChangedUserId");
+                        .HasForeignKey("ChangedUserId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
 
                     b.HasOne("Domain.Entities.Base.ApplicationState", "LastApplicationState")
                         .WithMany()
-                        .HasForeignKey("LastApplicationStateId");
+                        .HasForeignKey("LastApplicationStateId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
 
                     b.HasOne("Domain.Entities.Base.ApplicationState", "NewApplicationState")
                         .WithMany()
-                        .HasForeignKey("NewApplicationStateId");
+                        .HasForeignKey("NewApplicationStateId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("ApplicationSubmission");
 
                     b.Navigation("ChangedUser");
 
