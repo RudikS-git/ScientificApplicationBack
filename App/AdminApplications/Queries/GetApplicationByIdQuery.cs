@@ -19,10 +19,6 @@ namespace App.AdminApplications.Queries
     {
         public int id { get; set; }
 
-        public GetApplicationByIdQuery()
-        {
-        }
-
         public GetApplicationByIdQuery(int id)
         {
             this.id = id;
@@ -32,9 +28,7 @@ namespace App.AdminApplications.Queries
     public class GetApplicationByIdHandler : Handler<Application, ApplicationDetailsDto>, IRequestHandlerWrapper<GetApplicationByIdQuery, ApplicationDetailsDto>
     {
         public GetApplicationByIdHandler(IApplicationContext context, IStringLocalizer<SharedResource> localizer, IMapper mapper) 
-            : base(context, localizer, mapper)
-        {
-        }
+            : base(context, localizer, mapper) { }
 
         public async Task<ServiceResult<ApplicationDetailsDto>> Handle(GetApplicationByIdQuery query, CancellationToken cancellationToken)
         {
@@ -43,19 +37,15 @@ namespace App.AdminApplications.Queries
                 .Include(it => it.ApplicationGroups)
                 .ThenInclude(it => it.InputDataFields)
                 .ThenInclude(it => it.InputField)
-
                 .Include(it => it.ApplicationGroups)
                 .ThenInclude(it => it.InputTextFields)
                 .ThenInclude(it => it.InputField)
-
                 .Include(it => it.ApplicationGroups)
                 .ThenInclude(it => it.InputNumberFields)
                 .ThenInclude(it => it.InputField)
-
                 .Include(it => it.ApplicationGroups)
                 .ThenInclude(it => it.InputNumberPhoneFields)
                 .ThenInclude(it => it.InputField)
-
                 .Where(it => it.Id == query.id)
                 .FirstOrDefaultAsync(cancellationToken);
 

@@ -18,9 +18,6 @@ namespace App.AdminApplications.Commands
         {
             _applicationContext = applicationContext;
 
-           // RuleFor(p => p)
-           //     .MustAsync(IsUniqueApplication).WithMessage("Name already exists.");
-
             RuleFor(p => p.Name)
                 .NotEmpty().WithMessage("{PropertyName} is required.")
                 .NotNull()

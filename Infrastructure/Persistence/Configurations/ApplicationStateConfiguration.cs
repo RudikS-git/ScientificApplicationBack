@@ -37,7 +37,7 @@ namespace Infrastructure.Persistence.Configurations
                 new ApplicationState()
                 {
                     Id = ApplicationStatesEnum.Modification,
-                    Name = "Отправлено на доработку"
+                    Name = "Доработка"
                 },
 
                  new ApplicationState()

@@ -43,6 +43,7 @@ namespace App.ApplicationSubmissions.Commands
             {
                 var existingAppSubmission = await _context.ApplicationSubmissions.Where(it => it.Id == applicationSubmission.Id)
                     .Include(it => it.ApplicationState)
+                    .AsNoTracking()
                     .FirstOrDefaultAsync();
 
                 if(existingAppSubmission.ApplicationState.Id == ApplicationStatesEnum.Rejected ||
