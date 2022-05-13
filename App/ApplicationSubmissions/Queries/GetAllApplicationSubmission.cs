@@ -16,6 +16,7 @@ using MapsterMapper;
 using ResponseQuery = App.Common.Models.PaginatedList<App.ApplicationSubmissions.Queries.ApplicationSubmissionQueryDto>;
 using Microsoft.Extensions.Localization;
 using Domain.Enums;
+using App.ApplicationSubmissions.DTOs.Request;
 
 namespace App.ApplicationSubmissions.Queries
 {
@@ -24,9 +25,9 @@ namespace App.ApplicationSubmissions.Queries
         public int applicationId;
         public int page;
         public int pageSize;
-        public ApplicationQueryParamsDto filterParams;
+        public ApplicationSubmissionQueryParams filterParams;
 
-        public GetAllApplicationSubmission(int applicationId, int page, int pageSize, ApplicationQueryParamsDto filterParams)
+        public GetAllApplicationSubmission(int applicationId, int page, int pageSize, ApplicationSubmissionQueryParams filterParams)
         {
             this.applicationId = applicationId;
             this.page = page;
@@ -70,9 +71,29 @@ namespace App.ApplicationSubmissions.Queries
 
             if (query.filterParams != null)
             {
+                if (query.filterParams.Id != null)
+                {
+                    queryable = queryable.Where(it => it.Id == query.filterParams.Id);
+                }
+
                 if (!string.IsNullOrEmpty(query.filterParams.Name))
                 {
                     queryable = queryable.Where(it => it.Name.Contains(query.filterParams.Name));
+                }
+
+                if (query.filterParams.StartDate != null)
+                {
+                    queryable = queryable.Where(it => it.Created >= query.filterParams.StartDate);
+                }
+
+                if (query.filterParams.EndDate != null)
+                {
+                    queryable = queryable.Where(it => it.Created <= query.filterParams.EndDate);
+                }
+
+                if (query.filterParams.applicationState != null)
+                {
+                    queryable = queryable.Where(it => it.ApplicationState.Id != query.filterParams.applicationState);
                 }
             }
 

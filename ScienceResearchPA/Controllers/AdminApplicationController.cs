@@ -32,9 +32,9 @@ namespace ScienceResearchPA.Controllers
 
         // GET api/<InnovativeDevelopmentController>/5
         [HttpGet("{id}")]
-        public async Task<ActionResult> Get([FromRoute]GetApplicationByIdQuery query, CancellationToken cancellationToken)
+        public async Task<ActionResult> Get([FromRoute]int id, CancellationToken cancellationToken)
         {
-           return Ok(await Mediator.Send(query, cancellationToken));
+           return Ok(await Mediator.Send(new GetApplicationByIdQuery(id), cancellationToken));
         }
 
         // POST api/<InnovativeDevelopmentController>

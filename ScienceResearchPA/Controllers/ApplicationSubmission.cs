@@ -16,6 +16,7 @@ using App.ApplicationSubmissions.Commands;
 using Microsoft.AspNetCore.Authorization;
 using App.ApplicationSubmissions.Queries;
 using Domain.Enums;
+using App.ApplicationSubmissions.DTOs.Request;
 
 namespace ScienceResearchPA.Controllers
 {
@@ -25,7 +26,7 @@ namespace ScienceResearchPA.Controllers
     public class ApplicationSubmission : BaseApiController
     {
         [HttpGet("{applicationId}/{page}/{pageSize}")]
-        public async Task<ActionResult> Get(int applicationId, int page, int pageSize, [FromQuery] ApplicationQueryParamsDto filterParams, CancellationToken cancellationToken)
+        public async Task<ActionResult> Get(int applicationId, int page, int pageSize, [FromQuery] ApplicationSubmissionQueryParams filterParams, CancellationToken cancellationToken)
         {
             return Ok(await Mediator.Send(new GetApplicationSubmissions(applicationId, page, pageSize, filterParams), cancellationToken));
         }

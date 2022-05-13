@@ -23,7 +23,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="ApplicationSubmissions\DTOs\Request\" />
     <Folder Include="InputFields\DTOs\Response\" />
     <Folder Include="Users\Commands\" />
     <Folder Include="FieldSets\Queries\" />

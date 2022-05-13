@@ -1,5 +1,6 @@
 ﻿using App.AdminApplications.DTOs;
 using App.ApplicationSubmissions.Commands;
+using App.ApplicationSubmissions.DTOs.Request;
 using App.ApplicationSubmissions.Queries;
 using Domain.Enums;
 using Microsoft.AspNetCore.Authorization;
@@ -14,7 +15,7 @@ namespace ScienceResearchPA.Controllers
     public class ModeratorApplicationSubmissionController : BaseApiController
     {
         [HttpGet("{applicationId}/{page}/{pageSize}")]
-        public async Task<ActionResult> Get(int applicationId, int page, int pageSize, [FromQuery] ApplicationQueryParamsDto filterParams, CancellationToken cancellationToken)
+        public async Task<ActionResult> Get(int applicationId, int page, int pageSize, [FromQuery] ApplicationSubmissionQueryParams filterParams, CancellationToken cancellationToken)
         {
             return Ok(await Mediator.Send(new GetAllApplicationSubmission(applicationId, page, pageSize, filterParams), cancellationToken));
         }
