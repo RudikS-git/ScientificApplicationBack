@@ -90,7 +90,13 @@ namespace Infrastructure.Services
             var user = new User()
             {
                 Email = registerModel.Email,
-                UserName = registerModel.Email
+                UserName = registerModel.Email,
+                PersonName = new Domain.Entities.Complex.PersonName()
+                {
+                    FirstName = registerModel.FirstName,
+                    LastName = registerModel.LastName,
+                    Patronymic = registerModel.Patronymic
+                }
             };
 
             var result = await _userManager.CreateAsync(user, registerModel.Password);

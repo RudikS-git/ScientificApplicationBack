@@ -794,7 +794,7 @@ namespace Infrastructure.Migrations
 
                     b.HasIndex("RoleId");
 
-                    b.ToTable("UserRoles", "Identity");
+                    b.ToTable("AspNetUserRoles", "Identity");
                 });
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityUserToken<int>", b =>
@@ -829,6 +829,23 @@ namespace Infrastructure.Migrations
                     b.HasIndex("UsersId");
 
                     b.ToTable("PermissionUser", "Identity");
+                });
+
+            modelBuilder.Entity("Domain.Entities.Base.UserRoles", b =>
+                {
+                    b.HasBaseType("Microsoft.AspNetCore.Identity.IdentityUserRole<int>");
+
+                    b.Property<int?>("RoleId1")
+                        .HasColumnType("integer");
+
+                    b.Property<int?>("UserId1")
+                        .HasColumnType("integer");
+
+                    b.HasIndex("RoleId1");
+
+                    b.HasIndex("UserId1");
+
+                    b.ToTable("UserRole", "Identity");
                 });
 
             modelBuilder.Entity("Domain.Entities.Base.Application", b =>
@@ -1276,6 +1293,27 @@ namespace Infrastructure.Migrations
                         .IsRequired();
                 });
 
+            modelBuilder.Entity("Domain.Entities.Base.UserRoles", b =>
+                {
+                    b.HasOne("Domain.Entities.Base.Role", "Role")
+                        .WithMany("UserRoles")
+                        .HasForeignKey("RoleId1");
+
+                    b.HasOne("Domain.Entities.Base.User", "User")
+                        .WithMany("Roles")
+                        .HasForeignKey("UserId1");
+
+                    b.HasOne("Microsoft.AspNetCore.Identity.IdentityUserRole<int>", null)
+                        .WithOne()
+                        .HasForeignKey("Domain.Entities.Base.UserRoles", "UserId", "RoleId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Role");
+
+                    b.Navigation("User");
+                });
+
             modelBuilder.Entity("Domain.Entities.Base.Application", b =>
                 {
                     b.Navigation("ApplicationGroups");
@@ -1341,11 +1379,18 @@ namespace Infrastructure.Migrations
                     b.Navigation("Options");
                 });
 
+            modelBuilder.Entity("Domain.Entities.Base.Role", b =>
+                {
+                    b.Navigation("UserRoles");
+                });
+
             modelBuilder.Entity("Domain.Entities.Base.User", b =>
                 {
                     b.Navigation("Applications");
 
                     b.Navigation("RefreshTokens");
+
+                    b.Navigation("Roles");
 
                     b.Navigation("Submissions");
                 });

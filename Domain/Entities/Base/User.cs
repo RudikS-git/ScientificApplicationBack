@@ -22,5 +22,7 @@ namespace Domain.Entities.Base
         public IList<Permission> Permissions { get; set; }
 
         public IList<RefreshToken> RefreshTokens { get; set; }
+
+        public IList<UserRoles> Roles { get; set; }
     }
 }

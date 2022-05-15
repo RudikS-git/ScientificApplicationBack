@@ -90,7 +90,7 @@ namespace App.ApplicationSubmissions.Queries
 
                 if(query.filterParams.applicationState != null)
                 {
-                    queryable = queryable.Where(it => it.ApplicationState.Id != query.filterParams.applicationState);
+                    queryable = queryable.Where(it => it.ApplicationState.Id == query.filterParams.applicationState);
                 } 
             }
 

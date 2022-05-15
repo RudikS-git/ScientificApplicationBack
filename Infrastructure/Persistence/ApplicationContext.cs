@@ -76,9 +76,10 @@ namespace Infrastructure.Persistence
             {
                 entity.ToTable(name: "Role");
             });
-            modelBuilder.Entity<IdentityUserRole<int>>(entity =>
+
+            modelBuilder.Entity<UserRoles>(entity =>
             {
-                entity.ToTable("UserRoles");
+                entity.ToTable(name: "UserRole");
             });
 
             modelBuilder.Entity<IdentityUserClaim<int>>(entity =>

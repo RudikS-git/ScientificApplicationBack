@@ -10,6 +10,8 @@ namespace Domain.Entities.Base
 {
     public class Role : IdentityRole<int>
     {
+        public IList<UserRoles> UserRoles { get; set; }
+
         public Role() { }
 
         public Role(string name) : base(name)

@@ -26,5 +26,11 @@ namespace ScienceResearchPA.Controllers
         {
             return Ok(await Mediator.Send(query, cancellationToken));
         }
+
+        [HttpGet("states")]
+        public async Task<ActionResult> GetApplicationStates([FromRoute] GetApplicationStatesQuery query, CancellationToken cancellationToken)
+        {
+            return Ok(await Mediator.Send(query, cancellationToken));
+        }
     }
 }

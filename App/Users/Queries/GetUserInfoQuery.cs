@@ -41,25 +41,10 @@ namespace App.Users.Queries
 
         public async Task<ServiceResult<ResponseQuery>> Handle(GetUserInfoQuery query, CancellationToken cancellationToken)
         {
-            var user = await _context.Users.Where(it => it.Id == query.id).FirstOrDefaultAsync();
-            /*    Join(
-                _context.ApplicationSubmissions.Where(it => it.UserId == _userService.UserId),
-                u => u.Id,
-                c => c.ApplicationId,
-                (u, c) => new
-                {
-                    id = c.Id,
-                    ApplicationSubmissionName = c.Name,
-                    ApplicationId = u.Id,
-                    Created = c.Created,
-                    ApplicationState = c.ApplicationState,
-
-                    InputSubmissions = c.InputSubmissions,
-                    SelectSubmissions = c.SelectSubmissions
-
-                })
-                .OrderByDescending(it => it.id).AsQueryable();*/
-
+            var user = await _context.Users.Where(it => it.Id == query.id)
+                .Include(it => it.Roles)
+                .ThenInclude(it => it.Role)
+                .FirstOrDefaultAsync();
 
             return ServiceResult.Success(_mapper.Map<ResponseQuery>(user));
         }
