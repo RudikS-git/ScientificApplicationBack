@@ -72,14 +72,15 @@ namespace Infrastructure.Persistence
             modelBuilder.ApplyConfigurationsFromAssembly(assembly: typeof(AppContext).Assembly);
 
             modelBuilder.HasDefaultSchema("Identity");
+
+            modelBuilder.Entity<User>(entity =>
+            {
+                entity.ToTable(name: "User");
+            });
+
             modelBuilder.Entity<Role>(entity =>
             {
                 entity.ToTable(name: "Role");
-            });
-
-            modelBuilder.Entity<UserRoles>(entity =>
-            {
-                entity.ToTable(name: "UserRole");
             });
 
             modelBuilder.Entity<IdentityUserClaim<int>>(entity =>
@@ -101,28 +102,6 @@ namespace Infrastructure.Persistence
             {
                 entity.ToTable("UserTokens");
             });
-
-            /*  Task initDBTask = Task.WhenAll(new List<Task>
-              {
-                  InitializeDatabase<ApplicationState>(modelBuilder, "ApplicationState.json"),
-                  InitializeDatabase<Permission>(modelBuilder, "Permissions.json")
-              });*/
-
-            /*
-                            entity
-                                .HasCheckConstraint("CC_StartEndWork",
-                                                "\"StartWork\" <= \"EndWork\"")
-
-                                .HasCheckConstraint("CC_Email",
-                                               "\"Email\" ~* '^[A-Z0-9._%-]+@[A-Z0-9.-]+\\.[A-Z]{2,4}$)'")
-
-                                .HasCheckConstraint("CC_Phone",
-                                               "\"Phone\" ~* '^[0 - 9\\.] +$)'");*/
-
-            /*            modelBuilder.Entity<User>()
-                            .HasCheckConstraint("CC_FirstActivityLastActivity",
-                                                "\"FirstActivity\" <= \"LastActivity\"");*/
-
         }
 
         public override async Task<int> SaveChangesAsync(CancellationToken cancellationToken = new CancellationToken())

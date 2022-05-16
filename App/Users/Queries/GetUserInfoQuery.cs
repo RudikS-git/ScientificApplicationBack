@@ -15,6 +15,7 @@ using MapsterMapper;
 
 using ResponseQuery = App.Users.Queries.UserInfoResponse;
 using Microsoft.Extensions.Localization;
+using Microsoft.AspNetCore.Identity;
 
 namespace App.Users.Queries
 {
@@ -31,22 +32,25 @@ namespace App.Users.Queries
     public class GetUserInfoQueryHandler : Handler, IRequestHandlerWrapper<GetUserInfoQuery, ResponseQuery>
     {
         private readonly ICurrentUserService _userService;
+        private readonly UserManager<User> _userManager;
 
-        public GetUserInfoQueryHandler(IApplicationContext applicationContext, IStringLocalizer<SharedResource> localizer, IMapper mapper, ICurrentUserService userService)
+        public GetUserInfoQueryHandler(IApplicationContext applicationContext, IStringLocalizer<SharedResource> localizer, IMapper mapper, ICurrentUserService userService, UserManager<User> userManager)
             : base(applicationContext, localizer, mapper)
 
         {
             _userService = userService;
+            _userManager = userManager;
         }
 
         public async Task<ServiceResult<ResponseQuery>> Handle(GetUserInfoQuery query, CancellationToken cancellationToken)
         {
             var user = await _context.Users.Where(it => it.Id == query.id)
-                .Include(it => it.Roles)
-                .ThenInclude(it => it.Role)
                 .FirstOrDefaultAsync();
 
-            return ServiceResult.Success(_mapper.Map<ResponseQuery>(user));
+            var userDto = _mapper.Map<ResponseQuery>(user);
+            userDto.Roles = await _userManager.GetRolesAsync(user);
+
+            return ServiceResult.Success(userDto);
         }
     }
 }

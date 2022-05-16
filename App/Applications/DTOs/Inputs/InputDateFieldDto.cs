@@ -11,8 +11,8 @@ namespace App.Applications.DTOs.Inputs
 {
     public class InputDateFieldDto : InputFieldDto, IRegister
     {
-        public DateTime MinDateTime { get; set; }
-        public DateTime MaxDateTime { get; set; }
+        public DateTime? MinDateTime { get; set; }
+        public DateTime? MaxDateTime { get; set; }
 
         public void Register(TypeAdapterConfig config)
         {

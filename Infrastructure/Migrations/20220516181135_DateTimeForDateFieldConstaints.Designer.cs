@@ -3,6 +3,7 @@ using System;
 using Infrastructure.Persistence;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
 
@@ -11,9 +12,10 @@ using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
 namespace Infrastructure.Migrations
 {
     [DbContext(typeof(ApplicationContext))]
-    partial class ApplicationContextModelSnapshot : ModelSnapshot
+    [Migration("20220516181135_DateTimeForDateFieldConstaints")]
+    partial class DateTimeForDateFieldConstaints
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -710,7 +712,7 @@ namespace Infrastructure.Migrations
                         .IsUnique()
                         .HasDatabaseName("UserNameIndex");
 
-                    b.ToTable("User", "Identity");
+                    b.ToTable("AspNetUsers", "Identity");
                 });
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRoleClaim<int>", b =>
@@ -829,6 +831,23 @@ namespace Infrastructure.Migrations
                     b.HasIndex("UsersId");
 
                     b.ToTable("PermissionUser", "Identity");
+                });
+
+            modelBuilder.Entity("Domain.Entities.Base.UserRoles", b =>
+                {
+                    b.HasBaseType("Microsoft.AspNetCore.Identity.IdentityUserRole<int>");
+
+                    b.Property<int?>("RoleId1")
+                        .HasColumnType("integer");
+
+                    b.Property<int?>("UserId1")
+                        .HasColumnType("integer");
+
+                    b.HasIndex("RoleId1");
+
+                    b.HasIndex("UserId1");
+
+                    b.ToTable("UserRole", "Identity");
                 });
 
             modelBuilder.Entity("Domain.Entities.Base.Application", b =>
@@ -1201,7 +1220,7 @@ namespace Infrastructure.Migrations
 
                             b1.HasKey("UserId");
 
-                            b1.ToTable("User", "Identity");
+                            b1.ToTable("AspNetUsers", "Identity");
 
                             b1.WithOwner()
                                 .HasForeignKey("UserId");
@@ -1276,6 +1295,27 @@ namespace Infrastructure.Migrations
                         .IsRequired();
                 });
 
+            modelBuilder.Entity("Domain.Entities.Base.UserRoles", b =>
+                {
+                    b.HasOne("Domain.Entities.Base.Role", "Role")
+                        .WithMany("UserRoles")
+                        .HasForeignKey("RoleId1");
+
+                    b.HasOne("Domain.Entities.Base.User", "User")
+                        .WithMany("Roles")
+                        .HasForeignKey("UserId1");
+
+                    b.HasOne("Microsoft.AspNetCore.Identity.IdentityUserRole<int>", null)
+                        .WithOne()
+                        .HasForeignKey("Domain.Entities.Base.UserRoles", "UserId", "RoleId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Role");
+
+                    b.Navigation("User");
+                });
+
             modelBuilder.Entity("Domain.Entities.Base.Application", b =>
                 {
                     b.Navigation("ApplicationGroups");
@@ -1341,11 +1381,18 @@ namespace Infrastructure.Migrations
                     b.Navigation("Options");
                 });
 
+            modelBuilder.Entity("Domain.Entities.Base.Role", b =>
+                {
+                    b.Navigation("UserRoles");
+                });
+
             modelBuilder.Entity("Domain.Entities.Base.User", b =>
                 {
                     b.Navigation("Applications");
 
                     b.Navigation("RefreshTokens");
+
+                    b.Navigation("Roles");
 
                     b.Navigation("Submissions");
                 });

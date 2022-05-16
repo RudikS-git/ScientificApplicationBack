@@ -18,6 +18,6 @@ namespace App.Users.Queries
 
         public DateTime BirthDate { get; set; }
 
-        public IList<Role> Roles { get; set; }
+        public IList<string> Roles { get; set; }
     }
 }
