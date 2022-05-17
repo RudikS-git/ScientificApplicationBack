@@ -80,12 +80,12 @@ namespace App.ApplicationSubmissions.Queries
 
                 if(query.filterParams.StartDate != null)
                 {
-                    queryable = queryable.Where(it => it.Created >= query.filterParams.StartDate);
+                    queryable = queryable.Where(it => it.Created >= query.filterParams.StartDate.Value.ToUniversalTime());
                 }
 
                 if(query.filterParams.EndDate != null)
                 {
-                    queryable = queryable.Where(it => it.Created <= query.filterParams.EndDate);
+                    queryable = queryable.Where(it => it.Created <= query.filterParams.EndDate.Value.ToUniversalTime());
                 }
 
                 if(query.filterParams.applicationState != null)
