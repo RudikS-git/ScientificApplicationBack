@@ -71,7 +71,8 @@ namespace App.ApplicationSubmissions.Commands
             }
             else
             {
-                return ServiceResult.Failed<ApplicationSubmissionDto>(new ServiceError("Заявка уже находится на проверке, согласована или отклонена", 400));
+                return ServiceResult.Failed<ApplicationSubmissionDto>(
+                    new ServiceError("Заявка уже находится на проверке, согласована или отклонена", 400));
             }
 
             await _context.SaveChangesAsync();

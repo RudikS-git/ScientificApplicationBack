@@ -227,3 +227,7 @@ project.lock.json
 appsettings.Development.json
 appsettings.json
 logs
+.vs
+.idea
+%APPDATA%
+%USERPROFILE%

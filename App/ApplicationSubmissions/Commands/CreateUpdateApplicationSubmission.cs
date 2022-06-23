@@ -50,7 +50,8 @@ namespace App.ApplicationSubmissions.Commands
                     existingAppSubmission.ApplicationState.Id == ApplicationStatesEnum.Checked ||
                     existingAppSubmission.ApplicationState.Id == ApplicationStatesEnum.Accepted)
                 {
-                    return ServiceResult.Failed<ApplicationSubmissionDto>(new ServiceError("Невозможно изменить заявку, так как она уже находится на проверке, отклонена или согласована", 400));
+                    return ServiceResult.Failed<ApplicationSubmissionDto>(new ServiceError("Невозможно изменить заявку, " +
+                        "так как она уже находится на проверке, отклонена или согласована", 400));
                 }
 
                 if (request.ApplicationSubmission?.SelectSubmissions?.Count != 0)
